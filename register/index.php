@@ -15,9 +15,10 @@
 	<link rel="stylesheet" href="./public/frontend/templates/css/owl-css/owl.min.css">
 	<link rel="stylesheet" href="./public/dist/plugins/select2-4.1.0-rc.0/css/select2.min.css">
 	<link rel="shortcut icon" href="./public/uploads/logos/1530689937_favicon.png" />
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" type="text/css" href="./public/dist/plugins/intl-tel-input-17.0.19/css/intlTelInput.min.css">
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -252,7 +253,24 @@
 						},
 						success: (res) => {
 							if (res.header === 'good') {
-								console.log('bankai');
+								toastr.info("Fill all fields!!!", "Note", {
+									positionClass: "toast-top-center",
+									timeOut: 5e3,
+									closeButton: !0,
+									debug: !1,
+									newestOnTop: !0,
+									progressBar: !0,
+									preventDuplicates: !0,
+									onclick: null,
+									showDuration: "300",
+									hideDuration: "1000",
+									extendedTimeOut: "1000",
+									showEasing: "swing",
+									hideEasing: "linear",
+									showMethod: "fadeIn",
+									hideMethod: "fadeOut",
+									tapToDismiss: !1
+								})
 							} else {
 								console.log('bankaidato');
 							}
