@@ -10,7 +10,11 @@ if (isset($_POST['fname'])) {
     $email = $_POST['email'];
     $pass = $_POST['pass'];
 
-    if ($modules->register($fname, $lname, $email, $phone, $pass)) {
+    $registered = $modules->register($fname, $lname, $email, $phone, $pass);
+
+    if ($registered == "exists") {
+        $response['header'] = 'exists';
+    } elseif ($registered == "chuwa") {
         $response['header'] = 'good';
     }
     echo json_encode($response);
