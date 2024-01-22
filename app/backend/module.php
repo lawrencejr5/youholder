@@ -26,7 +26,7 @@ class Modules extends Connection
         $this->stmt->execute();
         return $this->stmt->rowCount();
     }
-    public function sendMail()
+    public function sendMail($fromEmail, $password, $fromName, $toEmail,  $toName, $subject, $body)
     {
         $mail = new PHPMailer(true);
         $mail->SMTPOptions = array(
@@ -40,23 +40,23 @@ class Modules extends Connection
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'oputalawrence@gmail.com';                     //SMTP username
-        $mail->Password   = 'law3221211';                               //SMTP password
+        $mail->Username   = $fromEmail;                     //SMTP username
+        $mail->Password   = $password;                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
         $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
         $mail->IsHTML(true);
-        $mail->setFrom('oputalawrence@gmail.com', 'Iffff');
-        $mail->addReplyTo('oputalawrence@gmail.com', 'Idddd');
-        $mail->addAddress('lawjun.com@gmail.com', 'vvjfkkfk');
-        $mail->Subject = 'kaaaaaaaaa';
-        $mail->Body = 'ddjjdjdjd';
-        // try {
-        if ($mail->send()) {
-            return true;
+        $mail->setFrom($fromEmail, $fromName);
+        $mail->addReplyTo($fromEmail, $fromName);
+        $mail->addAddress($toEmail, $toName);
+        $mail->Subject = $subject;
+        $mail->Body = $body;
+        try {
+            if ($mail->send()) {
+                return true;
+            }
+        } catch (Exception $e) {
+            echo $e->errorMessage();
         }
-        // } catch (Exception $e) {
-        //     echo $e->errorMessage();
-        // }
     }
     public function register($fname, $lname, $email, $phone, $password, $otp)
     {
@@ -104,7 +104,7 @@ class Modules extends Connection
 }
 
 $modules = new Modules();
-if ($modules->sendMail()) {
+if ($modules->sendMail('lawjun.com@gmail.com', 'lawjun3221211', 'Lawjun', 'oputalawrence@gmail.com',  'oputa', "Verify your email", "hello oputa")) {
     echo 'Sent';
 } else {
     echo "error";
