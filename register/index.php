@@ -27,7 +27,9 @@
 		<a href="https://demo.paymoney.techvill.net/register#top-header"><i class="fas fa-arrow-up"></i></a>
 	</div>
 	<!-- End scroll-top button -->
-
+	<script type="text/javascript">
+		var SITE_URL = "https://demo.paymoney.techvill.net";
+	</script>
 	<!-- Start Header -->
 	<!-- navbar -->
 	<div class="navigation-wrap bg-white start-header start-style d-none">
@@ -374,7 +376,9 @@
 	<script src="./public/dist/libraries/bootstrap-5.0.2/js/bootstrap.min.js"></script>
 	<script src="./public/frontend/templates/js/main.min.js"></script>
 	<script src="./public/dist/plugins/select2-4.1.0-rc.0/js/select2.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
 
 	<script type="text/javascript">
@@ -383,6 +387,8 @@
 			const registerBtn = $('#registerBtn')
 
 			registerBtn.on('click', () => {
+				registerBtn.html('Loading....')
+
 				const fname = $('#first_name').val()
 				const lname = $('#last_name').val()
 				const email = $('#email').val()
@@ -409,6 +415,7 @@
 						hideMethod: "fadeOut",
 						tapToDismiss: !1
 					})
+					registerBtn.html('Continue')
 				} else {
 					$.ajax({
 						type: 'post',
@@ -423,67 +430,70 @@
 						},
 						success: (res) => {
 							if (res.header == 'exists') {
-								toastr.error("Email already exists!!!", "Sorry", {
-									positionClass: "toast-top-center",
-									timeOut: 5e3,
-									closeButton: !0,
-									debug: !1,
-									newestOnTop: !0,
-									progressBar: !0,
-									preventDuplicates: !0,
-									onclick: null,
-									showDuration: "300",
-									hideDuration: "1000",
-									extendedTimeOut: "1000",
-									showEasing: "swing",
-									hideEasing: "linear",
-									showMethod: "fadeIn",
-									hideMethod: "fadeOut",
-									tapToDismiss: !1
-								})
+								// toastr.error("Email already exists!!!", "Sorry", {
+								// 	positionClass: "toast-top-center",
+								// 	timeOut: 5e3,
+								// 	closeButton: !0,
+								// 	debug: !1,
+								// 	newestOnTop: !0,
+								// 	progressBar: !0,
+								// 	preventDuplicates: !0,
+								// 	onclick: null,
+								// 	showDuration: "300",
+								// 	hideDuration: "1000",
+								// 	extendedTimeOut: "1000",
+								// 	showEasing: "swing",
+								// 	hideEasing: "linear",
+								// 	showMethod: "fadeIn",
+								// 	hideMethod: "fadeOut",
+								// 	tapToDismiss: !1
+								// })
+								alert('exists')
+								registerBtn.html('Continue')
 							} else if (res.header == 'good') {
-								toastr.success("An otp was sent to your email", "Verify your email", {
-									positionClass: "toast-top-center",
-									timeOut: 5e3,
-									closeButton: !0,
-									debug: !1,
-									newestOnTop: !0,
-									progressBar: !0,
-									preventDuplicates: !0,
-									onclick: null,
-									showDuration: "300",
-									hideDuration: "1000",
-									extendedTimeOut: "1000",
-									showEasing: "swing",
-									hideEasing: "linear",
-									showMethod: "fadeIn",
-									hideMethod: "fadeOut",
-									tapToDismiss: !1
-								})
-								window.setTimeout(() => {
-									window.location = '../login'
-								}, 3000)
-							} else if (res.header == 'email_not_valid') {
-								toastr.error("Email not valid", "Invalid Email", {
-									positionClass: "toast-top-center",
-									timeOut: 5e3,
-									closeButton: !0,
-									debug: !1,
-									newestOnTop: !0,
-									progressBar: !0,
-									preventDuplicates: !0,
-									onclick: null,
-									showDuration: "300",
-									hideDuration: "1000",
-									extendedTimeOut: "1000",
-									showEasing: "swing",
-									hideEasing: "linear",
-									showMethod: "fadeIn",
-									hideMethod: "fadeOut",
-									tapToDismiss: !1
-								})
-
+								// toastr.success("An otp was sent to your email", "Verify your email", {
+								// 	positionClass: "toast-top-center",
+								// 	timeOut: 5e3,
+								// 	closeButton: !0,
+								// 	debug: !1,
+								// 	newestOnTop: !0,
+								// 	progressBar: !0,
+								// 	preventDuplicates: !0,
+								// 	onclick: null,
+								// 	showDuration: "300",
+								// 	hideDuration: "1000",
+								// 	extendedTimeOut: "1000",
+								// 	showEasing: "swing",
+								// 	hideEasing: "linear",
+								// 	showMethod: "fadeIn",
+								// 	hideMethod: "fadeOut",
+								// 	tapToDismiss: !1
+								// })
+								// window.setTimeout(() => {
+								window.location = '../login'
+								// }, 3000)
 							}
+							// else if (res.header == 'email_not_valid') {
+							// 	toastr.error("Email not valid", "Invalid Email", {
+							// 		positionClass: "toast-top-center",
+							// 		timeOut: 5e3,
+							// 		closeButton: !0,
+							// 		debug: !1,
+							// 		newestOnTop: !0,
+							// 		progressBar: !0,
+							// 		preventDuplicates: !0,
+							// 		onclick: null,
+							// 		showDuration: "300",
+							// 		hideDuration: "1000",
+							// 		extendedTimeOut: "1000",
+							// 		showEasing: "swing",
+							// 		hideEasing: "linear",
+							// 		showMethod: "fadeIn",
+							// 		hideMethod: "fadeOut",
+							// 		tapToDismiss: !1
+							// 	})
+							// 	registerBtn.html('Continue')
+							// }
 						}
 					})
 				}
@@ -519,7 +529,7 @@
 	</script>
 
 	<script src="./public/dist/plugins/html5-validation-1.0.0/validation.min.js" type="text/javascript"></script>
-	<script src="./public/dist/plugins/intl-tel-input-17.0.19/js/intlTelInput-jquery.min.js" type="text/javascript"></script>
+	<!-- <script src="./public/dist/plugins/intl-tel-input-17.0.19/js/intlTelInput-jquery.min.js" type="text/javascript"></script> -->
 	<script src="./public/dist/js/isValidPhoneNumber.min.js" type="text/javascript"></script>
 
 	<script>
