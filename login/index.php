@@ -434,7 +434,7 @@
 					$.ajax({
 						url: '../app/backend/actions/login.php',
 						type: 'post',
-
+						dataType: 'json',
 						data: {
 							email: email,
 							pass: pass

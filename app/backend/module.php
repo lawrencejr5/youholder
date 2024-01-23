@@ -18,13 +18,13 @@ class Modules extends Connection
         return $this->stmt->rowCount();
     }
 
-    public function register($fname, $lname, $email, $phone, $password)
+    public function register($fname, $lname, $email, $phone, $password, $otp)
     {
         if ($this->checkEmailExists($email) > 0) {
             $this->msg = "exists";
-            return false;
+            return $this->msg;
         } else {
-            $this->sql = "INSERT INTO users(fname, lname, email, phone, password) VALUES(:fname, :lname, :email, :phone, :password)";
+            $this->sql = "INSERT INTO users(fname, lname, email, phone, password, verify_code) VALUES(:fname, :lname, :email, :phone, :password, :verify_code)";
             try {
                 $this->stmt = $this->conn->prepare($this->sql);
                 $this->stmt->bindParam(':fname', $fname);
@@ -32,10 +32,10 @@ class Modules extends Connection
                 $this->stmt->bindParam(':email', $email);
                 $this->stmt->bindParam(':phone', $phone);
                 $this->stmt->bindParam(':password', $password);
-                // $this->stmt->bindParam(':verify_code', $otp);
+                $this->stmt->bindParam(':verify_code', $otp);
                 $this->stmt->execute();
                 $this->msg = 'chuwa';
-                return true;
+                return $this->msg;
             } catch (PDOException $e) {
                 echo "Failed," . $e->getMessage();
             }

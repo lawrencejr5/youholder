@@ -1,14 +1,12 @@
 <?php
 
-ob_start();
-
-include __DIR__ . "../../../src/Exception.php";
-include __DIR__ . "../../../src/PHPMailer.php";
-include __DIR__ . "../../../src/SMTP.php";
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
+
+include "../../phpMailer/src/PHPMailer.php";
+include "../../phpMailer/src/SMTP.php";
+include "../../phpMailer/src/Exception.php";
 
 
 class Mailer
@@ -23,7 +21,7 @@ class Mailer
                 'allow_self_signed' => true
             )
         );
-        $mail->SMTPDebug = 2;                      //Enable verbose debug output
+        $mail->SMTPDebug = 0;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'server188.web-hosting.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
@@ -37,14 +35,17 @@ class Mailer
         $mail->addAddress($toEmail, $toName);
         $mail->Subject = $subject;
         $mail->Body = $body;
-        // try {
-        ob_end_clean();
-        $mail->send();
-
-        // } catch (Exception $e) {
-        //     echo $e->errorMessage();
-        // }
+        try {
+            ob_end_clean();
+            if ($mail->send()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            echo $e->errorMessage();
+        }
     }
 }
 $mailer = new Mailer();
-$mailer->sendMyMail('oputalawrence@gmail.com', 'ify', "verify email", '12345678');
+// $mailer->sendMyMail('oputalawrence@gmail.com', 'ify', "verify email", '12345678');

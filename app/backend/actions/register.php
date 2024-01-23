@@ -1,7 +1,6 @@
 <?php
 
 include '../module.php';
-include '../mailer.php';
 
 if (isset($_POST['fname'])) {
     $response = [];
@@ -12,11 +11,11 @@ if (isset($_POST['fname'])) {
     $pass = $_POST['pass'];
     $otp = rand(100000, 999999);
 
-    $registered = $modules->register($fname, $lname, $email, $phone, $pass);
+    $registered = $modules->register($fname, $lname, $email, $phone, $pass, $otp);
 
-    if (!$registered) {
+    if ($registered == 'exists') {
         $response['header'] = 'exists';
-    } elseif ($registered) {
+    } elseif ($registered == 'chuwa') {
         $response['header'] = 'good';
     }
     // elseif ($registered == "email_not_valid") {

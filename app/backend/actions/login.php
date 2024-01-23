@@ -1,7 +1,10 @@
 <?php
 
 include '../module.php';
+
 session_start();
+
+
 if (isset($_POST['email'])) {
     $response = [];
     $data = [];
