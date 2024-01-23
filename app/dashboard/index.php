@@ -1,8 +1,7 @@
 <?php
 session_start();
 $fullname = $_SESSION['fname'] . ' ' . $_SESSION['lname'];
-
-
+!$_SESSION['id'] && header('location: ../../login');
 ?>
 
 <!DOCTYPE html>

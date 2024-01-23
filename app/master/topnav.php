@@ -35,7 +35,7 @@
                         <img src="../public/uploads/user-profile/1532005837.jpg" alt="Profile" class="img-fluid">
                     </div>
                     <div class="ml-12 d-flex align-items-center h-78 w-134">
-                        <p class="mb-0 f-14 text-dark gilroy-Semibold">Irish Watson</p>
+                        <p class="mb-0 f-14 text-dark gilroy-Semibold"><?php echo $_SESSION['fname'] . ' ' . $_SESSION['lname'] ?></p>
                         <span class="ml-13">
                             <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.401158 0.234532C0.639812 -0.00412146 1.02675 -0.00412146 1.2654 0.234532L4.49995 3.46908L7.73449 0.234532C7.97315 -0.00412146 8.36008 -0.00412146 8.59873 0.234532C8.83739 0.473186 8.83739 0.86012 8.59873 1.09877L4.93207 4.76544C4.69341 5.00409 4.30648 5.00409 4.06783 4.76544L0.401158 1.09877C0.162505 0.86012 0.162505 0.473186 0.401158 0.234532Z" fill="#3F405B" />
@@ -49,8 +49,8 @@
                             <img src="../public/uploads/user-profile/1532005837.jpg" alt="Profile" class="img-fluid">
                         </div>
                         <div class="ms-3 text-white">
-                            <p class="mb-0 f-15 gilroy-medium text-white">Irish Watson</p>
-                            <p class="mb-0 f-13 mt-3p gilroy-regular text-info-100">irish@gmail.com</p>
+                            <p class="mb-0 f-15 gilroy-medium text-white"><?php echo $_SESSION['fname'] . ' ' . $_SESSION['lname'] ?></p>
+                            <p class="mb-0 f-13 mt-3p gilroy-regular text-info-100"><?php echo $_SESSION['email'] ?></p>
                         </div>
                     </li>
                     <li class="d-flex align-items-center">

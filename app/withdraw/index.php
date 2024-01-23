@@ -1,3 +1,8 @@
+<?php
+session_start();
+!$_SESSION['id'] && header('location: ../../login');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

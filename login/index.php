@@ -411,6 +411,7 @@
 						hideMethod: "fadeOut",
 						tapToDismiss: !1
 					})
+					loginBtn.html('Continue')
 				} else if (pass.length == 0) {
 					toastr.error("Password is empty", "Field required", {
 						positionClass: "toast-top-center",
@@ -430,6 +431,7 @@
 						hideMethod: "fadeOut",
 						tapToDismiss: !1
 					})
+					loginBtn.html('Continue')
 				} else {
 					$.ajax({
 						url: '../app/backend/actions/login.php',
@@ -459,7 +461,7 @@
 									hideMethod: "fadeOut",
 									tapToDismiss: !1
 								})
-
+								loginBtn.html('Continue')
 							} else if (res.header == 'signin') {
 								toastr.success("Authentication successful!!!", "Signed in", {
 									positionClass: "toast-top-center",
