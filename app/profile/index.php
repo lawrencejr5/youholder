@@ -1,5 +1,5 @@
 <?php
-session_start();
+include '../backend/udata.php';
 !$_SESSION['id'] && header('location: ../../login');
 ?>
 
@@ -20,6 +20,8 @@ session_start();
     <link rel="stylesheet" href="../public/dist/plugins/select2-4.1.0-rc.0/css/select2.min.css">
     <link rel="stylesheet" href="../public/dist/plugins/intl-tel-input-17.0.19/css/intlTelInput.min.css">
     <link rel="stylesheet" href="../public/user/templates/css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- end css -->
 
     <!-- favicon -->
@@ -171,39 +173,7 @@ session_start();
 
                         <div class="col-xl-12 col-xxl-6">
                             <div class="bg-white profile-qr-code mt-32">
-                                <!-- Qr Code Div -->
-                                <div class="d-flex flex-wrap justify-content-between gap-26">
-                                    <div class="left-qr-desc">
-                                        <input type="hidden" value="2" name="user_id" id="user_id">
-                                        <div class="peofile-qr-text d-flex">
-                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.11084 1.83301L7.33203 1.83301C7.83829 1.83301 8.2487 2.24341 8.2487 2.74968C8.2487 3.25594 7.83829 3.66634 7.33203 3.66634H7.1487C6.3635 3.66634 5.82973 3.66706 5.41715 3.70076C5.01527 3.7336 4.80975 3.79311 4.66638 3.86616C4.32142 4.04193 4.04095 4.3224 3.86519 4.66736C3.79214 4.81073 3.73262 5.01625 3.69979 5.41813C3.66608 5.83071 3.66537 6.36448 3.66537 7.14968V7.33301C3.66537 7.83927 3.25496 8.24968 2.7487 8.24968C2.24244 8.24968 1.83203 7.83927 1.83203 7.33301L1.83203 7.11182C1.83202 6.37393 1.83201 5.76493 1.87254 5.26884C1.91464 4.75358 2.00499 4.27993 2.23167 3.83504C2.58321 3.14512 3.14414 2.58419 3.83407 2.23265C4.27896 2.00597 4.7526 1.91562 5.26786 1.87352C5.76395 1.83299 6.37295 1.833 7.11084 1.83301ZM16.5802 3.70076C16.1677 3.66706 15.6339 3.66634 14.8487 3.66634H14.6654C14.1591 3.66634 13.7487 3.25594 13.7487 2.74968C13.7487 2.24341 14.1591 1.83301 14.6654 1.83301L14.8866 1.83301C15.6244 1.833 16.2334 1.83299 16.7295 1.87352C17.2448 1.91562 17.7184 2.00597 18.1633 2.23265C18.8533 2.58419 19.4142 3.14512 19.7657 3.83504C19.9924 4.27993 20.0828 4.75358 20.1249 5.26884C20.1654 5.76493 20.1654 6.37392 20.1654 7.1118V7.33301C20.1654 7.83927 19.755 8.24968 19.2487 8.24968C18.7424 8.24968 18.332 7.83927 18.332 7.33301V7.14968C18.332 6.36448 18.3313 5.83071 18.2976 5.41813C18.2648 5.01625 18.2053 4.81073 18.1322 4.66736C17.9564 4.3224 17.676 4.04193 17.331 3.86616C17.1876 3.79311 16.9821 3.7336 16.5802 3.70076ZM1.83203 10.9997C1.83203 10.4934 2.24244 10.083 2.7487 10.083H2.75787C3.26413 10.083 3.67453 10.4934 3.67453 10.9997C3.67453 11.5059 3.26413 11.9163 2.75787 11.9163H2.7487C2.24244 11.9163 1.83203 11.5059 1.83203 10.9997ZM5.95703 10.9997C5.95703 10.4934 6.36744 10.083 6.8737 10.083H6.88287C7.38913 10.083 7.79953 10.4934 7.79953 10.9997C7.79953 11.5059 7.38913 11.9163 6.88287 11.9163H6.8737C6.36744 11.9163 5.95703 11.5059 5.95703 10.9997ZM10.082 10.9997C10.082 10.4934 10.4924 10.083 10.9987 10.083H11.0079C11.5141 10.083 11.9245 10.4934 11.9245 10.9997C11.9245 11.5059 11.5141 11.9163 11.0079 11.9163H10.9987C10.4924 11.9163 10.082 11.5059 10.082 10.9997ZM14.207 10.9997C14.207 10.4934 14.6174 10.083 15.1237 10.083H15.1329C15.6391 10.083 16.0495 10.4934 16.0495 10.9997C16.0495 11.5059 15.6391 11.9163 15.1329 11.9163H15.1237C14.6174 11.9163 14.207 11.5059 14.207 10.9997ZM18.332 10.9997C18.332 10.4934 18.7424 10.083 19.2487 10.083H19.2579C19.7641 10.083 20.1745 10.4934 20.1745 10.9997C20.1745 11.5059 19.7641 11.9163 19.2579 11.9163H19.2487C18.7424 11.9163 18.332 11.5059 18.332 10.9997ZM2.7487 13.7497C3.25496 13.7497 3.66537 14.1601 3.66537 14.6663V14.8497C3.66537 15.6349 3.66608 16.1686 3.69979 16.5812C3.73262 16.9831 3.79214 17.1886 3.86519 17.332C4.04096 17.677 4.32142 17.9574 4.66638 18.1332C4.80975 18.2062 5.01527 18.2658 5.41715 18.2986C5.82973 18.3323 6.3635 18.333 7.1487 18.333H7.33203C7.83829 18.333 8.2487 18.7434 8.2487 19.2497C8.2487 19.7559 7.83829 20.1663 7.33203 20.1663H7.11082C6.37294 20.1664 5.76395 20.1664 5.26786 20.1258C4.7526 20.0837 4.27896 19.9934 3.83407 19.7667C3.14414 19.4152 2.58321 18.8542 2.23167 18.1643C2.00499 17.7194 1.91464 17.2458 1.87254 16.7305C1.83201 16.2344 1.83202 15.6254 1.83203 14.8875L1.83203 14.6663C1.83203 14.1601 2.24244 13.7497 2.7487 13.7497ZM19.2487 13.7497C19.755 13.7497 20.1654 14.1601 20.1654 14.6663V14.8876C20.1654 15.6254 20.1654 16.2344 20.1249 16.7305C20.0828 17.2458 19.9924 17.7194 19.7657 18.1643C19.4142 18.8542 18.8533 19.4152 18.1633 19.7667C17.7184 19.9934 17.2448 20.0837 16.7295 20.1258C16.2334 20.1664 15.6245 20.1664 14.8866 20.1663H14.6654C14.1591 20.1663 13.7487 19.7559 13.7487 19.2497C13.7487 18.7434 14.1591 18.333 14.6654 18.333H14.8487C15.6339 18.333 16.1677 18.3323 16.5802 18.2986C16.9821 18.2658 17.1876 18.2062 17.331 18.1332C17.676 17.9574 17.9564 17.677 18.1322 17.332C18.2053 17.1886 18.2648 16.9831 18.2976 16.5812C18.3313 16.1686 18.332 15.6349 18.332 14.8497V14.6663C18.332 14.1601 18.7424 13.7497 19.2487 13.7497Z" fill="currentColor" />
-                                            </svg>
-                                            <div class="peofile-qr-body-text ml-12">
-                                                <p class="mb-0 f-16 leading-20 gilroy-medium text-dark mt-3p">Profile QR
-                                                    Code</p>
-                                                <p class="mt-8 mb-0 f-13 leading-20 gilroy-medium text-gray-100 w-258">
-                                                    Use the QR code to easily handle your transactions.</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex print-update-code mt-20">
-                                            <a href="javascript:void(0)" class="print-code bg-primary text-white green-btn d-flex gap-2 align-items-center" id="printQrCodeBtn">
-                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M3.23077 12.8333H10.7692V10.5H3.23077V12.8333ZM3.23077 7H10.7692V3.5H9.42308C9.19872 3.5 9.00801 3.41493 8.85096 3.24479C8.69391 3.07465 8.61538 2.86806 8.61538 2.625V1.16667H3.23077V7ZM12.9231 7.58333C12.9231 7.42535 12.8698 7.28863 12.7632 7.17318C12.6567 7.05773 12.5304 7 12.3846 7C12.2388 7 12.1126 7.05773 12.006 7.17318C11.8994 7.28863 11.8462 7.42535 11.8462 7.58333C11.8462 7.74132 11.8994 7.87804 12.006 7.99349C12.1126 8.10894 12.2388 8.16667 12.3846 8.16667C12.5304 8.16667 12.6567 8.10894 12.7632 7.99349C12.8698 7.87804 12.9231 7.74132 12.9231 7.58333ZM14 7.58333V11.375C14 11.454 13.9734 11.5224 13.9201 11.5801C13.8668 11.6378 13.8037 11.6667 13.7308 11.6667H11.8462V13.125C11.8462 13.3681 11.7676 13.5747 11.6106 13.7448C11.4535 13.9149 11.2628 14 11.0385 14H2.96154C2.73718 14 2.54647 13.9149 2.38942 13.7448C2.23237 13.5747 2.15385 13.3681 2.15385 13.125V11.6667H0.269231C0.196314 11.6667 0.133213 11.6378 0.0799279 11.5801C0.0266426 11.5224 0 11.454 0 11.375V7.58333C0 7.1033 0.158453 6.69162 0.475361 6.34831C0.792268 6.00499 1.17228 5.83333 1.61538 5.83333H2.15385V0.875C2.15385 0.631944 2.23237 0.425347 2.38942 0.255208C2.54647 0.0850694 2.73718 0 2.96154 0H8.61538C8.83974 0 9.08654 0.0607639 9.35577 0.182292C9.625 0.303819 9.83814 0.449653 9.99519 0.619792L11.274 2.00521C11.4311 2.17535 11.5657 2.40625 11.6779 2.69792C11.7901 2.98958 11.8462 3.25694 11.8462 3.5V5.83333H12.3846C12.8277 5.83333 13.2077 6.00499 13.5246 6.34831C13.8415 6.69162 14 7.1033 14 7.58333Z" fill="currentColor" />
-                                                </svg>
-                                                <span class="print-code-text f-13 leading-20">Print Code</span>
-                                            </a>
-                                            <a href="javascript:void(0)" class="ml-12 update-code text-gray-100 d-flex justify-content-center align-items-center" id="updateQrCodeBtn">
-                                                <span class="print-code-text f-13 leading-20" id="updateQrCodeBtnText">Update Code</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="right-qr-code">
-                                        <div class="profile-qr-img" id="userProfileQrCode">
-                                            <img class="qrCodeImage" src="../public/uploads/qrcode/user/1688455489.jpg" alt="QrCode">
-                                        </div>
-                                    </div>
-                                </div>
+                                <h4>Login details</h4>
                                 <!-- Password Div -->
                                 <div class="profile-qr-bootom d-flex justify-content-between align-items-center mt-26">
                                     <div class="d-flex align-items-center">
@@ -237,8 +207,7 @@ session_start();
                                                         </button>
                                                     </div>
                                                     <div class="modal-body modal-body-pxy">
-                                                        <form method="post" action="https://demo.paymoney.techvill.net/prifile/update_password" id="profileResetPasswordForm">
-                                                            <input type="hidden" name="_token" value="PFhVNJMPXGAl78xl7DN1x28WvuRvz2vpVljgxMPU" autocomplete="off">
+                                                        <form id="profileResetPasswordForm">
                                                             <div>
                                                                 <div class="row">
                                                                     <div class="col-md-12">
@@ -289,7 +258,7 @@ session_start();
                                                             </div>
                                                             <div class="row mt-20">
                                                                 <div class="col-md-12 pd-bottom pb-2">
-                                                                    <button type="submit" class="btn bg-primary add-option-btn w-100 setting-btn f-16 leading-20 gilroy-medium" id="profileResetPasswordSubmitBtn">
+                                                                    <button type="button" class="btn bg-primary add-option-btn w-100 setting-btn f-16 leading-20 gilroy-medium" id="updatePasswordBtn">
                                                                         <div class="spinner spinner-border text-white spinner-border-sm mx-2 d-none" role="status">
                                                                             <span class="visually-hidden"></span>
                                                                         </div>
@@ -314,7 +283,7 @@ session_start();
                                         <p class="ml-12 mb-0 f-16 leading-20 gilroy-medium text-dark">Email Address</p>
                                     </div>
                                     <p class="mb-0 f-15 leading-18 gilroy-medium d-flex align-items-center text-gray-100 responsive-mail-text">
-                                        irish@gmail.com</p>
+                                        <?= $email ?></p>
                                 </div>
                             </div>
                         </div>
@@ -353,7 +322,7 @@ session_start();
                                                         <div class="label-top mt-withdraw">
                                                             <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 r-mt-amount r-mt-6">First
                                                                 Name <span class="f-16 text-F30">*</span></label>
-                                                            <input type="text" class="form-control input-form-control input-form-control-withdraw apply-bg" name="first_name" id="first_name" value="<?= $_SESSION['fname'] ?>" required data-value-missing="This field is required.">
+                                                            <input type="text" class="form-control input-form-control input-form-control-withdraw apply-bg" name="first_name" id="first_name" value="<?= $fname ?>" required data-value-missing="This field is required.">
                                                         </div>
                                                     </div>
                                                     <!-- Last Name -->
@@ -361,7 +330,7 @@ session_start();
                                                         <div class="label-top mt-withdraw position-r">
                                                             <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 r-mt-amount r-mt-6">Last
                                                                 Name <span class="f-16 text-F30">*</span></label>
-                                                            <input type="text" class="form-control input-form-control input-form-control-withdraw apply-bg" name="last_name" id="last_name" value="<?= $_SESSION['lname'] ?>" required data-value-missing="This field is required.">
+                                                            <input type="text" class="form-control input-form-control input-form-control-withdraw apply-bg" name="last_name" id="last_name" value="<?= $lname ?>" required data-value-missing="This field is required.">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -369,8 +338,8 @@ session_start();
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="label-top mt-withdraw">
-                                                            <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-amount r-mt-6"><?= $_SESSION['phone'] ?></label>
-                                                            <input type="tel" class="form-control apply-bg" id="phone" name="phone">
+                                                            <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-amount r-mt-6">Phone</label>
+                                                            <input type="tel" class="form-control apply-bg" id="phone" name="phone" value="<?= $phone ?>">
                                                             <span id="phone-error"></span>
                                                             <span id="tel-error"></span>
                                                         </div>
@@ -382,7 +351,7 @@ session_start();
                                                         <div class="label-top mt-withdraw">
                                                             <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-amount r-mt-6">Adress
                                                                 1</label>
-                                                            <textarea class="form-control input-form-control input-form-control-withdraw apply-bg" name="address_1" id="address_1" rows="2" value=""><?= $_SESSION['address1'] ?></textarea>
+                                                            <textarea class="form-control input-form-control input-form-control-withdraw apply-bg" name="address_1" id="address_1" rows="2" value=""><?= $address1 ?></textarea>
                                                         </div>
                                                     </div>
                                                     <!-- Adress 2 -->
@@ -390,7 +359,7 @@ session_start();
                                                         <div class="label-top mt-withdraw">
                                                             <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-amount r-mt-6">Adress
                                                                 2</label>
-                                                            <textarea class="form-control input-form-control input-form-control-withdraw apply-bg" name="address_2" id="address_2" rows="2"><?= $_SESSION['address2'] ?></textarea>
+                                                            <textarea class="form-control input-form-control input-form-control-withdraw apply-bg" name="address_2" id="address_2" rows="2"><?= $address2 ?></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -399,14 +368,14 @@ session_start();
                                                     <div class="col-6 column-pr-unset2">
                                                         <div class="label-top mt-withdraw">
                                                             <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-amount r-mt-6">City</label>
-                                                            <input type="text" class="form-control input-form-control input-form-control-withdraw apply-bg" name="city" id="city" value="<?= $_SESSION['city'] ?>">
+                                                            <input type="text" class="form-control input-form-control input-form-control-withdraw apply-bg" name="city" id="city" value="<?= $city ?>">
                                                         </div>
                                                     </div>
                                                     <!-- State -->
                                                     <div class="col-6 column-pl-unset2">
                                                         <div class="label-top mt-withdraw position-r">
                                                             <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-amount r-mt-6">State</label>
-                                                            <input type="text" class="form-control input-form-control input-form-control-withdraw apply-bg" name="state" id="state" value="<?= $_SESSION['state'] ?>">
+                                                            <input type="text" class="form-control input-form-control input-form-control-withdraw apply-bg" name="state" id="state" value="<?= $state ?>">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -417,8 +386,9 @@ session_start();
                                                     <div class="col-6 column-pr-unset2">
                                                         <div class="param-ref param-ref-withdraw param-ref-withdraw-modal money-ref-2">
                                                             <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-0">Country</label>
-                                                            <select class="select2" name="country_id" id="country_id">
-                                                                <option value="Afghanistan" selected>Afghanistan</option>
+                                                            <select class="select2" name="country_id" id="country" value="<?= $country ?>">
+                                                                <option value="<?= $country ?>"><?= $country ?></option>
+                                                                <option value="Afghanistan">Afghanistan</option>
                                                                 <option value="Albania">Albania</option>
                                                                 <option value="Algeria">Algeria</option>
                                                                 <option value="American">American Samoa</option>
@@ -682,7 +652,8 @@ session_start();
                                                         <div class="param-ref param-ref-withdraw param-ref-withdraw-modal money-ref-2">
                                                             <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-0">Time
                                                                 Zone</label>
-                                                            <select class="select2" name="timezone" id="timezone">
+                                                            <select class="select2" name="timezone" id="timezone" value="<?= $timezone ?>">
+                                                                <option value="<?= $timezone ?>"><?= $timezone ?></option>
                                                                 <option value="Africa/Abidjan">UTC/GMT +00:00 -
                                                                     Africa/Abidjan</option>
                                                                 <option value="Africa/Accra">UTC/GMT +00:00 -
@@ -1137,7 +1108,7 @@ session_start();
                                                                     Asia/Colombo</option>
                                                                 <option value="Asia/Damascus">UTC/GMT +03:00 -
                                                                     Asia/Damascus</option>
-                                                                <option value="Asia/Dhaka" selected>UTC/GMT +06:00 -
+                                                                <option value="Asia/Dhaka">UTC/GMT +06:00 -
                                                                     Asia/Dhaka</option>
                                                                 <option value="Asia/Dili">UTC/GMT +09:00 - Asia/Dili
                                                                 </option>
@@ -1526,11 +1497,11 @@ session_start();
                                                 </div>
                                                 <div class="row mt-20">
                                                     <div class="col-md-12 pd-bottom pb-2">
-                                                        <button type="submit" class="btn bg-primary add-option-btn w-100 setting-btn f-16 leading-20 gilroy-medium" id="profileUpdateSubmitBtn">
+                                                        <button type="button" class="btn bg-primary add-option-btn w-100 setting-btn f-16 leading-20 gilroy-medium" id="updateProfileBtn">
                                                             <div class="spinner spinner-border text-white spinner-border-sm mx-2 d-none" role="status">
                                                                 <span class="visually-hidden"></span>
                                                             </div>
-                                                            <span id="profileUpdateSubmitBtnText">Save Changes</span>
+                                                            <span id="">Save Changes</span>
                                                         </button>
                                                     </div>
                                                 </div>
@@ -1545,44 +1516,44 @@ session_start();
                             <div class="left-profile-info w-50">
                                 <div class="d-flex gap-3 justify-content-between profile-borders-bottom">
                                     <p class="mb-0 f-15 leading-18 text-dark gilroy-medium text-align-initial">Name</p>
-                                    <p class="mb-0 f-15 leading-18 text-gray-100 gilroy-medium text-align-end">Irish
-                                        Watson</p>
+                                    <p class="mb-0 f-15 leading-18 text-gray-100 gilroy-medium text-align-end"><?= $fullname ?></p>
                                 </div>
                                 <div class="d-flex gap-3 justify-content-between profile-borders-bottom">
                                     <p class="mb-0 f-15 leading-18 text-dark gilroy-medium text-align-initial">Phone</p>
-                                    <p class="mb-0 f-15 leading-18 text-gray gilroy-medium text-align-end">N/A</p>
+                                    <p class="mb-0 f-15 leading-18 text-gray gilroy-medium text-align-end"><?= $phone ?></p>
                                 </div>
                                 <div class="d-flex gap-3 justify-content-between profile-borders-bottom">
                                     <p class="mb-0 f-15 leading-18 text-dark gilroy-medium text-align-initial">Address 1
                                     </p>
-                                    <p class="mb-0 f-15 leading-18 text-gray-100 gilroy-medium text-align-end"></p>
+                                    <p class="mb-0 f-15 leading-18 text-gray-100 gilroy-medium text-align-end"><?= $address1 ?></p>
                                 </div>
-                                <div class="d-flex gap-3 justify-content-between profile-bottom b-unset">
+                                <div class="d-flex gap-3 justify-content-between profile-borders-bottom">
                                     <p class="mb-0 f-15 leading-18 text-dark gilroy-medium text-align-initial">Address 2
                                     </p>
-                                    <p class="mb-0 f-15 leading-18 text-gray-100 gilroy-medium text-align-end">N/A</p>
+                                    <p class="mb-0 f-15 leading-18 text-gray-100 gilroy-medium text-align-end"><?= $address2 ?></p>
                                 </div>
+
                             </div>
                             <div class="ml-76 left-profile-info w-50">
                                 <div class="d-flex gap-3 justify-content-between profile-borders-bottom responsive-mtop">
                                     <p class="mb-0 f-15 leading-18 text-dark gilroy-medium text-align-initial">City</p>
-                                    <p class="mb-0 f-15 leading-18 text-gray-100 gilroy-medium text-align-end">N/A</p>
+                                    <p class="mb-0 f-15 leading-18 text-gray-100 gilroy-medium text-align-end"><?= $city ?></p>
                                 </div>
                                 <div class="d-flex gap-3 justify-content-between profile-borders-bottom">
                                     <p class="mb-0 f-15 leading-18 text-dark gilroy-medium text-align-initial">State</p>
-                                    <p class="mb-0 f-15 leading-18 text-gray-100 gilroy-medium text-align-end">N/A</p>
+                                    <p class="mb-0 f-15 leading-18 text-gray-100 gilroy-medium text-align-end"><?= $state ?></p>
                                 </div>
                                 <div class="d-flex gap-3 justify-content-between profile-borders-bottom">
                                     <p class="mb-0 f-15 leading-18 text-dark gilroy-medium text-align-initial">Country
                                     </p>
                                     <p class="mb-0 f-15 leading-18 text-gray-100 gilroy-medium text-align-end">
-                                        Afghanistan</p>
+                                        <?= $country ?></p>
                                 </div>
                                 <div class="d-flex gap-3 justify-content-between profile-bottom b-unset">
                                     <p class="mb-0 f-15 leading-18 text-dark gilroy-medium text-align-initial">Time Zone
                                     </p>
                                     <p class="mb-0 f-15 leading-18 text-gray-100 gilroy-medium text-align-end">
-                                        Asia/Dhaka</p>
+                                        <?= $timezone ?></p>
                                 </div>
                             </div>
                         </div>
@@ -1628,6 +1599,8 @@ session_start();
     <script src="../public/user/templates/js/chart.umd.min.js"></script>
     <script src="../public/user/templates/js/main.min.js"></script>
     <script src="../public/user/customs/js/common.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <script type="text/javascript">
         var SITE_URL = "https://demo.paymoney.techvill.net";
@@ -1635,6 +1608,274 @@ session_start();
         var CRYPTODP = "0.00000000";
 
         $(document).ready(function() {
+            const updateBtn = $('#updateProfileBtn')
+            updateBtn.on('click', () => {
+                updateBtn.html("Saving...")
+                const fname = $('#first_name').val()
+                const lname = $('#last_name').val()
+                const phone = $('#phone').val()
+                const state = $('#state').val()
+                const city = $('#city').val()
+                const country = $('#country').val()
+                const timezone = $('#timezone').val()
+                const address1 = $('#address_1').val()
+                const address2 = $('#address_2').val()
+
+                if (!fname) {
+                    toastr.error("Firstname is empty", "Required", {
+                        positionClass: "toast-top-center",
+                        timeOut: 5e3,
+                        closeButton: !0,
+                        debug: !1,
+                        newestOnTop: !0,
+                        progressBar: !0,
+                        preventDuplicates: !0,
+                        onclick: null,
+                        showDuration: "300",
+                        hideDuration: "1000",
+                        extendedTimeOut: "1000",
+                        showEasing: "swing",
+                        hideEasing: "linear",
+                        showMethod: "fadeIn",
+                        hideMethod: "fadeOut",
+                        tapToDismiss: !1
+                    })
+                    updateBtn.html('Save Changes')
+                } else if (!lname) {
+                    toastr.error("Lastname is empty", "Required", {
+                        positionClass: "toast-top-center",
+                        timeOut: 5e3,
+                        closeButton: !0,
+                        debug: !1,
+                        newestOnTop: !0,
+                        progressBar: !0,
+                        preventDuplicates: !0,
+                        onclick: null,
+                        showDuration: "300",
+                        hideDuration: "1000",
+                        extendedTimeOut: "1000",
+                        showEasing: "swing",
+                        hideEasing: "linear",
+                        showMethod: "fadeIn",
+                        hideMethod: "fadeOut",
+                        tapToDismiss: !1
+                    })
+                    updateBtn.html('Save Changes')
+                } else {
+                    $.ajax({
+                        url: '../backend/actions/updateProfile.php',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {
+                            fname: fname,
+                            lname: lname,
+                            phone: phone,
+                            address1: address1,
+                            address2: address2,
+                            state: state,
+                            country: country,
+                            city: city,
+                            timezone: timezone
+                        },
+                        success: (res) => {
+                            if (res.header == 'updated') {
+                                toastr.success("Your personal profile was successfully updated", "Updated", {
+                                    positionClass: "toast-top-center",
+                                    timeOut: 5e3,
+                                    closeButton: !0,
+                                    debug: !1,
+                                    newestOnTop: !0,
+                                    progressBar: !0,
+                                    preventDuplicates: !0,
+                                    onclick: null,
+                                    showDuration: "300",
+                                    hideDuration: "1000",
+                                    extendedTimeOut: "1000",
+                                    showEasing: "swing",
+                                    hideEasing: "linear",
+                                    showMethod: "fadeIn",
+                                    hideMethod: "fadeOut",
+                                    tapToDismiss: !1
+                                })
+                                updateBtn.html('Save Changes')
+                                window.setTimeout(() => {
+                                    window.location.reload();
+                                }, 1000)
+                            } else {
+                                toastr.error("An error occurred", "Error", {
+                                    positionClass: "toast-top-center",
+                                    timeOut: 5e3,
+                                    closeButton: !0,
+                                    debug: !1,
+                                    newestOnTop: !0,
+                                    progressBar: !0,
+                                    preventDuplicates: !0,
+                                    onclick: null,
+                                    showDuration: "300",
+                                    hideDuration: "1000",
+                                    extendedTimeOut: "1000",
+                                    showEasing: "swing",
+                                    hideEasing: "linear",
+                                    showMethod: "fadeIn",
+                                    hideMethod: "fadeOut",
+                                    tapToDismiss: !1
+                                })
+                                updateBtn.html('Save Changes')
+                            }
+                        }
+                    })
+                }
+            })
+
+            const updatePasswordBtn = $('#updatePasswordBtn')
+            updatePasswordBtn.on('click', () => {
+                updatePasswordBtn.html('Updating...')
+
+                const oldPass = $('#old_password').val()
+                const newPass = $('#password').val()
+                const cPass = $('#password_confirmation').val()
+
+                if (!oldPass) {
+                    toastr.error("Input old password", "Required", {
+                        positionClass: "toast-top-center",
+                        timeOut: 5e3,
+                        closeButton: !0,
+                        debug: !1,
+                        newestOnTop: !0,
+                        progressBar: !0,
+                        preventDuplicates: !0,
+                        onclick: null,
+                        showDuration: "300",
+                        hideDuration: "1000",
+                        extendedTimeOut: "1000",
+                        showEasing: "swing",
+                        hideEasing: "linear",
+                        showMethod: "fadeIn",
+                        hideMethod: "fadeOut",
+                        tapToDismiss: !1
+                    })
+                    updatePasswordBtn.html('Save changes')
+                } else if (!newPass) {
+                    toastr.error("New password cannot be empty", "Required", {
+                        positionClass: "toast-top-center",
+                        timeOut: 5e3,
+                        closeButton: !0,
+                        debug: !1,
+                        newestOnTop: !0,
+                        progressBar: !0,
+                        preventDuplicates: !0,
+                        onclick: null,
+                        showDuration: "300",
+                        hideDuration: "1000",
+                        extendedTimeOut: "1000",
+                        showEasing: "swing",
+                        hideEasing: "linear",
+                        showMethod: "fadeIn",
+                        hideMethod: "fadeOut",
+                        tapToDismiss: !1
+                    })
+                    updatePasswordBtn.html('Save changes')
+                } else if (!cPass) {
+                    toastr.error("Confirm your new password", "Required", {
+                        positionClass: "toast-top-center",
+                        timeOut: 5e3,
+                        closeButton: !0,
+                        debug: !1,
+                        newestOnTop: !0,
+                        progressBar: !0,
+                        preventDuplicates: !0,
+                        onclick: null,
+                        showDuration: "300",
+                        hideDuration: "1000",
+                        extendedTimeOut: "1000",
+                        showEasing: "swing",
+                        hideEasing: "linear",
+                        showMethod: "fadeIn",
+                        hideMethod: "fadeOut",
+                        tapToDismiss: !1
+                    })
+                    updatePasswordBtn.html('Save changes')
+                } else if (newPass !== cPass) {
+                    toastr.error("Passwords do not match", "Error", {
+                        positionClass: "toast-top-center",
+                        timeOut: 5e3,
+                        closeButton: !0,
+                        debug: !1,
+                        newestOnTop: !0,
+                        progressBar: !0,
+                        preventDuplicates: !0,
+                        onclick: null,
+                        showDuration: "300",
+                        hideDuration: "1000",
+                        extendedTimeOut: "1000",
+                        showEasing: "swing",
+                        hideEasing: "linear",
+                        showMethod: "fadeIn",
+                        hideMethod: "fadeOut",
+                        tapToDismiss: !1
+                    })
+                    updatePasswordBtn.html('Save changes')
+                } else {
+                    $.ajax({
+                        url: '../backend/actions/updatePassword.php',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {
+                            oldPass: oldPass,
+                            newPass: newPass
+                        },
+                        success: (res) => {
+                            if (res.header == 'updated') {
+                                toastr.success("Login to restart your session", "Successful", {
+                                    positionClass: "toast-top-center",
+                                    timeOut: 5e3,
+                                    closeButton: !0,
+                                    debug: !1,
+                                    newestOnTop: !0,
+                                    progressBar: !0,
+                                    preventDuplicates: !0,
+                                    onclick: null,
+                                    showDuration: "300",
+                                    hideDuration: "1000",
+                                    extendedTimeOut: "1000",
+                                    showEasing: "swing",
+                                    hideEasing: "linear",
+                                    showMethod: "fadeIn",
+                                    hideMethod: "fadeOut",
+                                    tapToDismiss: !1
+                                })
+                                setTimeout(() => {
+                                    window.location = '../logout'
+                                }, 1500)
+                                updatePasswordBtn.html('Save changes')
+                            } else if (res.header == 'failed') {
+                                toastr.error("Old password is not correct", "Error", {
+                                    positionClass: "toast-top-center",
+                                    timeOut: 5e3,
+                                    closeButton: !0,
+                                    debug: !1,
+                                    newestOnTop: !0,
+                                    progressBar: !0,
+                                    preventDuplicates: !0,
+                                    onclick: null,
+                                    showDuration: "300",
+                                    hideDuration: "1000",
+                                    extendedTimeOut: "1000",
+                                    showEasing: "swing",
+                                    hideEasing: "linear",
+                                    showMethod: "fadeIn",
+                                    hideMethod: "fadeOut",
+                                    tapToDismiss: !1
+                                })
+                                updatePasswordBtn.html('Save changes')
+                            }
+                        }
+                    })
+                }
+            })
+
+
+
             $("#select_language").on("change", function() {
                 if ($("#select_language select").val() == 'ar') {
                     localStorage.setItem('lang', 'ar');
@@ -1679,26 +1920,6 @@ session_start();
     <script src="../public/dist/plugins/intl-tel-input-17.0.19/js/intlTelInput-jquery.min.js" type="text/javascript"></script>
     <script src="../public/dist/js/isValidPhoneNumber.min.js" type="text/javascript"></script>
     <script src="../public/dist/libraries/sweetalert/sweetalert-unpkg.min.js" type="text/javascript"></script>
-    <script>
-        'use strict';
-        var csrfToken = 'PFhVNJMPXGAl78xl7DN1x28WvuRvz2vpVljgxMPU';
-        var userId = $('#id').val();
-        var countryShortCode = 'US';
-        var utilsScriptLoadingPath = '../public/dist/plugins/intl-tel-input-17.0.19/js/utils.min.js';
-        var validPhoneNumberErrorText = 'Please enter a valid international phone number.';
-        var formattedPhoneNumber = "";
-        var defaultCountry = "";
-        var carrierCode = "";
-        var printQrCodeUrl = "https://demo.paymoney.techvill.net/profile/qr-code-print/2/user";
-        var updateQrCodeUrl = "https://demo.paymoney.techvill.net/profile/qr-code/add-or-update";
-        var profileImageUploadUrl = "https://demo.paymoney.techvill.net/profile-image-upload";
-        var duplicatePhoneCheckUrl = "https://demo.paymoney.techvill.net/profile/duplicate-phone-number-check";
-        var pleaseWaitText = "Please Wait";
-        var loadingText = 'Loading...';
-        var errorText = 'Error!';
-        var updateQrCodeText = "Update QR Code";
-        var submitButtonText = "Submitting...";
-    </script>
     <script src="../public/user/customs/js/phone.min.js" type="text/javascript"></script>
     <script src="../public/user/customs/js/profile.min.js" type="text/javascript"></script>
     <!-- end js -->

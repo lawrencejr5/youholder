@@ -19,6 +19,13 @@ if (isset($_POST['email'])) {
             $_SESSION['fname'] = $u['fname'];
             $_SESSION['lname'] = $u['lname'];
             $_SESSION['email'] = $u['email'];
+            $_SESSION['phone'] = $u['phone'];
+            $_SESSION['address1'] = $u['address1'];
+            $_SESSION['address2'] = $u['address2'];
+            $_SESSION['country'] = $u['country'];
+            $_SESSION['city'] = $u['city'];
+            $_SESSION['state'] = $u['state'];
+            $_SESSION['timezone'] = $u['timezone'];
         }
         $response['header'] = 'signin';
     } elseif ($login->rowCount() == 0) {

@@ -1,3 +1,7 @@
+<?php
+include '../backend/udata.php';
+!$_SESSION['id'] && header('location: ../../login');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
