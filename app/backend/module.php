@@ -56,6 +56,17 @@ class Modules extends Connection
             echo $e->getMessage();
         }
     }
+
+    public function updateProfile()
+    {
+        try {
+            //code...
+            $this->sql = "UPDATE users SET ";
+        } catch (PDOException $e) {
+            //throw $th;
+            echo 'false ' . $e->getMessage();
+        }
+    }
 }
 
 $modules = new Modules();
