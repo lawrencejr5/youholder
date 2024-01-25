@@ -1,6 +1,5 @@
 <?php
-session_start();
-$fullname = $_SESSION['fname'] . ' ' . $_SESSION['lname'];
+include '../backend/udata.php';
 !$_SESSION['id'] && header('location: ../../login');
 ?>
 
@@ -63,7 +62,7 @@ $fullname = $_SESSION['fname'] . ' ' . $_SESSION['lname'];
                     <div class="d-flex justify-content-between dash-left-profile dash-profile-flex-wrap">
                         <div class="dash-left-profile d-flex gap-14">
                             <div class="dash-left-img">
-                                <img src="../public/uploads/user-profile/1532005837.jpg" alt="Profile" class="img-fluid">
+                                <img src="../backend/actions/uploads/<?= $profile_pic ?>" alt="Profile" class="img-fluid">
                             </div>
                             <div class="qr-icon">
                                 <p class="mb-0 f-32 gilroy-Semibold text-dark"><span><?= $fullname ?></span>

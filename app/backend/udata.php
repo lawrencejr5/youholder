@@ -16,6 +16,7 @@ foreach ($data['user'] as $u) {
     $fullname = $u['fname'] . ' ' . $u['lname'];
     $email = $u['email'];
     $phone = $u['phone'];
+    $profile_pic = $u['profile_pic'];
     $address1 = $u['address1'];
     $address2 = $u['address2'];
     $city = $u['city'];

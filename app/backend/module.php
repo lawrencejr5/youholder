@@ -117,6 +117,20 @@ class Modules extends Connection
         }
     }
 
+    public function updateProfilePic($pic, $id)
+    {
+        try {
+            $this->sql = "UPDATE users SET profile_pic = :profile_pic WHERE id = :id";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':profile_pic', $pic);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $e) {
+            echo 'Error' . $e->getMessage();
+        }
+    }
+
     // Fetch user data
     public function getUserData($id)
     {

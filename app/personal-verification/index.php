@@ -1,8 +1,7 @@
 <?php
-session_start();
+include '../backend/udata.php';
 !$_SESSION['id'] && header('location: ../../login');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,7 +78,7 @@ session_start();
 
                                         <div class="mt-28 param-ref">
                                             <label class="gilroy-medium text-gray-100 mb-2 f-15">Identity Type</label>
-                                            <span class="gilroy-medium text-success f-15"> (approved)</span>
+                                            <!-- <span class="gilroy-medium text-success f-15"> (approved)</span> -->
                                             <div class="avoid-blink">
                                                 <select class="select2" data-minimum-results-for-search="Infinity" name="identity_type" id="identity_type" required data-value-missing="This field is required.">
                                                     <option value="national_id">National ID</option>
@@ -91,24 +90,28 @@ session_start();
                                         <div class="label-top mt-20">
                                             <label class="gilroy-medium text-gray-100 f-15 mb-2">Identity Number</label>
                                             <input type="text" class="form-control input-form-control apply-bg l-s2" name="identity_number" id="identity_number" value="1520004698" required data-value-missing="This field is required.">
-
                                         </div>
-
                                         <div class="attach-file attach-print amount-label">
-                                            <label class="gilroy-medium text-B87 f-15 mb-2 mt-24 r-mt-amount r-mt-6" for="identity_file">Attach Identity Proof</label>
+                                            <label class="gilroy-medium text-B87 f-15 mb-2 mt-24 r-mt-amount r-mt-6" for="identity_file">Attach Identity Proof (Front)</label>
+                                            <input type="file" class="form-control upload-filed" name="identity_file" id="identity_file" required data-value-missing="This field is required.">
+                                        </div>
+                                        <p class="mb-0 f-11 gilroy-regular text-B87 mt-10">Upload your documents (Max: 2
+                                            mb)</p>
+                                        <div class="attach-file attach-print amount-label">
+                                            <label class="gilroy-medium text-B87 f-15 mb-2 mt-24 r-mt-amount r-mt-6" for="identity_file">Attach Identity Proof (Back)</label>
                                             <input type="file" class="form-control upload-filed" name="identity_file" id="identity_file" required data-value-missing="This field is required.">
                                         </div>
                                         <p class="mb-0 f-11 gilroy-regular text-B87 mt-10">Upload your documents (Max: 2
                                             mb)</p>
 
-                                        <div class="proof-btn-div d-flex justify-content-start mt-3">
+                                        <!-- <div class="proof-btn-div d-flex justify-content-start mt-3">
                                             <a href="https://demo.paymoney.techvill.net/kyc-proof-download/1688456042.png/identity-proof" class='btn f-10 leading-12 proof-btn p-0 border-DF bg-FFF text-dark'><span>passport.png</span>
                                                 <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect width="26" height="26" rx="4" fill="" />
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M13 8C13.2761 8 13.5 8.22386 13.5 8.5V14.2929L15.6464 12.1464C15.8417 11.9512 16.1583 11.9512 16.3536 12.1464C16.5488 12.3417 16.5488 12.6583 16.3536 12.8536L13.3536 15.8536C13.1583 16.0488 12.8417 16.0488 12.6464 15.8536L9.64645 12.8536C9.45118 12.6583 9.45118 12.3417 9.64645 12.1464C9.84171 11.9512 10.1583 11.9512 10.3536 12.1464L12.5 14.2929V8.5C12.5 8.22386 12.7239 8 13 8ZM8 17.5C8 17.2239 8.22386 17 8.5 17H17.5C17.7761 17 18 17.2239 18 17.5C18 17.7761 17.7761 18 17.5 18H8.5C8.22386 18 8 17.7761 8 17.5Z" fill="currentColor" />
                                                 </svg>
                                             </a>
-                                        </div>
+                                        </div> -->
 
                                         <div class="d-grid">
                                             <button type="submit" class="btn btn-primary px-4 py-2 mt-3" id="identitiyVerifySubmitBtn">
