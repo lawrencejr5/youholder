@@ -60,22 +60,19 @@ include '../backend/udata.php';
 
                     <!-- main-containt -->
                     <div class="bg-white pxy-62 exchange pt-62 shadow" id="identitiyVerify">
-                        <p class="mb-0 f-26 gilroy-Semibold text-uppercase text-center">Settings</p>
+                        <p class="mb-0 f-26 gilroy-Semibold text-uppercase text-center">Identity Verification</p>
                         <div class="row">
                             <div class="col-12">
-                                <nav>
+                                <!-- <nav>
                                     <div class="nav-tab-parent d-flex justify-content-center mt-4">
                                         <div class="d-flex p-2 border-1p rounded-pill gap-1 bg-white nav-tab-child">
                                             <a href="../personal-verification" class="tablink-edit text-gray-100 tabactive">Identity Verification</a>
                                             <a href="../address-verification" class="tablink-edit text-gray-100">Address Verfication</a>
                                         </div>
                                     </div>
-                                </nav>
+                                </nav> -->
                                 <div class="mt-28 label-top">
-                                    <form method="post" action="https://demo.paymoney.techvill.net/profile/personal-id-update" enctype="multipart/form-data" id="identitiyVerifyForm">
-                                        <input type="hidden" name="_token" value="PFhVNJMPXGAl78xl7DN1x28WvuRvz2vpVljgxMPU" autocomplete="off"> <input type="hidden" value="2" name="user_id" id="user_id" />
-                                        <input type="hidden" value="7" name="existingIdentityFileID" id="existingIdentityFileID" />
-
+                                    <form method="post" action="../backend/actions/personalVerification.php" enctype="multipart/form-data" id="identitiyVerifyForm">
                                         <div class="mt-28 param-ref">
                                             <label class="gilroy-medium text-gray-100 mb-2 f-15">Identity Type</label>
                                             <!-- <span class="gilroy-medium text-success f-15"> (approved)</span> -->
@@ -89,19 +86,19 @@ include '../backend/udata.php';
                                         </div>
                                         <div class="label-top mt-20">
                                             <label class="gilroy-medium text-gray-100 f-15 mb-2">Identity Number</label>
-                                            <input type="text" class="form-control input-form-control apply-bg l-s2" name="identity_number" id="identity_number" value="1520004698" required data-value-missing="This field is required.">
+                                            <input type="text" class="form-control input-form-control apply-bg l-s2" name="identity_number" id="identity_number" value="" required data-value-missing="This field is required.">
                                         </div>
                                         <div class="attach-file attach-print amount-label">
                                             <label class="gilroy-medium text-B87 f-15 mb-2 mt-24 r-mt-amount r-mt-6" for="identity_file">Attach Identity Proof (Front)</label>
-                                            <input type="file" class="form-control upload-filed" name="identity_file" id="identity_file" required data-value-missing="This field is required.">
+                                            <input type="file" class="form-control upload-filed" name="identity_file_front" id="identity_file" required data-value-missing="This field is required.">
                                         </div>
-                                        <p class="mb-0 f-11 gilroy-regular text-B87 mt-10">Upload your documents (Max: 2
+                                        <p class="mb-0 f-11 gilroy-regular text-B87 mt-10">Upload front document (Max: 2
                                             mb)</p>
                                         <div class="attach-file attach-print amount-label">
                                             <label class="gilroy-medium text-B87 f-15 mb-2 mt-24 r-mt-amount r-mt-6" for="identity_file">Attach Identity Proof (Back)</label>
-                                            <input type="file" class="form-control upload-filed" name="identity_file" id="identity_file" required data-value-missing="This field is required.">
+                                            <input type="file" class="form-control upload-filed" name="identity_file_back" id="identity_file" required data-value-missing="This field is required.">
                                         </div>
-                                        <p class="mb-0 f-11 gilroy-regular text-B87 mt-10">Upload your documents (Max: 2
+                                        <p class="mb-0 f-11 gilroy-regular text-B87 mt-10">Upload back document (Max: 2
                                             mb)</p>
 
                                         <!-- <div class="proof-btn-div d-flex justify-content-start mt-3">
@@ -114,7 +111,7 @@ include '../backend/udata.php';
                                         </div> -->
 
                                         <div class="d-grid">
-                                            <button type="submit" class="btn btn-primary px-4 py-2 mt-3" id="identitiyVerifySubmitBtn">
+                                            <button type="submit" class="btn btn-primary px-4 py-2 mt-3" id="identitiyVerifySubmitBtn" name="verify_document">
                                                 <div class="spinner spinner-border text-white spinner-border-sm mx-2 d-none" role="status">
                                                     <span class="visually-hidden"></span>
                                                 </div>

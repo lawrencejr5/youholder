@@ -103,9 +103,9 @@ include '../backend/udata.php';
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="right-avatar-img">
+                                    <!-- <div class="right-avatar-img">
                                         <img src="../backend/actions/uploads/<?= $profile_pic ?>" alt="Profile" id="profileImage">
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <!-- Default Wallet Div -->

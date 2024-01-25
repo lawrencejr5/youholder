@@ -131,6 +131,36 @@ class Modules extends Connection
         }
     }
 
+    public function uploadPersonalVerification($id, $type, $number, $front, $back)
+    {
+        try {
+            $this->sql = "INSERT INTO personal_documents(uid, identity_type, identity_number, front, back) VALUES(:uid, :identity_type, :identity_number, :front, :back)";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $id);
+            $this->stmt->bindParam(':identity_type', $type);
+            $this->stmt->bindParam(':identity_number', $number);
+            $this->stmt->bindParam(':front', $front);
+            $this->stmt->bindParam(':back', $back);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $e) {
+            echo 'Error' . $e->getMessage();
+        }
+    }
+
+    public function uploadAddressVerification($id, $address_file)
+    {
+        try {
+            $this->sql = "INSERT INTO personal_documents(uid, address_file) VALUES(:uid, :address_file)";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $id);
+            $this->stmt->bindParam(':address_file', $address_file);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $e) {
+            echo 'Error' . $e->getMessage();
+        }
+    }
     // Fetch user data
     public function getUserData($id)
     {
