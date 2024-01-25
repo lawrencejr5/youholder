@@ -11,15 +11,14 @@ if (isset($_POST['fname'])) {
     $pass = $_POST['pass'];
     $otp = rand(100000, 999999);
 
-    $registered = $modules->register($fname, $lname, $email, $phone, $pass, $otp);
+    $registered = $modules->register($fname, $lname, $email, $phone, $pass, $subject, $otp);
 
     if ($registered == 'exists') {
         $response['header'] = 'exists';
     } elseif ($registered == 'chuwa') {
         $response['header'] = 'good';
+    } elseif ($registered == "emailFailed") {
+        $response['header'] = 'email_not_valid';
     }
-    // elseif ($registered == "email_not_valid") {
-    //     $response['header'] = 'email_not_valid';
-    // }
     echo json_encode($response);
 }

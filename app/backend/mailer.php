@@ -11,7 +11,7 @@ include "../../phpMailer/src/Exception.php";
 
 class Mailer
 {
-    function sendMyMail($toEmail,  $toName, $subject, $body)
+    public function sendMyMail($toEmail,  $toName, $subject, $body)
     {
         $mail = new PHPMailer;
         $mail->SMTPOptions = array(
@@ -36,16 +36,11 @@ class Mailer
         $mail->Subject = $subject;
         $mail->Body = $body;
         try {
-            ob_end_clean();
-            if ($mail->send()) {
-                return true;
-            } else {
-                return false;
-            }
-        } catch (Exception $e) {
-            echo $e->errorMessage();
+            $mail->send();
+        } catch (PDOException $e) {
+            return false;
         }
     }
 }
-$mailer = new Mailer();
+$mailer = new Mailer;
 // $mailer->sendMyMail('oputalawrence@gmail.com', 'ify', "verify email", '12345678');
