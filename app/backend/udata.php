@@ -6,10 +6,11 @@ include 'module.php';
 
 $data = [];
 $uID = $_SESSION['id'];
+
+
+
+// User info
 $data['user'] = $modules->getUserData($uID);
-
-
-
 foreach ($data['user'] as $u) {
     $fname = $u['fname'];
     $lname = $u['lname'];
@@ -24,3 +25,12 @@ foreach ($data['user'] as $u) {
     $country = $u['country'];
     $timezone = $u['timezone'];
 }
+
+
+// Other data
+$data['wallets'] = $modules->getAllWallets();
+$data['user_wallets'] = $modules->getAllUserWallets($uID);
+
+
+$data['personal_documents'] = $modules->getUserPersonalDocuments($uID);
+

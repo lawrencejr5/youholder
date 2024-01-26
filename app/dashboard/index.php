@@ -93,125 +93,25 @@ include '../backend/udata.php';
                         </div>
                     </div>
                     <div class="d-flex dasboard-wallet-card gap-20 flex-wrap mt-40">
-                        <div class="dash-wallet-box bg-white">
-                            <div class="d-flex justify-content-between">
-                                <div class="dash-box-one">
-                                    <p class="mb-0 gilroy-Semibold text-primary f-16 leading-20">BTC</p>
-                                    <p class="mb-0 f-12 leading-15 text-gray-100 gilroy-regular mt-1">Crypto Asset</p>
+                        <?php foreach ($data['user_wallets'] as $w) { ?>
+                            <div class="dash-wallet-box bg-white">
+                                <div class="d-flex justify-content-between">
+                                    <div class="dash-box-one">
+                                        <p class="mb-0 gilroy-Semibold text-primary f-16 leading-20"><?= $w['wallet_name'] ?></p>
+                                        <p class="mb-0 f-12 leading-15 text-gray-100 gilroy-regular mt-1"><?= $w['wallet_type'] ?></p>
+                                    </div>
+                                    <div class="dash-currency-sign d-flex justify-content-center align-items-center">
+                                        <img src="../public/uploads/currency_logos/<?= $w['wallet_img'] ?>" alt="Currency" class="img-fluid">
+                                    </div>
                                 </div>
-                                <div class="dash-currency-sign d-flex justify-content-center align-items-center">
-                                    <img src="../public/uploads/currency_logos/1661050287.png" alt="Currency" class="img-fluid">
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between mt-15">
-                                <p class="mb-0 f-24 leading-30 gilroy-Semibold l-s1 text-dark">0</p>
-                                <p class="mb-0 text-success f-12 leading-15 l-s1 gilroy-medium d-flex align-items-center">
-                                    <span></span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="dash-wallet-box bg-white">
-                            <div class="d-flex justify-content-between">
-                                <div class="dash-box-one">
-                                    <p class="mb-0 gilroy-Semibold text-primary f-16 leading-20">LTCTEST</p>
-                                    <p class="mb-0 f-12 leading-15 text-gray-100 gilroy-regular mt-1">Crypto Asset</p>
-                                </div>
-                                <div class="dash-currency-sign d-flex justify-content-center align-items-center">
-                                    <img src="../public/uploads/currency_logos/1660982923.png" alt="Currency" class="img-fluid">
+                                <div class="d-flex justify-content-between mt-15">
+                                    <p class="mb-0 f-24 leading-30 gilroy-Semibold l-s1 text-dark">0.134</p>
+                                    <p class="mb-0 text-success f-12 leading-15 l-s1 gilroy-medium d-flex align-items-center">
+                                        <span></span>
+                                    </p>
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-between mt-15">
-                                <p class="mb-0 f-24 leading-30 gilroy-Semibold l-s1 text-dark">0.0336</p>
-                                <p class="mb-0 text-success f-12 leading-15 l-s1 gilroy-medium d-flex align-items-center">
-                                    <span></span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="dash-wallet-box bg-white">
-                            <div class="d-flex justify-content-between">
-                                <div class="dash-box-one">
-                                    <p class="mb-0 gilroy-Semibold text-primary f-16 leading-20">ETH</p>
-                                    <p class="mb-0 f-12 leading-15 text-gray-100 gilroy-regular mt-1">Crypto</p>
-                                </div>
-                                <div class="dash-currency-sign d-flex justify-content-center align-items-center">
-                                    <img src="../public/uploads/currency_logos/1671520294.png" alt="Currency" class="img-fluid">
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between mt-15">
-                                <p class="mb-0 f-24 leading-30 gilroy-Semibold l-s1 text-dark">0.6172</p>
-                                <p class="mb-0 text-success f-12 leading-15 l-s1 gilroy-medium d-flex align-items-center">
-                                    <span></span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="dash-wallet-box bg-white">
-                            <div class="d-flex justify-content-between">
-                                <div class="dash-box-one">
-                                    <p class="mb-0 gilroy-Semibold text-primary f-16 leading-20">DOGETEST</p>
-                                    <p class="mb-0 f-12 leading-15 text-gray-100 gilroy-regular mt-1">Crypto Asset</p>
-                                </div>
-                                <div class="dash-currency-sign d-flex justify-content-center align-items-center">
-                                    <img src="../public/uploads/currency_logos/1671523566.png" alt="Currency" class="img-fluid">
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between mt-15">
-                                <p class="mb-0 f-24 leading-30 gilroy-Semibold l-s1 text-dark">1.74440939</p>
-                                <p class="mb-0 text-success f-12 leading-15 l-s1 gilroy-medium d-flex align-items-center">
-                                    <span></span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="dash-wallet-box bg-white">
-                            <div class="d-flex justify-content-between">
-                                <div class="dash-box-one">
-                                    <p class="mb-0 gilroy-Semibold text-primary f-16 leading-20">EUR</p>
-                                    <p class="mb-0 f-12 leading-15 text-gray-100 gilroy-regular mt-1">Fiat</p>
-                                </div>
-                                <div class="dash-currency-sign d-flex justify-content-center align-items-center">
-                                    <img src="../public/uploads/currency_logos/icons8-euro-64.png" alt="Currency" class="img-fluid">
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between mt-15">
-                                <p class="mb-0 f-24 leading-30 gilroy-Semibold l-s1 text-dark">41</p>
-                                <p class="mb-0 text-success f-12 leading-15 l-s1 gilroy-medium d-flex align-items-center">
-                                    <span></span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="dash-wallet-box bg-white">
-                            <div class="d-flex justify-content-between">
-                                <div class="dash-box-one">
-                                    <p class="mb-0 gilroy-Semibold text-primary f-16 leading-20">USD</p>
-                                    <p class="mb-0 f-12 leading-15 text-gray-100 gilroy-regular mt-1">Fiat</p>
-                                </div>
-                                <div class="dash-currency-sign d-flex justify-content-center align-items-center">
-                                    <img src="../public/uploads/currency_logos/icons8-us-dollar-64.png" alt="Currency" class="img-fluid">
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between mt-15">
-                                <p class="mb-0 f-24 leading-30 gilroy-Semibold l-s1 text-dark">115.83</p>
-                                <p class="mb-0 text-success f-12 leading-15 l-s1 gilroy-medium d-flex align-items-center">
-                                    <span>Default</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="dash-wallet-box bg-white">
-                            <div class="d-flex justify-content-between">
-                                <div class="dash-box-one">
-                                    <p class="mb-0 gilroy-Semibold text-primary f-16 leading-20">GBP</p>
-                                    <p class="mb-0 f-12 leading-15 text-gray-100 gilroy-regular mt-1">Fiat</p>
-                                </div>
-                                <div class="dash-currency-sign d-flex justify-content-center align-items-center">
-                                    <img src="../public/uploads/currency_logos/icons8-british-pound-64.png" alt="Currency" class="img-fluid">
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between mt-15">
-                                <p class="mb-0 f-24 leading-30 gilroy-Semibold l-s1 text-dark">1,977.98</p>
-                                <p class="mb-0 text-success f-12 leading-15 l-s1 gilroy-medium d-flex align-items-center">
-                                    <span></span>
-                                </p>
-                            </div>
-                        </div>
+                        <?php } ?>
                         <div class="dash-wallet-box bg-white d-flex gap-14 align-items-center h-112 cursor-pointer">
                             <div class="dash-check-all bg-white-50 d-flex justify-content-center align-items-center">
                                 <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -228,6 +128,7 @@ include '../backend/udata.php';
                                 </svg>
                             </a>
                         </div>
+
                     </div>
                     <div class="row mt-20 gy-4">
                         <div class="col-12 col-xl-4">
