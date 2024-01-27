@@ -83,6 +83,15 @@ include '../backend/udata.php';
                             </p>
                         </div>
                         <div class="px-28 helper-div">
+                            <div class="dash-right-profile d-flex align-items-end">
+                                <a href="../wallets" class="btn btn-lg btn-primary w-160">
+                                    <span class="mb-0 f-14 leading-20 gilroy-medium text-light">My Wallets</span>
+                                    <svg class="ml-10 nscaleX-1" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.25 6C4.83579 6 4.5 5.66421 4.5 5.25C4.5 4.83579 4.83579 4.5 5.25 4.5L12.75 4.5C13.1642 4.5 13.5 4.83579 13.5 5.25L13.5 12.75C13.5 13.1642 13.1642 13.5 12.75 13.5C12.3358 13.5 12 13.1642 12 12.75V7.06066L5.78033 13.2803C5.48744 13.5732 5.01256 13.5732 4.71967 13.2803C4.42678 12.9874 4.42678 12.5126 4.71967 12.2197L10.9393 6L5.25 6Z" fill="currentColor" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <br>
                             <div class="row r-mt-n">
                                 <?php foreach ($data['wallets'] as $w) { ?>
                                     <div class="col-12 col-xl-6 mt-19">
