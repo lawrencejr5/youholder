@@ -62,7 +62,7 @@ include '../backend/udata.php';
                     <div class="d-flex justify-content-between dash-left-profile dash-profile-flex-wrap">
                         <div class="dash-left-profile d-flex gap-14">
                             <div class="dash-left-img">
-                                <img src="../backend/actions/uploads/<?= $profile_pic ?>" alt="Profile" class="img-fluid">
+                                <img src="<?= $profile_pic ? "../backend/actions/uploads/" . $profile_pic : '../public/uploads/user-profile/1532005837.jpg' ?>" alt="Profile" class="img-fluid">
                             </div>
                             <div class="qr-icon">
                                 <p class="mb-0 f-32 gilroy-Semibold text-dark"><span><?= $fullname ?></span>
@@ -93,7 +93,7 @@ include '../backend/udata.php';
                         </div>
                     </div>
                     <div class="d-flex dasboard-wallet-card gap-20 flex-wrap mt-40">
-                        <?php foreach ($data['user_wallets'] as $w) { ?>
+                        <?php foreach ($data['user_walletsL'] as $w) { ?>
                             <div class="dash-wallet-box bg-white">
                                 <div class="d-flex justify-content-between">
                                     <div class="dash-box-one">
@@ -105,7 +105,14 @@ include '../backend/udata.php';
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between mt-15">
-                                    <p class="mb-0 f-24 leading-30 gilroy-Semibold l-s1 text-dark">0.134</p>
+                                    <?php
+                                    $data['total_wallet_amount'] = $modules->getAllUserWalletsAmount($uID, $w['wallet_id']);
+                                    foreach ($data['total_wallet_amount'] as $total) {
+                                    ?>
+                                        <p class="mb-0 f-24 leading-30 gilroy-Semibold l-s1 text-dark"><?= $total['amount'] ? round($total['amount'], 2) . ' ' . $w['wallet_name'] : 0 ?></p>
+                                    <?php
+                                    }
+                                    ?>
                                     <p class="mb-0 text-success f-12 leading-15 l-s1 gilroy-medium d-flex align-items-center">
                                         <span></span>
                                     </p>

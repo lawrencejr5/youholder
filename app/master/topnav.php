@@ -33,7 +33,7 @@
                 <div class="d-flex align-items-center">
                     <div class="d-flex align-items-center justify-content-center user-list">
                         <!-- <img src="../public/uploads/user-profile/1532005837.jpg" alt="Profile" class="img-fluid"> -->
-                        <img src="../backend/actions/uploads/<?= $profile_pic ?>" alt="Profile" class="img-fluid">
+                        <img src="<?= $profile_pic ? "../backend/actions/uploads/" . $profile_pic : '../public/uploads/user-profile/1532005837.jpg' ?>" alt="Profile" class="img-fluid">
                     </div>
                     <div class="ml-12 d-flex align-items-center h-78 w-134">
                         <p class="mb-0 f-14 text-dark gilroy-Semibold"><?php echo $fullname ?></p>
@@ -47,7 +47,7 @@
                 <ul class="open-notify open-drop bg-white">
                     <li class="d-flex align-items-center bg-secondary h-78 px-3">
                         <div class="d-flex align-items-center justify-content-center user-dp">
-                            <img src="../backend/actions/uploads/<?= $profile_pic ?>" alt="Profile" class="img-fluid">
+                            <img src="<?= $profile_pic ? "../backend/actions/uploads/" . $profile_pic : '../public/uploads/user-profile/1532005837.jpg' ?>" alt="Profile" class="img-fluid">
                         </div>
                         <div class="ms-3 text-white">
                             <p class="mb-0 f-15 gilroy-medium text-white"><?php echo $fullname ?></p>

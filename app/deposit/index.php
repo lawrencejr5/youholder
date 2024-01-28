@@ -18,6 +18,8 @@ include '../backend/udata.php';
     <link rel="stylesheet" href="../public/dist/libraries/bootstrap-5.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/dist/plugins/select2-4.1.0-rc.0/css/select2.min.css">
     <link rel="stylesheet" href="../public/user/templates/css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- end css -->
 
     <!-- favicon -->
@@ -60,11 +62,11 @@ include '../backend/udata.php';
                     <!-- main-containt -->
                     <div class="bg-white pxy-62 shadow" id="depositCreate">
                         <p class="mb-0 f-26 gilroy-Semibold text-uppercase text-center">Deposit Money</p>
-                        <p class="mb-0 text-center f-13 gilroy-medium text-gray mt-4 dark-A0">Step: 1 of 3</p>
+                        <p class="mb-0 text-center f-13 gilroy-medium text-gray mt-4 dark-A0">Step: 1 of 2</p>
                         <p class="mb-0 text-center f-18 gilroy-medium text-dark dark-5B mt-2">Create Deposit</p>
                         <div class="text-center"><svg class="mt-18 nscaleX-1" width="314" height="6" viewBox="0 0 314 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="100" height="6" rx="3" fill="#635BFE" />
-                                <rect class="rect-B87" x="107" width="100" height="6" rx="3" fill="#DDD3FD" />
+                                <!-- <rect class="rect-B87" x="107" width="100" height="6" rx="3" fill="#DDD3FD" /> -->
                                 <rect class="rect-B87" x="214" width="100" height="6" rx="3" fill="#DDD3FD" />
                             </svg></div>
 
@@ -74,19 +76,32 @@ include '../backend/udata.php';
 
 
                         <form method="post" action="./deposit/confirm" id="depositCreateForm">
-                            <input type="hidden" name="_token" value="PFhVNJMPXGAl78xl7DN1x28WvuRvz2vpVljgxMPU" autocomplete="off"> <input type="hidden" name="percentage_fee" id="percentage_fee" value="">
-                            <input type="hidden" name="fixed_fee" id="fixed_fee" value="">
-                            <input type="hidden" name="total_fee" id="total_fee" value="">
-
+                            <input type="hidden" value="" id="user_wallet_id">
+                            <input type="hidden" value="" id="wallet_id">
+                            <input type="hidden" value="<?= $uID ?>" id="uid">
                             <!-- Currency -->
                             <div class="mt-28 param-ref">
                                 <label class="gilroy-medium text-gray-100 mb-2 f-15" for="currency_id">Currency</label>
                                 <div class="avoid-blink">
-                                    <select class="select2" data-minimum-results-for-search="Infinity" name="currency_id" id="currency_id">
-                                        <option data-type="fiat" value="1" selected=&quot;selected&quot;>USD</option>
-                                        <option data-type="fiat" value="2">GBP</option>
-                                        <option data-type="fiat" value="3">EUR</option>
-                                        <option data-type="crypto" value="11">ETH</option>
+                                    <select class="select2" data-minimum-results-for-search="Infinity" name="currency" id="currency" onchange="checkAmt()">
+                                        <option data-type="" value="">--Select Currency--</option>
+                                        <option data-type="fiat" value="btc">BTC</option>
+                                        <option data-type="fiat" value="usdt">USDT</option>
+                                        <option data-type="fiat" value="eth">ETH</option>
+                                    </select>
+                                </div>
+                                <p class="mb-0 text-gray-100 dark-B87 gilroy-regular f-12 mt-2">Fee (<span class="pFees">0%</span>+<span class="fFees"> 0</span>) Total Fee: <span class="total_fees">0.00</span></p>
+                            </div>
+
+                            <!-- Wallet -->
+                            <div class="mt-28 param-ref">
+                                <label class="gilroy-medium text-gray-100 mb-2 f-15" for="wallet">Wallet</label>
+                                <div class="avoid-blink">
+                                    <select class="select2" data-minimum-results-for-search="Infinity" name="wallet" id="wallet" onchange="checkAmt()">
+                                        <option data-type="" value="">--Select Wallet--</option>
+                                        <?php foreach ($data['user_wallets'] as $w) { ?>
+                                            <option class="option" data-type="<?= $w['wallet_type'] ?>" data-id="<?= $w['id'] ?>" data-wid="<?= $w['wallet_id'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] ?></option>
+                                        <?php } ?>
                                     </select>
                                 </div>
                                 <p class="mb-0 text-gray-100 dark-B87 gilroy-regular f-12 mt-2">Fee (<span class="pFees">0%</span>+<span class="fFees"> 0</span>) Total Fee: <span class="total_fees">0.00</span></p>
@@ -95,35 +110,20 @@ include '../backend/udata.php';
                             <!-- Amount -->
                             <div class="mt-20 label-top">
                                 <label class="gilroy-medium text-gray-100 mb-2 f-15" for="amount">Amount</label>
-                                <input type="text" class="form-control input-form-control apply-bg l-s2" name="amount" id="amount" placeholder="Enter amount" onkeypress="return isNumberOrDecimalPointKey(this, event);" oninput="restrictNumberToPrefdecimalOnInput(this)" value="" required data-value-missing="This field is required.">
+                                <input type="text" class="form-control input-form-control apply-bg l-s2" name="amount" id="amount" autocomplete="off" placeholder="Enter amount" onfocusout="checkAmt()" value="" required data-value-missing="This field is required.">
                                 <span class="amountLimit custom-error"></span>
                             </div>
 
-                            <!-- Payment Methods Empty -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="mt-20 param-ref d-none" id="paymentMethodEmpty">
-                                        <label class="gilroy-medium text-warning mb-2 f-15">Fees Limit or Payment Method
-                                            are currently inactive.</label>
-                                    </div>
-                                </div>
-                            </div>
-
                             <!-- Payment Methods -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="mt-20 param-ref" id="paymentMethodSection">
-                                        <label class="gilroy-medium text-gray-100 mb-2 f-15" for="payment_method">Payment Method</label>
-                                        <div class="avoid-blink">
-                                            <select class="select2" data-minimum-results-for-search="Infinity" name="payment_method" id="payment_method"></select>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="mt-20 label-top">
+                                <label class="gilroy-medium text-gray-100 mb-2 f-15" for="converted_value">Value</label>
+                                <input type="text" class="form-control input-form-control apply-bg l-s2" name="value" id="converted_value" placeholder="Converted value" disabled value="" required data-value-missing="This field is required.">
+                                <span class="amountLimit custom-error"></span>
                             </div>
 
                             <!-- Submit -->
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-lg btn-primary mt-4" id="depositCreateSubmitBtn">
+                                <button type="button" class="btn btn-lg btn-primary mt-4" id="deposit">
                                     <div class="spinner spinner-border text-white spinner-border-sm mx-2 d-none">
                                         <span class="visually-hidden"></span>
                                     </div>
@@ -133,6 +133,7 @@ include '../backend/udata.php';
                                         </svg></span>
                                 </button>
                             </div>
+
                         </form>
                     </div>
                     <!-- main-containt -->
@@ -176,6 +177,151 @@ include '../backend/udata.php';
     <script src="../public/user/templates/js/chart.umd.min.js"></script>
     <script src="../public/user/templates/js/main.min.js"></script>
     <script src="../public/user/customs/js/common.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script type="text/javascript">
+        const convert = async (wallet, curr, amount) => {
+            try {
+                const res = await fetch(`https://api.coinconvert.net/convert/${curr}/${wallet}?amount=${amount}`);
+                const data = await res.json()
+                const test = Object.values(data)
+                const val = test[2];
+                if (!val) {
+                    return amount
+                }
+                return val
+            } catch (error) {
+                console.log(error);
+            }
+
+        }
+
+        const checkAmt = async () => {
+            try {
+                const converted_value = document.querySelector('#converted_value')
+                const wallet = document.querySelector('#wallet').value
+                const curr = document.querySelector('#currency').value
+                const amount = document.querySelector('#amount').value
+                const val = await convert(wallet, curr, parseFloat(amount))
+                if (val) {
+
+                    converted_value.value = val
+                } else {
+                    converted_value.value = ''
+                }
+            } catch (error) {
+                console.log(error);
+            }
+
+        }
+
+        const selection = document.querySelector("#wallet");
+        selection.onchange = function(event) {
+            const id = event.target.options[event.target.selectedIndex].dataset.id;
+            const wid = event.target.options[event.target.selectedIndex].dataset.wid;
+            const user_wallet_id = document.querySelector('#user_wallet_id')
+            const wallet_id = document.querySelector('#wallet_id')
+            user_wallet_id.value = id
+            wallet_id.value = wid
+        };
+
+
+        const depBtn = document.querySelector('#deposit')
+        depBtn.addEventListener('click', () => {
+            document.querySelector('#deposit').textContent = '........'
+            const uid = document.querySelector('#uid').value
+            const curr = document.querySelector('#currency').value
+            const amount = document.querySelector('#amount').value
+            const wallet = document.querySelector('#wallet').value
+            const user_wallet_id = document.querySelector('#user_wallet_id').value
+            const wallet_id = document.querySelector('#wallet_id').value
+            const value = document.querySelector('#converted_value').value
+
+            if (!value) {
+                toastr.error("All fields are required to proceed", "Required", {
+                    positionClass: "toast-top-center",
+                    timeOut: 5e3,
+                    closeButton: !0,
+                    debug: !1,
+                    newestOnTop: !0,
+                    progressBar: !0,
+                    preventDuplicates: !0,
+                    onclick: null,
+                    showDuration: "300",
+                    hideDuration: "1000",
+                    extendedTimeOut: "1000",
+                    showEasing: "swing",
+                    hideEasing: "linear",
+                    showMethod: "fadeIn",
+                    hideMethod: "fadeOut",
+                    tapToDismiss: !1
+                })
+                depBtn.innerHTML = "Proceed"
+            } else {
+                $.ajax({
+                    url: '../backend/actions/addDeposit.php',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        uid,
+                        curr,
+                        amount,
+                        user_wallet_id,
+                        value,
+                        wallet,
+                        wallet_id
+                    },
+                    success: (res) => {
+                        if (res.header == 'deposited') {
+                            toastr.success("Deposit was successful, proceed to payment", "Success", {
+                                positionClass: "toast-top-center",
+                                timeOut: 5e3,
+                                closeButton: !0,
+                                debug: !1,
+                                newestOnTop: !0,
+                                progressBar: !0,
+                                preventDuplicates: !0,
+                                onclick: null,
+                                showDuration: "300",
+                                hideDuration: "1000",
+                                extendedTimeOut: "1000",
+                                showEasing: "swing",
+                                hideEasing: "linear",
+                                showMethod: "fadeIn",
+                                hideMethod: "fadeOut",
+                                tapToDismiss: !1
+                            })
+                            depBtn.innerHTML = "Proceed"
+                            setTimeout(() => {
+                                window.location = `./confirm.php?curr=${curr}&amt=${amount}&address=${'djdhdlalsdn937w3uwesqw8eqiaxx873hs'}`
+                            }, 1500)
+                        } else {
+                            toastr.error("An error occured", "Error", {
+                                positionClass: "toast-top-center",
+                                timeOut: 5e3,
+                                closeButton: !0,
+                                debug: !1,
+                                newestOnTop: !0,
+                                progressBar: !0,
+                                preventDuplicates: !0,
+                                onclick: null,
+                                showDuration: "300",
+                                hideDuration: "1000",
+                                extendedTimeOut: "1000",
+                                showEasing: "swing",
+                                hideEasing: "linear",
+                                showMethod: "fadeIn",
+                                hideMethod: "fadeOut",
+                                tapToDismiss: !1
+                            })
+                            depBtn.innerHTML = "Proceed"
+                        }
+                    }
+                })
+            }
+        })
+    </script>
 
     <script type="text/javascript">
         var SITE_URL = "https://demo.paymoney.techvill.net";
@@ -221,9 +367,7 @@ include '../backend/udata.php';
                 }
             });
         });
-    </script>
 
-    <script type="text/javascript">
         function restrictNumberToPrefdecimal(e, type) {
             let decimalFormat =
                 type === "fiat" ?

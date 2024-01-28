@@ -1,5 +1,5 @@
 <?php
-session_start();
+include '../backend/udata.php';
 !$_SESSION['id'] && header('location: ../../login');
 ?>
 
@@ -13,7 +13,7 @@ session_start();
     <meta name="author" content="Techvillage">
     <meta name="csrf-token" content="PFhVNJMPXGAl78xl7DN1x28WvuRvz2vpVljgxMPU">
 
-    <title>Payouts | Pay Money</title>
+    <title>Withdraw | Pay Money</title>
 
     <!-- css -->
     <link rel="stylesheet" href="../public/dist/libraries/bootstrap-5.0.2/css/bootstrap.min.css">

@@ -30,7 +30,7 @@ foreach ($data['user'] as $u) {
 // Other data
 $data['wallets'] = $modules->getAllWallets();
 $data['user_wallets'] = $modules->getAllUserWallets($uID);
+$data['user_walletsL'] = $modules->getAllUserWalletsL($uID);
 
 
 $data['personal_documents'] = $modules->getUserPersonalDocuments($uID);
-

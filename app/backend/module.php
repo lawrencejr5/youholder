@@ -191,6 +191,26 @@ class Modules extends Connection
         }
     }
 
+    public function addDeposit($uid, $wallet_id, $user_wallet_id, $wallet, $curr, $amount, $value)
+    {
+        try {
+            //code...
+            $this->sql = "INSERT INTO deposits(uid, user_wallet_id, wallet_id, wallet, currency, deposit_amt, return_amt) VALUES(:uid, :user_wallet_id, :wallet_id, :wallet, :currency, :deposit_amt, :return_amt)";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->bindParam(':wallet_id', $wallet_id);
+            $this->stmt->bindParam(':user_wallet_id', $user_wallet_id);
+            $this->stmt->bindParam(':wallet', $wallet);
+            $this->stmt->bindParam(':currency', $curr);
+            $this->stmt->bindParam(':deposit_amt', $amount);
+            $this->stmt->bindParam(':return_amt', $value);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            //throw $th;
+            echo "failed" . $th->getMessage();
+        }
+    }
 
 
 
@@ -206,7 +226,8 @@ class Modules extends Connection
 
 
 
-    // FETCH FROM DATABASE
+
+    // ******FETCH FROM DATABASE********
 
     # Fetch user data
     public function getUserData($id)
@@ -236,17 +257,72 @@ class Modules extends Connection
     }
 
     # Fetch all user wallets
+    public function getAllUserWalletsL($uid)
+    {
+        try {
+            $this->sql = "SELECT w.wallet_name as wallet_name, w.wallet_img as wallet_img, w.wallet_type as wallet_type,
+             uw.uid as uid, uw.wallet_id as wallet_id, uw.id as id
+             FROM user_wallets uw 
+             LEFT JOIN wallets w ON uw.wallet_id = w.id
+             WHERE uw.uid = :uid
+             LIMIT 3";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $th) {
+            echo $th->getMessage();
+        }
+    }
+
     public function getAllUserWallets($uid)
     {
         try {
             $this->sql = "SELECT w.wallet_name as wallet_name, w.wallet_img as wallet_img, w.wallet_type as wallet_type,
-             uw.uid as uid, uw.wallet_id as wallet_id 
+             uw.uid as uid, uw.wallet_id as wallet_id, uw.id as id
              FROM user_wallets uw 
-             LEFT JOIN wallets w 
-             ON uw.wallet_id = w.id 
-             WHERE uid = :uid";
+             LEFT JOIN wallets w ON uw.wallet_id = w.id
+             WHERE uw.uid = :uid";
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $th) {
+            echo $th->getMessage();
+        }
+    }
+
+
+    # Get the total amount of oney a wallet
+    public function getAllUserWalletsAmount($uid, $wid)
+    {
+        try {
+            $this->sql = "SELECT w.wallet_name as wallet_name, uw.id as id, SUM(d.return_amt) as amount
+             FROM user_wallets uw 
+             LEFT JOIN wallets w ON uw.wallet_id = w.id
+             LEFT JOIN deposits d ON uw.id = d.user_wallet_id
+             WHERE uw.uid = :uid AND uw.wallet_id = :wallet_id";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->bindParam(':wallet_id', $wid);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $th) {
+            echo $th->getMessage();
+        }
+    }
+    public function getUserWalletsLastDeposit($uid, $wid)
+    {
+        try {
+            $this->sql = "SELECT d.return_amt as last_deposit
+             FROM deposits d 
+             LEFT JOIN user_wallets uw ON uw.id = d.user_wallet_id
+             WHERE uw.uid = :uid AND uw.wallet_id = :wallet_id
+             ORDER BY d.id DESC
+             LIMIT 1";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->bindParam(':wallet_id', $wid);
             $this->stmt->execute();
             return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $th) {
@@ -265,6 +341,26 @@ class Modules extends Connection
             return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $th) {
             echo $th->getMessage();
+        }
+    }
+
+    # Fetch all user deposits
+    public function getAllUserDeposits($uid)
+    {
+        try {
+            //code...
+            $this->sql =
+                "SELECT w.wallet_name as wallet_name, w.wallet_type as wallet_type, w.wallet_img as wallet_img, d.return_amt as amount, d.datetime as datetime, d.approved as approved, d.id as id
+            FROM deposits d 
+            JOIN user_wallets uw ON d.user_wallet_id = uw.id 
+            JOIN wallets w ON d.wallet_id = w.id 
+            WHERE d.uid = :uid";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (\Throwable $th) {
+            //throw $th;
         }
     }
 }
