@@ -31,6 +31,6 @@ foreach ($data['user'] as $u) {
 $data['wallets'] = $modules->getAllWallets();
 $data['user_wallets'] = $modules->getAllUserWallets($uID);
 $data['user_walletsL'] = $modules->getAllUserWalletsL($uID);
-
+$data['withdrawals'] = $modules->getAllUserWithdrawals($uID);
 
 $data['personal_documents'] = $modules->getUserPersonalDocuments($uID);

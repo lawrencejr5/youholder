@@ -106,11 +106,14 @@ include '../backend/udata.php';
                                 </div>
                                 <div class="d-flex justify-content-between mt-15">
                                     <?php
-                                    $data['total_wallet_amount'] = $modules->getAllUserWalletsAmount($uID, $w['wallet_id']);
-                                    foreach ($data['total_wallet_amount'] as $total) {
+                                    $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_id']);
+                                    $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_id']);
+                                    foreach ($data['total_deposits'] as $td) {
+                                        foreach ($data['total_withdrawals'] as $tw) {
                                     ?>
-                                        <p class="mb-0 f-24 leading-30 gilroy-Semibold l-s1 text-dark"><?= $total['amount'] ? round($total['amount'], 2) . ' ' . $w['wallet_name'] : 0 ?></p>
+                                            <p class="mb-0 f-24 leading-30 gilroy-Semibold l-s1 text-dark"><?= $td['amount'] ? round($td['amount'], 2) - round($tw['amount'], 2) . ' ' . $w['wallet_name'] : 0 ?></p>
                                     <?php
+                                        }
                                     }
                                     ?>
                                     <p class="mb-0 text-success f-12 leading-15 l-s1 gilroy-medium d-flex align-items-center">

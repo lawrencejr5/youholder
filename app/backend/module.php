@@ -212,6 +212,26 @@ class Modules extends Connection
         }
     }
 
+    public function makeWithdrawal($uid, $uwid, $wid, $amt, $address, $wallet)
+    {
+        try {
+            //code...
+            $this->sql = "INSERT INTO withdrawals(uid, wallet_id, user_wallet_id, amount, crypto_address, wallet_name) VALUES(:uid, :wallet_id, :user_wallet_id, :amount, :crypto_address, :wallet_name)";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->bindParam(':user_wallet_id', $uwid);
+            $this->stmt->bindParam(':wallet_id', $wid);
+            $this->stmt->bindParam(':amount', $amt);
+            $this->stmt->bindParam(':crypto_address', $address);
+            $this->stmt->bindParam(':wallet_name', $wallet);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            //throw $th;
+            echo 'failed' . $th->getMessage();
+        }
+    }
+
 
 
 
@@ -294,7 +314,7 @@ class Modules extends Connection
 
 
     # Get the total amount of oney a wallet
-    public function getAllUserWalletsAmount($uid, $wid)
+    public function getTotalDeposits($uid, $wid)
     {
         try {
             $this->sql = "SELECT w.wallet_name as wallet_name, uw.id as id, SUM(d.return_amt) as amount
@@ -311,10 +331,31 @@ class Modules extends Connection
             echo $th->getMessage();
         }
     }
+
+    # Get the total amount of oney a wallet
+    public function getTotalWithdrawals($uid, $wid)
+    {
+        try {
+            $this->sql = "SELECT w.wallet_name as wallet_name, uw.id as id, SUM(wt.amount) as amount
+             FROM user_wallets uw 
+             LEFT JOIN wallets w ON uw.wallet_id = w.id
+             LEFT JOIN withdrawals wt ON uw.id = wt.user_wallet_id
+             WHERE uw.uid = :uid AND uw.wallet_id = :wallet_id";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->bindParam(':wallet_id', $wid);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $th) {
+            echo $th->getMessage();
+        }
+    }
+
+
     public function getUserWalletsLastDeposit($uid, $wid)
     {
         try {
-            $this->sql = "SELECT d.return_amt as last_deposit
+            $this->sql = "SELECT d.return_amt as amount
              FROM deposits d 
              LEFT JOIN user_wallets uw ON uw.id = d.user_wallet_id
              WHERE uw.uid = :uid AND uw.wallet_id = :wallet_id
@@ -359,10 +400,53 @@ class Modules extends Connection
             $this->stmt->bindParam(':uid', $uid);
             $this->stmt->execute();
             return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
-        } catch (\Throwable $th) {
+        } catch (PDOException $th) {
             //throw $th;
+            return 'err' . $th->getMessage();
         }
     }
+
+    # Fetch all user deposits
+    public function getAllUserWithdrawals($uid)
+    {
+        try {
+            //code...
+            $this->sql =
+                "SELECT w.wallet_name as wallet_name, w.wallet_type as wallet_type, w.wallet_img as wallet_img, wt.amount as amount, wt.crypto_address as address, wt.datetime as datetime, wt.verified as verified, wt.id as id
+            FROM withdrawals wt 
+            JOIN user_wallets uw ON wt.user_wallet_id = uw.id 
+            JOIN wallets w ON wt.wallet_id = w.id 
+            WHERE wt.uid = :uid";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (\Throwable $th) {
+            //throw $th;
+            return 'err' . $th->getMessage();
+        }
+    }
+
+
+
+
+    // public function total($uid, $wid)
+    // {
+    //     try {
+    //         $this->sql = "SELECT 
+    //         (SELECT SUM(return_amt) FROM deposits as damount WHERE uid = :uid AND wallet_id = :wallet_id) 
+    //          - 
+    //         (SELECT SUM(amount) FROM withdrawals as wamount WHERE uid = :uid AND wallet_id = :wallet_id)
+    //          AS total";
+    //         $this->stmt = $this->conn->prepare($this->sql);
+    //         $this->stmt->bindParam(':uid', $uid);
+    //         $this->stmt->bindParam(':wallet_id', $wid);
+    //         $this->stmt->execute();
+    //         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+    //     } catch (PDOException $th) {
+    //         echo $th->getMessage();
+    //     }
+    // }
 }
 
 

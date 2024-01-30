@@ -109,11 +109,14 @@ include '../backend/udata.php';
                                                 <div class="wallet-right-box mt-n3p span-currency text-end">
                                                     <span class="f-15 gilroy-medium text-gray">Balance</span>
                                                     <?php
-                                                    $data['total_wallet_amount'] = $modules->getAllUserWalletsAmount($uID, $w['wallet_id']);
-                                                    foreach ($data['total_wallet_amount'] as $total) {
+                                                    $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_id']);
+                                                    $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_id']);
+                                                    foreach ($data['total_deposits'] as $td) {
+                                                        foreach ($data['total_withdrawals'] as $tw) {
                                                     ?>
-                                                        <p class="mb-0 mt-6 f-28 gilroy-Semibold text-dark l-s2"><?= $total['amount'] ? round($total['amount'], 2) : 0 ?></p>
-                                                    <?php } ?>
+                                                            <p class="mb-0 mt-6 f-28 gilroy-Semibold text-dark l-s2"><?= $td['amount'] ? round($td['amount'], 2) - round($tw['amount'], 2) . ' ' . $w['wallet_name'] : 0 ?></p>
+                                                    <?php }
+                                                    } ?>
                                                 </div>
                                             </div>
                                             <div class="d-flex justify-content-between span-currency">
@@ -124,7 +127,7 @@ include '../backend/udata.php';
                                                         foreach ($data['wallet_last_deposit'] as $l) {
                                                         ?>
 
-                                                            <span class="text-dark"><?= round($l['last_deposit'], 2) . ' ' . $w['wallet_name'] ?></span>
+                                                            <span class="text-dark"><?= round($l['amount'], 2) . ' ' . $w['wallet_name'] ?></span>
                                                             ( Deposit )
                                                         <?php
                                                         }

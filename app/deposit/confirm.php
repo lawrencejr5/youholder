@@ -1,6 +1,8 @@
 <?php
 include '../backend/udata.php';
 !$_SESSION['id'] && header('location: ../../login');
+!$_GET['amt'] && !$_GET['curr'] && !$_GET['address'] &&
+    header('location: ../deposit');
 ?>
 <!DOCTYPE html>
 <html lang="en">

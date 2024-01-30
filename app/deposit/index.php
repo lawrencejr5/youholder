@@ -75,7 +75,7 @@ include '../backend/udata.php';
                             want to deposit.</p>
 
 
-                        <form method="post" action="./deposit/confirm" id="depositCreateForm">
+                        <form method="post" id="depositCreateForm">
                             <input type="hidden" value="" id="user_wallet_id">
                             <input type="hidden" value="" id="wallet_id">
                             <input type="hidden" value="<?= $uID ?>" id="uid">
