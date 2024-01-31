@@ -32,5 +32,7 @@ $data['wallets'] = $modules->getAllWallets();
 $data['user_wallets'] = $modules->getAllUserWallets($uID);
 $data['user_walletsL'] = $modules->getAllUserWalletsL($uID);
 $data['withdrawals'] = $modules->getAllUserWithdrawals($uID);
+$data['deposits'] = $modules->getAllUserDeposits($uID);
+$data['transactions'] = $modules->allTransactions($uID);
 
 $data['personal_documents'] = $modules->getUserPersonalDocuments($uID);

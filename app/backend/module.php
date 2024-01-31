@@ -351,6 +351,31 @@ class Modules extends Connection
         }
     }
 
+    public function allTransactions($uid)
+    {
+        try {
+            //code...
+            $this->sql = "SELECT d.id as id, d.uid as uid, d.user_wallet_id as user_wallet_id, d.return_amt as amount, 
+            d.datetime as datetime, d.transaction_type as transaction_type, d.wallet as wallet, d.approved as verified, w.wallet_img as wallet_img  
+            FROM deposits d 
+            LEFT JOIN wallets w ON d.wallet = w.wallet_name
+            UNION ALL
+            SELECT wt.id as id, wt.uid as uid, wt.user_wallet_id as user_wallet_id, wt.amount as amount, wt.datetime as datetime, 
+            wt.transaction_type as transaction_type, wt.wallet_name as wallet, wt.verified as verified, w.wallet_img as wallet_img 
+            FROM withdrawals wt 
+            LEFT JOIN wallets w ON wt.wallet_name = w.wallet_name
+            WHERE uid = :uid
+            ORDER BY datetime DESC
+            ";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $th) {
+            echo $th->getMessage();
+        }
+    }
+
 
     public function getUserWalletsLastDeposit($uid, $wid)
     {
@@ -395,7 +420,7 @@ class Modules extends Connection
             FROM deposits d 
             JOIN user_wallets uw ON d.user_wallet_id = uw.id 
             JOIN wallets w ON d.wallet_id = w.id 
-            WHERE d.uid = :uid";
+            WHERE d.uid = :uid ORDER BY datetime DESC";
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':uid', $uid);
             $this->stmt->execute();
@@ -412,11 +437,11 @@ class Modules extends Connection
         try {
             //code...
             $this->sql =
-                "SELECT w.wallet_name as wallet_name, w.wallet_type as wallet_type, w.wallet_img as wallet_img, wt.amount as amount, wt.crypto_address as address, wt.datetime as datetime, wt.verified as verified, wt.id as id
+                "SELECT w.wallet_name as wallet_name, w.wallet_type as wallet_type, w.wallet_img as wallet_img, wt.amount as amount, wt.crypto_address as address, wt.datetime as datetime, wt.verified as approved, wt.id as id
             FROM withdrawals wt 
             JOIN user_wallets uw ON wt.user_wallet_id = uw.id 
             JOIN wallets w ON wt.wallet_id = w.id 
-            WHERE wt.uid = :uid";
+            WHERE wt.uid = :uid ORDER BY datetime DESC";
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':uid', $uid);
             $this->stmt->execute();
@@ -433,11 +458,12 @@ class Modules extends Connection
     // public function total($uid, $wid)
     // {
     //     try {
-    //         $this->sql = "SELECT 
-    //         (SELECT SUM(return_amt) FROM deposits as damount WHERE uid = :uid AND wallet_id = :wallet_id) 
-    //          - 
-    //         (SELECT SUM(amount) FROM withdrawals as wamount WHERE uid = :uid AND wallet_id = :wallet_id)
-    //          AS total";
+    //         $this->sql = "SELECT w.wallet_name as wallet_name, uw.id as id, SUM(d.return_amt) - SUM(wt.amount) as amount
+    //          FROM user_wallets uw 
+    //          left JOIN wallets w ON uw.wallet_id = w.id
+    //          left JOIN deposits d ON uw.id = d.user_wallet_id
+    //          left JOIN withdrawals wt ON uw.id = wt.user_wallet_id
+    //          WHERE uw.uid = :uid AND uw.wallet_id = :wallet_id";
     //         $this->stmt = $this->conn->prepare($this->sql);
     //         $this->stmt->bindParam(':uid', $uid);
     //         $this->stmt->bindParam(':wallet_id', $wid);
