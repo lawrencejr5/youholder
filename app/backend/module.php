@@ -359,6 +359,7 @@ class Modules extends Connection
             d.datetime as datetime, d.transaction_type as transaction_type, d.wallet as wallet, d.approved as verified, w.wallet_img as wallet_img  
             FROM deposits d 
             LEFT JOIN wallets w ON d.wallet = w.wallet_name
+            WHERE uid = :uid
             UNION ALL
             SELECT wt.id as id, wt.uid as uid, wt.user_wallet_id as user_wallet_id, wt.amount as amount, wt.datetime as datetime, 
             wt.transaction_type as transaction_type, wt.wallet_name as wallet, wt.verified as verified, w.wallet_img as wallet_img 
