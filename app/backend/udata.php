@@ -33,6 +33,6 @@ $data['user_wallets'] = $modules->getAllUserWallets($uID);
 $data['user_walletsL'] = $modules->getAllUserWalletsL($uID);
 $data['withdrawals'] = $modules->getAllUserWithdrawals($uID);
 $data['deposits'] = $modules->getAllUserDeposits($uID);
-$data['transactions'] = $modules->allTransactions($uID);
-
+$data['transactions'] = $modules->allTransactions($uID, 25);
+$data['latest_transactions'] = $modules->allTransactions($uID, 10);
 $data['personal_documents'] = $modules->getUserPersonalDocuments($uID);

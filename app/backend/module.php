@@ -351,7 +351,7 @@ class Modules extends Connection
         }
     }
 
-    public function allTransactions($uid)
+    public function allTransactions($uid, $limit)
     {
         try {
             //code...
@@ -366,6 +366,7 @@ class Modules extends Connection
             LEFT JOIN wallets w ON wt.wallet_name = w.wallet_name
             WHERE uid = :uid
             ORDER BY datetime DESC
+            LIMIT $limit
             ";
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':uid', $uid);
