@@ -106,8 +106,8 @@ include '../backend/udata.php';
                                 </div>
                                 <div class="d-flex justify-content-between mt-15">
                                     <?php
-                                    $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_id']);
-                                    $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_id']);
+                                    $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_name']);
+                                    $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_name']);
                                     foreach ($data['total_deposits'] as $td) {
                                         foreach ($data['total_withdrawals'] as $tw) {
                                     ?>

@@ -109,8 +109,8 @@ include '../backend/udata.php';
                                                 <div class="wallet-right-box mt-n3p span-currency text-end">
                                                     <span class="f-15 gilroy-medium text-gray">Balance</span>
                                                     <?php
-                                                    $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_id']);
-                                                    $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_id']);
+                                                    $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_name']);
+                                                    $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_name']);
                                                     foreach ($data['total_deposits'] as $td) {
                                                         foreach ($data['total_withdrawals'] as $tw) {
                                                     ?>
@@ -123,7 +123,7 @@ include '../backend/udata.php';
                                                 <div class="currency-mt-32">
                                                     <p class="text-gray mb-0 f-12 leading-16 gilroy-medium">Last Action:
                                                         <?php
-                                                        $data['wallet_last_deposit'] = $modules->getUserWalletsLastDeposit($uID, $w['wallet_id']);
+                                                        $data['wallet_last_deposit'] = $modules->getUserWalletsLastDeposit($uID, $w['wallet_name']);
                                                         foreach ($data['wallet_last_deposit'] as $l) {
                                                         ?>
 

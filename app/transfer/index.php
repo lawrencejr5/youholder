@@ -61,40 +61,41 @@ include '../backend/udata.php';
                     <!-- main-containt -->
                     <div class="bg-white pxy-62 shadow" id="sendMoneyCreate">
                         <p class="mb-0 f-26 gilroy-Semibold text-uppercase text-center">Send Money</p>
-                        <p class="mb-0 text-center f-13 gilroy-medium text-gray mt-4 dark-A0">Step: 1 of 3</p>
                         <p class="mb-0 text-center f-18 gilroy-medium text-dark dark-5B mt-2">Start Transfer</p>
-                        <div class="text-center">
-                            <svg class="mt-18 nscaleX-1" width="314" height="6" viewBox="0 0 314 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100" height="6" rx="3" fill="#635BFE" />
-                                <rect class="rect-B87" x="107" width="100" height="6" rx="3" fill="#DDD3FD" />
-                                <rect class="rect-B87" x="214" width="100" height="6" rx="3" fill="#DDD3FD" />
-                            </svg>
-                        </div>
                         <p class="mb-0 text-center f-14 gilroy-medium text-gray dark-p mt-20">Enter your recipients email address &amp; then add an amount with currency. You can also provide a note for reference.</p>
 
                         <form method="post" action="https://demo.paymoney.techvill.net/transfer" id="sendMoneyCreateForm">
-                            <input type="hidden" name="_token" value="PFhVNJMPXGAl78xl7DN1x28WvuRvz2vpVljgxMPU" autocomplete="off"> <input type="hidden" name="percentage_fee" id="feesPercentage" value="">
-                            <input type="hidden" name="fixed_fee" id="feesFixed" value="">
-                            <input type="hidden" name="total_fee" id="totalFees" value="0.00">
-                            <input type="hidden" name="sendMoneyProcessedBy" id="sendMoneyProcessedBy">
+                            <input type="text" id="uid">
+                            <input type="text" value="" id="wallet_id">
+                            <input type="text" value="" id="user_wallet_id">
+                            <input type="text" value="<?= $uID ?>" id="myUid">
+                            <input type="text" value="" id="balance">
 
                             <!-- Recipient -->
                             <div class="mt-28 label-top">
                                 <label class="gilroy-medium text-gray-100 mb-2 f-15">Recipient</label>
-                                <input type="text" class="form-control input-form-control apply-bg" name="receiver" id="receiver" value="" placeholder="Please enter valid email (ex: user@gmail.com)" onkeyup="this.value = this.value.replace(/\s/g, '')" required data-value-missing="This field is required.">
+                                <input type="email" class="form-control input-form-control apply-bg" name="receiver" id="receiver" value="" placeholder="Please enter valid email (ex: user@gmail.com)" onkeyup="fetchUsers()">
                                 <span class="receiverError custom-error"></span>
                             </div>
-                            <p class="mb-0 text-gray-100 gilroy-regular f-12 mt-2"><em>We will never share your email with anyone else.</em></p>
-
+                            <p class="mb-0 text-gray-100 gilroy-regular f-12 mt-2"><em id="username"></em></p>
                             <!-- Currency -->
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="param-ref mt-20">
-                                        <label class="gilroy-medium text-gray-100 mb-2 f-15">Currency</label>
+                                        <label class="gilroy-medium text-gray-100 mb-2 f-15">Wallet</label>
                                         <select class="select2" data-minimum-results-for-search="Infinity" name="wallet" id="wallet">
-                                            <option data-type="fiat" value="7" selected=&quot;selected&quot;>USD</option>
-                                            <option data-type="fiat" value="2">GBP</option>
-                                            <option data-type="fiat" value="11">EUR</option>
+                                            <option value="">--Select Wallet--</option>
+                                            <?php foreach ($data['user_wallets'] as $w) {
+                                                $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_id']);
+                                                $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_id']);
+                                                foreach ($data['total_deposits'] as $td) {
+                                                    foreach ($data['total_withdrawals'] as $tw) {
+
+                                            ?>
+                                                        <option data-wid="<?= $w['wallet_id'] ?>" data-uwid="<?= $w['id'] ?>" data-bal="<?= $td['amount'] - $tw['amount'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] . ' - ' . $td['amount'] - $tw['amount'] ?></option>
+                                            <?php }
+                                                }
+                                            } ?>
                                         </select>
                                         <span id="walletlHelp" class="mb-0 text-gray-100 dark-B87 gilroy-regular f-12 mt-2">
                                             Fee (<span id="formattedFeesPercentage">0.00</span>%+<span id="formattedFeesFixed">0.00</span>)&nbsp;Total Fee:&nbsp;<span id="formattedTotalFees">0.00</span>
@@ -106,7 +107,7 @@ include '../backend/udata.php';
                                 <div class="col-md-6">
                                     <div class="label-top mt-20">
                                         <label class="gilroy-medium text-gray-100 mb-2 f-15">Amount</label>
-                                        <input type="text" class="form-control input-form-control apply-bg l-s2" name="amount" id="amount" placeholder="0.00" onkeypress="return isNumberOrDecimalPointKey(this, event);" oninput="restrictNumberToPrefdecimalOnInput(this)" required data-value-missing="This field is required." value="">
+                                        <input type="text" class="form-control input-form-control apply-bg l-s2" name="amount" id="amount" placeholder="0.00" value="">
 
                                         <label class="custom-error amount-limit-error"></span>
                                     </div>
@@ -174,6 +175,47 @@ include '../backend/udata.php';
     <script src="../public/user/templates/js/main.min.js"></script>
     <script src="../public/user/customs/js/common.min.js"></script>
 
+
+    <script>
+        fetchUsers = async () => {
+            const username = document.querySelector('#username')
+            username.innerHTML = 'Searching user....'
+            const url = 'http://localhost/youholder/app/backend/api/users.php';
+            try {
+                const res = await fetch(url);
+                const data = await res.json();
+                const {
+                    users
+                } = data
+                const receiver = document.querySelector('#receiver').value
+                const uid = document.querySelector('#uid')
+                const singleUser = users.find((user) => user.email === receiver)
+                uid.value = singleUser.id
+                username.innerHTML = `${singleUser.fname} ${singleUser.lname}`;
+            } catch (err) {
+                return err;
+            }
+        }
+        const selection = document.querySelector('#wallet')
+        selection.onchange = function(event) {
+            const wid = event.target.options[event.target.selectedIndex].dataset.wid;
+            const uwid = event.target.options[event.target.selectedIndex].dataset.uwid;
+            const bal = event.target.options[event.target.selectedIndex].dataset.bal;
+            document.querySelector('#wallet_id').value = wid
+            document.querySelector('#user_wallet_id').value = uwid
+            document.querySelector('#balance').value = bal
+        };
+
+        const transferBtn = document.querySelector('#transferBtn').addEventListener('click', () => {
+            const uid = document.querySelector('#uid').value
+            const myuid = document.querySelector('#myUid').value
+            const bal = document.querySelector('#balance').value
+            const wallet_id = document.querySelector('#wallet_id').value
+            const receiver = document.querySelector('#receiver').value
+
+        })
+    </script>
+
     <script type="text/javascript">
         var SITE_URL = "https://demo.paymoney.techvill.net";
         var FIATDP = "0.00";
@@ -220,46 +262,6 @@ include '../backend/udata.php';
         });
     </script>
 
-    <script type="text/javascript">
-        function restrictNumberToPrefdecimal(e, type) {
-            let decimalFormat =
-                type === "fiat" ?
-                "2" :
-                "8";
-
-            let num = $.trim(e.value);
-            if (num.length > 0 && !isNaN(num)) {
-                e.value = digitCheck(num, 8, decimalFormat);
-                return e.value;
-            }
-        }
-
-        function digitCheck(num, beforeDecimal, afterDecimal) {
-            return num
-                .replace(/[^\d.]/g, "")
-                .replace(new RegExp("(^[\\d]{" + beforeDecimal + "})[\\d]", "g"), "$1")
-                .replace(/(\..*)\./g, "$1")
-                .replace(new RegExp("(\\.[\\d]{" + afterDecimal + "}).", "g"), "$1");
-        }
-    </script>
-    <script>
-        var isNumberOrDecimalPointKey = function(value, e) {
-
-            var charCode = (e.which) ? e.which : e.keyCode;
-
-            if (charCode == 46) {
-                if (value.value.indexOf('.') === -1) {
-                    return true;
-                } else {
-                    return false;
-                }
-            } else {
-                if (charCode > 31 && (charCode < 48 || charCode > 57))
-                    return false;
-            }
-            return true;
-        }
-    </script>
 
     <script src="../public/dist/plugins/html5-validation-1.0.0/validation.min.js"></script>
     <script src="../public/dist/plugins/debounce-1.1/jquery.ba-throttle-debounce.min.js"></script>

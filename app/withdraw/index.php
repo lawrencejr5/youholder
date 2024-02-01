@@ -78,13 +78,13 @@ include '../backend/udata.php';
                                     <select class="select2" data-minimum-results-for-search="Infinity" name="wallet" id="wallet">
                                         <option value="">--Select Wallet--</option>
                                         <?php foreach ($data['user_wallets'] as $w) {
-                                            $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_id']);
-                                            $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_id']);
+                                            $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_name']);
+                                            $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_name']);
                                             foreach ($data['total_deposits'] as $td) {
                                                 foreach ($data['total_withdrawals'] as $tw) {
 
                                         ?>
-                                                    <option data-wid="<?= $w['wallet_id'] ?>" data-uwid="<?= $w['id'] ?>" data-bal="<?= $total['amount'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] . ' - ' . $td['amount'] - $tw['amount'] ?></option>
+                                                    <option data-wid="<?= $w['wallet_id'] ?>" data-uwid="<?= $w['id'] ?>" data-bal="<?= $td['amount'] - $tw['amount'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] . ' - ' . $td['amount'] - $tw['amount'] ?></option>
                                         <?php }
                                             }
                                         } ?>
