@@ -67,34 +67,6 @@ include '../backend/udata.php';
                     </div>
                     <div class="withdraw-list-parent mt-32">
                         <?php foreach ($data['withdrawals'] as $wt) {  ?>
-                            <!-- <div class="d-flex withdraw-list-child">
-                                <div class="d-flex flex-wraps flex-grows-1">
-                                    <div class="transaction-medium d-flex width-50">
-                                        <div class="d-flex justify-content-center sm-send_medium">
-                                            <img src="../public/uploads/currency_logos/<?= $wt['wallet_img'] ?>" alt="Paypal">
-                                        </div>
-                                        <div class="ml-20 date_and-status">
-                                            <p class="text-dark gilroy-medium f-16 mb-0 mt-medium-2p leading-20"><?= $wt['wallet_name'] ?></p>
-                                            <p class="f-13 gilroy-regular d-flex justify-content-center align-items-center mb-0 mt-8">
-                                                <span class="text-gray-100"><?= $wt['datetime'] ?></span>
-                                                <svg class="mx-between-date_and_sattus" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <circle cx="2" cy="2" r="2" fill="#2AAA5E"></circle>
-                                                </svg>
-                                                <span class="text-success">Success</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center width-75 addres">
-                                        <p class="text-start mb-0 f-16 leading-20 text-dark gilroy-medium">irish@gmail.com
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="currency-with-fees d-flex align-items-end flex-column mt-medium-2p width-25">
-                                    <p class="mb-0 f-16 leading-20 gilroy-medium text-start w-space l-sp64"><span class="text-dark">EUR 20</span></p>
-                                    <p class="mb-0 f-13  text-gray-100 gilroy-regular text-end ml-24 fee-mt-8 w-space">EUR
-                                        2.02</p>
-                                </div>
-                            </div> -->
                             <div class="d-flex withdraw-list-child">
                                 <div class="d-flex flex-wraps flex-grows-1">
                                     <div class="transaction-medium d-flex width-50">
@@ -120,7 +92,6 @@ include '../backend/udata.php';
                                     </div>
                                     <div class="d-flex align-items-center width-75 addres">
                                         <p class="text-start mb-0 f-16 leading-20 text-dark gilroy-medium">
-                                            <!-- 0x6BcA3DdEf6c42Cc8B741F8604b7cf7185f016782 -->
                                             <?= $wt['address'] ?>
                                         </p>
                                     </div>

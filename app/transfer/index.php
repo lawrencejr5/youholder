@@ -65,11 +65,12 @@ include '../backend/udata.php';
                         <p class="mb-0 text-center f-14 gilroy-medium text-gray dark-p mt-20">Enter your recipients email address &amp; then add an amount with currency. You can also provide a note for reference.</p>
 
                         <form method="post" action="https://demo.paymoney.techvill.net/transfer" id="sendMoneyCreateForm">
-                            <input type="text" id="uid">
-                            <input type="text" value="" id="wallet_id">
-                            <input type="text" value="" id="user_wallet_id">
-                            <input type="text" value="<?= $uID ?>" id="myUid">
-                            <input type="text" value="" id="balance">
+                            <input type="hidden" id="uid">
+                            <input type="text" id="from">
+                            <input type="text" id="to">
+                            <input type="hidden" value="" id="wallet_id">
+                            <input type="hidden" value="<?= $uID ?>" id="myUid">
+                            <input type="hidden" value="" id="balance">
 
                             <!-- Recipient -->
                             <div class="mt-28 label-top">
@@ -86,13 +87,13 @@ include '../backend/udata.php';
                                         <select class="select2" data-minimum-results-for-search="Infinity" name="wallet" id="wallet">
                                             <option value="">--Select Wallet--</option>
                                             <?php foreach ($data['user_wallets'] as $w) {
-                                                $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_id']);
-                                                $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_id']);
+                                                $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_name']);
+                                                $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_name']);
                                                 foreach ($data['total_deposits'] as $td) {
                                                     foreach ($data['total_withdrawals'] as $tw) {
 
                                             ?>
-                                                        <option data-wid="<?= $w['wallet_id'] ?>" data-uwid="<?= $w['id'] ?>" data-bal="<?= $td['amount'] - $tw['amount'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] . ' - ' . $td['amount'] - $tw['amount'] ?></option>
+                                                        <option data-wid="<?= $w['wallet_id'] ?>" data-bal="<?= $td['amount'] - $tw['amount'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] . ' - ' . $td['amount'] - $tw['amount'] ?></option>
                                             <?php }
                                                 }
                                             } ?>
@@ -117,11 +118,11 @@ include '../backend/udata.php';
                             <!-- Note -->
                             <div class="label-top mt-20">
                                 <label class="gilroy-medium text-gray-100 mb-2 f-15" for="floatingTextarea">Note</label>
-                                <textarea class="form-control l-s0 input-form-control h-100p" id="floatingTextarea note" name="note" required data-value-missing="This field is required."></textarea>
+                                <textarea class="form-control l-s0 input-form-control h-100p" id="note" name="note" required data-value-missing="This field is required."></textarea>
                             </div>
 
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-lg btn-primary mt-4" id="sendMoneyCreateSubmitBtn">
+                                <button type="button" class="btn btn-lg btn-primary mt-4" id="transferBtn">
                                     <div class="spinner spinner-border text-white spinner-border-sm mx-2 d-none" role="status">
                                         <span class="visually-hidden"></span>
                                     </div>
@@ -189,8 +190,12 @@ include '../backend/udata.php';
                 } = data
                 const receiver = document.querySelector('#receiver').value
                 const uid = document.querySelector('#uid')
+                const from = document.querySelector('#from')
+                const to = document.querySelector('#to')
                 const singleUser = users.find((user) => user.email === receiver)
                 uid.value = singleUser.id
+                from.value = `From: <?= $fullname ?>`
+                to.value = `To: ${singleUser.fname} ${singleUser.lname}`
                 username.innerHTML = `${singleUser.fname} ${singleUser.lname}`;
             } catch (err) {
                 return err;
@@ -199,20 +204,53 @@ include '../backend/udata.php';
         const selection = document.querySelector('#wallet')
         selection.onchange = function(event) {
             const wid = event.target.options[event.target.selectedIndex].dataset.wid;
-            const uwid = event.target.options[event.target.selectedIndex].dataset.uwid;
             const bal = event.target.options[event.target.selectedIndex].dataset.bal;
             document.querySelector('#wallet_id').value = wid
-            document.querySelector('#user_wallet_id').value = uwid
             document.querySelector('#balance').value = bal
         };
 
         const transferBtn = document.querySelector('#transferBtn').addEventListener('click', () => {
+            document.querySelector('#transferBtn').innerHTML = '......'
             const uid = document.querySelector('#uid').value
             const myuid = document.querySelector('#myUid').value
             const bal = document.querySelector('#balance').value
             const wallet_id = document.querySelector('#wallet_id').value
             const receiver = document.querySelector('#receiver').value
-
+            const wallet_name = document.querySelector('#wallet').value
+            const amount = document.querySelector('#amount').value
+            const note = document.querySelector('#note').value
+            const from = document.querySelector('#from').value
+            const to = document.querySelector('#to').value
+            if (!amount || !wallet || !receiver) {
+                console.log('empty');
+            } else if (amount > bal) {
+                console.log('err');
+            } else {
+                $.ajax({
+                    url: '../backend/actions/makeTransfer.php',
+                    dataType: 'json',
+                    type: 'post',
+                    data: {
+                        uid,
+                        myuid,
+                        amount,
+                        wallet_id,
+                        note,
+                        wallet_name,
+                        receiver,
+                        from,
+                        to
+                    },
+                    success: (res) => {
+                        if (res.header == 'sent') {
+                            document.querySelector('#transferBtn').innerHTML = 'Proceed'
+                            console.log('good');
+                        } else {
+                            console.log('err');
+                        }
+                    }
+                })
+            }
         })
     </script>
 

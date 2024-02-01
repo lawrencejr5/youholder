@@ -112,6 +112,7 @@ include '../backend/udata.php';
                                         foreach ($data['total_withdrawals'] as $tw) {
                                     ?>
                                             <p class="mb-0 f-24 leading-30 gilroy-Semibold l-s1 text-dark"><?= $td['amount'] ? round($td['amount'], 2) - round($tw['amount'], 2) . ' ' . $w['wallet_name'] : 0 ?></p>
+                                            <p class="mb-0 f-13  text-gray-100 gilroy-regular text-end ml-24 fee-mt-8 w-space"><?= $td['amount'] ? $td['amount'] - $tw['amount'] . ' ' . $w['wallet_name'] : 0 ?></p>
                                     <?php
                                         }
                                     }
@@ -276,7 +277,7 @@ include '../backend/udata.php';
                                             <div class="d-flex flex-wrap">
 
                                                 <p class="mb-0 text-gray-100 f-13 leading-17 gilroy-regular tran-title mt-2">
-                                                    <?= $fullname ?></p>
+                                                    <?= $t['from_to'] ? $t['from_to'] : $fullname ?></p>
 
                                                 <!-- Dot & Transaction Date -->
                                                 <p class="mb-0 text-gray-100 f-13 leading-17 gilroy-regular tran-title mt-2 d-flex justify-content-center align-items-center">
@@ -301,8 +302,18 @@ include '../backend/udata.php';
                                                     <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M8.89992 6.15383L7.02742 4.28133L5.88409 3.13216C5.65113 2.89955 5.33538 2.76891 5.00617 2.76891C4.67697 2.76891 4.36122 2.89955 4.12826 3.13216L1.10659 6.15383C0.709923 6.5505 0.995756 7.22716 1.54992 7.22716H8.45659C9.01659 7.22716 9.29659 6.5505 8.89992 6.15383Z" fill="#D9204C"></path>
                                                     </svg>
+                                                <?php } elseif ($t['transaction_type'] == 'transfer') { ?>
+                                                    <?php if ($t['amount'] < 0) { ?>
+                                                        <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8.89992 6.15383L7.02742 4.28133L5.88409 3.13216C5.65113 2.89955 5.33538 2.76891 5.00617 2.76891C4.67697 2.76891 4.36122 2.89955 4.12826 3.13216L1.10659 6.15383C0.709923 6.5505 0.995756 7.22716 1.54992 7.22716H8.45659C9.01659 7.22716 9.29659 6.5505 8.89992 6.15383Z" fill="#D9204C"></path>
+                                                        </svg>
+                                                    <?php } else { ?>
+                                                        <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8.89992 3.84617L7.02742 5.71867L5.88409 6.86784C5.65113 7.10045 5.33538 7.23109 5.00617 7.23109C4.67697 7.23109 4.36122 7.10045 4.12826 6.86784L1.10659 3.84617C0.709923 3.4495 0.995756 2.77284 1.54992 2.77284H8.45659C9.01659 2.77284 9.29659 3.4495 8.89992 3.84617Z" fill="#2AAA5E" />
+                                                        </svg>
+                                                    <?php } ?>
                                                 <?php } ?>
-                                                <?= round($t['amount'], 2) . ' ' . $t['wallet'] ?>
+                                                <?= $t['amount'] . ' ' . $t['wallet'] ?>
                                             </p>
 
                                             <?php if ($t['verified'] == 0) { ?>

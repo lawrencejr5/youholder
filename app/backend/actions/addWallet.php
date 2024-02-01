@@ -7,8 +7,9 @@ if (isset($_POST['wallet_id'])) {
 
     $uid = $_POST['uid'];
     $wallet_id = $_POST['wallet_id'];
+    $wallet_name = $_POST['wallet_name'];
 
-    if ($modules->addWallet($uid, $wallet_id)) {
+    if ($modules->addWallet($uid, $wallet_id, $wallet_name)) {
         $response['header'] = 'added';
     } else {
         $response['header'] = 'removed';

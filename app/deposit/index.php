@@ -76,7 +76,6 @@ include '../backend/udata.php';
 
 
                         <form method="post" id="depositCreateForm">
-                            <input type="hidden" value="" id="user_wallet_id">
                             <input type="hidden" value="" id="wallet_id">
                             <input type="hidden" value="<?= $uID ?>" id="uid">
                             <!-- Currency -->
@@ -84,7 +83,7 @@ include '../backend/udata.php';
                                 <label class="gilroy-medium text-gray-100 mb-2 f-15" for="currency_id">Currency</label>
                                 <div class="avoid-blink">
                                     <select class="select2" data-minimum-results-for-search="Infinity" name="currency" id="currency" onchange="checkAmt()">
-                                        <option data-type="" value="">--Select Currency--</option>
+                                        <option data-type="" value="">Select Currency</option>
                                         <option data-type="fiat" value="btc">BTC</option>
                                         <option data-type="fiat" value="usdt">USDT</option>
                                         <option data-type="fiat" value="eth">ETH</option>
@@ -98,9 +97,9 @@ include '../backend/udata.php';
                                 <label class="gilroy-medium text-gray-100 mb-2 f-15" for="wallet">Wallet</label>
                                 <div class="avoid-blink">
                                     <select class="select2" data-minimum-results-for-search="Infinity" name="wallet" id="wallet" onchange="checkAmt()">
-                                        <option data-type="" value="">--Select Wallet--</option>
+                                        <option data-type="" value="">Select Wallet</option>
                                         <?php foreach ($data['user_wallets'] as $w) { ?>
-                                            <option class="option" data-type="<?= $w['wallet_type'] ?>" data-id="<?= $w['id'] ?>" data-wid="<?= $w['wallet_id'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] ?></option>
+                                            <option class="option" data-type="<?= $w['wallet_type'] ?>" data-wid="<?= $w['wallet_id'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] ?></option>
                                         <?php } ?>
                                     </select>
                                 </div>
@@ -218,11 +217,8 @@ include '../backend/udata.php';
 
         const selection = document.querySelector("#wallet");
         selection.onchange = function(event) {
-            const id = event.target.options[event.target.selectedIndex].dataset.id;
             const wid = event.target.options[event.target.selectedIndex].dataset.wid;
-            const user_wallet_id = document.querySelector('#user_wallet_id')
             const wallet_id = document.querySelector('#wallet_id')
-            user_wallet_id.value = id
             wallet_id.value = wid
         };
 
@@ -234,7 +230,6 @@ include '../backend/udata.php';
             const curr = document.querySelector('#currency').value
             const amount = document.querySelector('#amount').value
             const wallet = document.querySelector('#wallet').value
-            const user_wallet_id = document.querySelector('#user_wallet_id').value
             const wallet_id = document.querySelector('#wallet_id').value
             const value = document.querySelector('#converted_value').value
 
@@ -267,7 +262,6 @@ include '../backend/udata.php';
                         uid,
                         curr,
                         amount,
-                        user_wallet_id,
                         value,
                         wallet,
                         wallet_id

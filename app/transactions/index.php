@@ -181,7 +181,8 @@ include '../backend/udata.php';
                                         <div class="d-flex flex-wrap">
 
                                             <p class="mb-0 text-gray-100 f-13 leading-17 gilroy-regular tran-title mt-2">
-                                                <?= $fullname ?></p>
+
+                                                <?= $t['from_to'] ? $t['from_to'] : $fullname ?></p>
 
                                             <!-- Dot & Transaction Date -->
                                             <p class="mb-0 text-gray-100 f-13 leading-17 gilroy-regular tran-title mt-2 d-flex justify-content-center align-items-center">
@@ -206,8 +207,18 @@ include '../backend/udata.php';
                                                 <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M8.89992 6.15383L7.02742 4.28133L5.88409 3.13216C5.65113 2.89955 5.33538 2.76891 5.00617 2.76891C4.67697 2.76891 4.36122 2.89955 4.12826 3.13216L1.10659 6.15383C0.709923 6.5505 0.995756 7.22716 1.54992 7.22716H8.45659C9.01659 7.22716 9.29659 6.5505 8.89992 6.15383Z" fill="#D9204C"></path>
                                                 </svg>
+                                            <?php } elseif ($t['transaction_type'] == 'transfer') { ?>
+                                                <?php if ($t['amount'] < 0) { ?>
+                                                    <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.89992 6.15383L7.02742 4.28133L5.88409 3.13216C5.65113 2.89955 5.33538 2.76891 5.00617 2.76891C4.67697 2.76891 4.36122 2.89955 4.12826 3.13216L1.10659 6.15383C0.709923 6.5505 0.995756 7.22716 1.54992 7.22716H8.45659C9.01659 7.22716 9.29659 6.5505 8.89992 6.15383Z" fill="#D9204C"></path>
+                                                    </svg>
+                                                <?php } else { ?>
+                                                    <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.89992 3.84617L7.02742 5.71867L5.88409 6.86784C5.65113 7.10045 5.33538 7.23109 5.00617 7.23109C4.67697 7.23109 4.36122 7.10045 4.12826 6.86784L1.10659 3.84617C0.709923 3.4495 0.995756 2.77284 1.54992 2.77284H8.45659C9.01659 2.77284 9.29659 3.4495 8.89992 3.84617Z" fill="#2AAA5E" />
+                                                    </svg>
+                                                <?php } ?>
                                             <?php } ?>
-                                            <?= round($t['amount'], 2) . ' ' . $t['wallet'] ?>
+                                            <?= $t['amount'] . ' ' . $t['wallet'] ?>
                                         </p>
 
                                         <?php if ($t['verified'] == 0) { ?>
@@ -218,13 +229,6 @@ include '../backend/udata.php';
                                             <p class="text-danger f-13 gilroy-regular text-end mt-6 mb-0 status-info rlt-txt">Failed</p>
                                         <?php } ?>
                                     </div>
-                                    <!-- <div class="cursor-pointer transaction-arrow ml-28 r-ml-12">
-                                        <a class="arrow-hovers" data-bs-toggle="modal" data-bs-target="#transaction-Info-0">
-                                            <svg class="nscaleX-1" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5312 1.52861C3.27085 1.78896 3.27085 2.21107 3.5312 2.47141L7.0598 6.00001L3.5312 9.52861C3.27085 9.78895 3.27085 10.2111 3.5312 10.4714C3.79155 10.7318 4.21366 10.7318 4.47401 10.4714L8.47401 6.47141C8.73436 6.21106 8.73436 5.78895 8.47401 5.52861L4.47401 1.52861C4.21366 1.26826 3.79155 1.26826 3.5312 1.52861Z" fill="currentColor" />
-                                            </svg>
-                                        </a>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>

@@ -68,7 +68,6 @@ include '../backend/udata.php';
                         </p>
                         <form id="withdrawalCreateForm">
                             <input type="hidden" value="" id="wallet_id">
-                            <input type="hidden" value="" id="user_wallet_id">
                             <input type="hidden" value="<?= $uID ?>" id="uid">
                             <input type="hidden" value="" id="balance">
                             <!-- Payment Methods -->
@@ -76,7 +75,7 @@ include '../backend/udata.php';
                                 <label class="gilroy-medium text-gray-100 mb-2 f-15">Wallet</label>
                                 <div class="avoid-blink">
                                     <select class="select2" data-minimum-results-for-search="Infinity" name="wallet" id="wallet">
-                                        <option value="">--Select Wallet--</option>
+                                        <option value="">Select Wallet</option>
                                         <?php foreach ($data['user_wallets'] as $w) {
                                             $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_name']);
                                             $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_name']);
@@ -84,7 +83,7 @@ include '../backend/udata.php';
                                                 foreach ($data['total_withdrawals'] as $tw) {
 
                                         ?>
-                                                    <option data-wid="<?= $w['wallet_id'] ?>" data-uwid="<?= $w['id'] ?>" data-bal="<?= $td['amount'] - $tw['amount'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] . ' - ' . $td['amount'] - $tw['amount'] ?></option>
+                                                    <option data-wid="<?= $w['wallet_id'] ?>" data-bal="<?= $td['amount'] - $tw['amount'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] . ' - ' . $td['amount'] - $tw['amount'] ?></option>
                                         <?php }
                                             }
                                         } ?>
@@ -174,10 +173,8 @@ include '../backend/udata.php';
         const selection = document.querySelector('#wallet')
         selection.onchange = function(event) {
             const wid = event.target.options[event.target.selectedIndex].dataset.wid;
-            const uwid = event.target.options[event.target.selectedIndex].dataset.uwid;
             const bal = event.target.options[event.target.selectedIndex].dataset.bal;
             document.querySelector('#wallet_id').value = wid
-            document.querySelector('#user_wallet_id').value = uwid
             document.querySelector('#balance').value = bal
         };
 
@@ -187,7 +184,6 @@ include '../backend/udata.php';
             const uid = document.querySelector('#uid').value;
             const wallet_name = document.querySelector('#wallet').value
             const wallet_id = document.querySelector('#wallet_id').value
-            const user_wallet_id = document.querySelector('#user_wallet_id').value
             const address = document.querySelector('#address').value
             let amount = document.querySelector('#amount').value
             amount = parseFloat(amount)
@@ -242,7 +238,6 @@ include '../backend/udata.php';
                         uid,
                         wallet_name,
                         wallet_id,
-                        user_wallet_id,
                         address,
                         amount
                     },

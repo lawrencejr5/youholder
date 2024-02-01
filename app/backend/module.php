@@ -163,7 +163,7 @@ class Modules extends Connection
     }
 
     // Add wallet
-    public function addWallet($uid, $wallet_id)
+    public function addWallet($uid, $wallet_id, $wallet_name)
     {
         if ($this->checkWallet($uid, $wallet_id) > 0) {
             try {
@@ -178,10 +178,11 @@ class Modules extends Connection
             }
         } elseif ($this->checkWallet($uid, $wallet_id) == 0) {
             try {
-                $this->sql = "INSERT INTO user_wallets(uid, wallet_id) VALUES(:uid, :wallet_id)";
+                $this->sql = "INSERT INTO user_wallets(uid, wallet_id, wallet_name) VALUES(:uid, :wallet_id, :wallet_name)";
                 $this->stmt = $this->conn->prepare($this->sql);
                 $this->stmt->bindParam(':uid', $uid);
                 $this->stmt->bindParam(':wallet_id', $wallet_id);
+                $this->stmt->bindParam(':wallet_name', $wallet_name);
                 $this->stmt->execute();
                 $this->msg = "added";
                 return true;
@@ -229,6 +230,32 @@ class Modules extends Connection
             echo 'failed' . $th->getMessage();
         }
     }
+
+    public function makeTransfer($uid, $wid, $curr, $wallet, $amt, $from_to, $notes, $approved, $type)
+    {
+        try {
+            $this->sql = "INSERT INTO deposits(uid, wallet_id, currency, wallet, deposit_amt, return_amt, from_to, notes, approved, transaction_type) 
+            VALUES(:uid, :wallet_id, :currency, :wallet, :deposit_amt, :return_amt, :from_to, :notes, :approved, :transaction_type)";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->bindParam(':wallet_id', $wid);
+            $this->stmt->bindParam(':currency', $curr);
+            $this->stmt->bindParam(':wallet', $wallet);
+            $this->stmt->bindParam(':deposit_amt', $amt);
+            $this->stmt->bindParam(':return_amt', $amt);
+            $this->stmt->bindParam(':from_to', $from_to);
+            $this->stmt->bindParam(':notes', $notes);
+            $this->stmt->bindParam(':approved', $approved);
+            $this->stmt->bindParam(':transaction_type', $type);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
+
+
+
 
 
 
@@ -342,11 +369,10 @@ class Modules extends Connection
     public function getTotalDeposits($uid, $w_name)
     {
         try {
-            $this->sql = "SELECT w.wallet_name as wallet_name, SUM(d.return_amt) as amount
-             FROM user_wallets uw 
-             LEFT JOIN wallets w ON uw.wallet_name = w.wallet_name
-             LEFT JOIN deposits d ON uw.wallet_name = d.wallet
-             WHERE uw.uid = :uid AND uw.wallet_name = :wallet_name";
+            $this->sql = "SELECT SUM(d.return_amt) as amount, w.wallet_name as wallet_name 
+            FROM deposits d 
+            LEFT JOIN wallets w ON w.wallet_name = d.wallet 
+            WHERE d.uid = :uid AND d.wallet = :wallet_name";
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':uid', $uid);
             $this->stmt->bindParam(':wallet_name', $w_name);
@@ -361,11 +387,10 @@ class Modules extends Connection
     public function getTotalWithdrawals($uid, $w_name)
     {
         try {
-            $this->sql = "SELECT w.wallet_name as wallet_name, SUM(wt.amount) as amount
-             FROM user_wallets uw 
-             LEFT JOIN wallets w ON uw.wallet_name = w.wallet_name
-             LEFT JOIN withdrawals wt ON uw.wallet_name = wt.wallet_name
-             WHERE uw.uid = :uid AND uw.wallet_name = :wallet_name";
+            $this->sql = "SELECT SUM(wt.amount) as amount, w.wallet_name as wallet_name 
+            FROM withdrawals wt 
+            LEFT JOIN wallets w ON w.wallet_name = wt.wallet_name 
+            WHERE wt.uid = :uid AND wt.wallet_name = :wallet_name";
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':uid', $uid);
             $this->stmt->bindParam(':wallet_name', $w_name);
@@ -381,13 +406,13 @@ class Modules extends Connection
         try {
             //code...
             $this->sql = "SELECT d.id as id, d.uid as uid, d.return_amt as amount, 
-            d.datetime as datetime, d.transaction_type as transaction_type, d.wallet as wallet, d.approved as verified, w.wallet_img as wallet_img  
+            d.datetime as datetime, d.transaction_type as transaction_type, d.wallet as wallet, d.from_to as from_to, d.approved as verified, w.wallet_img as wallet_img  
             FROM deposits d 
             LEFT JOIN wallets w ON d.wallet = w.wallet_name
             WHERE uid = :uid
             UNION ALL
             SELECT wt.id as id, wt.uid as uid, wt.amount as amount, wt.datetime as datetime, 
-            wt.transaction_type as transaction_type, wt.wallet_name as wallet, wt.verified as verified, w.wallet_img as wallet_img 
+            wt.transaction_type as transaction_type, wt.wallet_name as wallet, wt.from_to as from_to, wt.verified as verified, w.wallet_img as wallet_img 
             FROM withdrawals wt 
             LEFT JOIN wallets w ON wt.wallet_name = w.wallet_name
             WHERE uid = :uid
@@ -478,28 +503,6 @@ class Modules extends Connection
             return 'err' . $th->getMessage();
         }
     }
-
-
-
-
-    // public function total($uid, $wid)
-    // {
-    //     try {
-    //         $this->sql = "SELECT w.wallet_name as wallet_name, uw.id as id, SUM(d.return_amt) - SUM(wt.amount) as amount
-    //          FROM user_wallets uw 
-    //          left JOIN wallets w ON uw.wallet_id = w.id
-    //          left JOIN deposits d ON uw.id = d.user_wallet_id
-    //          left JOIN withdrawals wt ON uw.id = wt.user_wallet_id
-    //          WHERE uw.uid = :uid AND uw.wallet_id = :wallet_id";
-    //         $this->stmt = $this->conn->prepare($this->sql);
-    //         $this->stmt->bindParam(':uid', $uid);
-    //         $this->stmt->bindParam(':wallet_id', $wid);
-    //         $this->stmt->execute();
-    //         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
-    //     } catch (PDOException $th) {
-    //         echo $th->getMessage();
-    //     }
-    // }
 }
 
 

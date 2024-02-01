@@ -124,9 +124,9 @@ include '../backend/udata.php';
                                                             $wallet_added = $modules->checkWallet($uID, $w['id']);
                                                             if ($wallet_added == 0) {
                                                             ?>
-                                                                <button class="add_wallet_btn" data-id="<?= $w['id'] ?>" data-uid="<?= $uID ?>" type="button">Add Wallet <i class="bi bi-plus-lg"></i></button>
+                                                                <button class="add_wallet_btn" data-id="<?= $w['id'] ?>" data-uid="<?= $uID ?>" data-wallet_name="<?= $w['wallet_name'] ?>" type="button">Add Wallet <i class="bi bi-plus-lg"></i></button>
                                                             <?php } else { ?>
-                                                                <button class="add_wallet_btn" data-id="<?= $w['id'] ?>" data-uid="<?= $uID ?>" type="button">Added <i class="bi bi-check-lg"></i></button>
+                                                                <button class="add_wallet_btn" data-id="<?= $w['id'] ?>" data-uid="<?= $uID ?>" data-wallet_name="<?= $w['wallet_name'] ?>" type="button">Added <i class="bi bi-check-lg"></i></button>
                                                             <?php } ?>
                                                         </form>
                                                     </div>
@@ -197,6 +197,7 @@ include '../backend/udata.php';
 
                 const uid = ct.dataset.uid
                 const wallet_id = ct.dataset.id
+                const wallet_name = ct.dataset.wallet_name
 
                 $.ajax({
                     url: '../backend/actions/addWallet.php',
@@ -204,7 +205,8 @@ include '../backend/udata.php';
                     dataType: 'json',
                     data: {
                         uid,
-                        wallet_id
+                        wallet_id,
+                        wallet_name
                     },
                     success: (res) => {
                         if (res.header == 'added') {
