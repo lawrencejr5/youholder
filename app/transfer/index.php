@@ -66,8 +66,8 @@ include '../backend/udata.php';
 
                         <form method="post" action="https://demo.paymoney.techvill.net/transfer" id="sendMoneyCreateForm">
                             <input type="hidden" id="uid">
-                            <input type="text" id="from">
-                            <input type="text" id="to">
+                            <input type="hidden" id="from">
+                            <input type="hidden" id="to">
                             <input type="hidden" value="" id="wallet_id">
                             <input type="hidden" value="<?= $uID ?>" id="myUid">
                             <input type="hidden" value="" id="balance">
@@ -246,7 +246,7 @@ include '../backend/udata.php';
                             document.querySelector('#transferBtn').innerHTML = 'Proceed'
                             console.log('good');
                         } else {
-                            console.log('err');
+                            console.log(res.header);
                         }
                     }
                 })
