@@ -223,8 +223,16 @@ include '../backend/udata.php';
             const to = document.querySelector('#to').value
             if (!amount || !wallet || !receiver) {
                 console.log('empty');
+                document.querySelector('#transferBtn').innerHTML = 'Proceed'
+            } else if (!to) {
+                console.log('User does not exist')
+                document.querySelector('#transferBtn').innerHTML = 'Proceed'
+            } else if (from == to) {
+                console.log('U cannot transfer to urself')
+                document.querySelector('#transferBtn').innerHTML = 'Proceed'
             } else if (amount > bal) {
                 console.log('err');
+                document.querySelector('#transferBtn').innerHTML = 'Proceed'
             } else {
                 $.ajax({
                     url: '../backend/actions/makeTransfer.php',
@@ -242,8 +250,8 @@ include '../backend/udata.php';
                         to
                     },
                     success: (res) => {
+                        document.querySelector('#transferBtn').innerHTML = 'Proceed'
                         if (res.header == 'sent') {
-                            document.querySelector('#transferBtn').innerHTML = 'Proceed'
                             console.log('good');
                         } else {
                             console.log(res.header);

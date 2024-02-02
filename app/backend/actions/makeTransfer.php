@@ -16,11 +16,13 @@ if (isset($_POST['receiver'])) {
     $from = $_POST['from'];
     $to = $_POST['to'];
     $approved = 1;
-    $type = "transfer";
+    $type_from = "transfer from";
+    $type_to = "transfer to";
 
-    $sentFrom = $modules->makeTransferFrom($myuid, $wid, $wallet, $amt, $to, $notes, $approved, $type);
-    $sentTo = $modules->makeTransferTo($uid, $wid, $curr, $wallet, $amt, $from, $notes, $approved, $type);
+    $sentFrom = $modules->makeTransferFrom($myuid, $wid, $wallet, $amt, $to, $notes, $approved, $type_from);
+    $sentTo = $modules->makeTransferTo($uid, $wid, $curr, $wallet, $amt, $from, $notes, $approved, $type_to);
     if ($sentTo) {
+        $res['header'] = 'sent';
         if ($sentFrom) {
             $res['header'] = 'sent';
         } else {
