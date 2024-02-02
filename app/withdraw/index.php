@@ -104,7 +104,7 @@ include '../backend/udata.php';
                             <!-- Amount -->
                             <div class="label-top mt-20">
                                 <label class="gilroy-medium text-gray-100 mb-2 f-15">Amount</label>
-                                <input class="form-control input-form-control apply-bg l-s2" name="amount" id="amount" value="">
+                                <input class="form-control input-form-control apply-bg l-s2" type="number" name="amount" id="amount" value="">
                             </div>
 
                             <span class="amountLimit text-danger" id="amountLimit"></span>

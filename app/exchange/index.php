@@ -60,26 +60,13 @@ include '../backend/udata.php';
                     <!-- main-containt -->
                     <div class="bg-white pxy-62 pt-62 shadow" id="exchangeMoneyCreate">
                         <p class="mb-0 f-26 gilroy-Semibold text-uppercase text-center">Exchange Money</p>
-                        <p class="mb-0 text-center f-13 gilroy-medium text-gray mt-4 dark-A0">Step: 1 of 3</p>
-                        <p class="mb-0 text-center f-18 gilroy-medium text-dark dark-5B mt-2">Setup Money</p>
-                        <div class="text-center"><svg class="mt-18 nscaleX-1" width="314" height="6" viewBox="0 0 314 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100" height="6" rx="3" fill="#635BFE" />
-                                <rect class="rect-B87" x="107" width="100" height="6" rx="3" fill="#DDD3FD" />
-                                <rect class="rect-B87" x="214" width="100" height="6" rx="3" fill="#DDD3FD" />
-                            </svg></div>
-
                         <p class="mb-0 text-center f-14 gilroy-medium text-gray dark-p mt-20">Exchange currencies from the comfort of your home, quickly, safely with a minimal fees.Select the wallet &amp; put the amount you want to exchange.</p>
 
                         <form method="post" action="https://demo.paymoney.techvill.net/exchange-of-money" id="exchangeMoneyCreateForm">
-                            <input type="hidden" name="_token" value="qb1QM8RsLbLH2VAZWJopBTfxWK5gnxizsKMLjfI7" autocomplete="off">
-                            <input type="hidden" name="percentage_fee" id="feesPercentage">
-                            <input type="hidden" name="fixed_fee" id="feesFixed">
-                            <input type="hidden" name="total_fee" id="totalFees">
-                            <input type="hidden" name="final_amount" id="finalAmount">
-                            <input type="hidden" name="sessionToWalletCode" id="sessionToWalletCode">
-                            <input type="hidden" name="sessionFromWalletCode" id="sessionFromWalletCode">
-                            <input type="hidden" name="destinationCurrencyRate" id="destinationCurrencyRate">
-                            <input type="hidden" name="destinationCurrencyCode" id="destinationCurrencyCode">
+                            <input type="hidden" value="" id="wallet_id_from">
+                            <input type="hidden" value="" id="wallet_id_to">
+                            <input type="hidden" value="<?= $uID ?>" id="uid">
+                            <input type="hidden" value="" id="balance">
 
                             <div class="row my-auto">
 
@@ -88,14 +75,23 @@ include '../backend/udata.php';
                                     <div class="param-ref money-ref r-mt-11">
                                         <label class="gilroy-medium text-gray-100 mb-2 f-16 mt-28 r-mt-0">From</label>
                                         <span class="f-12 mob-f-12 gilroy-medium mtop-10 mb-0">
-                                            <span class="balance-text text-gray-100">Balance: </span><span class="d-none balance-color" id="fromCurrencyWalletBalanceDiv">( <span id="fromWalletCurrencyBalance"></span> <span id="fromWalletCurrencyCode"></span> )</span>
+                                            <!-- <span class="balance-text text-gray-100">Balance: </span><span class="d-none balance-color" id="fromCurrencyWalletBalanceDiv">( <span id="fromWalletCurrencyBalance"></span> <span id="fromWalletCurrencyCode"></span> )</span> -->
                                         </span>
 
                                         <div class="avoid-blink">
-                                            <select class="select2" data-minimum-results-for-search="Infinity" id="fromCurrencyWallet" name="from_currency_id">
-                                                <option data-type="fiat" value="1" selected=&quot;selected&quot;>USD</option>
-                                                <option data-type="fiat" value="2">GBP</option>
-                                                <option data-type="fiat" value="3">EUR</option>
+                                            <select class="select2" data-minimum-results-for-search="Infinity" name="from_wallet" id="from_wallet" onchange="checkAmt()">
+                                                <option value="">Select Wallet</option>
+                                                <?php foreach ($data['user_wallets'] as $w) {
+                                                    $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_name']);
+                                                    $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_name']);
+                                                    foreach ($data['total_deposits'] as $td) {
+                                                        foreach ($data['total_withdrawals'] as $tw) {
+
+                                                ?>
+                                                            <option data-wid="<?= $w['wallet_id'] ?>" data-bal="<?= $td['amount'] - $tw['amount'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] . ' - ' . $td['amount'] - $tw['amount'] ?></option>
+                                                <?php }
+                                                    }
+                                                } ?>
                                             </select>
                                         </div>
 
@@ -118,7 +114,20 @@ include '../backend/udata.php';
                                         </span>
 
                                         <div class="avoid-blink">
-                                            <select class="select2" data-minimum-results-for-search="Infinity" id="toCurrencyWallet" name="currency_id"></select>
+                                            <select class="select2" data-minimum-results-for-search="Infinity" name="to_wallet" id="to_wallet" onchange="checkAmt()">
+                                                <option value="">Select Wallet</option>
+                                                <?php foreach ($data['user_wallets'] as $w) {
+                                                    $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_name']);
+                                                    $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_name']);
+                                                    foreach ($data['total_deposits'] as $td) {
+                                                        foreach ($data['total_withdrawals'] as $tw) {
+
+                                                ?>
+                                                            <option data-wid="<?= $w['wallet_id'] ?>" data-bal="<?= $td['amount'] - $tw['amount'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] . ' - ' . $td['amount'] - $tw['amount'] ?></option>
+                                                <?php }
+                                                    }
+                                                } ?>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -127,13 +136,9 @@ include '../backend/udata.php';
                             <!-- Amount -->
                             <div class="label-top mt-20">
                                 <label class="gilroy-medium text-gray-100 mb-2 f-16">Your Amount</label>
-                                <input type="text" class="form-control input-form-control apply-bg l-s2" id="amount" name="amount" onkeypress="return isNumberOrDecimalPointKey(this, event);" oninput="restrictNumberToPrefdecimalOnInput(this)" placeholder="0.00" value="" required data-value-missing="This field is required">
+                                <input type="number" class="form-control input-form-control apply-bg l-s2" id="amount" name="amount" placeholder="Enter amount" onfocusout="checkAmt()">
                                 <span class="custom-error" id="amountLimitError">
                             </div>
-                            <small class="mb-0 gilroy-medium f-12 mob-f-12 mt-11 r-mt-10 text-gray" id="feesLimitDiv">
-                                Fee(<span id="formattedFeesPercentage">0</span>%+<span id="formattedFeesFixed">0</span>)
-                                Total Fee: <span id="formattedTotalFees">0.00</span>
-                            </small>
 
                             <!-- Converted Amount -->
                             <div class="mb-4 label-top mt-20">
@@ -141,14 +146,9 @@ include '../backend/udata.php';
                                 <input type="text" class="form-control input-form-control apply-bg l-s2" value="" id="convertedAmount" placeholder="0.00" readonly>
                             </div>
 
-                            <!-- Exchange rate -->
-                            <div class="mt-2 mb-4" id="exchangeRateDiv">
-                                <p class="mb-0 dark-B87 gilroy-medium f-14 text-center">Exchange rate: 1 <span class="text-primary" id="exchangeRateFromWalletCode"></span> = <span class="text-primary" id="exchangeRate"></span> <span class="text-primary" id="exchangeRateToWalletCode"></span></p>
-                            </div>
-
                             <!-- submit button -->
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-lg btn-primary" id="exchangeMoneyCreateSubmitBtn">
+                                <button type="button" class="btn btn-lg btn-primary" id="exchangeBtn">
                                     <div class="spinner spinner-border text-white spinner-border-sm mx-2 d-none" role="status">
                                         <span class="visually-hidden"></span>
                                     </div>
@@ -202,6 +202,104 @@ include '../backend/udata.php';
     <script src="../public/user/templates/js/main.min.js"></script>
     <script src="../public/user/customs/js/common.min.js"></script>
 
+    <script>
+        const convert = async (wallet, curr, amount) => {
+            try {
+                const res = await fetch(`https://api.coinconvert.net/convert/${curr}/${wallet}?amount=${amount}`);
+                const data = await res.json()
+                const test = Object.values(data)
+                const val = test[2];
+                if (!val) {
+                    return amount
+                }
+                return val
+            } catch (error) {
+                console.log(error);
+            }
+
+        }
+
+        const checkAmt = async () => {
+            try {
+                const converted_value = document.querySelector('#convertedAmount')
+                const wallet_from = document.querySelector('#from_wallet').value
+                const wallet_to = document.querySelector('#to_wallet').value
+                const amount = document.querySelector('#amount').value
+                const val = await convert(wallet_to, wallet_from, parseFloat(amount))
+                if (val) {
+                    converted_value.value = val
+                    console.log(val);
+                } else {
+                    converted_value.value = ''
+                }
+            } catch (error) {
+                console.log(error);
+            }
+
+        }
+
+        const wallet_from = document.querySelector("#from_wallet");
+        wallet_from.onchange = function(event) {
+            const wid = event.target.options[event.target.selectedIndex].dataset.wid;
+            const bal = event.target.options[event.target.selectedIndex].dataset.bal;
+            const wallet_id = document.querySelector('#wallet_id_from')
+            const balance = document.querySelector('#balance')
+            wallet_id.value = wid
+            balance.value = bal
+        };
+        const wallet_to = document.querySelector("#to_wallet");
+        wallet_to.onchange = function(event) {
+            const wid = event.target.options[event.target.selectedIndex].dataset.wid;
+            const wallet_id = document.querySelector('#wallet_id_to')
+            wallet_id.value = wid
+        };
+
+        const exchange = document.querySelector('#exchangeBtn')
+        exchange.addEventListener('click', () => {
+            exchange.innerHTML = "...."
+            const widf = document.querySelector('#wallet_id_from').value
+            const widt = document.querySelector('#wallet_id_to').value
+            const uid = document.querySelector('#uid').value
+            const bal = document.querySelector('#balance').value
+            const wallet_from = document.querySelector('#from_wallet').value
+            const wallet_to = document.querySelector('#to_wallet').value
+            const amount = document.querySelector('#amount').value
+            const converted = document.querySelector('#convertedAmount').value
+            if (!wallet_from || !wallet_to) {
+                console.log('Empty');
+                exchange.innerHTML = "Proceed"
+            } else if (!converted) {
+                console.log('Not converted');
+                exchange.innerHTML = "Proceed"
+            } else if (amount > bal) {
+                console.log('Not enough');
+                exchange.innerHTML = "Proceed"
+            } else {
+                $.ajax({
+                    url: '../backend/actions/exchange.php',
+                    dataType: 'json',
+                    type: 'post',
+                    data: {
+                        widf,
+                        widt,
+                        uid,
+                        bal,
+                        wallet_from,
+                        wallet_to,
+                        amount,
+                        converted
+                    },
+                    success: (res) => {
+                        if (res.header == 'exchanged') {
+                            document.querySelector('#exchangeBtn').innerHTML = "Proceed"
+                            console.log('good');
+                        }
+                    }
+                })
+            }
+        })
+    </script>
+
     <script type="text/javascript">
         var SITE_URL = "https://demo.paymoney.techvill.net";
         var FIATDP = "0.00";
@@ -247,71 +345,6 @@ include '../backend/udata.php';
             });
         });
     </script>
-
-
-    <script type="text/javascript">
-        function restrictNumberToPrefdecimal(e, type) {
-            let decimalFormat =
-                type === "fiat" ?
-                "2" :
-                "8";
-
-            let num = $.trim(e.value);
-            if (num.length > 0 && !isNaN(num)) {
-                e.value = digitCheck(num, 8, decimalFormat);
-                return e.value;
-            }
-        }
-
-        function digitCheck(num, beforeDecimal, afterDecimal) {
-            return num
-                .replace(/[^\d.]/g, "")
-                .replace(new RegExp("(^[\\d]{" + beforeDecimal + "})[\\d]", "g"), "$1")
-                .replace(/(\..*)\./g, "$1")
-                .replace(new RegExp("(\\.[\\d]{" + afterDecimal + "}).", "g"), "$1");
-        }
-    </script>
-    <script>
-        var isNumberOrDecimalPointKey = function(value, e) {
-
-            var charCode = (e.which) ? e.which : e.keyCode;
-
-            if (charCode == 46) {
-                if (value.value.indexOf('.') === -1) {
-                    return true;
-                } else {
-                    return false;
-                }
-            } else {
-                if (charCode > 31 && (charCode < 48 || charCode > 57))
-                    return false;
-            }
-            return true;
-        }
-    </script>
-
-    <script src="../public/dist/plugins/html5-validation-1.0.0/validation.min.js"></script>
-    <script src="../public/dist/libraries/sweetalert/sweetalert-unpkg.min.js"></script>
-    <script src="../public/dist/plugins/debounce-1.1/jquery.ba-throttle-debounce.min.js"></script>
-    <script>
-        "use strict";
-        var csrfToken = $('[name="_token"]').val();
-        var convertedCurrency = "";
-        var currencyListExceptSelectedUrl = "https://demo.paymoney.techvill.net/exchange/get-converted-currencies";
-        var walletBalanceUrl = "https://demo.paymoney.techvill.net/exchange/selected-currency-wallet-balance";
-        var currentUrl = "https://demo.paymoney.techvill.net/exchange";
-        var exchangeRateUrl = "https://demo.paymoney.techvill.net/exchange/get-currencies-exchange-rate";
-        var amountLimitCheckUrl = "https://demo.paymoney.techvill.net/exchange/amount-limit-check"
-        var toWalletOptionText = "Select Wallet";
-        var submitButtonText = "Submiting...";
-        var swalTitleText = "Please Wait...";
-        var swalBodyText = "Loading...";
-        var transactionTypeId = '5';
-        var lowBalanceText = "Not have enough balance !";
-        var failedText = 'Error';
-        let submitBtnText = 'Processing...';
-    </script>
-    <script src="../public/user/customs/js/exchange-currency.min.js"></script>
     <!-- end js -->
 
 </body>

@@ -85,7 +85,7 @@ include '../backend/udata.php';
                                     <div class="param-ref mt-20">
                                         <label class="gilroy-medium text-gray-100 mb-2 f-15">Wallet</label>
                                         <select class="select2" data-minimum-results-for-search="Infinity" name="wallet" id="wallet">
-                                            <option value="">--Select Wallet--</option>
+                                            <option value="">Select Wallet</option>
                                             <?php foreach ($data['user_wallets'] as $w) {
                                                 $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_name']);
                                                 $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_name']);
@@ -108,7 +108,7 @@ include '../backend/udata.php';
                                 <div class="col-md-6">
                                     <div class="label-top mt-20">
                                         <label class="gilroy-medium text-gray-100 mb-2 f-15">Amount</label>
-                                        <input type="text" class="form-control input-form-control apply-bg l-s2" name="amount" id="amount" placeholder="0.00" value="">
+                                        <input type="number" class="form-control input-form-control apply-bg l-s2" name="amount" id="amount" placeholder="0.00" value="">
 
                                         <label class="custom-error amount-limit-error"></span>
                                     </div>

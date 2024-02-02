@@ -275,7 +275,46 @@ class Modules extends Connection
         }
     }
 
+    public function exchangeTo($uid, $widt, $wallet_from, $wallet_to, $amount, $converted, $approved, $type)
+    {
+        try {
+            //code...
+            $this->sql = "INSERT INTO deposits(uid, wallet_id, currency, wallet, deposit_amt, return_amt, approved, transaction_type) 
+            VALUES(:uid, :wallet_id, :currency, :wallet, :deposit_amt, :return_amt, :approved, :transaction_type)";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->bindParam(':wallet_id', $widt);
+            $this->stmt->bindParam(':currency', $wallet_from);
+            $this->stmt->bindParam(':wallet', $wallet_to);
+            $this->stmt->bindParam(':deposit_amt', $amount);
+            $this->stmt->bindParam(':return_amt', $converted);
+            $this->stmt->bindParam(':approved', $approved);
+            $this->stmt->bindParam(':transaction_type', $type);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
 
+    public function exchangeFrom($uid, $widf, $wallet_from, $converted, $approved, $type)
+    {
+        try {
+            $this->sql = "INSERT INTO withdrawals(uid, wallet_id, wallet_name, amount, verified, transaction_type) 
+            VALUES(:uid, :wallet_id, :wallet_name, :amount, :verified, :transaction_type)";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->bindParam(':wallet_id', $widf);
+            $this->stmt->bindParam(':wallet_name', $wallet_from);
+            $this->stmt->bindParam(':amount', $converted);
+            $this->stmt->bindParam(':verified', $approved);
+            $this->stmt->bindParam(':transaction_type', $type);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
 
 
 
