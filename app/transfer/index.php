@@ -19,6 +19,8 @@ include '../backend/udata.php';
     <link rel="stylesheet" href="../public/dist/libraries/bootstrap-5.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/dist/plugins/select2-4.1.0-rc.0/css/select2.min.css">
     <link rel="stylesheet" href="../public/user/templates/css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- end css -->
 
     <!-- favicon -->
@@ -175,6 +177,8 @@ include '../backend/udata.php';
     <script src="../public/user/templates/js/chart.umd.min.js"></script>
     <script src="../public/user/templates/js/main.min.js"></script>
     <script src="../public/user/customs/js/common.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 
     <script>
@@ -222,16 +226,84 @@ include '../backend/udata.php';
             const from = document.querySelector('#from').value
             const to = document.querySelector('#to').value
             if (!amount || !wallet || !receiver) {
-                console.log('empty');
+                toastr.error("All fields are required to proceed", "Required", {
+                    positionClass: "toast-top-center",
+                    timeOut: 5e3,
+                    closeButton: !0,
+                    debug: !1,
+                    newestOnTop: !0,
+                    progressBar: !0,
+                    preventDuplicates: !0,
+                    onclick: null,
+                    showDuration: "300",
+                    hideDuration: "1000",
+                    extendedTimeOut: "1000",
+                    showEasing: "swing",
+                    hideEasing: "linear",
+                    showMethod: "fadeIn",
+                    hideMethod: "fadeOut",
+                    tapToDismiss: !1
+                })
                 document.querySelector('#transferBtn').innerHTML = 'Proceed'
             } else if (!to) {
-                console.log('User does not exist')
+                toastr.error("User does not exist", "Required", {
+                    positionClass: "toast-top-center",
+                    timeOut: 5e3,
+                    closeButton: !0,
+                    debug: !1,
+                    newestOnTop: !0,
+                    progressBar: !0,
+                    preventDuplicates: !0,
+                    onclick: null,
+                    showDuration: "300",
+                    hideDuration: "1000",
+                    extendedTimeOut: "1000",
+                    showEasing: "swing",
+                    hideEasing: "linear",
+                    showMethod: "fadeIn",
+                    hideMethod: "fadeOut",
+                    tapToDismiss: !1
+                })
                 document.querySelector('#transferBtn').innerHTML = 'Proceed'
             } else if (from == to) {
-                console.log('U cannot transfer to urself')
+                toastr.error("You cannot make a transfer to yourself", "Error", {
+                    positionClass: "toast-top-center",
+                    timeOut: 5e3,
+                    closeButton: !0,
+                    debug: !1,
+                    newestOnTop: !0,
+                    progressBar: !0,
+                    preventDuplicates: !0,
+                    onclick: null,
+                    showDuration: "300",
+                    hideDuration: "1000",
+                    extendedTimeOut: "1000",
+                    showEasing: "swing",
+                    hideEasing: "linear",
+                    showMethod: "fadeIn",
+                    hideMethod: "fadeOut",
+                    tapToDismiss: !1
+                })
                 document.querySelector('#transferBtn').innerHTML = 'Proceed'
             } else if (amount > bal) {
-                console.log('err');
+                toastr.error("You dont have up to that", "Erro", {
+                    positionClass: "toast-top-center",
+                    timeOut: 5e3,
+                    closeButton: !0,
+                    debug: !1,
+                    newestOnTop: !0,
+                    progressBar: !0,
+                    preventDuplicates: !0,
+                    onclick: null,
+                    showDuration: "300",
+                    hideDuration: "1000",
+                    extendedTimeOut: "1000",
+                    showEasing: "swing",
+                    hideEasing: "linear",
+                    showMethod: "fadeIn",
+                    hideMethod: "fadeOut",
+                    tapToDismiss: !1
+                })
                 document.querySelector('#transferBtn').innerHTML = 'Proceed'
             } else {
                 $.ajax({
@@ -252,8 +324,43 @@ include '../backend/udata.php';
                     success: (res) => {
                         document.querySelector('#transferBtn').innerHTML = 'Proceed'
                         if (res.header == 'sent') {
-                            console.log('good');
+                            toastr.success("You have successfully made your transaction", "Success", {
+                                positionClass: "toast-top-center",
+                                timeOut: 5e3,
+                                closeButton: !0,
+                                debug: !1,
+                                newestOnTop: !0,
+                                progressBar: !0,
+                                preventDuplicates: !0,
+                                onclick: null,
+                                showDuration: "300",
+                                hideDuration: "1000",
+                                extendedTimeOut: "1000",
+                                showEasing: "swing",
+                                hideEasing: "linear",
+                                showMethod: "fadeIn",
+                                hideMethod: "fadeOut",
+                                tapToDismiss: !1
+                            })
                         } else {
+                            toastr.error("An error occured", "Error", {
+                                positionClass: "toast-top-center",
+                                timeOut: 5e3,
+                                closeButton: !0,
+                                debug: !1,
+                                newestOnTop: !0,
+                                progressBar: !0,
+                                preventDuplicates: !0,
+                                onclick: null,
+                                showDuration: "300",
+                                hideDuration: "1000",
+                                extendedTimeOut: "1000",
+                                showEasing: "swing",
+                                hideEasing: "linear",
+                                showMethod: "fadeIn",
+                                hideMethod: "fadeOut",
+                                tapToDismiss: !1
+                            })
                             console.log(res.header);
                         }
                     }

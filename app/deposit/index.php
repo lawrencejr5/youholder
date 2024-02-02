@@ -109,7 +109,7 @@ include '../backend/udata.php';
                             <!-- Amount -->
                             <div class="mt-20 label-top">
                                 <label class="gilroy-medium text-gray-100 mb-2 f-15" for="amount">Amount</label>
-                                <input type="text" class="form-control input-form-control apply-bg l-s2" name="amount" id="amount" autocomplete="off" placeholder="Enter amount" onfocusout="checkAmt()" value="" required data-value-missing="This field is required.">
+                                <input type="text" class="form-control input-form-control apply-bg l-s2" name="amount" id="amount" autocomplete="off" placeholder="Enter amount" onkeyup="checkAmt()" value="" required data-value-missing="This field is required.">
                                 <span class="amountLimit custom-error"></span>
                             </div>
 

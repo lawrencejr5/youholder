@@ -18,6 +18,8 @@ include '../backend/udata.php';
     <link rel="stylesheet" href="../public/dist/libraries/bootstrap-5.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/dist/plugins/select2-4.1.0-rc.0/css/select2.min.css">
     <link rel="stylesheet" href="../public/user/templates/css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- end css -->
 
     <!-- favicon -->
@@ -136,7 +138,7 @@ include '../backend/udata.php';
                             <!-- Amount -->
                             <div class="label-top mt-20">
                                 <label class="gilroy-medium text-gray-100 mb-2 f-16">Your Amount</label>
-                                <input type="number" class="form-control input-form-control apply-bg l-s2" id="amount" name="amount" placeholder="Enter amount" onfocusout="checkAmt()">
+                                <input type="number" class="form-control input-form-control apply-bg l-s2" id="amount" name="amount" placeholder="Enter amount" onkeyup="checkAmt()">
                                 <span class="custom-error" id="amountLimitError">
                             </div>
 
@@ -201,6 +203,8 @@ include '../backend/udata.php';
     <script src="../public/user/templates/js/chart.umd.min.js"></script>
     <script src="../public/user/templates/js/main.min.js"></script>
     <script src="../public/user/customs/js/common.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <script>
         const convert = async (wallet, curr, amount) => {
@@ -266,13 +270,64 @@ include '../backend/udata.php';
             const amount = document.querySelector('#amount').value
             const converted = document.querySelector('#convertedAmount').value
             if (!wallet_from || !wallet_to) {
-                console.log('Empty');
+                toastr.error("Select wallet from and wallet to", "Required", {
+                    positionClass: "toast-top-center",
+                    timeOut: 5e3,
+                    closeButton: !0,
+                    debug: !1,
+                    newestOnTop: !0,
+                    progressBar: !0,
+                    preventDuplicates: !0,
+                    onclick: null,
+                    showDuration: "300",
+                    hideDuration: "1000",
+                    extendedTimeOut: "1000",
+                    showEasing: "swing",
+                    hideEasing: "linear",
+                    showMethod: "fadeIn",
+                    hideMethod: "fadeOut",
+                    tapToDismiss: !1
+                })
                 exchange.innerHTML = "Proceed"
             } else if (!converted) {
-                console.log('Not converted');
+                toastr.error("Currency not converted yet", "Required", {
+                    positionClass: "toast-top-center",
+                    timeOut: 5e3,
+                    closeButton: !0,
+                    debug: !1,
+                    newestOnTop: !0,
+                    progressBar: !0,
+                    preventDuplicates: !0,
+                    onclick: null,
+                    showDuration: "300",
+                    hideDuration: "1000",
+                    extendedTimeOut: "1000",
+                    showEasing: "swing",
+                    hideEasing: "linear",
+                    showMethod: "fadeIn",
+                    hideMethod: "fadeOut",
+                    tapToDismiss: !1
+                })
                 exchange.innerHTML = "Proceed"
             } else if (amount > bal) {
-                console.log('Not enough');
+                toastr.error("Not enough money in wallet", "Error", {
+                    positionClass: "toast-top-center",
+                    timeOut: 5e3,
+                    closeButton: !0,
+                    debug: !1,
+                    newestOnTop: !0,
+                    progressBar: !0,
+                    preventDuplicates: !0,
+                    onclick: null,
+                    showDuration: "300",
+                    hideDuration: "1000",
+                    extendedTimeOut: "1000",
+                    showEasing: "swing",
+                    hideEasing: "linear",
+                    showMethod: "fadeIn",
+                    hideMethod: "fadeOut",
+                    tapToDismiss: !1
+                })
                 exchange.innerHTML = "Proceed"
             } else {
                 $.ajax({
@@ -292,7 +347,24 @@ include '../backend/udata.php';
                     success: (res) => {
                         if (res.header == 'exchanged') {
                             document.querySelector('#exchangeBtn').innerHTML = "Proceed"
-                            console.log('good');
+                            toastr.success("You have successfully made an exchange between wallets", "Success", {
+                                positionClass: "toast-top-center",
+                                timeOut: 5e3,
+                                closeButton: !0,
+                                debug: !1,
+                                newestOnTop: !0,
+                                progressBar: !0,
+                                preventDuplicates: !0,
+                                onclick: null,
+                                showDuration: "300",
+                                hideDuration: "1000",
+                                extendedTimeOut: "1000",
+                                showEasing: "swing",
+                                hideEasing: "linear",
+                                showMethod: "fadeIn",
+                                hideMethod: "fadeOut",
+                                tapToDismiss: !1
+                            })
                         }
                     }
                 })
