@@ -397,7 +397,7 @@ class Modules extends Connection
              FROM user_wallets uw 
              LEFT JOIN wallets w ON uw.wallet_name = w.wallet_name
              WHERE uw.uid = :uid
-             LIMIT 3";
+             LIMIT 4";
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':uid', $uid);
             $this->stmt->execute();

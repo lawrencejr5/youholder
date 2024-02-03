@@ -84,7 +84,7 @@ include '../backend/udata.php';
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 12C13.1642 12 13.5 12.3358 13.5 12.75C13.5 13.1642 13.1642 13.5 12.75 13.5L5.25 13.5C4.83579 13.5 4.5 13.1642 4.5 12.75L4.5 5.25C4.5 4.83579 4.83579 4.5 5.25 4.5C5.66421 4.5 6 4.83579 6 5.25L6 10.9393L12.2197 4.71967C12.5126 4.42678 12.9874 4.42678 13.2803 4.71967C13.5732 5.01256 13.5732 5.48744 13.2803 5.78033L7.06066 12L12.75 12Z" fill="currentColor" />
                                 </svg>
                             </a>
-                            <a href="../withdraw" class="btn btn-lg btn-warning cursor-pointer ml-12 w-160 yellow-btn">
+                            <a href="../withdraw" class="btn btn-lg btn-light cursor-pointer ml-12 w-160 yellow-btn">
                                 <span class="mb-0 f-14 leading-20 gilroy-medium text-dark">Withdraw Money</span>
                                 <svg class="ml-10 nscaleX-1" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.25 6C4.83579 6 4.5 5.66421 4.5 5.25C4.5 4.83579 4.83579 4.5 5.25 4.5L12.75 4.5C13.1642 4.5 13.5 4.83579 13.5 5.25L13.5 12.75C13.5 13.1642 13.1642 13.5 12.75 13.5C12.3358 13.5 12 13.1642 12 12.75V7.06066L5.78033 13.2803C5.48744 13.5732 5.01256 13.5732 4.71967 13.2803C4.42678 12.9874 4.42678 12.5126 4.71967 12.2197L10.9393 6L5.25 6Z" fill="#3F405B" />
@@ -112,7 +112,6 @@ include '../backend/udata.php';
                                         foreach ($data['total_withdrawals'] as $tw) {
                                     ?>
                                             <p class="mb-0 f-24 leading-30 gilroy-Semibold l-s1 text-dark"><?= $td['amount'] ? round($td['amount'], 2) - round($tw['amount'], 2) . ' ' . $w['wallet_name'] : 0 ?></p>
-                                            <p class="mb-0 f-13  text-gray-100 gilroy-regular text-end ml-24 fee-mt-8 w-space"><?= $td['amount'] ? $td['amount'] - $tw['amount'] . ' ' . $w['wallet_name'] : 0 ?></p>
                                     <?php
                                         }
                                     }
@@ -130,8 +129,8 @@ include '../backend/udata.php';
                                 </svg>
                             </div>
                             <div class="check-all">
-                                <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Check all</p>
-                                <p class="mb-0 f-18 leading-22 text-dark gilroy-Semibold">Wallet Balance</p>
+                                <!-- <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Check all</p> -->
+                                <p class="mb-0 f-18 leading-22 text-dark gilroy-Semibold"> All Wallet Balance</p>
                             </div>
                             <a href="../wallets" class="nscaleX-1 cursor-pointer d-flex justify-content-center align-items-center dash-arrow-div">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
