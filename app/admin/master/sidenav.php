@@ -75,5 +75,12 @@
                 <a href="../stakes"><i class="fa fa-arrow-up"></i><span>Stakes</span></a>
             </li>
 
+
+            <p class="pl-4 configuration">Account</p>
+            <!-- Currencies & Fees -->
+            <li class="">
+                <a href="../../dashboard/"><i class="fa fa-chevron-left"></i><span>Back to User Dashboard</span></a>
+            </li>
+
     </section>
 </aside>

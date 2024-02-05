@@ -1,3 +1,7 @@
+<?php
+include "../../backend/adminData.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,19 +82,30 @@
                                                 <thead>
                                                     <tr>
                                                         <th title="ID">ID</th>
-                                                        <th title="Document Verification Status">Document Verification
-                                                            Status</th>
-                                                        <th title="First Name">First Name</th>
-                                                        <th title="Last Name">Last Name</th>
-                                                        <th title="Phone">Phone</th>
-                                                        <th title="Email">Email</th>
-                                                        <th title="Group">Group</th>
-                                                        <th title="Last Login">Last Login</th>
-                                                        <th title="IP">IP</th>
-                                                        <th title="Status">Status</th>
+                                                        <th title="First Name">Name</th>
+                                                        <th title="Phone">Deposit amount</th>
+                                                        <th title="Email">Converted amount</th>
+                                                        <th title="Email">Wallet</th>
+                                                        <th title="Group">Datetime</th>
+                                                        <th title="Status">Verified</th>
                                                         <th title="Action">Action</th>
                                                     </tr>
                                                 </thead>
+                                                <tbody>
+                                                    <?php $sn = 1;
+                                                    foreach ($data['deposits'] as $d) { ?>
+                                                        <tr>
+                                                            <td><?= $sn++ ?></td>
+                                                            <td><?= $d['fname'] . ' ' . $d['lname'] ?></td>
+                                                            <td><?= $d['deposit_amt'] . ' ' . strtoupper($d['currency']) ?></td>
+                                                            <td><?= $d['return_amt'] . ' ' . $d['wallet'] ?></td>
+                                                            <td><?= $d['wallet'] ?></td>
+                                                            <td><?= $d['datetime'] ?></td>
+                                                            <td><?= $d['approved'] ?></td>
+                                                            <td><button class="btn btn-success">Verify</button>&nbsp;<button class="btn btn-danger">Delete</button></td>
+                                                        </tr>
+                                                    <?php } ?>
+                                                </tbody>
                                             </table>
                                         </div>
                                     </div>

@@ -1,3 +1,7 @@
+<?php
+include "../../backend/adminData.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

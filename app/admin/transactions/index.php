@@ -1,3 +1,6 @@
+<?php
+include "../../backend/adminData.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,20 +80,33 @@
                                             <table class="table table-striped table-hover f-14 dt-responsive" id="dataTableBuilder" width="100%" cellspacing="0">
                                                 <thead>
                                                     <tr>
-                                                        <th title="ID">ID</th>
-                                                        <th title="Document Verification Status">Document Verification
-                                                            Status</th>
-                                                        <th title="First Name">First Name</th>
-                                                        <th title="Last Name">Last Name</th>
-                                                        <th title="Phone">Phone</th>
-                                                        <th title="Email">Email</th>
-                                                        <th title="Group">Group</th>
-                                                        <th title="Last Login">Last Login</th>
-                                                        <th title="IP">IP</th>
-                                                        <th title="Status">Status</th>
-                                                        <th title="Action">Action</th>
+                                                        <th title="ID">Sn</th>
+                                                        <th title="First Name">Name</th>
+                                                        <th title="Last Name">Transaction type</th>
+                                                        <th title="Phone">Amount</th>
+                                                        <th title="Email">Wallet</th>
+                                                        <th title="Group">From to</th>
+                                                        <th title="Last Login">Verified</th>
+                                                        <th title="IP">Date & time</th>
+                                                        <th title="IP">Action</th>
                                                     </tr>
                                                 </thead>
+                                                <tbody>
+                                                    <?php $sn = 1;
+                                                    foreach ($data['transactions'] as $t) { ?>
+                                                        <tr>
+                                                            <td><?= $sn++ ?></td>
+                                                            <td><?= $t['fname'] . ' ' . $t['lname'] ?></td>
+                                                            <td><?= $t['transaction_type'] ?></td>
+                                                            <td><?= $t['amount'] ?></td>
+                                                            <td><?= $t['wallet'] ?></td>
+                                                            <td><?= $t['from_to'] ?></td>
+                                                            <td><?= $t['verified'] ?></td>
+                                                            <td><?= $t['datetime'] ?></td>
+                                                            <td><button class="btn btn-success">Verify</button>&nbsp;<button class="btn btn-danger">Delete</button></td>
+                                                        </tr>
+                                                    <?php } ?>
+                                                </tbody>
                                             </table>
                                         </div>
                                     </div>

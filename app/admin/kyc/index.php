@@ -1,3 +1,7 @@
+<?php
+include "../../backend/adminData.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,19 +84,38 @@
                                                 <thead>
                                                     <tr>
                                                         <th title="ID">ID</th>
-                                                        <th title="Document Verification Status">Document Verification
-                                                            Status</th>
-                                                        <th title="First Name">First Name</th>
-                                                        <th title="Last Name">Last Name</th>
-                                                        <th title="Phone">Phone</th>
-                                                        <th title="Email">Email</th>
-                                                        <th title="Group">Group</th>
-                                                        <th title="Last Login">Last Login</th>
-                                                        <th title="IP">IP</th>
-                                                        <th title="Status">Status</th>
+                                                        <th title="First Name">First name</th>
+                                                        <th title="First Name">Last name</th>
+                                                        <!-- <th title="Phone">Email</th> -->
+                                                        <th title="Email">Identity type</th>
+                                                        <th title="Email">Identity Number</th>
+                                                        <th title="Group">Front img</th>
+                                                        <th title="Status">Back Img</th>
+                                                        <th title="Status">Level</th>
+                                                        <th title="Status">Date and time</th>
+                                                        <!-- <th title="Status">Veriffied</th> -->
                                                         <th title="Action">Action</th>
                                                     </tr>
                                                 </thead>
+                                                <tbody>
+                                                    <?php $sn = 1;
+                                                    foreach ($data['documents'] as $d) { ?>
+                                                        <tr>
+                                                            <td><?= $sn++ ?></td>
+                                                            <td><?= $d['fname'] ?></td>
+                                                            <td><?= $d['lname'] ?></td>
+                                                            <!-- <td><?= $d['email'] ?></td> -->
+                                                            <td><?= $d['identity_type'] ?></td>
+                                                            <td><?= $d['identity_number'] ?></td>
+                                                            <td><a target="__blank" href="../../backend/actions/uploads/<?= $d['front_img'] ?>"><?= $d['front_img'] ?></a></td>
+                                                            <td><a target="__blank" href="../../backend/actions/uploads/<?= $d['back_img'] ?>"><?= $d['back_img'] ?></a></td>
+                                                            <td><?= $d['level'] ?></td>
+                                                            <td><?= $d['datetime'] ?></td>
+                                                            <!-- <td><?= $d['verified'] ?></td> -->
+                                                            <td><button class="btn btn-success">Approve</button>&nbsp;<button class="btn btn-danger">Deny</button></td>
+                                                        </tr>
+                                                    <?php } ?>
+                                                </tbody>
                                             </table>
                                         </div>
                                     </div>

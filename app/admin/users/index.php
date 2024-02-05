@@ -1,3 +1,8 @@
+<?php
+include "../../backend/adminData.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,19 +87,37 @@
                                                 <thead>
                                                     <tr>
                                                         <th title="ID">ID</th>
-                                                        <th title="Document Verification Status">Document Verification
-                                                            Status</th>
                                                         <th title="First Name">First Name</th>
                                                         <th title="Last Name">Last Name</th>
                                                         <th title="Phone">Phone</th>
                                                         <th title="Email">Email</th>
-                                                        <th title="Group">Group</th>
-                                                        <th title="Last Login">Last Login</th>
-                                                        <th title="IP">IP</th>
-                                                        <th title="Status">Status</th>
-                                                        <th title="Action">Action</th>
+                                                        <th title="Adress">Addrss1</th>
+                                                        <th title="Address">Address2</th>
+                                                        <th title="Country">Country</th>
+                                                        <th title="State">State</th>
+                                                        <th title="City">City</th>
+                                                        <th title="Level">Level</th>
+                                                        <th title="Date & Time">Date & Time Joined</th>
                                                     </tr>
                                                 </thead>
+                                                <tbody>
+                                                    <?php foreach ($data['users'] as $u) { ?>
+                                                        <tr>
+                                                            <td><?= $u['id'] ?></td>
+                                                            <td><?= $u['fname'] ?></td>
+                                                            <td><?= $u['lname'] ?></td>
+                                                            <td><?= $u['phone'] ?></td>
+                                                            <td><?= $u['email'] ?></td>
+                                                            <td><?= $u['address1'] ?></td>
+                                                            <td><?= $u['address2'] ?></td>
+                                                            <td><?= $u['country'] ?></td>
+                                                            <td><?= $u['state'] ?></td>
+                                                            <td><?= $u['city'] ?></td>
+                                                            <td><?= $u['level'] ?></td>
+                                                            <td><?= $u['datetime'] ?></td>
+                                                        </tr>
+                                                    <?php } ?>
+                                                </tbody>
                                             </table>
                                         </div>
                                     </div>
