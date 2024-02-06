@@ -67,7 +67,7 @@ include "../../backend/adminData.php";
                             <!-- small box -->
                             <div class="small-box bg-yellow">
                                 <div class="inner">
-                                    <h3>4</h3>
+                                    <h3><?= $numOfUsers ?></h3>
 
                                     <p>Total Users</p>
                                 </div>
@@ -82,14 +82,14 @@ include "../../backend/adminData.php";
                             <!-- small box -->
                             <div class="small-box bg-red">
                                 <div class="inner">
-                                    <h3>5</h3>
+                                    <h3><?= $numOfTransactions ?></h3>
 
-                                    <p>Total Merchants</p>
+                                    <p>Total Transactions</p>
                                 </div>
                                 <div class="icon">
                                     <i class="ion ion-person-add"></i>
                                 </div>
-                                <a href="../merchants" class="small-box-footer">More info<i class="fa fa-arrow-circle-right ms-1"></i></a>
+                                <a href="../transactions" class="small-box-footer">More info<i class="fa fa-arrow-circle-right ms-1"></i></a>
                             </div>
                         </div>
 
@@ -97,13 +97,13 @@ include "../../backend/adminData.php";
                             <!-- small box -->
                             <div class="small-box bg-aqua">
                                 <div class="inner">
-                                    <h3>3</h3>
-                                    <p>Total Tickets</p>
+                                    <h3>0</h3>
+                                    <p>Total Stakes</p>
                                 </div>
                                 <div class="icon">
                                     <i class="fa fa-envelope-o"></i>
                                 </div>
-                                <a href="../tickets/list" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                                <a href="../stakings/" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
 
@@ -111,14 +111,14 @@ include "../../backend/adminData.php";
                             <!-- small box -->
                             <div class="small-box bg-green">
                                 <div class="inner">
-                                    <h3>2</h3>
+                                    <h3>0</h3>
 
-                                    <p>Total Dispute</p>
+                                    <p>Total Investments</p>
                                 </div>
                                 <div class="icon">
                                     <i class="ion ion-stats-bars"></i>
                                 </div>
-                                <a href="../disputes" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                                <a href="../investments" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>

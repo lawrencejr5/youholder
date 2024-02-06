@@ -45,6 +45,10 @@ include "../../backend/adminData.php";
     <!-- custom styles -->
     <link rel="stylesheet" type="text/css" href="../public/admin/templates/css/style.min.css">
 
+    <!-- dataTables -->
+    <link rel="stylesheet" type="text/css" href="../public/dist/plugins/DataTables/DataTables-1.10.18/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/dist/plugins/DataTables/Responsive-2.2.2/css/responsive.dataTables.min.css">
+
     <!-- jQuery 3.2.1 -->
     <script src="../public/dist/libraries/jquery-3.2.1/dist/jquery.min.js"></script>
 
@@ -77,7 +81,7 @@ include "../../backend/adminData.php";
                                 <div class="panel panel-info">
                                     <div class="panel-body">
                                         <div class="table-responsive">
-                                            <table class="table table-striped table-hover f-14 dt-responsive" id="dataTableBuilder" width="100%" cellspacing="0">
+                                            <table class="table table-striped table-hover f-14 dt-responsive" id="transactionTable" width="100%" cellspacing="0">
                                                 <thead>
                                                     <tr>
                                                         <th title="ID">Sn</th>
@@ -178,6 +182,11 @@ include "../../backend/adminData.php";
     <!-- AdminLTE App -->
     <script src="../public/admin/templates/js/app.min.js" type="text/javascript"></script>
 
+    <!-- jquery.dataTables js -->
+    <script src="../public/dist/plugins/DataTables/DataTables-1.10.18/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="../public/dist/plugins/DataTables/Responsive-2.2.2/js/dataTables.responsive.min.js" type="text/javascript"></script>
+
+
     <script type="text/javascript">
         "use strict";
         var url = "https://demo.paymoney.techvill.net/change-lang";
@@ -185,6 +194,13 @@ include "../../backend/adminData.php";
     </script>
     <script src="../public/admin/customs/js/body_script.min.js"></script>
     <script type="text/javascript">
+        $(function() {
+            $("#transactionTable").DataTable({
+                "order": [],
+                "language": '',
+                "pageLength": '25'
+            });
+        });
     </script>
 </body>
 

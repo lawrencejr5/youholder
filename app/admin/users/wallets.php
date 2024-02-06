@@ -1,3 +1,8 @@
+<?php
+include "../../backend/adminData.php";
+
+$data['user_wallets'] = $adminModule->getUserWallets($_GET['userid']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,31 +75,36 @@
                                             <table class="table table-hover pt-3" id="eachuserwallet">
                                                 <thead>
                                                     <tr>
-                                                        <th>Date</th>
-                                                        <th>Balance</th>
-                                                        <th>Currency</th>
-                                                        <th>Default</th>
+                                                        <th title="ID">ID</th>
+                                                        <th title="First Name">Wallet Name</th>
+                                                        <th title="Phone">Balance</th>
+                                                        <th title="Phone">Date & time</th>
+                                                        <th title="Action">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>20-07-2018 3:04 AM</td>
-
-                                                        <td>995</td>
-
-                                                        <td>USD</td>
-
-                                                        <td><span class="label label-success">Yes</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>19-07-2018 10:51 PM</td>
-
-                                                        <td>0</td>
-
-                                                        <td>EUR</td>
-
-                                                        <td><span class="label label-danger">No</span></td>
-                                                    </tr>
+                                                    <?php $sn = 1;
+                                                    foreach ($data['user_wallets'] as $w) { ?>
+                                                        <tr>
+                                                            <td><?= $sn++ ?></td>
+                                                            <td><?= $w['wallet_name'] ?></td>
+                                                            <?php
+                                                            $data['total_deposits'] = $adminModule->getTotalDeposits($_GET['userid'], $w['wallet_name']);
+                                                            $data['total_withdrawals'] = $adminModule->getTotalWithdrawals($_GET['userid'], $w['wallet_name']);
+                                                            foreach ($data['total_deposits'] as $t1) {
+                                                                foreach ($data['total_withdrawals'] as $t2) {
+                                                            ?>
+                                                                    <td>
+                                                                        <?= $t1['amount'] - $t2['amount'] ?>
+                                                                    </td>
+                                                            <?php
+                                                                }
+                                                            }
+                                                            ?>
+                                                            <td><?= $w['datetime'] ?></td>
+                                                            <td><button class="btn btn-danger">Delete</button></td>
+                                                        </tr>
+                                                    <?php } ?>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -102,6 +112,8 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
             </section>
         </div>
 

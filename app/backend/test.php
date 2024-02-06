@@ -16,4 +16,6 @@ header('content-type: application/json');
 // echo json_encode(['withdrawals' => $adminModule->fetchAllWithdrawals('withdrawal')]);
 // echo json_encode(['success' => true, 'data' => $adminModule->fetchAllTransfers('transfer from')]);
 // echo json_encode(['success' => true, 'data' => $adminModule->fetchAllExchanges('exchange from', 'exchange to')]);
-echo json_encode(['success' => true, 'data' => $adminModule->fetchAllUserDocuments()]);
+// echo json_encode(['success' => true, 'data' => $adminModule->fetchAllUserDocuments()]);
+// echo json_encode(['success' => true, 'datum' => $adminModule->getUserExchanges('transfer from', 'transfer to', 25)]);
+echo json_encode(['success' => true, 'datum' => $adminModule->getUserWallets(26)]);

@@ -72,7 +72,10 @@
             <p class="pl-4 configuration">Addons</p>
             <!-- Currencies & Fees -->
             <li class="">
-                <a href="../stakes"><i class="fa fa-arrow-up"></i><span>Stakes</span></a>
+                <a href="../stakings"><i class="fa fa-arrow-up"></i><span>Stakes</span></a>
+            </li>
+            <li class="">
+                <a href="../investments"><i class="fa fa-money"></i><span>Investments</span></a>
             </li>
 
 

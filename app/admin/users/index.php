@@ -47,6 +47,10 @@ include "../../backend/adminData.php";
     <!-- custom styles -->
     <link rel="stylesheet" type="text/css" href="../public/admin/templates/css/style.min.css">
 
+    <!-- dataTables -->
+    <link rel="stylesheet" type="text/css" href="../public/dist/plugins/DataTables/DataTables-1.10.18/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/dist/plugins/DataTables/Responsive-2.2.2/css/responsive.dataTables.min.css">
+
     <!-- jQuery 3.2.1 -->
     <script src="../public/dist/libraries/jquery-3.2.1/dist/jquery.min.js"></script>
 
@@ -83,7 +87,7 @@ include "../../backend/adminData.php";
                                 <div class="panel panel-info">
                                     <div class="panel-body">
                                         <div class="table-responsive">
-                                            <table class="table table-striped table-hover f-14 dt-responsive" id="dataTableBuilder" width="100%" cellspacing="0">
+                                            <table class="table table-striped table-hover f-14 dt-responsive" id="usersTable" width="100%" cellspacing="0">
                                                 <thead>
                                                     <tr>
                                                         <th title="ID">ID</th>
@@ -98,6 +102,7 @@ include "../../backend/adminData.php";
                                                         <th title="City">City</th>
                                                         <th title="Level">Level</th>
                                                         <th title="Date & Time">Date & Time Joined</th>
+                                                        <th>View</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -115,6 +120,7 @@ include "../../backend/adminData.php";
                                                             <td><?= $u['city'] ?></td>
                                                             <td><?= $u['level'] ?></td>
                                                             <td><?= $u['datetime'] ?></td>
+                                                            <td><a href="profile.php?userid=<?= $u['id'] ?>"><button style="border: none; outline: none; background: transparent;"><i class="fa fa-chevron-right"></i></button></a></td>
                                                         </tr>
                                                     <?php } ?>
                                                 </tbody>
@@ -188,6 +194,10 @@ include "../../backend/adminData.php";
     <script src="../public/dist/js/moment.min.js" type="text/javascript"></script>
     <!-- AdminLTE App -->
     <script src="../public/admin/templates/js/app.min.js" type="text/javascript"></script>
+    <!-- jquery.dataTables js -->
+    <script src="../public/dist/plugins/DataTables/DataTables-1.10.18/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="../public/dist/plugins/DataTables/Responsive-2.2.2/js/dataTables.responsive.min.js" type="text/javascript"></script>
+
 
     <script type="text/javascript">
         "use strict";
@@ -196,6 +206,13 @@ include "../../backend/adminData.php";
     </script>
     <script src="../public/admin/customs/js/body_script.min.js"></script>
     <script type="text/javascript">
+        $(function() {
+            $("#usersTable").DataTable({
+                "order": [],
+                "language": '',
+                "pageLength": '25'
+            });
+        });
     </script>
 </body>
 

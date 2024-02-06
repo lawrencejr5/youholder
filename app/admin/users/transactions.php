@@ -1,3 +1,13 @@
+<?php
+include "../../backend/adminData.php";
+
+
+!$_GET['userid'] && header('location: ./');
+$data['user_deposits'] = $adminModule->getUserDeposits('deposit', $_GET['userid']);
+$data['user_withdrawals'] = $adminModule->getUserWithdrawals('withdrawal', $_GET['userid']);
+$data['user_transfers'] = $adminModule->getUserTransfers('transfer from', 'transfer to', $_GET['userid']);
+$data['user_exchanges'] = $adminModule->getUserExchanges('exchange from', 'exchange to', $_GET['userid']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,28 +75,152 @@
                 <?php include "../master/usernav.php" ?>
                 <div class="box">
                     <div class="box-body">
+                        <h4>Deposits</h4>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="table-responsive">
-                                    <table class="table table-striped table-hover f-14 dt-responsive transactions" id="dataTableBuilder" width="100%" cellspacing="0">
+                                    <table class="table table-striped table-hover f-14 dt-responsive transactions" id="depositTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
                                                 <th title="ID">ID</th>
-                                                <th title="UUID">UUID</th>
-                                                <th title="Date">Date</th>
-                                                <th title="User">User</th>
-                                                <th title="User">User</th>
-                                                <th title="Type">Type</th>
-                                                <th title="Amount">Amount</th>
-                                                <th title="Fees">Fees</th>
-                                                <th title="Total">Total</th>
-                                                <th title="Currency">Currency</th>
-                                                <th title="Receiver">Receiver</th>
-                                                <th title="Receiver">Receiver</th>
-                                                <th title="Status">Status</th>
+                                                <th title="First Name">Name</th>
+                                                <th title="Phone">Deposit amount</th>
+                                                <th title="Email">Converted amount</th>
+                                                <th title="Email">Wallet</th>
+                                                <th title="Group">Datetime</th>
+                                                <th title="Status">Verified</th>
                                                 <th title="Action">Action</th>
                                             </tr>
                                         </thead>
+                                        <tbody>
+                                            <?php $sn = 1;
+                                            foreach ($data['user_deposits'] as $d) { ?>
+                                                <tr>
+                                                    <td><?= $sn++ ?></td>
+                                                    <td><?= $d['fname'] . ' ' . $d['lname'] ?></td>
+                                                    <td><?= $d['deposit_amt'] . ' ' . strtoupper($d['currency']) ?></td>
+                                                    <td><?= $d['return_amt'] . ' ' . $d['wallet'] ?></td>
+                                                    <td><?= $d['wallet'] ?></td>
+                                                    <td><?= $d['datetime'] ?></td>
+                                                    <td><?= $d['approved'] ?></td>
+                                                    <td><button class="btn btn-success">Verify</button>&nbsp;<button class="btn btn-danger">Delete</button></td>
+                                                </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-body">
+                        <h4>Withdrawals</h4>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover f-14 dt-responsive transactions" id="withdrawTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th title="ID">ID</th>
+                                                <th title="First Name">Name</th>
+                                                <th title="Phone">Amount</th>
+                                                <th title="Email">Wallet</th>
+                                                <th title="Group">Address</th>
+                                                <th title="Status">Verified</th>
+                                                <th title="Status">Date & time</th>
+                                                <th title="Action">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $sn = 1;
+                                            foreach ($data['user_withdrawals'] as $w) { ?>
+                                                <tr>
+                                                    <td><?= $sn++ ?></td>
+                                                    <td><?= $w['fname'] . ' ' . $w['lname'] ?></td>
+                                                    <td><?= $w['amount'] . ' ' . $w['wallet_name'] ?></td>
+                                                    <td><?= $w['wallet_name'] ?></td>
+                                                    <td><?= $w['crypto_address'] ?></td>
+                                                    <td><?= $w['verified'] ?></td>
+                                                    <td><?= $w['datetime'] ?></td>
+                                                    <td><button class="btn btn-success">Verify</button>&nbsp;<button class="btn btn-danger">Delete</button></td>
+                                                </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-body">
+                        <h4>Transfers</h4>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover f-14 dt-responsive transactions" id="transferTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th title="ID">ID</th>
+                                                <th title="First Name">Name</th>
+                                                <th title="Phone">Amount</th>
+                                                <th title="Group">From/To</th>
+                                                <th title="Status">Date & time</th>
+                                                <!-- <th title="Action">Action</th> -->
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $sn = 1;
+                                            foreach ($data['user_transfers'] as $t) { ?>
+                                                <tr>
+                                                    <td><?= $sn++ ?></td>
+                                                    <td><?= $t['fname'] . ' ' . $t['lname'] ?></td>
+                                                    <td><?= $t['amount'] . ' ' . $t['wallet'] ?></td>
+                                                    <td><?= $t['from_to'] ?></td>
+                                                    <td><?= $t['datetime'] ?></td>
+                                                    <!-- <td><button class="btn btn-success">Verify</button>&nbsp;<button class="btn btn-danger">Delete</button></td> -->
+                                                </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-body">
+                        <h4>Exchanges</h4>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover f-14 dt-responsive transactions" id="exchangeTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th title="ID">ID</th>
+                                                <th title="First Name">Name</th>
+                                                <th title="Group">Exchange type</th>
+                                                <th title="Phone">Wallet</th>
+                                                <th title="Phone">Amount</th>
+                                                <th title="Status">Date & time</th>
+                                                <!-- <th title="Action">Action</th> -->
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $sn = 1;
+                                            foreach ($data['user_exchanges'] as $e) { ?>
+                                                <tr>
+                                                    <td><?= $sn++ ?></td>
+                                                    <td><?= $e['fname'] . ' ' . $e['lname'] ?></td>
+                                                    <td><?= $e['transaction_type'] ?></td>
+                                                    <td><?= $e['wallet'] ?></td>
+                                                    <td><?= $e['amount'] . ' ' . $e['wallet'] ?></td>
+                                                    <td><?= $e['datetime'] ?></td>
+                                                    <!-- <td><button class="btn btn-success">Verify</button>&nbsp;<button class="btn btn-danger">Delete</button></td> -->
+                                                </tr>
+                                            <?php } ?>
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
@@ -221,7 +355,36 @@
             }
         });
     </script>
-
+    <script type="text/javascript">
+        $(function() {
+            $("#depositTable").DataTable({
+                "order": [],
+                "language": '',
+                "pageLength": '10'
+            });
+        });
+        $(function() {
+            $("#withdrawTable").DataTable({
+                "order": [],
+                "language": '',
+                "pageLength": '10'
+            });
+        });
+        $(function() {
+            $("#transferTable").DataTable({
+                "order": [],
+                "language": '',
+                "pageLength": '10'
+            });
+        });
+        $(function() {
+            $("#exchangeTable").DataTable({
+                "order": [],
+                "language": '',
+                "pageLength": '10'
+            });
+        });
+    </script>
 </body>
 
 </html>

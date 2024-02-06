@@ -1,3 +1,9 @@
+<?php
+include "../../backend/adminData.php";
+
+$data['single_user'] = $adminModule->getUserData($_GET['userid']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,18 +68,20 @@
                     <div class="row align-items-center">
                         <div class="col-md-4">
                             <div class="d-flex align-items-center">
-                                <h3 class="f-24 mb-0">Nishat Nuzhat</h3>
-                                <p class="badge bg-warning mb-0 ms-1">Suspended</p>
+                                <?php foreach ($data['single_user'] as $u) { ?>
+                                    <h3 class="f-24 mb-0"><?= $u['fname'] . ' ' . $u['lname'] ?></h3>
+                                <?php } ?>
+                                <!-- <p class="badge bg-warning mb-0 ms-1">Suspended</p> -->
                             </div>
                         </div>
                         <div class="col-md-3"></div>
 
-                        <div class="col-md-5">
+                        <!-- <div class="col-md-5">
                             <div class="pull-right">
                                 <a href="./deposit.php" class="btn btn-theme f-14">Deposit</a>
                                 <a href="./withdraw.php" class="btn btn-theme f-14 ms-1">Withdraw</a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
 
@@ -82,110 +90,141 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <!-- form start -->
-                                    <form action="/update" class="form-horizontal" id="user_form" method="POST">
-                                        <input type="hidden" name="_token" value="AFPUgjA9zxV2UPj9WMPFDAGWhz5OzqNQTrudrvui" autocomplete="off">
+                                    <?php foreach ($data['single_user'] as $u) { ?>
+                                        <form action="/update" class="form-horizontal" id="user_form" method="POST">
+                                            <input type="hidden" value="<?= $_GET['userid'] ?>" name="id" id="id" />
+                                            <div class="box-body">
+                                                <div class="row">
+                                                    <div class="col-md-12">
 
-                                        <input type="hidden" value="4" name="id" id="id" />
-                                        <input type="hidden" value="" name="user_defaultCountry" id="user_defaultCountry" />
-                                        <input type="hidden" value="" name="user_carrierCode" id="user_carrierCode" />
-                                        <input type="hidden" value="" name="formattedPhone" id="formattedPhone">
-
-                                        <div class="box-body">
-                                            <div class="row">
-                                                <div class="col-md-12">
-
-                                                    <!-- FirstName -->
-                                                    <div class="row form-group">
-                                                        <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="first_name">First Name</label>
-                                                        <div class="col-sm-6">
-                                                            <input name="first_name" value="Nishat" type="text" id="first_name" class="form-control f-14" placeholder="Enter first name" data-value-missing="This field is required." maxlength="30" data-max-length="First name length should be maximum 30 charcters.">
+                                                        <!-- FirstName -->
+                                                        <div class="row form-group">
+                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="first_name">First Name</label>
+                                                            <div class="col-sm-6">
+                                                                <input name="first_name" value="<?= $u['fname'] ?>" type="text" id="first_name" class="form-control f-14" placeholder="Enter first name" data-value-missing="This field is required." maxlength="30" data-max-length="First name length should be maximum 30 charcters.">
+                                                            </div>
                                                         </div>
-                                                    </div>
 
-                                                    <!-- LastName -->
-                                                    <div class="row form-group">
-                                                        <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="last_name">Last Name</label>
-                                                        <div class="col-sm-6">
-                                                            <input name="last_name" value="Nuzhat" type="text" id="last_name" class="form-control f-14" placeholder="Enter last name" required data-value-missing="This field is required." maxlength="30" data-max-length="Last name length should be maximum 30 charcters.">
+                                                        <!-- LastName -->
+                                                        <div class="row form-group">
+                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="last_name">Last Name</label>
+                                                            <div class="col-sm-6">
+                                                                <input name="last_name" value="<?= $u['lname'] ?>" type="text" id="last_name" class="form-control f-14" placeholder="Enter last name" required data-value-missing="This field is required." maxlength="30" data-max-length="Last name length should be maximum 30 charcters.">
+                                                            </div>
                                                         </div>
-                                                    </div>
 
-                                                    <!-- Phone -->
-                                                    <div class="row form-group">
-                                                        <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="phone">Phone</label>
-                                                        <div class="col-sm-6">
-                                                            <input type="tel" class="form-control f-14" id="phone" name="phone">
-                                                            <span id="duplicate-phone-error"></span>
-                                                            <span id="tel-error"></span>
+                                                        <!-- Phone -->
+                                                        <div class="row form-group">
+                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="phone">Phone</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="tel" class="form-control f-14" value="<?= $u['phone'] ?>" id="phone" name="phone">
+                                                                <span id="duplicate-phone-error"></span>
+                                                                <span id="tel-error"></span>
+                                                            </div>
                                                         </div>
-                                                    </div>
 
-                                                    <!-- Email -->
-                                                    <div class="row form-group">
-                                                        <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">Email</label>
-                                                        <div class="col-sm-6">
-                                                            <input name="email" value="nuzhat@gmail.com" type="email" id="email" class="form-control f-14" placeholder="Enter a valid email." required oninvalid="this.setCustomValidity('This field is required.')" data-type-mismatch="Enter a valid email.">
-                                                            <span id="emailError"></span>
-                                                            <span id="email-ok" class="text-success"></span>
+                                                        <!-- Email -->
+                                                        <div class="row form-group">
+                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">Email</label>
+                                                            <div class="col-sm-6">
+                                                                <input name="email" value="<?= $u['email'] ?>" type="email" id="email" class="form-control f-14">
+                                                                <span id="emailError"></span>
+                                                                <span id="email-ok" class="text-success"></span>
+                                                            </div>
                                                         </div>
-                                                    </div>
 
-                                                    <!-- Role -->
-                                                    <div class="row form-group">
-                                                        <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="role">Group</label>
-                                                        <div class="col-sm-6">
-                                                            <select class="select2" name="role" id="role" required oninvalid="this.setCustomValidity('This field is required.')">
-                                                                <option value='2' selected> Default User</option>
-                                                                <option value='3'> Merchant Regular</option>
-                                                            </select>
+                                                        <!-- Role -->
+                                                        <div class="row form-group">
+                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">Country</label>
+                                                            <div class="col-sm-6">
+                                                                <input name="email" value="<?= $u['country'] ?>" type="email" id="email" class="form-control f-14">
+                                                                <span id="emailError"></span>
+                                                                <span id="email-ok" class="text-success"></span>
+                                                            </div>
                                                         </div>
-                                                    </div>
-
-                                                    <!-- Password -->
-                                                    <div class="row form-group">
-                                                        <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="password">
-                                                            Password
-                                                        </label>
-                                                        <div class="col-sm-6">
-                                                            <input name="password" type="password" id="password" class="form-control f-14" placeholder="Enter new Password">
+                                                        <!-- Role -->
+                                                        <div class="row form-group">
+                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">State</label>
+                                                            <div class="col-sm-6">
+                                                                <input name="email" value="<?= $u['state'] ?>" type="email" id="email" class="form-control f-14">
+                                                                <span id="emailError"></span>
+                                                                <span id="email-ok" class="text-success"></span>
+                                                            </div>
                                                         </div>
-                                                    </div>
-
-                                                    <!-- Password Confirmation -->
-                                                    <div class="row form-group">
-                                                        <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="password_confirmation">
-                                                            Confirm Password
-                                                        </label>
-                                                        <div class="col-sm-6">
-                                                            <input name="password_confirmation" type="password" id="password_confirmation" class="form-control f-14" placeholder="Confirm password">
+                                                        <!-- Role -->
+                                                        <div class="row form-group">
+                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">City</label>
+                                                            <div class="col-sm-6">
+                                                                <input name="email" value="<?= $u['city'] ?>" type="email" id="email" class="form-control f-14">
+                                                                <span id="emailError"></span>
+                                                                <span id="email-ok" class="text-success"></span>
+                                                            </div>
                                                         </div>
-                                                    </div>
-
-                                                    <!-- Status -->
-                                                    <div class="row form-group">
-                                                        <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="status">Status</label>
-                                                        <div class="col-sm-6">
-                                                            <select class="select2" name="status" id="status" required oninvalid="this.setCustomValidity('This field is required.')">
-                                                                <option value='Active'>Active</option>
-                                                                <option value='Inactive'>Inactive</option>
-                                                                <option value='Suspended' selected>Suspended</option>
-                                                            </select>
-                                                            <label id="user-status" class="error" for="status"></label>
+                                                        <!-- Role -->
+                                                        <div class="row form-group">
+                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">Addres1</label>
+                                                            <div class="col-sm-6">
+                                                                <input name="email" value="<?= $u['address1'] ?>" type="email" id="email" class="form-control f-14">
+                                                                <span id="emailError"></span>
+                                                                <span id="email-ok" class="text-success"></span>
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                        <!-- Role -->
+                                                        <div class="row form-group">
+                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">Address2</label>
+                                                            <div class="col-sm-6">
+                                                                <input name="email" value="<?= $u['address2'] ?>" type="email" id="email" class="form-control f-14">
+                                                                <span id="emailError"></span>
+                                                                <span id="email-ok" class="text-success"></span>
+                                                            </div>
+                                                        </div>
 
-                                                    <div class="row form-group align-items-center">
-                                                        <div class="col-sm-6 offset-md-3">
-                                                            <a class="btn btn-theme-danger me-1 f-14" href="https://demo.paymoney.techvill.net/admin/users" id="users_cancel">Cancel</a>
-                                                            <button type="submit" class="btn btn-theme f-14" id="users_edit">
-                                                                <i class="fa fa-spinner fa-spin f-14 d-none"></i> <span id="users_edit_text">Update</span>
-                                                            </button>
+                                                        <!-- Password -->
+                                                        <div class="row form-group">
+                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="password">
+                                                                Password
+                                                            </label>
+                                                            <div class="col-sm-6">
+                                                                <input name="password" type="password" value="<?= $u['password'] ?>" id="password" class="form-control f-14" placeholder="Enter new Password">
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Password Confirmation -->
+                                                        <div class="row form-group">
+                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="password_confirmation">
+                                                                Confirm Password
+                                                            </label>
+                                                            <div class="col-sm-6">
+                                                                <input name="password_confirmation" value="<?= $u['password'] ?>" type="password" id="password_confirmation" class="form-control f-14" placeholder="Confirm password">
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Status -->
+                                                        <div class="row form-group">
+                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="status">Status</label>
+                                                            <div class="col-sm-6">
+                                                                <select class="select2" name="status" id="status" required oninvalid="this.setCustomValidity('This field is required.')">
+                                                                    <option value='Active'>Active</option>
+                                                                    <option value='Inactive'>Inactive</option>
+                                                                    <option value='Suspended' selected>Suspended</option>
+                                                                </select>
+                                                                <label id="user-status" class="error" for="status"></label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row form-group align-items-center">
+                                                            <div class="col-sm-6 offset-md-3">
+                                                                <a class="btn btn-theme-danger me-1 f-14" href="https://demo.paymoney.techvill.net/admin/users" id="users_cancel">Cancel</a>
+                                                                <button type="submit" class="btn btn-theme f-14" id="users_edit">
+                                                                    <i class="fa fa-spinner fa-spin f-14 d-none"></i> <span id="users_edit_text">Update</span>
+                                                                </button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
