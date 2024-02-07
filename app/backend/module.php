@@ -316,6 +316,24 @@ class Modules extends Connection
         }
     }
 
+    public function stake($uid, $plan_id, $plan_name, $staked, $earned, $start, $end)
+    {
+        $this->sql = "INSERT INTO stakes(uid, plan_id, plan_name, staked, daily_earned, start_date, end_date) VALUES(:uid, :plan_id, :plan_name, :staked, :daily_earned, :start_date, :end_date)";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->bindParam(':plan_id', $plan_id);
+            $this->stmt->bindParam(':plan_name', $plan_name);
+            $this->stmt->bindParam(':staked', $staked);
+            $this->stmt->bindParam(':daily_earned', $earned);
+            $this->stmt->bindParam(':start_date', $start);
+            $this->stmt->bindParam(':end_date', $end);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
 
 
 
@@ -561,6 +579,31 @@ class Modules extends Connection
         } catch (\Throwable $th) {
             //throw $th;
             return 'err' . $th->getMessage();
+        }
+    }
+
+    public function getStakingPlans()
+    {
+        $this->sql = "SELECT p.*, w.wallet_img FROM stake_plans p LEFT JOIN wallets w ON w.wallet_name = p.crypto";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function getStakingPlan($id)
+    {
+        $this->sql = "SELECT p.*, w.wallet_img FROM stake_plans p LEFT JOIN wallets w ON w.wallet_name = p.crypto WHERE p.id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $th) {
+            return $th->getMessage();
         }
     }
 }

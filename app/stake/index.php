@@ -72,100 +72,123 @@ include '../backend/udata.php';
                         </div>
                         <p class="mb-0 text-center f-14 gilroy-medium text-gray dark-p mt-20"> You can invest on any plan using our popular payment methods or wallet.</p>
 
-                        <form method="" action="" id="invest-form">
-                            <input type="hidden" value="2" name="user_id" id="user-id">
-                            <input type="hidden" value="qb1QM8RsLbLH2VAZWJopBTfxWK5gnxizsKMLjfI7" name="_token" id="token">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="mt-28 param-ref">
-                                        <label class="gilroy-medium text-gray-100 mb-2 f-15" for="currency_id">Plan</label>
-                                        <div class="avoid-blink">
-                                            <select class="select2" data-minimum-results-for-search="Infinity" name="currency" id="currency" onchange="checkAmt()">
-                                                <option data-type="" value="">Select Plan</option>
-                                                <option data-type="fiat" value="btc">Basic</option>
-                                                <option data-type="fiat" value="usdt">Premium</option>
-                                                <option data-type="fiat" value="eth">Vip</option>
-                                            </select>
+                        <?php
+                        $data['stake_plan'] = $modules->getStakingPlan($_GET['planid']);
+                        foreach ($data['stake_plan'] as $s) {
+                        ?>
+                            <form>
+                                <input type="text" value="<?= $uID ?>" name="user_id" id="uid">
+                                <input type="text" value="<?= $s['crypto'] ?>" id="currency">
+                                <input type="text" value="" id="wid">
+                                <input type="text" value="" id="bal">
+                                <input type="text" value="<?= $s['min'] ?>" id="min">
+                                <input type="text" value="<?= $s['apy'] ?>" id="apy">
+                                <input type="text" value="<?= $s['id'] ?>" id="plan_id">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="label-top mt-20">
+                                            <label class="gilroy-medium text-gray-100 mb-2 f-15" for="amount">Staking Plan <span class="currency"></span></label>
+                                            <input type="text" class="form-control input-form-control apply-bg l-s2 amount" value="<?= $s['plan'] ?>" disabled name="plan" id="plan">
                                         </div>
-                                        <p class="mb-0 text-gray-100 dark-B87 gilroy-regular f-12 mt-2">Fee (<span class="pFees">0%</span>+<span class="fFees"> 0</span>) Total Fee: <span class="total_fees">0.00</span></p>
+                                        <div class="custom-error amountLimit"></div>
+
+                                        <div class="d-flex justify-content-between mt-10 d-none" id="amount-limit-div">
+
+                                            <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="amount-range"></span></p>
+
+                                            <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="maximum-amount"></span></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="mt-28 param-ref">
-                                        <label class="gilroy-medium text-gray-100 mb-2 f-15" for="plan">Wallet</label>
-                                        <select class="select2" data-minimum-results-for-search="Infinity" name="wallet" id="wallet">
-                                            <option value="">Select Wallet</option>
-                                            <?php foreach ($data['user_wallets'] as $w) {
-                                                $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_name']);
-                                                $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_name']);
-                                                foreach ($data['total_deposits'] as $td) {
-                                                    foreach ($data['total_withdrawals'] as $tw) {
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="mt-28 param-ref">
+                                            <label class="gilroy-medium text-gray-100 mb-2 f-15" for="plan">Wallet</label>
+                                            <select class="select2" data-minimum-results-for-search="Infinity" name="wallet" id="wallet" onchange="checkAmt()">
+                                                <option value="">Select Wallet</option>
+                                                <?php foreach ($data['user_wallets'] as $w) {
+                                                    $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_name']);
+                                                    $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_name']);
+                                                    foreach ($data['total_deposits'] as $td) {
+                                                        foreach ($data['total_withdrawals'] as $tw) {
 
-                                            ?>
-                                                        <option data-wid="<?= $w['wallet_id'] ?>" data-bal="<?= $td['amount'] - $tw['amount'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] . ' - ' . $td['amount'] - $tw['amount'] ?></option>
-                                            <?php }
-                                                }
-                                            } ?>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="label-top mt-20">
-                                        <label class="gilroy-medium text-gray-100 mb-2 f-15" for="amount">Amount <span class="currency"></span></label>
-                                        <input type="text" class="form-control input-form-control apply-bg l-s2 amount" value="" name="user_amount" placeholder="Give an amount" id="amount" onkeypress="return isNumberOrDecimalPointKey(this, event);" oninput="restrictNumberToPrefdecimalOnInput(this)" required data-value-missing="This field is required.">
-                                    </div>
-                                    <div class="custom-error amountLimit"></div>
-
-                                    <div class="d-flex justify-content-between mt-10 d-none" id="amount-limit-div">
-
-                                        <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="amount-range"></span></p>
-
-                                        <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="maximum-amount"></span></p>
-                                    </div>
-
-
-
-                                </div>
-                            </div>
-
-                            <div class="row d-none" id="empty-payment">
-                                <div class="col-12">
-                                    <div class="mt-20 param-ref">
-                                        <span class="text-danger">Wallet or payment method is not available.</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row d-none" id="payment-method-div">
-                                <div class="col-12">
-                                    <div class="mt-20 param-ref">
-                                        <label class="gilroy-medium text-gray-100 mb-2 f-15" for="payment-method">Payment Methods</label>
-                                        <div class="avoid-blink">
-                                            <select class="select2 sl_common_bx" data-minimum-results-for-search="Infinity" name="payment_method" id="payment-method" required data-value-missing="This field is required.">
-
+                                                ?>
+                                                            <option data-wid="<?= $w['wallet_id'] ?>" data-bal="<?= $td['amount'] - $tw['amount'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] . ' - ' . $td['amount'] - $tw['amount'] ?></option>
+                                                <?php }
+                                                    }
+                                                } ?>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="label-top mt-20">
+                                            <label class="gilroy-medium text-gray-100 mb-2 f-15" for="amount">Amount <span class="currency"></span></label>
+                                            <input type="text" class="form-control input-form-control apply-bg l-s2 amount" value="" name="user_amount" placeholder="Give an amount" id="amount" onkeyup="checkAmt()">
+                                        </div>
+                                        <div class="custom-error amountLimit"></div>
 
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-lg btn-primary mt-4" id="invest-money-btn">
-                                    <div class="spinner spinner-border text-white spinner-border-sm mx-2 d-none" role="status">
-                                        <span class="visually-hidden"></span>
+                                        <div class="d-flex justify-content-between mt-10 d-none" id="amount-limit-div">
+
+                                            <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="amount-range"></span></p>
+
+                                            <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="maximum-amount"></span></p>
+                                        </div>
                                     </div>
-                                    <span>Stake</span>
-                                    <svg class="position-relative ms-1 rtl-wrap-one nscaleX-1" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.11648 12.216C3.81274 11.9123 3.81274 11.4198 4.11648 11.1161L8.23317 6.99937L4.11648 2.88268C3.81274 2.57894 3.81274 2.08647 4.11648 1.78273C4.42022 1.47899 4.91268 1.47899 5.21642 1.78273L9.88309 6.4494C10.1868 6.75314 10.1868 7.2456 9.88309 7.54934L5.21642 12.216C4.91268 12.5198 4.42022 12.5198 4.11648 12.216Z" fill="currentColor" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </form>
+                                </div>
 
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="label-top mt-20">
+                                            <label class="gilroy-medium text-gray-100 mb-2 f-15" for="amount">Converted Amount <span class="currency"></span></label>
+                                            <input type="text" class="form-control input-form-control apply-bg l-s2 amount" value="" name="user_amount" placeholder="0.00" id="converted_value" disabled>
+                                        </div>
+                                        <div class="custom-error amountLimit"></div>
+
+                                        <div class="d-flex justify-content-between mt-10 d-none" id="amount-limit-div">
+
+                                            <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="amount-range"></span></p>
+
+                                            <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="maximum-amount"></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row d-none" id="empty-payment">
+                                    <div class="col-12">
+                                        <div class="mt-20 param-ref">
+                                            <span class="text-danger">Wallet or payment method is not available.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row d-none" id="payment-method-div">
+                                    <div class="col-12">
+                                        <div class="mt-20 param-ref">
+                                            <label class="gilroy-medium text-gray-100 mb-2 f-15" for="payment-method">Payment Methods</label>
+                                            <div class="avoid-blink">
+                                                <select class="select2 sl_common_bx" data-minimum-results-for-search="Infinity" name="payment_method" id="payment-method" required data-value-missing="This field is required.">
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="button" class="btn btn-lg btn-primary mt-4" id="stakeBtn">
+                                        <div class="spinner spinner-border text-white spinner-border-sm mx-2 d-none" role="status">
+                                            <span class="visually-hidden"></span>
+                                        </div>
+                                        <span>Stake</span>
+                                        <svg class="position-relative ms-1 rtl-wrap-one nscaleX-1" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.11648 12.216C3.81274 11.9123 3.81274 11.4198 4.11648 11.1161L8.23317 6.99937L4.11648 2.88268C3.81274 2.57894 3.81274 2.08647 4.11648 1.78273C4.42022 1.47899 4.91268 1.47899 5.21642 1.78273L9.88309 6.4494C10.1868 6.75314 10.1868 7.2456 9.88309 7.54934L5.21642 12.216C4.91268 12.5198 4.42022 12.5198 4.11648 12.216Z" fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        <?php } ?>
                     </div>
                     <!-- main-containt -->
 
@@ -208,6 +231,92 @@ include '../backend/udata.php';
     <script src="../public/user/templates/js/chart.umd.min.js"></script>
     <script src="../public/user/templates/js/main.min.js"></script>
     <script src="../public/user/customs/js/common.min.js"></script>
+
+    <script>
+        const convert = async (wallet, curr, amount) => {
+            try {
+                const res = await fetch(`https://api.coinconvert.net/convert/${curr}/${wallet}?amount=${amount}`);
+                const data = await res.json()
+                const test = Object.values(data)
+                const val = test[2];
+                if (!val) {
+                    return amount
+                }
+                return val
+            } catch (error) {
+                console.log(error);
+            }
+
+        }
+
+        const checkAmt = async () => {
+            try {
+                const converted_value = document.querySelector('#converted_value')
+                const wallet = document.querySelector('#wallet').value
+                const curr = document.querySelector('#currency').value
+                const amount = document.querySelector('#amount').value
+                const val = await convert(curr, wallet, parseFloat(amount))
+                if (val) {
+                    converted_value.value = val
+                } else {
+                    converted_value.value = ''
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        const selection = document.querySelector("#wallet");
+        selection.onchange = function(event) {
+            const wid = event.target.options[event.target.selectedIndex].dataset.wid;
+            const bal = event.target.options[event.target.selectedIndex].dataset.bal;
+            const wallet_id = document.querySelector('#wid')
+            const balance = document.querySelector('#bal')
+            wallet_id.value = wid
+            balance.value = bal
+        };
+
+        const stakeBtn = document.querySelector('#stakeBtn')
+        stakeBtn.addEventListener('click', () => {
+            const uid = document.querySelector('#uid').value
+            const wid = document.querySelector('#wid').value
+            const min = document.querySelector('#min').value
+            const apy = document.querySelector('#apy').value
+            const bal = document.querySelector('#bal').value
+            const amount = document.querySelector('#amount').value
+            const wname = document.querySelector('#wallet').value
+            const planId = document.querySelector('#plan_id').value
+            const planName = document.querySelector('#plan').value
+            const staked = document.querySelector('#converted_value').value
+
+            if (bal < amount) {
+                console.log('err');
+            } else if (staked < min) {
+                console.log('err');
+            } else {
+                $.ajax({
+                    url: '../backend/actions/stake.php',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        uid,
+                        wid,
+                        apy,
+                        amount,
+                        wname,
+                        planId,
+                        planName,
+                        staked
+                    },
+                    success: (res) => {
+                        if (res.header == 'staked') {
+                            console.log('good');
+                        }
+                    }
+                })
+            }
+        })
+    </script>
 
     <script type="text/javascript">
         var SITE_URL = "https://demo.paymoney.techvill.net";
@@ -297,27 +406,6 @@ include '../backend/udata.php';
         }
     </script>
 
-    <script src="../public/dist/plugins/debounce-1.1/jquery.ba-throttle-debounce.min.js" type="text/javascript"></script>
-    <script src="../public/dist/libraries/sweetalert2/sweetalert2.min.js" type="text/javascript"></script>
-    <script src="../public/dist/libraries/sweetalert/sweetalert-unpkg.min.js" type="text/javascript"></script>
-    <script src="../public/dist/plugins/html5-validation-1.0.0/validation.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        'use strict';
-        var minAmount = "Minimum amount";
-        var maxAmount = "Maximum amount";
-        var investSubmitButtonText = "Submitting..";
-        var preText = "Next";
-        var failedText = "Failed";
-        var investmentPlan = "1";
-        var transactionTypeId = "19";
-        var currencyTypeUrl = "https://demo.paymoney.techvill.net/invest/check-currency-type";
-        var paymentMethodUrl = "https://demo.paymoney.techvill.net/invest/get-active-payment-methods";
-        var amountLimitUrl = "https://demo.paymoney.techvill.net/invest/check-invest-user-amount-limit";
-        var waitText = "Please Wait";
-        var loadingText = "Loading";
-    </script>
-    <script src="https://demo.paymoney.techvill.net/Modules/Investment/Resources/assets/js/user/invest.min.js" type="text/javascript"></script>
-    <!-- end js -->
 
 </body>
 

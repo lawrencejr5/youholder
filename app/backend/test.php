@@ -1,7 +1,8 @@
 <?php
 
 // include 'module.php';
-include 'adminModule.php';
+include 'module.php';
+// include 'adminModule.php';
 header('content-type: application/json');
 // echo json_encode(['wallets' => $modules->getAllUserWallets(25)]);
 // echo json_encode(['deposits' => $modules->getAllUserDeposits(25)]);
@@ -18,4 +19,14 @@ header('content-type: application/json');
 // echo json_encode(['success' => true, 'data' => $adminModule->fetchAllExchanges('exchange from', 'exchange to')]);
 // echo json_encode(['success' => true, 'data' => $adminModule->fetchAllUserDocuments()]);
 // echo json_encode(['success' => true, 'datum' => $adminModule->getUserExchanges('transfer from', 'transfer to', 25)]);
-echo json_encode(['success' => true, 'datum' => $adminModule->getUserWallets(26)]);
+// echo json_encode(['success' => true, 'datum' => $adminModule->getUserWallets(26)]);
+// echo json_encode(['success' => true, 'data' => $modules->getStakingPlans()]);
+// echo json_encode(['success' => true, 'datum' => $modules->getStakingPlan(2)]);
+
+$start = date('Y-m-d H:m:s');
+$end = date('Y-m-d H:m:s', strtotime("+60 days"));
+
+$earned = ((22 / 100) * 2.22) / 365;
+if ($modules->stake(25, 1, 'sol', 2.22, $earned, $start, $end)) {
+    echo 'yes';
+}
