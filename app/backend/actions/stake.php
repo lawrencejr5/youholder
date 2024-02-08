@@ -15,7 +15,7 @@ if (isset($_POST['staked'])) {
     $start_date = date('Y-m-d H:m:s');
     $end_date = date('Y-m-d H:m:s', strtotime("+365 days"));
 
-    $earned = (($apy / 100) * $amount) / 365;
+    $earned = (($apy / 100) * $staked) / 365;
 
     if ($modules->stake($uid, $planId, $planName, $staked, $earned, $start_date, $end_date)) {
         $res['header'] = 'staked';

@@ -318,7 +318,7 @@ class Modules extends Connection
 
     public function stake($uid, $plan_id, $plan_name, $staked, $earned, $start, $end)
     {
-        $this->sql = "INSERT INTO stakes(uid, plan_id, plan_name, staked, daily_earned, start_date, end_date) VALUES(:uid, :plan_id, :plan_name, :staked, :daily_earned, :start_date, :end_date)";
+        $this->sql = "INSERT INTO stakes(uid, plan_id, plan_name, staked, daily_earned, earned, start_date, end_date) VALUES(:uid, :plan_id, :plan_name, :staked, :daily_earned, :earned, :start_date, :end_date)";
         try {
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':uid', $uid);
@@ -326,8 +326,39 @@ class Modules extends Connection
             $this->stmt->bindParam(':plan_name', $plan_name);
             $this->stmt->bindParam(':staked', $staked);
             $this->stmt->bindParam(':daily_earned', $earned);
+            $this->stmt->bindParam(':earned', $earned);
             $this->stmt->bindParam(':start_date', $start);
             $this->stmt->bindParam(':end_date', $end);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function stakeUp($id, $earned, $status, $time)
+    {
+        $this->sql = "UPDATE stakes SET earned = :earned, last_updated = :last_updated WHERE id = :id AND status = :status";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':earned', $earned);
+            $this->stmt->bindParam(':status', $status);
+            $this->stmt->bindParam(':last_updated', $time);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function stakeEnd($id, $status)
+    {
+        $this->sql = "UPDATE stakes SET status = :status WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':status', $status);
+            $this->stmt->bindParam(':id', $id);
             $this->stmt->execute();
             return true;
         } catch (PDOException $th) {
@@ -600,6 +631,31 @@ class Modules extends Connection
         try {
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function getStakes($uid)
+    {
+        $this->sql = "SELECT s.*, p.crypto as crypto FROM stakes s LEFT JOIN stake_plans p ON s.plan_id = p.id WHERE uid = :uid";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function getAllStakes()
+    {
+        $this->sql = "SELECT * FROM stakes";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->execute();
             return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $th) {

@@ -77,13 +77,13 @@ include '../backend/udata.php';
                         foreach ($data['stake_plan'] as $s) {
                         ?>
                             <form>
-                                <input type="text" value="<?= $uID ?>" name="user_id" id="uid">
-                                <input type="text" value="<?= $s['crypto'] ?>" id="currency">
-                                <input type="text" value="" id="wid">
-                                <input type="text" value="" id="bal">
-                                <input type="text" value="<?= $s['min'] ?>" id="min">
-                                <input type="text" value="<?= $s['apy'] ?>" id="apy">
-                                <input type="text" value="<?= $s['id'] ?>" id="plan_id">
+                                <input type="hidden" value="<?= $uID ?>" name="user_id" id="uid">
+                                <input type="hidden" value="<?= $s['crypto'] ?>" id="currency">
+                                <input type="hidden" value="" id="wid">
+                                <input type="hidden" value="" id="bal">
+                                <input type="hidden" value="<?= $s['min'] ?>" id="min">
+                                <input type="hidden" value="<?= $s['apy'] ?>" id="apy">
+                                <input type="hidden" value="<?= $s['id'] ?>" id="plan_id">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="label-top mt-20">

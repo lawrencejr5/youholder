@@ -39,3 +39,4 @@ $data['transactions'] = $modules->allTransactions($uID, 25);
 $data['latest_transactions'] = $modules->allTransactions($uID, 10);
 $data['personal_documents'] = $modules->getUserPersonalDocuments($uID);
 $data['staking_plans'] = $modules->getStakingPlans();
+$data['myStakes'] = $modules->getStakes($uID);
