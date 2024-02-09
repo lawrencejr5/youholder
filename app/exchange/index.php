@@ -64,7 +64,7 @@ include '../backend/udata.php';
                         <p class="mb-0 f-26 gilroy-Semibold text-uppercase text-center">Exchange Money</p>
                         <p class="mb-0 text-center f-14 gilroy-medium text-gray dark-p mt-20">Exchange currencies from the comfort of your home, quickly, safely with a minimal fees.Select the wallet &amp; put the amount you want to exchange.</p>
 
-                        <form method="post" action="https://demo.paymoney.techvill.net/exchange-of-money" id="exchangeMoneyCreateForm">
+                        <form method="post" action="" id="exchangeMoneyCreateForm">
                             <input type="hidden" value="" id="wallet_id_from">
                             <input type="hidden" value="" id="wallet_id_to">
                             <input type="hidden" value="<?= $uID ?>" id="uid">
@@ -81,7 +81,7 @@ include '../backend/udata.php';
                                         </span>
 
                                         <div class="avoid-blink">
-                                            <select class="select2" data-minimum-results-for-search="Infinity" name="from_wallet" id="from_wallet" onchange="checkAmt()">
+                                            <select class="select2" data-minimum-results-for-search="Infinity" name="from_wallet" id="from_wallet">
                                                 <option value="">Select Wallet</option>
                                                 <?php foreach ($data['user_wallets'] as $w) {
                                                     $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_name']);
@@ -116,7 +116,7 @@ include '../backend/udata.php';
                                         </span>
 
                                         <div class="avoid-blink">
-                                            <select class="select2" data-minimum-results-for-search="Infinity" name="to_wallet" id="to_wallet" onchange="checkAmt()">
+                                            <select class="select2" data-minimum-results-for-search="Infinity" name="to_wallet" id="to_wallet">
                                                 <option value="">Select Wallet</option>
                                                 <?php foreach ($data['user_wallets'] as $w) {
                                                     $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_name']);
@@ -226,6 +226,7 @@ include '../backend/udata.php';
         const checkAmt = async () => {
             try {
                 const converted_value = document.querySelector('#convertedAmount')
+                converted_value.value = ''
                 const wallet_from = document.querySelector('#from_wallet').value
                 const wallet_to = document.querySelector('#to_wallet').value
                 const amount = document.querySelector('#amount').value
@@ -244,6 +245,7 @@ include '../backend/udata.php';
 
         const wallet_from = document.querySelector("#from_wallet");
         wallet_from.onchange = function(event) {
+            checkAmt()
             const wid = event.target.options[event.target.selectedIndex].dataset.wid;
             const bal = event.target.options[event.target.selectedIndex].dataset.bal;
             const wallet_id = document.querySelector('#wallet_id_from')
@@ -253,6 +255,7 @@ include '../backend/udata.php';
         };
         const wallet_to = document.querySelector("#to_wallet");
         wallet_to.onchange = function(event) {
+            checkAmt()
             const wid = event.target.options[event.target.selectedIndex].dataset.wid;
             const wallet_id = document.querySelector('#wallet_id_to')
             wallet_id.value = wid

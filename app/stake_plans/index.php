@@ -47,7 +47,7 @@ include '../backend/udata.php';
 
     <!-- sidebar section -->
     <!-- Sidebar Start -->
-    <?php $page = "plans"  ?>
+    <?php $page = "stake_plans"  ?>
     <?php include "../master/sidenav.php" ?>
     <div class="my-container active-cont bg-white-50">
 
@@ -60,8 +60,8 @@ include '../backend/udata.php';
 
                     <!-- main-containt -->
                     <div class="text-center inv-title px-326">
-                        <p class="mb-0 gilroy-Semibold f-26 text-dark theme-tran r-f-20 text-uppercase">Investment plans</p>
-                        <p class="mb-0 gilroy-medium text-gray-100 f-16 leading-26 r-f-12 mt-2 inv-title tran-title ">Here is our several investment plans. You can invest daily, weekly or monthly and get higher returns in your investment.</p>
+                        <p class="mb-0 gilroy-Semibold f-26 text-dark theme-tran r-f-20 text-uppercase">Staking plans</p>
+                        <p class="mb-0 gilroy-medium text-gray-100 f-16 leading-26 r-f-12 mt-2 inv-title tran-title ">Here are our staking plans.</p>
 
                     </div>
                     <div class="row">
@@ -74,8 +74,6 @@ include '../backend/udata.php';
                                     <div class="mt-14 profit-duration d-flex justify-content-between bg-white-100">
                                         <div class="daily-profit">
                                             <img src="../public/uploads/currency_logos/<?= $s['wallet_img'] ?>" style="border-radius: 50%;" width="100px" height="100px" alt="">
-                                            <!-- <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Daily Profit</p>
-                                            <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">15 GBP</p> -->
                                         </div>
                                         <div class="duration text-end">
                                             <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Duration</p>
@@ -90,7 +88,7 @@ include '../backend/udata.php';
                                         </div>
                                         <div class="min-max-right">
                                             <p class="mb-0 f-13 leading-16 gilroy-medium text-gray-100">Max Amount</p>
-                                            <p class="mb-0 f-16 leading-20 gilroy-Semibold text-dark mt-2"><?= $s['max'] ?></p>
+                                            <p class="mb-0 f-16 leading-20 gilroy-Semibold text-dark mt-2" style="text-transform: capitalize;"><?= $s['max'] ?></p>
                                         </div>
                                     </div>
                                     <div class="terms mt-20">
@@ -110,7 +108,7 @@ include '../backend/udata.php';
 
                                     <div class="d-grid">
                                         <a href="../stake/?planid=<?= $s['id'] ?>" class="investment-btn green-btn cursor-pointer bg-primary d-flex justify-content-center mt-24 b-none">
-                                            <span class="f-14 leading-20 gilroy-regular inv-btn text-white">Invest Now</span>
+                                            <span class="f-14 leading-20 gilroy-regular inv-btn text-white">Stake Now</span>
                                         </a>
                                     </div>
                                 </div>

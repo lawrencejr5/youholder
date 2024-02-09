@@ -23,10 +23,14 @@ header('content-type: application/json');
 // echo json_encode(['success' => true, 'data' => $modules->getStakingPlans()]);
 // echo json_encode(['success' => true, 'datum' => $modules->getStakingPlan(2)]);
 
-$start = date('Y-m-d H:m:s');
-$end = date('Y-m-d H:m:s', strtotime("+60 days"));
+// $date = '0000-00-00';
 
-$earned = ((22 / 100) * 2.22) / 365;
-if ($modules->stake(25, 1, 'sol', 2.22, $earned, $start, $end)) {
-    echo 'yes';
-}
+// $date1 = new DateTime($date);
+// $date2 = new DateTime('2024-03-13');
+
+// $interval = $date1->diff($date2);
+$last_updated = 1707425661;
+$next_days = strtotime('2024-03-13');
+$curr_date = time();
+$interval = $next_days - $curr_date;
+echo floor($interval / (60 * 60 * 24));

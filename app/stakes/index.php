@@ -47,7 +47,7 @@ include '../backend/udata.php';
 
     <!-- sidebar section -->
     <!-- Sidebar Start -->
-    <?php $page = "investments"  ?>
+    <?php $page = "stakes"  ?>
     <?php include "../master/sidenav.php" ?>
     <div class="my-container active-cont bg-white-50">
 
@@ -60,8 +60,8 @@ include '../backend/udata.php';
 
                     <!-- main-containt -->
                     <div class="text-center" id="invest_list">
-                        <p class="mb-0 gilroy-Semibold f-26 text-dark theme-tran r-f-20 text-uppercase">Investment list</p>
-                        <p class="mb-0 gilroy-medium text-gray-100 f-16 r-f-12 mt-2 tran-title p-inline-block">List of all the investments you had or currently have ongoing</p>
+                        <p class="mb-0 gilroy-Semibold f-26 text-dark theme-tran r-f-20 text-uppercase">My Stakings</p>
+                        <p class="mb-0 gilroy-medium text-gray-100 f-16 r-f-12 mt-2 tran-title p-inline-block">List of all the stakings you had or currently have ongoing</p>
                     </div>
 
                     <div class="d-flex justify-content-between mt-24 r-mt-22 align-items-center">
@@ -69,10 +69,6 @@ include '../backend/udata.php';
                             <div class="param-ref param-ref-withdraw filter-ref r-filter-ref w-135">
                                 <select name="status" class="select2 f-13" id="status" data-minimum-results-for-search="Infinity">
                                     <option value="all" selected>All</option>
-                                    <option value="active">Active</option>
-                                    <option value="pending">Pending</option>
-                                    <option value="completed">Completed</option>
-                                    <option value="cancelled">Cancelled</option>
                                 </select>
                             </div>
                         </div>
@@ -98,7 +94,7 @@ include '../backend/udata.php';
                                                 <p class="mb-0 ml-20 f-13 leading-16 gilroy-regular text-gray-100">Start Date / End Date</p>
                                             </th>
                                             <th class="p-0 pb-10">
-                                                <p class="mb-0 ml-20 f-13 leading-16 gilroy-regular text-gray-100">Net Profit / Total</p>
+                                                <p class="mb-0 ml-20 f-13 leading-16 gilroy-regular text-gray-100">Total / Expected</p>
                                             </th>
                                             <th class="p-0 pb-10">
                                                 <p class="mb-0 ml-20 f-13 leading-16 gilroy-regular text-gray-100">Status</p>
@@ -131,15 +127,21 @@ include '../backend/udata.php';
                                                 <td>
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <div class="td-p-20">
-                                                            <p class="mb-0 f-16 leading-20 text-dark gilroy-medium l-sp64"><?= round($s['daily_earned'], 6) ?></p>
-                                                            <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2 l-sp64"><?= round($s['earned'], 6) ?></p>
+                                                            <p class="mb-0 f-16 leading-20 text-dark gilroy-medium l-sp64"><?= round($s['earned'], 6) ?></p>
+                                                            <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2 l-sp64"><?= round($s['expected'], 6) ?></p>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <div class="td-p-20">
-                                                            <p class="mb-0 f-14 leading-14 gilroy-medium l-sp64 inv-status-badge bg-warning text-white"><?= $s['status'] ?></p>
+                                                            <?php if ($s['status'] == 'ended') { ?>
+                                                                <p class="mb-0 f-14 leading-14 gilroy-medium l-sp64 inv-status-badge bg-dark text-white" style="text-transform: capitalize;"><?= $s['status'] ?></p>
+                                                            <?php } elseif ($s['status'] == 'staking') { ?>
+                                                                <p class="mb-0 f-14 leading-14 gilroy-medium l-sp64 inv-status-badge bg-success text-white" style="text-transform: capitalize;"><?= $s['status'] ?></p>
+                                                            <?php } elseif ($s['status'] == 'unstaked') { ?>
+                                                                <p class="mb-0 f-14 leading-14 gilroy-medium l-sp64 inv-status-badge bg-danger text-white" style="text-transform: capitalize;"><?= $s['status'] ?></p>
+                                                            <?php } ?>
                                                         </div>
                                                         <div class="arrow-hover">
                                                             <a href="https://demo.paymoney.techvill.net/investment-details/7" class="">

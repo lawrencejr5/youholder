@@ -47,7 +47,7 @@ include '../backend/udata.php';
 
     <!-- sidebar section -->
     <!-- Sidebar Start -->
-    <?php $page = "plans"  ?>
+    <?php $page = "invest_plans"  ?>
     <?php include "../master/sidenav.php" ?>
     <div class="my-container active-cont bg-white-50">
 
@@ -65,282 +65,56 @@ include '../backend/udata.php';
 
                     </div>
                     <div class="row">
-                        <div class="col-xl-4 col-top">
-                            <div class="invest-plan plan-diamond bg-white bdr-8">
+                        <?php foreach ($data['invest_plans'] as $i) { ?>
+                            <div class="col-xl-4 col-top">
+                                <div class="invest-plan plan-diamond bg-white bdr-8">
 
-                                <p class="text-dark d-title f-20 leading-24 gilroy-Semibold text-uppercase text-center">Dimond</p>
+                                    <p class="text-dark d-title f-20 leading-24 gilroy-Semibold text-uppercase text-center"><?= $i['plan'] ?></p>
 
-                                <div class="mt-14 profit-duration d-flex justify-content-between bg-white-100">
-                                    <div class="daily-profit">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Daily Profit</p>
-                                        <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">15 GBP</p>
+                                    <div class="mt-14 profit-duration d-flex justify-content-between bg-white-100">
+                                        <div class="daily-profit">
+                                            <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Percentage Profit</p>
+                                            <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2"><?= $i['monthly'] ?>%</p>
+                                        </div>
+                                        <div class="duration text-end">
+                                            <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Duration</p>
+                                            <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">30 Days</p>
+                                        </div>
                                     </div>
-                                    <div class="duration text-end">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Duration</p>
-                                        <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">15 Days</p>
-                                    </div>
-                                </div>
 
-                                <div class="min-max-amount border-b-EF d-flex justify-content-between">
-                                    <div class="min-max-left">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-gray-100">Min Amount</p>
-                                        <p class="mb-0 f-16 leading-20 gilroy-Semibold text-dark mt-2">300 GBP</p>
+                                    <div class="min-max-amount border-b-EF d-flex justify-content-between">
+                                        <div class="min-max-left">
+                                            <p class="mb-0 f-13 leading-16 gilroy-medium text-gray-100">Min Amount</p>
+                                            <p class="mb-0 f-16 leading-20 gilroy-Semibold text-dark mt-2"><?= $i['min'] ?> USD</p>
+                                        </div>
+                                        <div class="min-max-right">
+                                            <p class="mb-0 f-13 leading-16 gilroy-medium text-gray-100">Max Amount</p>
+                                            <p class="mb-0 f-16 leading-20 gilroy-Semibold text-dark mt-2"><?= $i['max'] ?> USD</p>
+                                        </div>
                                     </div>
-                                    <div class="min-max-right">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-gray-100">Max Amount</p>
-                                        <p class="mb-0 f-16 leading-20 gilroy-Semibold text-dark mt-2">500 GBP</p>
+                                    <div class="terms mt-20">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Profit cumulation</p>
+                                            <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">Bi-weekly(<?= $i['bi_weekly'] ?>%)</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-16">
+                                            <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Withdraw After Matured</p>
+                                            <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">No</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-16">
+                                            <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Withdrawal</p>
+                                            <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">After Matured</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="terms mt-20">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Return Term</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">15</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-16">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Withdraw After Matured</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">No</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-16">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Capital Return</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">After Matured</p>
-                                    </div>
-                                </div>
 
-                                <div class="d-grid">
-                                    <a href="https://demo.paymoney.techvill.net/invest/create?plan_id=1" class="investment-btn green-btn cursor-pointer bg-primary d-flex justify-content-center mt-24 b-none">
-                                        <span class="f-14 leading-20 gilroy-regular inv-btn text-white">Invest Now</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-top">
-                            <div class="invest-plan plan-diamond bg-white bdr-8">
-
-                                <p class="text-dark d-title f-20 leading-24 gilroy-Semibold text-uppercase text-center">Gold</p>
-
-                                <div class="mt-14 profit-duration d-flex justify-content-between bg-white-100">
-                                    <div class="daily-profit">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Hourly Profit</p>
-                                        <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">2%</p>
+                                    <div class="d-grid">
+                                        <a href="../invest?planid=<?= $i['id'] ?>" class="investment-btn green-btn cursor-pointer bg-primary d-flex justify-content-center mt-24 b-none">
+                                            <span class="f-14 leading-20 gilroy-regular inv-btn text-white">Invest Now</span>
+                                        </a>
                                     </div>
-                                    <div class="duration text-end">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Duration</p>
-                                        <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">6 Hours</p>
-                                    </div>
-                                </div>
-
-                                <div class="min-max-amount border-b-EF d-flex justify-content-between">
-                                    <div class="min-max-left">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-gray-100">Investment Amount</p>
-                                        <p class="mb-0 f-16 leading-20 gilroy-Semibold text-dark mt-2">100 USD</p>
-                                    </div>
-                                </div>
-                                <div class="terms mt-20">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Return Term</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">6</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-16">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Withdraw After Matured</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">No</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-16">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Capital Return</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">Term Basis</p>
-                                    </div>
-                                </div>
-
-                                <div class="d-grid">
-                                    <a href="https://demo.paymoney.techvill.net/invest/create?plan_id=2" class="investment-btn green-btn cursor-pointer bg-primary d-flex justify-content-center mt-24 b-none">
-                                        <span class="f-14 leading-20 gilroy-regular inv-btn text-white">Invest Now</span>
-                                    </a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-4 col-top">
-                            <div class="invest-plan plan-diamond bg-white bdr-8">
-
-                                <p class="text-dark d-title f-20 leading-24 gilroy-Semibold text-uppercase text-center">Platinum</p>
-
-                                <div class="mt-14 profit-duration d-flex justify-content-between bg-white-100">
-                                    <div class="daily-profit">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Monthly Profit</p>
-                                        <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">0.5%</p>
-                                    </div>
-                                    <div class="duration text-end">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Duration</p>
-                                        <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">1 Year</p>
-                                    </div>
-                                </div>
-
-                                <div class="min-max-amount border-b-EF d-flex justify-content-between">
-                                    <div class="min-max-left">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-gray-100">Investment Amount</p>
-                                        <p class="mb-0 f-16 leading-20 gilroy-Semibold text-dark mt-2">300 LTC</p>
-                                    </div>
-                                </div>
-                                <div class="terms mt-20">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Return Term</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">12</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-16">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Withdraw After Matured</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">No</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-16">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Capital Return</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">Term Basis</p>
-                                    </div>
-                                </div>
-
-                                <div class="d-grid">
-                                    <a href="https://demo.paymoney.techvill.net/invest/create?plan_id=3" class="investment-btn green-btn cursor-pointer bg-primary d-flex justify-content-center mt-24 b-none">
-                                        <span class="f-14 leading-20 gilroy-regular inv-btn text-white">Invest Now</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-top">
-                            <div class="invest-plan plan-diamond bg-white bdr-8">
-
-                                <p class="text-dark d-title f-20 leading-24 gilroy-Semibold text-uppercase text-center">Bronze</p>
-
-                                <div class="mt-14 profit-duration d-flex justify-content-between bg-white-100">
-                                    <div class="daily-profit">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Daily Profit</p>
-                                        <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">1%</p>
-                                    </div>
-                                    <div class="duration text-end">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Duration</p>
-                                        <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">1 Month</p>
-                                    </div>
-                                </div>
-
-                                <div class="min-max-amount border-b-EF d-flex justify-content-between">
-                                    <div class="min-max-left">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-gray-100">Min Amount</p>
-                                        <p class="mb-0 f-16 leading-20 gilroy-Semibold text-dark mt-2">250 GBP</p>
-                                    </div>
-                                    <div class="min-max-right">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-gray-100">Max Amount</p>
-                                        <p class="mb-0 f-16 leading-20 gilroy-Semibold text-dark mt-2">500 GBP</p>
-                                    </div>
-                                </div>
-                                <div class="terms mt-20">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Return Term</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">30</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-16">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Withdraw After Matured</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">No</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-16">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Capital Return</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">Term Basis</p>
-                                    </div>
-                                </div>
-
-                                <div class="d-grid">
-                                    <a href="https://demo.paymoney.techvill.net/invest/create?plan_id=4" class="investment-btn green-btn cursor-pointer bg-primary d-flex justify-content-center mt-24 b-none">
-                                        <span class="f-14 leading-20 gilroy-regular inv-btn text-white">Invest Now</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-top">
-                            <div class="invest-plan plan-diamond bg-white bdr-8">
-
-                                <p class="text-dark d-title f-20 leading-24 gilroy-Semibold text-uppercase text-center">Silver</p>
-
-                                <div class="mt-14 profit-duration d-flex justify-content-between bg-white-100">
-                                    <div class="daily-profit">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Hourly Profit</p>
-                                        <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">5%</p>
-                                    </div>
-                                    <div class="duration text-end">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Duration</p>
-                                        <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">5 Hours</p>
-                                    </div>
-                                </div>
-
-                                <div class="min-max-amount border-b-EF d-flex justify-content-between">
-                                    <div class="min-max-left">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-gray-100">Min Amount</p>
-                                        <p class="mb-0 f-16 leading-20 gilroy-Semibold text-dark mt-2">150 EUR</p>
-                                    </div>
-                                    <div class="min-max-right">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-gray-100">Max Amount</p>
-                                        <p class="mb-0 f-16 leading-20 gilroy-Semibold text-dark mt-2">300 EUR</p>
-                                    </div>
-                                </div>
-                                <div class="terms mt-20">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Return Term</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">5</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-16">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Withdraw After Matured</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">Yes</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-16">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Capital Return</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">After Matured</p>
-                                    </div>
-                                </div>
-
-                                <div class="d-grid">
-                                    <a href="https://demo.paymoney.techvill.net/invest/create?plan_id=5" class="investment-btn green-btn cursor-pointer bg-primary d-flex justify-content-center mt-24 b-none">
-                                        <span class="f-14 leading-20 gilroy-regular inv-btn text-white">Invest Now</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-top">
-                            <div class="invest-plan plan-diamond bg-white bdr-8">
-
-                                <p class="text-dark d-title f-20 leading-24 gilroy-Semibold text-uppercase text-center">Premium Plan</p>
-
-                                <div class="mt-14 profit-duration d-flex justify-content-between bg-white-100">
-                                    <div class="daily-profit">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Weekly Profit</p>
-                                        <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">3%</p>
-                                    </div>
-                                    <div class="duration text-end">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Duration</p>
-                                        <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">6 Weeks</p>
-                                    </div>
-                                </div>
-
-                                <div class="min-max-amount border-b-EF d-flex justify-content-between">
-                                    <div class="min-max-left">
-                                        <p class="mb-0 f-13 leading-16 gilroy-medium text-gray-100">Investment Amount</p>
-                                        <p class="mb-0 f-16 leading-20 gilroy-Semibold text-dark mt-2">350 USD</p>
-                                    </div>
-                                </div>
-                                <div class="terms mt-20">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Return Term</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">6</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-16">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Withdraw After Matured</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">Yes</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-16">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Capital Return</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">Term Basis</p>
-                                    </div>
-                                </div>
-
-                                <div class="d-grid">
-                                    <a href="https://demo.paymoney.techvill.net/invest/create?plan_id=6" class="investment-btn green-btn cursor-pointer bg-primary d-flex justify-content-center mt-24 b-none">
-                                        <span class="f-14 leading-20 gilroy-regular inv-btn text-white">Invest Now</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        <?php } ?>
                     </div>
                     <!-- main-containt -->
 

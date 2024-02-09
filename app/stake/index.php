@@ -47,7 +47,7 @@ include '../backend/udata.php';
 
     <!-- sidebar section -->
     <!-- Sidebar Start -->
-    <?php $page = "stake"  ?>
+    <?php $page = "stake_plans"  ?>
     <?php include "../master/sidenav.php" ?>
     <div class="my-container active-cont bg-white-50">
 
@@ -61,16 +61,8 @@ include '../backend/udata.php';
                     <!-- main-containt -->
                     <div class="bg-white pxy-62" id="invest_add">
                         <p class="mb-0 f-26 gilroy-Semibold text-uppercase text-center">New Staking</p>
-                        <p class="mb-0 text-center f-13 gilroy-medium text-gray mt-4 dark-A0">Step: 1 of 3</p>
                         <p class="mb-0 text-center f-18 gilroy-medium text-dark dark-5B mt-2">Fill Information</p>
-                        <div class="text-center">
-                            <svg class="mt-18 nscaleX-1" width="314" height="6" viewBox="0 0 314 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100" height="6" rx="3" fill="#635BFE" />
-                                <rect class="rect-B87" x="107" width="100" height="6" rx="3" fill="#DDD3FD" />
-                                <rect class="rect-B87" x="214" width="100" height="6" rx="3" fill="#DDD3FD" />
-                            </svg>
-                        </div>
-                        <p class="mb-0 text-center f-14 gilroy-medium text-gray dark-p mt-20"> You can invest on any plan using our popular payment methods or wallet.</p>
+                        <p class="mb-0 text-center f-14 gilroy-medium text-gray dark-p mt-20"> You can stake on any plan using your wallet.</p>
 
                         <?php
                         $data['stake_plan'] = $modules->getStakingPlan($_GET['planid']);
@@ -104,7 +96,7 @@ include '../backend/udata.php';
                                     <div class="col-md-12">
                                         <div class="mt-28 param-ref">
                                             <label class="gilroy-medium text-gray-100 mb-2 f-15" for="plan">Wallet</label>
-                                            <select class="select2" data-minimum-results-for-search="Infinity" name="wallet" id="wallet" onchange="checkAmt()">
+                                            <select class="select2" data-minimum-results-for-search="Infinity" name="wallet" id="wallet">
                                                 <option value="">Select Wallet</option>
                                                 <?php foreach ($data['user_wallets'] as $w) {
                                                     $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_name']);
@@ -252,6 +244,7 @@ include '../backend/udata.php';
         const checkAmt = async () => {
             try {
                 const converted_value = document.querySelector('#converted_value')
+                converted_value.value = ''
                 const wallet = document.querySelector('#wallet').value
                 const curr = document.querySelector('#currency').value
                 const amount = document.querySelector('#amount').value
@@ -268,6 +261,7 @@ include '../backend/udata.php';
 
         const selection = document.querySelector("#wallet");
         selection.onchange = function(event) {
+            checkAmt()
             const wid = event.target.options[event.target.selectedIndex].dataset.wid;
             const bal = event.target.options[event.target.selectedIndex].dataset.bal;
             const wallet_id = document.querySelector('#wid')
@@ -310,7 +304,7 @@ include '../backend/udata.php';
                     },
                     success: (res) => {
                         if (res.header == 'staked') {
-                            console.log('good');
+                            window.location = "../stakes"
                         }
                     }
                 })

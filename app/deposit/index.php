@@ -96,7 +96,7 @@ include '../backend/udata.php';
                             <div class="mt-28 param-ref">
                                 <label class="gilroy-medium text-gray-100 mb-2 f-15" for="wallet">Wallet</label>
                                 <div class="avoid-blink">
-                                    <select class="select2" data-minimum-results-for-search="Infinity" name="wallet" id="wallet" onchange="checkAmt()">
+                                    <select class="select2" data-minimum-results-for-search="Infinity" name="wallet" id="wallet">
                                         <option data-type="" value="">Select Wallet</option>
                                         <?php foreach ($data['user_wallets'] as $w) { ?>
                                             <option class="option" data-type="<?= $w['wallet_type'] ?>" data-wid="<?= $w['wallet_id'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] ?></option>
@@ -199,6 +199,7 @@ include '../backend/udata.php';
         const checkAmt = async () => {
             try {
                 const converted_value = document.querySelector('#converted_value')
+                converted_value.value = ''
                 const wallet = document.querySelector('#wallet').value
                 const curr = document.querySelector('#currency').value
                 const amount = document.querySelector('#amount').value
@@ -217,6 +218,7 @@ include '../backend/udata.php';
 
         const selection = document.querySelector("#wallet");
         selection.onchange = function(event) {
+            checkAmt()
             const wid = event.target.options[event.target.selectedIndex].dataset.wid;
             const wallet_id = document.querySelector('#wallet_id')
             wallet_id.value = wid

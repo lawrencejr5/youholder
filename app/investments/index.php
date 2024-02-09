@@ -1,5 +1,5 @@
 <?php
-session_start();
+include '../backend/udata.php';
 !$_SESSION['id'] && header('location: ../../login');
 ?>
 
@@ -77,7 +77,7 @@ session_start();
                             </div>
                         </div>
 
-                        <a href="https://demo.paymoney.techvill.net/invest/create" class="btn bg-primary text-light Add-new-btn w-176 addnew">
+                        <a href="../invest_plans/" class="btn bg-primary text-light Add-new-btn w-176 addnew">
                             <span class="f-14 gilroy-medium"> + New Investment</span>
                         </a>
                     </div>
@@ -106,182 +106,52 @@ session_start();
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="bg-white">
-                                            <td>
-                                                <div class="td-p-20">
-                                                    <p class="mb- d-flex"><a href="https://demo.paymoney.techvill.net/investment-details/7" class="mb-0 f-16 leading-20 text-dark gilroy-medium cursor-pointer">Dimond </a></p>
-                                                    <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2">
-                                                        Daily 15 GBP for 15 Day
-                                                    </p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="td-p-20">
-                                                    <p class="mb-0 f-16 leading-20 text-dark gilroy-medium l-sp64">300</p>
-                                                    <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2">GBP</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="td-p-20">
-                                                    <p class="mb-0 f-16 leading-20 text-dark gilroy-medium">23-07-2023 5:13 PM</p>
-                                                    <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2">07-08-2023 5:13 PM</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="d-flex justify-content-between align-items-center">
+                                        <?php foreach ($data['myInvestments'] as $i) { ?>
+                                            <tr class="bg-white">
+                                                <td>
                                                     <div class="td-p-20">
-                                                        <p class="mb-0 f-16 leading-20 text-dark gilroy-medium l-sp64">225</p>
-                                                        <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2 l-sp64">525</p>
+                                                        <p class="mb- d-flex"><a href="" class="mb-0 f-16 leading-20 text-dark gilroy-medium cursor-pointer"><?= $i['plan'] ?> </a></p>
+                                                        <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2">
+                                                            <?= $i['to_earn'] . ' ' . $i['currency'] ?> bi-weekly in 30 days
+                                                        </p>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="d-flex justify-content-between align-items-center">
+                                                </td>
+                                                <td>
                                                     <div class="td-p-20">
-                                                        <p class="mb-0 f-14 leading-14 gilroy-medium l-sp64 inv-status-badge bg-warning text-white">Pending</p>
+                                                        <p class="mb-0 f-16 leading-20 text-dark gilroy-medium l-sp64"><?= $i['amount'] ?></p>
+                                                        <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2"><?= $i['currency'] ?></p>
                                                     </div>
-                                                    <div class="arrow-hover">
-                                                        <a href="https://demo.paymoney.techvill.net/investment-details/7" class="">
-                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5312 1.52925C3.27085 1.7896 3.27085 2.21171 3.5312 2.47206L7.0598 6.00065L3.5312 9.52925C3.27085 9.7896 3.27085 10.2117 3.5312 10.4721C3.79155 10.7324 4.21366 10.7324 4.47401 10.4721L8.47401 6.47205C8.73436 6.21171 8.73436 5.7896 8.47401 5.52925L4.47401 1.52925C4.21366 1.2689 3.79155 1.2689 3.5312 1.52925Z" fill="#9998A0" />
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="bg-white">
-                                            <td>
-                                                <div class="td-p-20">
-                                                    <p class="mb- d-flex"><a href="https://demo.paymoney.techvill.net/investment-details/4" class="mb-0 f-16 leading-20 text-dark gilroy-medium cursor-pointer">Silver </a></p>
-                                                    <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2">
-                                                        Hourly 5% for 5 Hour
-                                                    </p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="td-p-20">
-                                                    <p class="mb-0 f-16 leading-20 text-dark gilroy-medium l-sp64">250</p>
-                                                    <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2">EUR</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="td-p-20">
-                                                    <p class="mb-0 f-16 leading-20 text-dark gilroy-medium">23-07-2023 2:01 PM</p>
-                                                    <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2">23-07-2023 7:01 PM</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="d-flex justify-content-between align-items-center">
+                                                </td>
+                                                <td>
                                                     <div class="td-p-20">
-                                                        <p class="mb-0 f-16 leading-20 text-dark gilroy-medium l-sp64">62.5</p>
-                                                        <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2 l-sp64">312.5</p>
+                                                        <p class="mb-0 f-16 leading-20 text-dark gilroy-medium"><?= $i['start_date'] ?></p>
+                                                        <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2"><?= $i['end_date'] ?></p>
                                                     </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="td-p-20">
-                                                        <p class="mb-0 f-14 leading-14 gilroy-medium l-sp64 inv-status-badge bg-success text-white">Active</p>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <div class="td-p-20">
+                                                            <p class="mb-0 f-16 leading-20 text-dark gilroy-medium l-sp64"><?= $i['earned'] ?></p>
+                                                            <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2 l-sp64"><?= $i['expected'] ?></p>
+                                                        </div>
                                                     </div>
-                                                    <div class="arrow-hover">
-                                                        <a href="https://demo.paymoney.techvill.net/investment-details/4" class="">
-                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5312 1.52925C3.27085 1.7896 3.27085 2.21171 3.5312 2.47206L7.0598 6.00065L3.5312 9.52925C3.27085 9.7896 3.27085 10.2117 3.5312 10.4721C3.79155 10.7324 4.21366 10.7324 4.47401 10.4721L8.47401 6.47205C8.73436 6.21171 8.73436 5.7896 8.47401 5.52925L4.47401 1.52925C4.21366 1.2689 3.79155 1.2689 3.5312 1.52925Z" fill="#9998A0" />
-                                                            </svg>
-                                                        </a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <div class="td-p-20">
+                                                            <p class="mb-0 f-14 leading-14 gilroy-medium l-sp64 inv-status-badge bg-warning text-white" style="text-transform: capitalize;"><?= $i['status'] ?></p>
+                                                        </div>
+                                                        <div class="arrow-hover">
+                                                            <a href="" class="">
+                                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5312 1.52925C3.27085 1.7896 3.27085 2.21171 3.5312 2.47206L7.0598 6.00065L3.5312 9.52925C3.27085 9.7896 3.27085 10.2117 3.5312 10.4721C3.79155 10.7324 4.21366 10.7324 4.47401 10.4721L8.47401 6.47205C8.73436 6.21171 8.73436 5.7896 8.47401 5.52925L4.47401 1.52925C4.21366 1.2689 3.79155 1.2689 3.5312 1.52925Z" fill="#9998A0" />
+                                                                </svg>
+                                                            </a>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="bg-white">
-                                            <td>
-                                                <div class="td-p-20">
-                                                    <p class="mb- d-flex"><a href="https://demo.paymoney.techvill.net/investment-details/5" class="mb-0 f-16 leading-20 text-dark gilroy-medium cursor-pointer">Premium Plan </a></p>
-                                                    <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2">
-                                                        Weekly 3% for 6 Week
-                                                    </p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="td-p-20">
-                                                    <p class="mb-0 f-16 leading-20 text-dark gilroy-medium l-sp64">350</p>
-                                                    <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2">USD</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="td-p-20">
-                                                    <p class="mb-0 f-16 leading-20 text-dark gilroy-medium">23-06-2023 4:03 PM</p>
-                                                    <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2">03-08-2023 4:03 PM</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="td-p-20">
-                                                        <p class="mb-0 f-16 leading-20 text-dark gilroy-medium l-sp64">63</p>
-                                                        <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2 l-sp64">413</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="td-p-20">
-                                                        <p class="mb-0 f-14 leading-14 gilroy-medium l-sp64 inv-status-badge bg-success text-white">Active</p>
-                                                    </div>
-                                                    <div class="arrow-hover">
-                                                        <a href="https://demo.paymoney.techvill.net/investment-details/5" class="">
-                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5312 1.52925C3.27085 1.7896 3.27085 2.21171 3.5312 2.47206L7.0598 6.00065L3.5312 9.52925C3.27085 9.7896 3.27085 10.2117 3.5312 10.4721C3.79155 10.7324 4.21366 10.7324 4.47401 10.4721L8.47401 6.47205C8.73436 6.21171 8.73436 5.7896 8.47401 5.52925L4.47401 1.52925C4.21366 1.2689 3.79155 1.2689 3.5312 1.52925Z" fill="#9998A0" />
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="bg-white">
-                                            <td>
-                                                <div class="td-p-20">
-                                                    <p class="mb- d-flex"><a href="https://demo.paymoney.techvill.net/investment-details/3" class="mb-0 f-16 leading-20 text-dark gilroy-medium cursor-pointer">Platinum </a></p>
-                                                    <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2">
-                                                        Monthly 0.5% for 1 Year
-                                                    </p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="td-p-20">
-                                                    <p class="mb-0 f-16 leading-20 text-dark gilroy-medium l-sp64">300</p>
-                                                    <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2">LTC</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="td-p-20">
-                                                    <p class="mb-0 f-16 leading-20 text-dark gilroy-medium">23-08-2022 11:09 AM</p>
-                                                    <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2">23-08-2023 11:09 AM</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="td-p-20">
-                                                        <p class="mb-0 f-16 leading-20 text-dark gilroy-medium l-sp64">18</p>
-                                                        <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2 l-sp64">318</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="td-p-20">
-                                                        <p class="mb-0 f-14 leading-14 gilroy-medium l-sp64 inv-status-badge bg-success text-white">Active</p>
-                                                    </div>
-                                                    <div class="arrow-hover">
-                                                        <a href="https://demo.paymoney.techvill.net/investment-details/3" class="">
-                                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5312 1.52925C3.27085 1.7896 3.27085 2.21171 3.5312 2.47206L7.0598 6.00065L3.5312 9.52925C3.27085 9.7896 3.27085 10.2117 3.5312 10.4721C3.79155 10.7324 4.21366 10.7324 4.47401 10.4721L8.47401 6.47205C8.73436 6.21171 8.73436 5.7896 8.47401 5.52925L4.47401 1.52925C4.21366 1.2689 3.79155 1.2689 3.5312 1.52925Z" fill="#9998A0" />
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div>
