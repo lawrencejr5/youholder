@@ -367,6 +367,24 @@ class Modules extends Connection
         }
     }
 
+    public function stakeWithdrawal($uid, $wallet_id, $wallet_name, $amount, $verified, $transactions_type)
+    {
+        $this->sql = "INSERT INTO withdrawals(uid, wallet_id, wallet_name, amount, verified, transactions_type) VALUES(:uid, :wallet_id, :wallet_name, :amount, :verified, :transactions_type)";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->bindParam(':wallet_id', $wallet_id);
+            $this->stmt->bindParam(':wallet_name', $wallet_name);
+            $this->stmt->bindParam(':amount', $amount);
+            $this->stmt->bindParam(':verified', $verified);
+            $this->stmt->bindParam(':transactions_type', $transactions_type);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false . $th->getMessage();
+        }
+    }
+
     public function invest($uid, $plan_id, $plan, $currency, $amount, $to_earn, $expected, $start_date, $end_date, $last_updated, $status)
     {
         $this->sql = "INSERT INTO investments(uid, plan_id, plan, currency, amount, to_earn, expected, start_date, end_date, last_updated, status) VALUES(:uid, :plan_id, :plan, :currency, :amount, :to_earn, :expected, :start_date, :end_date, :last_updated, :status)";
@@ -390,8 +408,52 @@ class Modules extends Connection
         }
     }
 
+    public function changeInvestStatus($id, $status)
+    {
+        $this->sql = "UPDATE investments SET status = :status WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':status', $status);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
 
+    public function investUp($id, $earned, $time)
+    {
+        $this->sql = "UPDATE stakes SET earned = :earned, last_updated = :last_updated WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':earned', $earned);
+            $this->stmt->bindParam(':last_updated', $time);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
 
+    public function investWithdrawal($uid, $wallet_id, $wallet_name, $amount, $verified, $transactions_type)
+    {
+        $this->sql = "INSERT INTO withdrawals(uid, wallet_id, wallet_name, amount, verified, transactions_type) VALUES(:uid, :wallet_id, :wallet_name, :amount, :verified, :transactions_type)";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->bindParam(':wallet_id', $wallet_id);
+            $this->stmt->bindParam(':wallet_name', $wallet_name);
+            $this->stmt->bindParam(':amount', $amount);
+            $this->stmt->bindParam(':verified', $verified);
+            $this->stmt->bindParam(':transactions_type', $transactions_type);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false . $th->getMessage();
+        }
+    }
 
 
 
@@ -718,6 +780,18 @@ class Modules extends Connection
         try {
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function getAllInvestments()
+    {
+        $this->sql = "SELECT * FROM investments";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->execute();
             return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $th) {

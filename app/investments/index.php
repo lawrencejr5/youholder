@@ -66,15 +66,7 @@ include '../backend/udata.php';
 
                     <div class="d-flex justify-content-between mt-24 r-mt-22 align-items-center">
                         <div class="me-2 me-3">
-                            <div class="param-ref param-ref-withdraw filter-ref r-filter-ref w-135">
-                                <select name="status" class="select2 f-13" id="status" data-minimum-results-for-search="Infinity">
-                                    <option value="all" selected>All</option>
-                                    <option value="active">Active</option>
-                                    <option value="pending">Pending</option>
-                                    <option value="completed">Completed</option>
-                                    <option value="cancelled">Cancelled</option>
-                                </select>
-                            </div>
+
                         </div>
 
                         <a href="../invest_plans/" class="btn bg-primary text-light Add-new-btn w-176 addnew">
@@ -132,7 +124,7 @@ include '../backend/udata.php';
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <div class="td-p-20">
                                                             <p class="mb-0 f-16 leading-20 text-dark gilroy-medium l-sp64"><?= $i['earned'] ?></p>
-                                                            <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2 l-sp64"><?= $i['expected'] ?></p>
+                                                            <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2 l-sp64"><?= $i['expected'] + $i['amount'] ?></p>
                                                         </div>
                                                     </div>
                                                 </td>

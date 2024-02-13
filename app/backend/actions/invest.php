@@ -15,12 +15,16 @@ if (isset($_POST['amount'])) {
     $status = "first phase";
 
     $start_date = date('Y-m-d H:m:s');
-    $end_date = date('Y-m-d H:m:s', strtotime('+30 days'));
+    $end_date = date('Y-m-d H:m:s', strtotime('+28 days'));
     $expected = ($mperc / 100) * $amt;
     $to_earn = ($bperc / 100) * $amt;
 
-    if ($modules->invest($uid, $pid, $plan, $curr, $amt, $to_earn, $expected, $start_date, $end_date, time(), $status)) {
-        $res['header'] = 'invested';
+    $withdrawn = $modules->investWithdrawal($uid, $wid, $curr, $amount, 1, 'investment');
+
+    if ($withdrawn) {
+        if ($modules->invest($uid, $pid, $plan, $curr, $amt, $to_earn, $expected, $start_date, $end_date, time(), $status)) {
+            $res['header'] = 'invested';
+        }
     }
 
     echo json_encode($res);

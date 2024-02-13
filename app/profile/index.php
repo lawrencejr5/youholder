@@ -298,7 +298,7 @@ include '../backend/udata.php';
                         </div>
                     </div>
                     <!-- Personal Information Div -->
-                    <div class="profile-personal-information bg-white mt-18">
+                    <div class="profile-personal-information bg-white mt-18" id="pinfo">
                         <div class="d-flex align-items-center">
                             <p class="mb-0 f-24 leading-30 gilroy-Semibold text-dark">Personal Information</p>
                             <div class="hover-qr-code cursor-pointer wallet-svg  position-r">

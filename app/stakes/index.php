@@ -66,11 +66,7 @@ include '../backend/udata.php';
 
                     <div class="d-flex justify-content-between mt-24 r-mt-22 align-items-center">
                         <div class="me-2 me-3">
-                            <div class="param-ref param-ref-withdraw filter-ref r-filter-ref w-135">
-                                <select name="status" class="select2 f-13" id="status" data-minimum-results-for-search="Infinity">
-                                    <option value="all" selected>All</option>
-                                </select>
-                            </div>
+
                         </div>
 
                         <a href="../stake_plans/" class="btn bg-primary text-light Add-new-btn w-176 addnew">
