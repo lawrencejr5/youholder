@@ -40,8 +40,8 @@
 			<div class="row">
 				<div class="col-12">
 					<nav class="navbar navbar-expand-md navbar-light">
-						<a class="navbar-brand" href="https://demo.paymoney.techvill.net">
-							<img src="./public/uploads/logos/1532175849_logo.png" alt="Brand Logo">
+						<a href="/youholder/">
+							<img src="/youholder/public/logos/yield-logo.png" height="auto" width="100px" alt="Brand Logo">
 						</a>
 
 						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,8 +109,8 @@
 						<div class="bg-content">
 							<div class="d-flex justify-content-start">
 								<div class="logo-div">
-									<a href="https://demo.paymoney.techvill.net">
-										<img src="./public/uploads/logos/1532175849_logo.png" alt="Brand Logo">
+									<a href="/youholder/">
+										<img src="/youholder/public/logos/yield-logo.png" height="auto" width="100px" alt="Brand Logo">
 									</a>
 								</div>
 							</div>
@@ -184,7 +184,7 @@
 										</div>
 										<!-- reCaptcha -->
 										<div class="d-grid mb-3 mb-3p">
-											<button class="btn btn-lg btn-primary" type="button" id="login-btn">
+											<button class="btn btn-lg" type="button" id="login-btn" style="background-color: #130e80;">
 												<div class="spinner spinner-border text-white spinner-border-sm mx-2 d-none" role="status">
 													<span class="visually-hidden"></span>
 												</div>
@@ -212,7 +212,7 @@
 
 	<!-- Start Footer-->
 	<!-- Footer section -->
-	<div class="footer-sec">
+	<!-- <div class="footer-sec">
 		<div class="px-240">
 			<div class="row">
 				<div class="col-md-5 pb-54 align-center">
@@ -336,7 +336,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="d-none bottom-footer">
 		<div class="px-240 d-flex justify-content-between btn-footer align-center">

@@ -1,5 +1,5 @@
 <div class="s-nav">
-    <div class="nav-wrap w-container"><a href="/youholder" aria-current="page" class="nav-logo-a w-inline-block w--current"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5e60f75746e6b86030d0c74b_wide%20dark.svg" width="145" alt="youhodler logo svg" class="nav-logo-wide" /><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5e60f76edcb1b696b1e2b3cd_fav.svg" alt="youhodler logo svg" width="30" class="nav-logo-fav" /></a>
+    <div class="nav-wrap w-container"><a href="/youholder" aria-current="page" class="nav-logo-a w-inline-block w--current"><img src="/youholder/public/logos/yield-logo.png" width="80px" height="auto" alt="youhodler logo svg" class="nav-logo-wide" /><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5e60f76edcb1b696b1e2b3cd_fav.svg" alt="youhodler logo svg" width="30" class="nav-logo-fav" /></a>
         <ul role="list" class="nav-ul center w-clearfix w-list-unstyled">
             <li class="nav-li show-mob">
                 <div data-delay="0" data-hover="true" class="nav-drop w-dropdown">
@@ -14,17 +14,17 @@
                                 </div>
                                 <nav class="nav-drop-wrap w-dropdown-list">
                                     <div class="nav-drop-bg">
-                                        <div class="nav-drop-tile-grid-five"><a href="/youholder/multi-hodl" class="nav-drop-a tile w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5d65135dca4f1a3669bf0aee_ftp.svg" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                        <div class="nav-drop-tile-grid-five"><a href="/youholder/multi-hodl" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">Crypto Trading</div>
                                             </a><a href="/youholder/crypto-loan" class="nav-drop-a tile w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dd2cbe6b0a74b9d00ab4cea_get%20loan.svg" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">Crypto Loans</div>
-                                            </a><a href="/youholder/exchange" class="nav-drop-a tile w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c5d534d32e540689b3d6e_conversion.svg" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                            </a><a href="/youholder/exchange" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/exchange.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">Exchange</div>
-                                            </a><a href="/youholder/yield" class="nav-drop-a tile w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dcfe041ef58f24526f1bb9_interest.svg" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                            </a><a href="/youholder/yield" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">Yield Account</div>
-                                            </a><a href="/youholder/cloud-miner" class="nav-drop-a tile w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dcfe193a59b502d31f1305_miner-block-cost.svg" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                            </a><a href="/youholder/cloud-miner" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">Cloud Miner</div>
-                                            </a><a href="/youholder/promo" class="nav-drop-a tile w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/6482e666357f03133544928b_redeem_FILL0_wght400_GRAD0_opsz48.svg" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                            </a><a href="/youholder/promo" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/gift.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">Promos</div>
                                             </a></div>
                                     </div>
@@ -36,11 +36,11 @@
                                 </div>
                                 <nav class="nav-drop-wrap short w-dropdown-list">
                                     <div class="nav-drop-bg">
-                                        <div class="nav-drop-tile-grid-five"><a href="/company" class="nav-drop-a tile w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dd5159fb98acb12e82bebb2_question.svg" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                        <div class="nav-drop-tile-grid-five"><a href="/company" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/question.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">About YouHodler</div>
-                                            </a><a href="/youholder/stats" class="nav-drop-a tile w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dc96c7508c6042ff6ba81ce_increase.svg" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                            </a><a href="/youholder/stats" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">Company Stats</div>
-                                            </a><a href="/youholder/affiliate-program" class="nav-drop-a tile w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dd2cbe7b0a74b7098ab4ceb_savings.svg" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                            </a><a href="/youholder/affiliate-program" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/percent.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">Affiliate Program</div>
                                             </a><a href="/youholder/ambassador" class="nav-drop-a tile w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dd51582608e495a6434c37c_profile.svg" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">Ambassadors </div>
@@ -71,15 +71,15 @@
                     <nav class="nav-drop-wrap w-dropdown-list">
                         <div class="nav-drop-bg">
 
-                            <div class="nav-drop-menu-grid"><a href="/youholder/multi-hodl" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Multi HODL" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dcfe744db871b8819b089c_hodl.svg" class="nav-drop-a-tile-icon" />
+                            <div class="nav-drop-menu-grid"><a href="/youholder/multi-hodl" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Multi HODL" src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
                                     <div class="nav-drop-a-tile-heading">Crypto Trading</div>
                                     <div class="nav-drop-a-tile-txt">The most user-friendly trading service in crypto. Fast and real
                                         execution. No order placements fee.</div>
-                                </a><a href="/youholder/crypto-loan" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Crypto Loans" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dd2cbe6b0a74b9d00ab4cea_get%20loan.svg" class="nav-drop-a-tile-icon" />
+                                </a><a href="/youholder/crypto-loan" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Crypto Loans" src="/youholder/public/icons/earn.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
                                     <div class="nav-drop-a-tile-heading">Crypto Loans</div>
                                     <div class="nav-drop-a-tile-txt">Get cash loan for more than 50 coins as collateral. LTV up to 90%.
                                         Bank and credit card withdrawals.</div>
-                                </a><a href="/youholder/exchange" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Crypto Loans" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c5d534d32e540689b3d6e_conversion.svg" class="nav-drop-a-tile-icon" />
+                                </a><a href="/youholder/exchange" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Crypto Loans" src="/youholder/public/icons/exchange.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
                                     <div class="nav-drop-a-tile-heading">Exchange</div>
                                     <div class="nav-drop-a-tile-txt">Exchange cryptocurrency, fiat, and stablecoins with real-time
                                         execution prices and low fees.</div>
@@ -87,11 +87,11 @@
                             <div class="nav-drop-menu-list">
                                 <div class="nav-drop-menu-list-heading">All Features</div><a href="/promo" class="nav-drop-a tile no-background hidden w-inline-block w-clearfix"><img width="24" alt="Web3 Wallet" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/652e688443d8feb8c4fd99d2_card.svg" class="nav-drop-a-tile-icon no-background" />
                                     <div class="nav-drop-a-tile-heading no-background">Crypto Card</div>
-                                </a><a href="/youholder/yield" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Loyalty program" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dcfe041ef58f24526f1bb9_interest.svg" class="nav-drop-a-tile-icon no-background" />
+                                </a><a href="/youholder/yield" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Loyalty program" src="/youholder/public/icons/percent.png" style="width: 15px; height: auto;" class="nav-drop-a-tile-icon no-background" />
                                     <div class="nav-drop-a-tile-heading no-background">Yield Account</div>
-                                </a><a href="/youholder/cloud-miner" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Web3 Wallet" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dcfe193a59b502d31f1305_miner-block-cost.svg" class="nav-drop-a-tile-icon no-background" />
+                                </a><a href="/youholder/cloud-miner" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Web3 Wallet" src="/youholder/public/icons/bolt.png" style="width: 15px; height: auto;" class="nav-drop-a-tile-icon no-background" />
                                     <div class="nav-drop-a-tile-heading no-background">Cloud Miner</div>
-                                </a><a href="/youholder/promo" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Web3 Wallet" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/6482e666357f03133544928b_redeem_FILL0_wght400_GRAD0_opsz48.svg" class="nav-drop-a-tile-icon no-background" />
+                                </a><a href="/youholder/promo" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Web3 Wallet" src="/youholder/public/icons/gift.png" style="width: 15px; height: auto;" class="nav-drop-a-tile-icon no-background" />
                                     <div class="nav-drop-a-tile-heading no-background">Promos</div>
                                 </a>
                             </div>
@@ -112,21 +112,21 @@
                                 </div>
                                 <div class="text-block-22-copy">Ilya Volkov, CEO <a href="https://www.linkedin.com/in/ilya-volkov-b4077b28/" target="_blank" class="linkedin-inline">in</a> <a href="https://twitter.com/Ilya_YouHodler" target="_blank" class="twitter-inline">t</a></div>
                             </div>
-                            <div class="nav-drop-menu-grid _2-column"><a href="/youholder/company" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Company" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dd5159fb98acb12e82bebb2_question.svg" class="nav-drop-a-tile-icon" />
+                            <div class="nav-drop-menu-grid _2-column"><a href="/youholder/company" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Company" src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
                                     <div class="nav-drop-a-tile-heading">About YouHodler</div>
                                     <div class="nav-drop-a-tile-txt">We innovate with respect for both technologies and traditions.
                                     </div>
-                                </a><a href="/youholder/stats" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Stats" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dc96c7508c6042ff6ba81ce_increase.svg" class="nav-drop-a-tile-icon" />
+                                </a><a href="/youholder/stats" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Stats" src="/youholder/public/icons/up.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
                                     <div class="nav-drop-a-tile-heading">Company Stats</div>
                                     <div class="nav-drop-a-tile-txt">Monthly data on the performance, community growth and volumes.
                                     </div>
                                 </a></div>
                             <div class="nav-drop-menu-list">
-                                <div class="nav-drop-menu-list-heading">Join YouHodler Team</div><a href="/youholder/affiliate-program" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Affiliates" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dd2cbe7b0a74b7098ab4ceb_savings.svg" class="nav-drop-a-tile-icon no-background" />
+                                <div class="nav-drop-menu-list-heading">Join YouHodler Team</div><a href="/youholder/affiliate-program" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Affiliates" src="/youholder/public/icons/percent.png" style="width: 15px; height: auto;" class="nav-drop-a-tile-icon no-background" />
                                     <div class="nav-drop-a-tile-heading no-background">Affiliate Program</div>
-                                </a><a href="/youholder/ambassador" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Ambassador" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dd51582608e495a6434c37c_profile.svg" class="nav-drop-a-tile-icon no-background" />
+                                </a><a href="/youholder/ambassador" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Ambassador" src="/youholder/public/icons/user.png" style="width: 15px; height: auto;" class="nav-drop-a-tile-icon no-background" />
                                     <div class="nav-drop-a-tile-heading no-background">Ambassador Program</div>
-                                </a><a href="/youholder/careers" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Careers" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/60893f96a138c60e748c42be_icon_diploma.svg" class="nav-drop-a-tile-icon no-background" />
+                                </a><a href="/youholder/careers" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Careers" src="/youholder/public/icons/bag.png" style="width: 15px; height: auto;" class="nav-drop-a-tile-icon no-background" />
                                     <div class="nav-drop-a-tile-heading no-background">Careers</div>
                                 </a>
                             </div>

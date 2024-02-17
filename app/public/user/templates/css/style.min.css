@@ -59,18 +59,18 @@ a {
   word-break: break-all;
 }
 :root {
-  --bs-primary: #635bfe;
+  --bs-primary: #130e80;
   --bs-secondary: #fff;
   --bs-success: #2aaa5e;
   --bs-white: #ffffff;
   --bs-danger: #d9204c;
   --bs-warning: blue;
   --bs-warning-100: #ca7c00;
-  --bs-warning-200: blue;
+  --bs-warning-200: #130e80;
   --bs-muted: #cdccd0;
   --bs-dark: rgb(7, 7, 67);
   --bs-light: #e8e7ea;
-  --bs-info: blue;
+  --bs-info: #130e80;
   --bs-info-100: #605f72;
   --bs-info-200: #8681a2;
   --bs-gray: #9998a0;

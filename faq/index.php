@@ -282,7 +282,7 @@
                 <div class="faq-wrap">
                     <div class="faq-item">
                         <div class="faq-link w-clearfix" data-ix="show-faq-yield">
-                            <div class="faq-link-txt">How to boost my crypto-payouts?<span class="faq-link-arr-expand">v</span><br />
+                            <div class="faq-link-txt">How to boost my crypto-payouts?<span class="faq-link-arr-expand">vv</span><br />
                             </div>
                         </div>
                         <div class="faq-content">

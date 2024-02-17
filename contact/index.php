@@ -272,7 +272,7 @@
         }
 
         #contact-btn {
-            background-color: #2979ff;
+            background-color: #130e80;
             padding: .5rem .3rem;
             width: 500px;
             margin: .5rem;

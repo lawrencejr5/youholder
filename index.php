@@ -14,13 +14,14 @@
   <meta property="og:type" content="website" />
   <meta content="summary_large_image" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta name="theme-color" content="blue" />
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.fog.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.dots.min.js"></script>
+  <!--<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.fog.min.js"></script>-->
   <script type="text/javascript">
     WebFont.load({
       google: {
@@ -35,8 +36,8 @@
       n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);
   </script>
-  <link href="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5cee8f37e521594bf21e30db_fav_small.png" rel="shortcut icon" type="image/x-icon" />
-  <link href="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5cee8faeaeff6f36241942f1_fav_large.png" rel="apple-touch-icon" />
+  <link href="/youholder/public/icons/yield.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="/youholder/public/icons/yield.png" rel="apple-touch-icon" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta name="facebook-domain-verification" content="9d151kspnzgxeyddfsx424rcf04nh6" />
@@ -168,81 +169,29 @@
 </head>
 
 <body>
-  <!-- <div id="popup-UK" class="popup-background">
-    <div class="popup-content-wrap">
-      <div class="popup-content">
-        <div class="popup-content-desktop">
-          <p>YouHodler is regulated in the EU (Italy) and Switzerland, and does not have a regulated UK entity.
-            YouHodler is NOT regulated by the FCA, and protections offered under UK law do not apply.</p>
-          <p>YouHodler promotions are not targeted at UK investors, and bonuses or loyalty programs like the rewards
-            programme or sign-up offers will not be available to residents of the UK. You can learn more about the
-            services offered to UK customers <a href="https://help.youhodler.com/en/articles/8456026-uk-faqs-message-for-our-uk-resident-customers-as-of-october-2023" target="_blank">here</a>.</p>
-          <p>Do not invest with YouHodler unless you’re prepared to lose all your money or tokens invested. Crypto
-            Currency is considered as a speculative and high‑risk investment and you are unlikely to be protected if
-            something goes wrong. Take 2min to <a href="http://help.youhodler.com/en/articles/8455958-risk-disclosure" target="_blank">learn more about risks</a>.</p>
-        </div>
-        <div class="popup-content-mobile">
-          <p class="p-small">YouHodler is regulated in the EU (Italy) and Switzerland, and does not have a regulated UK
-            entity. YouHodler is NOT regulated by the FCA, and protections offered under UK law do not apply.</p>
-          <p class="p-small">YouHodler promotions are not targeted at UK investors, and bonuses or loyalty programs like
-            the rewards programme or sign-up offers will not be available to residents of the UK. You can learn more
-            about the services offered to UK customers <a href="https://help.youhodler.com/en/articles/8456026-uk-faqs-message-for-our-uk-resident-customers-as-of-october-2023" target="_blank" class="footer-a">here</a>.</p>
-          <p class="p-small">Do not invest with YouHodler unless you’re prepared to lose all your money or tokens
-            invested. Crypto Currency is considered as a speculative and high‑risk investment and you are unlikely to be
-            protected if something goes wrong. Take 2min to <a href="http://help.youhodler.com/en/articles/8455958-risk-disclosure" target="_blank" class="footer-a">learn more about risks</a>.</p>
-        </div><a id="UK_POPUP_BUTTON" href="#" class="btn-big-solid full-width w-button">acknowledge</a>
-      </div>
-    </div>
-  </div>
-  <div id="popup-UK" class="popup-background">
-    <div class="popup-content-wrap">
-      <div class="popup-content">
-        <div class="popup-content-desktop">
-          <p>YouHodler is regulated in the EU (Italy) and Switzerland, and does not have a regulated UK entity.
-            YouHodler is NOT regulated by the FCA, and protections offered under UK law do not apply.</p>
-          <p>YouHodler promotions are not targeted at UK investors, and bonuses or loyalty programs like the rewards
-            programme or sign-up offers will not be available to residents of the UK. You can learn more about the
-            services offered to UK customers <a href="https://help.youhodler.com/en/articles/8456026-uk-faqs-message-for-our-uk-resident-customers-as-of-october-2023" target="_blank">here</a>.</p>
-          <p>Do not invest with YouHodler unless you’re prepared to lose all your money or tokens invested. Crypto
-            Currency is considered as a speculative and high‑risk investment and you are unlikely to be protected if
-            something goes wrong. Take 2min to <a href="http://help.youhodler.com/en/articles/8455958-risk-disclosure" target="_blank">learn more about risks</a>.</p>
-        </div>
-        <div class="popup-content-mobile">
-          <p class="p-small">YouHodler is regulated in the EU (Italy) and Switzerland, and does not have a regulated UK
-            entity. YouHodler is NOT regulated by the FCA, and protections offered under UK law do not apply.</p>
-          <p class="p-small">YouHodler promotions are not targeted at UK investors, and bonuses or loyalty programs like
-            the rewards programme or sign-up offers will not be available to residents of the UK. You can learn more
-            about the services offered to UK customers <a href="https://help.youhodler.com/en/articles/8456026-uk-faqs-message-for-our-uk-resident-customers-as-of-october-2023" target="_blank" class="footer-a">here</a>.</p>
-          <p class="p-small">Do not invest with YouHodler unless you’re prepared to lose all your money or tokens
-            invested. Crypto Currency is considered as a speculative and high‑risk investment and you are unlikely to be
-            protected if something goes wrong. Take 2min to <a href="http://help.youhodler.com/en/articles/8455958-risk-disclosure" target="_blank" class="footer-a">learn more about risks</a>.</p>
-        </div><a id="UK_POPUP_BUTTON" href="#" class="btn-big-solid full-width w-button">acknowledge</a>
-      </div>
-    </div>
-  </div> -->
-  <div class="toast-wrap w-clearfix">
+  <!-- <div class="toast-wrap w-clearfix">
     <div id="toast-cookies" class="toast-block-cookies w-clearfix">
-      <div class="toast-txt">We use cookies to improve your experience. <a href="/cookies" target="_blank" class="toast-link">Cookie Declaration</a></div><a href="#" class="toast-button w-inline-block" data-ix="hide-toast-cookies">
+      <div class="toast-txt">We use cookies to improve your experience. <a href="/cookies" target="_blank" class="toast-link">Cookie.Declaration</a></div><a href="#" class="toast-button w-inline-block" data-ix="hide-toast-cookies">
         <div class="toast-button-label">ACCEPT ALL</div>
       </a>
     </div>
-  </div>
+  </div> -->
   <?php include "./master/topnav.php" ?>
 
   <div class="s-hero wide bankai">
     <div class="hero-wrap wide w-container">
       <div class="w-row">
         <div class="column-compensation hero-left w-col w-col-6 w-col-stack">
-          <h1 class="h1 hero big main" style="color: white;">Your Digital Assets at Full Potential<br /></h1>
-          <p class="h3 subheading hero" style="color: white;">We unlock all benefits of crypto &amp; fiat. Buy, exchange, or trade your crypto
+          <h1 class="h1 hero big main" style="color: white;">Yield Financial Services<br /></h1>
+          <p class="h3 subheading hero" style="color: white; height: 30vh;">We unlock all benefits of crypto &amp; fiat. Buy, exchange, or trade your crypto
             at any time.</p>
-          <div class="hero-cta-wrap cta-desktop"><a data-test-id="GET_STARTED_BUTTON" href="./register/" class="btn-big-solid hero w-button" style="background-color: white; color: #2979ff;">GET STARTED</a>
+          <div class="hero-cta-wrap cta-desktop"><a data-test-id="GET_STARTED_BUTTON" href="./register/" class="btn-big-solid hero w-button" style="background-color: white; color: #130e80;">GET STARTED</a>
 
           </div>
           <div class="hero-cta-wrap cta-mobile"><a data-test-id="GET_STARTED_BUTTON" href="./register/" class="btn-big-solid hero w-button">GET STARTED</a>
 
           </div>
-          <!-- <ul role="list" class="testimonial-list testimonials-desktop w-clearfix w-list-unstyled">
+          <ul role="list" class="testimonial-list testimonials-desktop w-clearfix w-list-unstyled">
             <li class="testimonial-item"><a href="/company" target="_blank" class="testimonial-link w-inline-block">
                 <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb1cdaada6d30231e75_testimonial_eu_swiss_combined.svg" loading="lazy" alt="eu and swiss" class="testimonial-pic" /></div>
                 <div class="testimonial-txt">Regulated EU and Swiss Financial institutions</div>
@@ -255,9 +204,8 @@
                 <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb35925bbf0b0b93c0a_testimonial_torino_fc.svg" loading="lazy" alt="torino fc" class="testimonial-pic" /></div>
                 <div class="testimonial-txt">Official Crypto Partner of Torino FC</div>
               </a></li>
-          </ul> -->
+          </ul>
         </div>
-        <!-- <div class="column-compensation hero-image-wrap w-col w-col-6 w-col-stack"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c0666a3881731d9e5e235c_hero_pic_2.jpg" loading="eager" sizes="(max-width: 991px) 100vw, 900px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c0666a3881731d9e5e235c_hero_pic_2-p-500.jpg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c0666a3881731d9e5e235c_hero_pic_2-p-800.jpg 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c0666a3881731d9e5e235c_hero_pic_2-p-1080.jpg 1080w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c0666a3881731d9e5e235c_hero_pic_2-p-1600.jpg 1600w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c0666a3881731d9e5e235c_hero_pic_2-p-2000.jpg 2000w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c0666a3881731d9e5e235c_hero_pic_2.jpg 2280w" alt="youhodler app" class="hero-image hero-image-desktop" /><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c825c35881a964afedb688_screen_cta.png" loading="eager" width="460" sizes="(max-width: 767px) 92vw, (max-width: 991px) 480px, 100vw" alt="youhodler app" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c825c35881a964afedb688_screen_cta-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c825c35881a964afedb688_screen_cta-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c825c35881a964afedb688_screen_cta.png 920w" class="hero-image hero-image-mobile" /></div> -->
       </div>
     </div>
   </div>
@@ -266,7 +214,7 @@
       <ul role="list" class="testimonial-list testimonials-mobile w-clearfix w-list-unstyled">
         <li class="testimonial-item"><a href="/company" target="_blank" class="testimonial-link w-inline-block">
             <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb1cdaada6d30231e75_testimonial_eu_swiss_combined.svg" loading="lazy" alt="youhodler eu and swiss" class="testimonial-pic" /></div>
-            <div class="testimonial-txt">Regulated EU and Swiss Financial institutions</div>
+            <div class="testimonial-txt">Regulated Australian Financial institutions</div>
           </a></li>
         <li class="testimonial-item"><a href="https://twitter.com/ledger_business/status/1275806038613274631" target="_blank" class="testimonial-link w-inline-block">
             <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb0cdaada6a20231e71_testimonial_ledger.svg" loading="lazy" alt="ledger vault" class="testimonial-pic" /></div>
@@ -279,89 +227,99 @@
       </ul>
     </div>
   </div>
+  <br>
   <div id="platform" class="s-content wide card-pre-order">
     <div class="content-wrap wide w-container">
       <div class="card-preorder-wrap">
         <div class="w-row">
-          <div class="column-compensation w-col w-col-7 w-col-stack">
-            <h3>Pre-order <span class="span-blue">YouHodler Card</span> now!</h3>
+          <div class="column-compensation w-col w-col-6 w-col-stack">
+
             <ul role="list" class="card-preorder-list w-list-unstyled">
-              <li class="card-preorder-list-item w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64f1b9afa753c1ed937b476b_card.svg" loading="lazy" alt="" class="card-preorder-list-item-icon" />
-                <div class="card-preorder-list-item-txt">One card for all fiat operations</div>
+              <li class="card-preorder-list-item w-clearfix"><img src="/youholder/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
+                <div class="card-preorder-list-item-txt">Live automated Platforms</div>
               </li>
-              <li class="card-preorder-list-item w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64f1b9af5c0dca2a222db4b2_blockexplorer.svg" loading="lazy" alt="" class="card-preorder-list-item-icon" />
-                <div class="card-preorder-list-item-txt">Spend online and in-store</div>
+              <!-- <li class="card-preorder-list-item w-clearfix"><img src="/youholder/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
+                <div class="card-preorder-list-item-txt">Fully Audited smart contracts</div>
+              </li> -->
+              <li class="card-preorder-list-item w-clearfix"><img src="/youholder/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
+                <div class="card-preorder-list-item-txt">Full Blockchain-based smart contract sec</div>
               </li>
-              <li class="card-preorder-list-item w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64f1b9afc3ff2b6eedb2e314_devices.svg" loading="lazy" alt="" class="card-preorder-list-item-icon" />
-                <div class="card-preorder-list-item-txt">Manage your card in app</div>
+              <li class="card-preorder-list-item w-clearfix"><img src="/youholder/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
+                <div class="card-preorder-list-item-txt">Military-grade 256-bit Encryption</div>
+              </li>
+              <!-- <li class="card-preorder-list-item w-clearfix"><img src="/youholder/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
+                <div class="card-preorder-list-item-txt">Extensive Firewall Architecture</div>
+              </li> -->
+              <!-- <li class="card-preorder-list-item w-clearfix"><img src="/youholder/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
+                <div class="card-preorder-list-item-txt">Continuous Third-party Penetration Testing and platform Assessment</div>
+              </li> -->
+              <li class="card-preorder-list-item w-clearfix"><img src="/youholder/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
+                <div class="card-preorder-list-item-txt">24/7/365 Fraud Monitoring Mechanisms</div>
               </li>
             </ul>
-            <div class="form-preorder-email w-form">
-              <form id="wf-form-formPreorder-2" name="wf-form-formPreorder-2" data-name="formPreorder" method="get" class="form-contest-id-wrap" data-wf-page-id="65719812835ab1dfc00c38f5" data-wf-element-id="7609e9a9-d9c1-8078-460f-a1be3d70195b">
-                <div class="form-contest-inputs-wrap"><select id="country" name="Country" data-name="Country" required="" class="form-contest-id-input country-select w-select">
-                    <option value="">Select country</option>
-                    <option value="Austria">Austria</option>
-                    <option value="Belgium">Belgium</option>
-                    <option value="Bulgaria">Bulgaria</option>
-                    <option value="Croatia">Croatia</option>
-                    <option value="Cyprus">Cyprus</option>
-                    <option value="Czechia">Czech Republic</option>
-                    <option value="Denmark">Denmark</option>
-                    <option value="Estonia">Estonia</option>
-                    <option value="Finland">Finland</option>
-                    <option value="France">France</option>
-                    <option value="Germany">Germany</option>
-                    <option value="Greece">Greece</option>
-                    <option value="Hungary">Hungary</option>
-                    <option value="Iceland">Iceland</option>
-                    <option value="Ireland">Ireland</option>
-                    <option value="Italy">Italy</option>
-                    <option value="Latvia">Latvia</option>
-                    <option value="Liechtenstein">Liechtenstein</option>
-                    <option value="Luxembourg">Luxembourg</option>
-                    <option value="Malta">Malta</option>
-                    <option value="Netherlands">Netherlands</option>
-                    <option value="Norway">Norway</option>
-                    <option value="Poland">Poland</option>
-                    <option value="Portugal">Portugal</option>
-                    <option value="Romania">Romania</option>
-                    <option value="Slovakia">Slovakia</option>
-                    <option value="Slovenia">Slovenia</option>
-                    <option value="Spain">Spain</option>
-                    <option value="Sweden">Sweden</option>
-                    <option value="Other">Other</option>
-                  </select><input class="form-contest-id-input w-input" maxlength="256" name="email" data-name="email" placeholder="Email" type="email" id="email-2" required="" /></div><input type="submit" data-wait="Please wait..." class="form-contest-id-button w-button" value="I&#x27;m Interested!" />
-              </form>
-              <div id="formWeekendSuccess" class="form-contest-id-success w-form-done">
-                <div>Thank you! Your interest has been registered!</div>
-              </div>
-              <div id="formWeekendError" class="form-contest-id-error w-form-fail">
-                <div>Oops! Something went wrong while submitting the form.</div>
-              </div>
-            </div>
           </div>
-          <div class="column-compensation card-preorder-image w-col w-col-5 w-col-stack"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64f1e2248463c13f7e2dbffd_illustration_card.jpg" loading="eager" width="390" sizes="(max-width: 767px) 83vw, (max-width: 991px) 400px, (max-width: 1279px) 34vw, 400px" alt="youhodler card" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64f1e2248463c13f7e2dbffd_illustration_card-p-500.jpg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64f1e2248463c13f7e2dbffd_illustration_card-p-800.jpg 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64f1e2248463c13f7e2dbffd_illustration_card.jpg 1006w" class="image-60" /></div>
+          <div class="column-compensation card-preorder-image w-col w-col-6 w-col-stack">
+            <h4>I need more info on <span class="span-blue">Yield Financial Services</span></h4>
+            <form id="wf-form-formPreorder-2" name="wf-form-formPreorder-2" data-name="formPreorder" method="get" class="form-contest-id-wrap" data-wf-page-id="65719812835ab1dfc00c38f5" data-wf-element-id="7609e9a9-d9c1-8078-460f-a1be3d70195b">
+              <div class="form-contest-inputs-wrap"><select id="country" name="Country" data-name="Country" required="" class="form-contest-id-input country-select w-select">
+                  <option value="">Select country</option>
+                  <option value="Austria">Austria</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Belgium">Belgium</option>
+                  <option value="Bulgaria">Bulgaria</option>
+                  <option value="Croatia">Croatia</option>
+                  <option value="Cyprus">Cyprus</option>
+                  <option value="Czechia">Czech Republic</option>
+                  <option value="Denmark">Denmark</option>
+                  <option value="Estonia">Estonia</option>
+                  <option value="Finland">Finland</option>
+                  <option value="France">France</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Greece">Greece</option>
+                  <option value="Hungary">Hungary</option>
+                  <option value="Iceland">Iceland</option>
+                  <option value="Ireland">Ireland</option>
+                  <option value="Italy">Italy</option>
+                  <option value="Latvia">Latvia</option>
+                  <option value="Liechtenstein">Liechtenstein</option>
+                  <option value="Luxembourg">Luxembourg</option>
+                  <option value="Malta">Malta</option>
+                  <option value="Netherlands">Netherlands</option>
+                  <option value="Norway">Norway</option>
+                  <option value="Poland">Poland</option>
+                  <option value="Portugal">Portugal</option>
+                  <option value="Romania">Romania</option>
+                  <option value="Slovakia">Slovakia</option>
+                  <option value="Slovenia">Slovenia</option>
+                  <option value="Spain">Spain</option>
+                  <option value="Sweden">Sweden</option>
+                  <option value="United States">United States</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Other">Other</option>
+                </select><input class="form-contest-id-input w-input" maxlength="256" name="email" data-name="email" placeholder="Email" type="email" id="email-2" required="" /></div><input type="submit" data-wait="Please wait..." class="form-contest-id-button w-button" value="I&#x27;m Interested!" />
+            </form>
+          </div>
         </div>
       </div>
       <div class="wrap-center">
-        <h2 class="h2 center">Discover YouHodler</h2>
+        <h2 class="h2 center">Discover</h2>
       </div>
       <div data-current="Multi HODL" data-easing="ease" data-duration-in="300" data-duration-out="100" class="product-tabs w-tabs">
-        <div class="product-tabs-menu w-tab-menu"><a data-w-tab="Multi HODL" class="product-tabs-link w-inline-block w-clearfix w-tab-link w--current"><img loading="lazy" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dcfe744db871b8819b089c_hodl.svg" alt="Multi HODL" class="nav-drop-a-tile-icon tab" />
+        <div class="product-tabs-menu w-tab-menu"><a data-w-tab="Multi HODL" class="product-tabs-link w-inline-block w-clearfix w-tab-link w--current"><img loading="lazy" src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" alt="Multi HODL" class="nav-drop-a-tile-icon tab" />
             <div class="nav-drop-a-tile-heading tab">MultiHODL</div>
-          </a><a data-w-tab="Crypto Loans" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img loading="lazy" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dd2cbe6b0a74b9d00ab4cea_get%20loan.svg" alt="Crypto Loans" class="nav-drop-a-tile-icon tab" />
+          </a><a data-w-tab="Crypto Loans" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img loading="lazy" src="/youholder/public/icons/earn.png" style="width: 20px; height: auto;" alt="Crypto Loans" class="nav-drop-a-tile-icon tab" />
             <div class="nav-drop-a-tile-heading tab"><span class="span-hide-mobile">Crypto </span>Loans</div>
-          </a><a data-w-tab="Exchange" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img loading="lazy" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c5d534d32e540689b3d6e_conversion.svg" alt="Exchange" class="nav-drop-a-tile-icon tab" />
+          </a><a data-w-tab="Exchange" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img loading="lazy" src="/youholder/public/icons/exchange.png" style="width: 20px; height: auto;" alt="Exchange" class="nav-drop-a-tile-icon tab" />
             <div class="nav-drop-a-tile-heading tab">Exchange</div>
-          </a><a data-w-tab="Loyalty Program" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img loading="lazy" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dcfe041ef58f24526f1bb9_interest.svg" alt="Loyalty Program" class="nav-drop-a-tile-icon tab" />
+          </a><a data-w-tab="Loyalty Program" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img loading="lazy" src="/youholder/public/icons/percent.png" style="width: 20px; height: auto;" alt="Loyalty Program" class="nav-drop-a-tile-icon tab" />
             <div class="nav-drop-a-tile-heading tab">Yield<span class="span-hide-mobile"> Account</span></div>
-          </a><a data-w-tab="Cloud Miner" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img alt="" loading="lazy" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dcfe193a59b502d31f1305_miner-block-cost.svg" class="nav-drop-a-tile-icon" />
+          </a><a data-w-tab="Cloud Miner" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img alt="" loading="lazy" src="/youholder/public/icons/bolt.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
             <div class="nav-drop-a-tile-heading tab"><span class="span-hide-mobile">Cloud </span>Miner</div>
           </a></div>
         <div class="product-tabs-content w-tab-content">
           <div data-w-tab="Multi HODL" class="product-tabs-pane w-tab-pane w--tab-active">
             <div class="w-row">
-              <div class="column-compensation padding-right w-col w-col-7 w-col-stack">
+              <div class="column-compensation padding-right w-col w-col-12 w-col-stack">
                 <div class="product-tabs-content-mobile">
                   <h3 class="h3">MultiHODL</h3>
                   <p class="h3 subheading">An efficient and innovative tool powered by crypto-backed loans to help you
@@ -373,7 +331,7 @@
                   <h3 class="h3 subheading padding-top-large">The barbell strategy</h3>
                   <div class="w-clearfix">
                     <div class="barbell-wrap-left">
-                      <div class="barbell-bar-left"></div>
+                      <!-- <div class="barbell-bar-left"></div> -->
                       <div class="barbell-txt-wrap">
                         <p class="p"><strong>Crypto portfolio with Loyalty rewards. </strong>The conservative part of
                           your portfolio and safe investment.</p>
@@ -383,7 +341,7 @@
                       </div>
                     </div>
                     <div class="barbell-wrap-right">
-                      <div class="barbell-bar-right"></div>
+                      <!-- <div class="barbell-bar-right"></div> -->
                       <div class="barbell-txt-wrap-last">
                         <p class="p"><strong>MultiHODL.</strong> Small bets, the highest-reward investment.</p>
                         <p class="p small-padding-bottom">≈ <strong>20%</strong> share</p>
@@ -395,12 +353,12 @@
                 </div>
                 <div class="product-tabs-cta"><a href="/multi-hodl" class="btn-big-solid w-button">learn more</a></div>
               </div>
-              <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c834215a5c5f26aeca3f48_screen_multi-hodl-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c834215a5c5f26aeca3f48_screen_multi-hodl-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c834215a5c5f26aeca3f48_screen_multi-hodl.png 920w" alt="youhodler app multi hodl" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c834215a5c5f26aeca3f48_screen_multi-hodl.png" loading="lazy" class="product-tabs-image" /></div>
+              <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c834215a5c5f26aeca3f48_screen_multi-hodl-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c834215a5c5f26aeca3f48_screen_multi-hodl-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c834215a5c5f26aeca3f48_screen_multi-hodl.png 920w" alt="youhodler app multi hodl" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c834215a5c5f26aeca3f48_screen_multi-hodl.png" loading="lazy" class="product-tabs-image" /></div> -->
             </div>
           </div>
           <div data-w-tab="Crypto Loans" class="product-tabs-pane w-tab-pane">
             <div class="w-row">
-              <div class="column-compensation w-col w-col-7 w-col-stack">
+              <div class="column-compensation w-col w-col-12 w-col-stack">
                 <div class="product-tabs-content-mobile">
                   <h3 class="h3">Crypto Loans</h3>
                   <p class="h3 subheading">Keep HODLing and get instant cash for everyday needs. Don’t sell your
@@ -414,15 +372,15 @@
                     collateral. Instant credit card and bank withdrawals are included. </p>
                   <h3 class="h3 subheading padding-top-large">Explore crypto loan features</h3>
                   <div class="nav-inline">
-                    <div class="w-layout-grid nav-drop-tile-grid-two inpage"><a href="https://help.youhodler.com/en/articles/3061180-how-to-increase-ltv" target="_blank" class="nav-drop-a tile-coin w-inline-block w-clearfix"><img width="24" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5d65135eca4f1a06e4bf0aef_increase.svg" alt="increase LTV" class="product-a-icon" />
+                    <div class="w-layout-grid nav-drop-tile-grid-two inpage"><a href="https://help.youhodler.com/en/articles/3061180-how-to-increase-ltv" target="_blank" class="nav-drop-a tile-coin w-inline-block w-clearfix"><img width="24" src="/youholder/public/icons/up.png" style="width: 20px; height: auto;" alt="increase LTV" class="product-a-icon" />
                         <div class="nav-drop-a-tile-heading-small">Increase loan-to-value</div>
-                      </a><a href="https://help.youhodler.com/en/articles/3206184-how-to-extend-pdl" class="nav-drop-a tile-coin w-inline-block w-clearfix"><img alt="extend PDL" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5d65135d437276127c403223_extend.svg" class="product-a-icon" />
+                      </a><a href="https://help.youhodler.com/en/articles/3206184-how-to-extend-pdl" class="nav-drop-a tile-coin w-inline-block w-clearfix"><img alt="extend PDL" src="/youholder/public/icons/down.png" style="width: 20px; height: auto;" class="product-a-icon" />
                         <div class="nav-drop-a-tile-heading-small">Extend Price Down Limit</div>
-                      </a><a href="https://help.youhodler.com/en/articles/3133220-how-the-close-now-feature-works-on-an-opened-loan" class="nav-drop-a tile-coin w-inline-block w-clearfix"><img alt="close now" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5d65135c9093d70b25c5806a_close%20now.svg" class="product-a-icon" />
+                      </a><a href="https://help.youhodler.com/en/articles/3133220-how-the-close-now-feature-works-on-an-opened-loan" class="nav-drop-a tile-coin w-inline-block w-clearfix"><img alt="close now" src="/youholder/public/icons/zero.png" style="width: 20px; height: auto;" class="product-a-icon" />
                         <div class="nav-drop-a-tile-heading-small">Close without repay</div>
-                      </a><a href="https://help.youhodler.com/en/articles/3325776-how-the-set-close-price-feature-works" class="nav-drop-a tile-coin w-inline-block w-clearfix"><img alt="take profit" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5d65135dca4f1a3669bf0aee_ftp.svg" class="product-a-icon" />
+                      </a><a href="https://help.youhodler.com/en/articles/3325776-how-the-set-close-price-feature-works" class="nav-drop-a tile-coin w-inline-block w-clearfix"><img alt="take profit" src="/youholder/public/icons/fall.png" style="width: 20px; height: auto;" class="product-a-icon" />
                         <div class="nav-drop-a-tile-heading-small">Set take profit price</div>
-                      </a><a href="https://help.youhodler.com/en/articles/3433013-how-to-borrow-bitcoin" target="_blank" class="nav-drop-a tile-coin w-inline-block w-clearfix"><img alt="qr code" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dc96c94d6571e74b1ce2ff2_qr%20code.svg" class="product-a-icon" />
+                      </a><a href="https://help.youhodler.com/en/articles/3433013-how-to-borrow-bitcoin" target="_blank" class="nav-drop-a tile-coin w-inline-block w-clearfix"><img alt="qr code" src="/youholder/public/icons/barcode.png" style="width: 20px; height: auto;" class="product-a-icon" />
                         <div class="nav-drop-a-tile-heading-small">Borrow Bitcoin</div>
                       </a></div>
                   </div>
@@ -430,12 +388,12 @@
                 <div class="product-tabs-cta"><a href="/crypto-loan" class="btn-big-solid w-button">GET CRYPTO LOAN</a>
                 </div>
               </div>
-              <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create.png 920w" alt="youhodler app crypto loans" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create.png" loading="lazy" class="product-tabs-image" /></div>
+              <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create.png 920w" alt="youhodler app crypto loans" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create.png" loading="lazy" class="product-tabs-image" /></div> -->
             </div>
           </div>
           <div data-w-tab="Exchange" class="product-tabs-pane w-tab-pane">
             <div class="w-row">
-              <div class="column-compensation image-wrap-convert w-col w-col-7 w-col-stack">
+              <div class="column-compensation image-wrap-convert w-col w-col-12 w-col-stack">
                 <div class="product-tabs-content-mobile">
                   <h3 class="h3">Exchange</h3>
                   <p class="h3 subheading">Universal conversion between all crypto, fiat and stablecoins</p>
@@ -454,12 +412,12 @@
                 </div>
                 <div class="product-tabs-cta"><a href="/exchange" class="btn-big-solid w-button">EXCHANGE</a></div>
               </div>
-              <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert.png 920w" alt="youhodler app exchange" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert.png" loading="lazy" class="product-tabs-image" /></div>
+              <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert.png 920w" alt="youhodler app exchange" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert.png" loading="lazy" class="product-tabs-image" /></div> -->
             </div>
           </div>
           <div data-w-tab="Loyalty Program" class="product-tabs-pane w-tab-pane">
             <div class="w-row">
-              <div class="column-compensation image-wrap-earn w-col w-col-7 w-col-stack">
+              <div class="column-compensation image-wrap-earn w-col w-col-12 w-col-stack">
                 <div class="product-tabs-content-mobile">
                   <h3 class="h3">Earn <span class="span-blue">up to 15%</span> on Crypto &amp; Stablecoins</h3>
                   <p class="h3 subheading">Boost your earnings. Get increased rates on 55+ assets.</p>
@@ -556,12 +514,12 @@
                 </div>
                 <div class="product-tabs-cta"><a href="/yield" class="btn-big-solid w-button">EXPLORE Yield</a></div>
               </div>
-              <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account-p-500.jpg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg 800w" alt="youhodler app loyalty program" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg" loading="lazy" class="product-tabs-image" /></div>
+              <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account-p-500.jpg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg 800w" alt="youhodler app loyalty program" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg" loading="lazy" class="product-tabs-image" /></div> -->
             </div>
           </div>
           <div data-w-tab="Cloud Miner" class="product-tabs-pane w-tab-pane">
             <div class="w-row">
-              <div class="column-compensation image-wrap-earn w-col w-col-7 w-col-stack">
+              <div class="column-compensation image-wrap-earn w-col w-col-12 w-col-stack">
                 <div class="product-tabs-content-mobile">
                   <h3 class="h3">Earn <span class="span-blue">Real Bitcoins</span> With Cloud Miner</h3>
                   <p class="h3 subheading">Discover this unique reward system. Earn bitcoin on an hourly basis and earn
@@ -577,7 +535,7 @@
                 <div class="product-tabs-cta"><a href="/cloud-miner" class="btn-big-solid w-button">HOW MINER WORKS</a>
                 </div>
               </div>
-              <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7df2438412945011fe233_screen_miner-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7df2438412945011fe233_screen_miner-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7df2438412945011fe233_screen_miner.png 920w" alt="youhodler app loyalty program" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7df2438412945011fe233_screen_miner.png" loading="lazy" class="product-tabs-image" /></div>
+              <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7df2438412945011fe233_screen_miner-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7df2438412945011fe233_screen_miner-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7df2438412945011fe233_screen_miner.png 920w" alt="youhodler app loyalty program" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7df2438412945011fe233_screen_miner.png" loading="lazy" class="product-tabs-image" /></div> -->
             </div>
           </div>
         </div>
@@ -587,7 +545,7 @@
   <div id="blog-preview" class="s-content wide">
     <div class="content-wrap wide w-container">
       <div class="wrap-center">
-        <h2 class="h2 center">YouHodler Blog</h2>
+        <h2 class="h2 center">Our Blog</h2>
       </div>
       <div class="collection-hashtag-wrap w-dyn-list">
         <div role="list" class="collection-hashtag-ul centered w-dyn-items">
@@ -623,11 +581,11 @@
               <div class="collection-blog-li-a-preview"><img src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/658edd78b836add2cf52f950_2023%20review-small.jpeg" loading="lazy" alt="YouHodler Year in Review: 2023" sizes="100vw" srcset="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/658edd78b836add2cf52f950_2023%20review-small-p-500.jpeg 500w, https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/658edd78b836add2cf52f950_2023%20review-small.jpeg 600w" class="collection-blog-li-a-picture" /></div>
               <div class="collection-blog-li-a-info w-clearfix">
                 <div class="label-tiny left">Dec 29, 2023</div>
-                <div class="label-tiny right">The YouHodler Team</div>
+                <div class="label-tiny right">Anthony Cerullo</div>
               </div>
-              <h3 class="collection-blog-li-a-title">YouHodler Year in Review: 2023</h3>
+              <h3 class="collection-blog-li-a-title">Yield Year in Review: 2023</h3>
               <p class="collection-blog-li-a-summary">2023 was a whirlwind year! Before we storm into 2024, let&#x27;s
-                take time to reflect on everything we accomplished this year at YouHodler</p>
+                take time to reflect on everything we accomplished this year at Yield</p>
             </a>
             <div class="collection-blog-li-hashtag-wrap"><a href="https://www.youhodler.com/hashtag/company-news" class="collection-blog-li-hashtag">COMPANY NEWS</a></div>
           </div>
@@ -635,7 +593,7 @@
               <div class="collection-blog-li-a-preview"><img src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/655efe8eff1706f70f5fcf9c_Position_sizing_small.png" loading="lazy" alt="Position Sizing: The Key to Crypto Trading Success" sizes="100vw" srcset="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/655efe8eff1706f70f5fcf9c_Position_sizing_small-p-500.png 500w, https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/655efe8eff1706f70f5fcf9c_Position_sizing_small.png 600w" class="collection-blog-li-a-picture" /></div>
               <div class="collection-blog-li-a-info w-clearfix">
                 <div class="label-tiny left">Nov 23, 2023</div>
-                <div class="label-tiny right">The YouHodler Team</div>
+                <div class="label-tiny right">Anthony Cerullo</div>
               </div>
               <h3 class="collection-blog-li-a-title">Position Sizing: The Key to Crypto Trading Success</h3>
               <p class="collection-blog-li-a-summary">Position sizing is a good strategy for traders confident in their
@@ -1229,9 +1187,10 @@
       makePopupVisible();
     }
   </script>
-  <!-- <script>
-    VANTA.NET({
-      el: ".bankai ",
+
+  <script>
+    VANTA.DOTS({
+      el: ".bankai",
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
@@ -1239,22 +1198,25 @@
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00,
-      color: 0xcfd2f4,
-      backgroundColor: '#130e80'
-    })
-  </script> -->
-  <script>
-    VANTA.FOG({
-      el: ".bankai",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      highlightColor: 0x5cff,
-      midtoneColor: 0x7aff
+      // backgroundColor: '#1F55F8',
+      backgroundColor: '#130e80',
+      color: '#fff',
+      // color2: '#fff'
+      color2: '#130e80'
     })
   </script>
+  <!--<script>-->
+  <!--  VANTA.FOG({-->
+  <!--    el: ".bankai",-->
+  <!--    mouseControls: true,-->
+  <!--    touchControls: true,-->
+  <!--    gyroControls: false,-->
+  <!--    minHeight: 200.00,-->
+  <!--    minWidth: 200.00,-->
+  <!--    highlightColor: 0x5cff,-->
+  <!--    midtoneColor: 0x7aff-->
+  <!--  })-->
+  <!--</script>-->
 </body>
 
 </html>

@@ -107,8 +107,8 @@
 						<div class="bg-content">
 							<div class="d-flex justify-content-start">
 								<div class="logo-div">
-									<a href="https://demo.paymoney.techvill.net">
-										<img src="./public/uploads/logos/1532175849_logo.png" alt="Brand Logo">
+									<a href="/youholder/">
+										<img src="/youholder/public/logos/yield-logo.png" height="auto" width="100px" alt="Brand Logo">
 									</a>
 								</div>
 							</div>
@@ -195,7 +195,7 @@
 											<input type="password" class="form-control input-form-control" id="password_confirmation" name="password_confirmation" required oninvalid="this.setCustomValidity('This field is required.')" minlength="6" data-min-length="Password should contain at least 6 characters.">
 										</div>
 										<div class="d-grid mb-3 mb-3p">
-											<button class="btn btn-lg btn-primary" type="button" id="registerBtn">
+											<button class="btn btn-lg" type="button" id="registerBtn" style="background-color: #130e80;">
 												<div class="spinner spinner-border text-white spinner-border-sm mx-2 d-none" role="status">
 													<span class="visually-hidden"></span>
 												</div>
@@ -217,10 +217,13 @@
 	<!-- Sign-up section end -->
 	<!-- Start Footer-->
 	<!-- Footer section -->
-	<div class="footer-sec">
+	<!-- <div class="footer-sec">
 		<div class="px-240">
 			<div class="row">
 				<div class="col-md-5 pb-54 align-center">
+					<a href="/youholder/">
+						<img src="/youholder/public/logos/yield-logo.png" height="auto" width="100px" alt="Brand Logo">
+					</a>
 					<a class="d-flex" href="https://demo.paymoney.techvill.net">
 						<img class="mt-54 footer-logo" src="./public/uploads/logos/1532175849_logo.png" alt="Brand Logo">
 					</a>
@@ -341,7 +344,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="d-none bottom-footer">
 		<div class="px-240 d-flex justify-content-between btn-footer align-center">

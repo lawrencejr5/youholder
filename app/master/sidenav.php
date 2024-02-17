@@ -3,7 +3,7 @@
 <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
     <div class="bg-secondary vh-100 position-fixed d-flex flex-column w-inherit drop-parent">
         <div>
-            <a href="../dashboard/"><img class="ml-40 mt-20 pay-logo img-fluid" src="../public/uploads/logos/1532175849_logo.png" alt="Pay Money"></a>
+            <a href="../dashboard/"><img class="ml-40 mt-20 img-fluid" src="/youholder/public/logos/yield-logo.png" height="auto" width="100px" alt="Pay Money"></a>
         </div>
         <div class="flex-grow-1 px-4 px-res mt-43 bg-secondary position-relative overflow-auto hide-thin-scrollbar thin-scrollbar">
             <ul class="list-unstyled ps-0 accordion accordion-flush position-absolute w-268" id="accordion-menu">
