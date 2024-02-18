@@ -116,7 +116,14 @@ include "../../backend/adminData.php";
                                                             <td><?= $d['level'] ?></td>
                                                             <td><?= $d['datetime'] ?></td>
                                                             <!-- <td><?= $d['verified'] ?></td> -->
-                                                            <td><button class="btn btn-success">Approve</button>&nbsp;<button class="btn btn-danger">Deny</button></td>
+                                                            <td>
+                                                                <form action="../../backend/actionsAdmin/approveKyc.php" method="post">
+                                                                    <input type="hidden" name="id" value="<?= $d['id'] ?>">
+                                                                    <input type="hidden" name="uid" value="<?= $d['uid'] ?>">
+                                                                    <button type="submit" name="approveKyc" class="btn btn-success">Approve</button>&nbsp;
+                                                                    <button type="submit" name="declineKyc" class="btn btn-danger">Deny</button>
+                                                                </form>
+                                                            </td>
                                                         </tr>
                                                     <?php } ?>
                                                 </tbody>

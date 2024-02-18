@@ -2,9 +2,9 @@
             <!-- Logo -->
             <div class="full-width">
 
-                <a href="https://demo.paymoney.techvill.net/admin/home" class="logo pt-12 text-decoration-none">
-                    <span class="logo-mini"><b>Pay Money</b></span>
-                    <img src="../public/uploads/logos/1532175849_logo.png" width="192" height="49" class="company-logo">
+                <a href="" class="logo pt-6 text-decoration-none">
+                    <span class="logo-mini"><b>Yield</b></span>
+                    <img src="/youholder/public/logos/yield-logo.png" width="100px" height="auto" class="company-logo">
                 </a>
             </div>
 
@@ -14,7 +14,7 @@
                     <span class="sr-only">Toggle navigation</span>
                 </a>
                 <div class="mobile-width">
-                    <a href="https://demo.paymoney.techvill.net/admin/home" class="mobile-logo">
+                    <a href="" class="mobile-logo">
                         <span class="logo-lg f-13"><b>Pay Money</b></span>
                     </a>
                 </div>

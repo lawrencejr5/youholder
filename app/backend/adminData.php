@@ -47,3 +47,5 @@ $data['documents'] = $adminModule->fetchAllUserDocuments();
 
 $numOfTransactions = $adminModule->numOfDeposits() + $adminModule->numOfWithdrawals();
 $numOfUsers = $adminModule->numOfUsers();
+$numOfStakes = $adminModule->numOfStakes();
+$numOfInvests = $adminModule->numOfInvests();

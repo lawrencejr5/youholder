@@ -166,7 +166,7 @@ class AdminModule extends Connection
     public function fetchAllUserDocuments()
     {
         $this->sql =
-            "SELECT u.id as id, u.fname as fname, u.lname as lname, u.email as email, p.identity_type as identity_type, p.identity_number as identity_number, p.front as front_img, 
+            "SELECT u.id as uid, p.id as id, u.fname as fname, u.lname as lname, u.email as email, p.identity_type as identity_type, p.identity_number as identity_number, p.front as front_img, 
         p.back as back_img, u.level as level, p.datetime as datetime, p.verified as verified
         FROM personal_documents p
         LEFT JOIN users u ON u.id = p.uid
@@ -347,6 +347,38 @@ class AdminModule extends Connection
 
 
 
+    // ******** UPDATE ***********
+
+    public function upLevel($id, $level)
+    {
+        $this->sql = "UPDATE users SET level = :level WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->bindParam(':level', $level);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false . $th->getMessage();
+        }
+    }
+
+    public function approveKyc($id, $verified)
+    {
+        $this->sql = "UPDATE personal_documents SET verified = :verified WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->bindParam(':verified', $verified);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false . $th->getMessage();
+        }
+    }
+
+
+
 
 
     // ******** GET ROW COUNT ***********
@@ -377,6 +409,30 @@ class AdminModule extends Connection
     public function numOfWithdrawals()
     {
         $this->sql = 'SELECT * FROM withdrawals';
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->execute();
+            return $this->stmt->rowCount();
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function numOfStakes()
+    {
+        $this->sql = "SELECT * FROM stakes";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->execute();
+            return $this->stmt->rowCount();
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function numOfInvests()
+    {
+        $this->sql = "SELECT * FROM investments";
         try {
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->execute();

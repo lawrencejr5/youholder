@@ -97,7 +97,7 @@ include "../../backend/adminData.php";
                             <!-- small box -->
                             <div class="small-box bg-aqua">
                                 <div class="inner">
-                                    <h3>0</h3>
+                                    <h3><?= $numOfStakes ?></h3>
                                     <p>Total Stakes</p>
                                 </div>
                                 <div class="icon">
@@ -111,7 +111,7 @@ include "../../backend/adminData.php";
                             <!-- small box -->
                             <div class="small-box bg-green">
                                 <div class="inner">
-                                    <h3>0</h3>
+                                    <h3><?= $numOfInvests ?></h3>
 
                                     <p>Total Investments</p>
                                 </div>
