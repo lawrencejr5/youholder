@@ -107,7 +107,13 @@ include "../../backend/adminData.php";
                                                             <td><?= $w['crypto_address'] ?></td>
                                                             <td><?= $w['verified'] ?></td>
                                                             <td><?= $w['datetime'] ?></td>
-                                                            <td><button class="btn btn-success">Verify</button>&nbsp;<button class="btn btn-danger">Delete</button></td>
+                                                            <td>
+                                                                <form action="../../backend/actionsAdmin/approveWithdrawal.php" method="post">
+                                                                    <input type="hidden" name="id" value="<?= $w['id'] ?>">
+                                                                    <button type="submit" name="approveWithdrawal" class="btn btn-success">Approve</button>&nbsp;
+                                                                    <button type="submit" name="declineWithdrawal" class="btn btn-danger">Decline</button>
+                                                                </form>
+                                                            </td>
                                                         </tr>
                                                     <?php } ?>
                                                 </tbody>

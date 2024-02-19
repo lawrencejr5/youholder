@@ -1,7 +1,8 @@
 <?php
 include "../../backend/adminData.php";
-?>
 
+$data['user_wallets'] = $adminModule->getUserWallets($_GET['userid']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +11,10 @@ include "../../backend/adminData.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="MTS">
-    <title>Users | Pay Money</title>
+    <title>Wallets | Pay Money</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <meta name="csrf-token" content="AFPUgjA9zxV2UPj9WMPFDAGWhz5OzqNQTrudrvui"><!-- for ajax -->
 
     <script type="text/javascript">
         var SITE_URL = "https://demo.paymoney.techvill.net";
@@ -40,15 +43,12 @@ include "../../backend/adminData.php";
     <link rel="stylesheet" type="text/css" href="../public/admin/templates/adminLte/skins/_all-skins.min.css">
 
 
-    <!-- Bootstrap daterangepicker -->
-    <link rel="stylesheet" type="text/css" href="../public/dist/plugins/daterangepicker-3.1/daterangepicker.min.css">
-
-    <!-- custom styles -->
-    <link rel="stylesheet" type="text/css" href="../public/admin/templates/css/style.min.css">
-
     <!-- dataTables -->
     <link rel="stylesheet" type="text/css" href="../public/dist/plugins/DataTables/DataTables-1.10.18/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="../public/dist/plugins/DataTables/Responsive-2.2.2/css/responsive.dataTables.min.css">
+
+    <!-- custom styles -->
+    <link rel="stylesheet" type="text/css" href="../public/admin/templates/css/style.min.css">
 
     <!-- jQuery 3.2.1 -->
     <script src="../public/dist/libraries/jquery-3.2.1/dist/jquery.min.js"></script>
@@ -57,71 +57,61 @@ include "../../backend/adminData.php";
 
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper_custom">
-
         <?php include "../master/topnav.php" ?>
 
         <?php include "../master/sidenav.php" ?>
-
         <div class="content-wrapper">
             <!-- Main content -->
             <section class="content">
-                <div class="box box-default">
-                    <div class="box-body">
-                        <div class="d-flex justify-content-between">
-                            <div>
-                                <div class="top-bar-title padding-bottom pull-left">All Stakings</div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
+                <?php include "../master/usernav.php" ?>
 
                 <div class="box">
                     <div class="box-body">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-12 f-14">
                                 <div class="panel panel-info">
                                     <div class="panel-body">
                                         <div class="table-responsive">
-                                            <table class="table table-striped table-hover f-14 dt-responsive" id="dataTableBuilder" width="100%" cellspacing="0">
+                                            <table class="table table-hover pt-3" id="eachuserwallet">
                                                 <thead>
                                                     <tr>
                                                         <th title="ID">ID</th>
                                                         <th title="First Name">First name</th>
                                                         <th title="First Name">Last name</th>
                                                         <th title="Phone">Plan</th>
-                                                        <th title="Email">Staked</th>
-                                                        <th title="Email">Expected</th>
-                                                        <th title="Email">Daily Earned</th>
+                                                        <th title="Email">Currency</th>
+                                                        <th title="Email">Amount</th>
+                                                        <th title="Group">To earn</th>
                                                         <th title="Status">Earned</th>
+                                                        <th title="Status">Expected</th>
                                                         <th title="Status">Start date</th>
-                                                        <th title="Status">End Date</th>
-                                                        <th title="Action">Status</th>
+                                                        <th title="Status">End date</th>
+                                                        <th title="Status">Status</th>
                                                         <th title="Action">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <?php $sn = 1;
-                                                    foreach ($data['stakings'] as $s) { ?>
+                                                    $data['investments'] = $adminModule->getUserInvests($_GET['userid']);
+                                                    foreach ($data['investments'] as $i) { ?>
                                                         <tr>
                                                             <td><?= $sn++ ?></td>
-                                                            <td><?= $s['fname'] ?></td>
-                                                            <td><?= $s['lname'] ?></td>
-                                                            <td><?= $s['plan_name'] ?></td>
-                                                            <td><?= $s['staked'] ?></td>
-                                                            <td><?= $s['expected'] ?></td>
-                                                            <td><?= $s['daily_earned'] ?></td>
-                                                            <td><?= $s['earned'] ?></td>
-                                                            <td><?= $s['start_date'] ?></td>
-                                                            <td><?= $s['end_date'] ?></td>
-                                                            <td><?= $s['status'] ?></td>
+                                                            <td><?= $i['fname'] ?></td>
+                                                            <td><?= $i['lname'] ?></td>
+                                                            <td><?= $i['plan'] ?></td>
+                                                            <td><?= $i['currency'] ?></td>
+                                                            <td><?= $i['amount'] ?></td>
+                                                            <td><?= $i['to_earn'] ?></td>
+                                                            <td><?= $i['earned'] ?></td>
+                                                            <td><?= $i['expected'] ?></td>
+                                                            <td><?= $i['start_date'] ?></td>
+                                                            <td><?= $i['end_date'] ?></td>
+                                                            <td><?= $i['status'] ?></td>
                                                             <td>
                                                                 <form action="../../backend/actionsAdmin/" method="post">
-                                                                    <input type="hidden" name="id" value="<?= $s['id'] ?>">
-                                                                    <input type="hidden" name="uid" value="<?= $s['uid'] ?>">
-                                                                    <!-- <button type="submit" name="approveKyc" class="btn btn-success">Approve</button>&nbsp; -->
-                                                                    <button type="submit" name="declineKyc" class="btn btn-danger">Unstake</button>
+                                                                    <input type="hidden" name="id" value="<?= $i['id'] ?>">
+                                                                    <input type="hidden" name="uid" value="<?= $i['uid'] ?>">
+                                                                    <button type="submit" name="declineKyc" class="btn btn-danger">End earn</button>
                                                                 </form>
                                                             </td>
                                                         </tr>
@@ -197,19 +187,21 @@ include "../../backend/adminData.php";
     <script src="../public/dist/js/moment.min.js" type="text/javascript"></script>
     <!-- AdminLTE App -->
     <script src="../public/admin/templates/js/app.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        "use strict";
+        var url = "https://demo.paymoney.techvill.net/change-lang";
+        var token = "AFPUgjA9zxV2UPj9WMPFDAGWhz5OzqNQTrudrvui";
+    </script>
+    <script src="../public/admin/customs/js/body_script.min.js"></script>
+
     <!-- jquery.dataTables js -->
     <script src="../public/dist/plugins/DataTables/DataTables-1.10.18/js/jquery.dataTables.min.js" type="text/javascript"></script>
     <script src="../public/dist/plugins/DataTables/Responsive-2.2.2/js/dataTables.responsive.min.js" type="text/javascript"></script>
 
     <script type="text/javascript">
-        "use strict";
-        var url = "https://demo.paymoney.techvill.net/change-lang";
-        var token = "OTpM8byuH3VBQSARTeNYjYvSnedO9Nxuy9BhbgsC";
-    </script>
-    <script src="../public/admin/customs/js/body_script.min.js"></script>
-    <script type="text/javascript">
         $(function() {
-            $("#dataTableBuilder").DataTable({
+            $("#eachuserwallet").DataTable({
                 "order": [],
                 "language": '',
                 "pageLength": '25'

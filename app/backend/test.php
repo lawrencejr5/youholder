@@ -1,8 +1,7 @@
 <?php
 
 // include 'module.php';
-include 'module.php';
-// include 'adminModule.php';
+include 'adminModule.php';
 header('content-type: application/json');
 // echo json_encode(['wallets' => $modules->getAllUserWallets(25)]);
 // echo json_encode(['deposits' => $modules->getAllUserDeposits(25)]);
@@ -22,6 +21,11 @@ header('content-type: application/json');
 // echo json_encode(['success' => true, 'datum' => $adminModule->getUserWallets(26)]);
 // echo json_encode(['success' => true, 'data' => $modules->getStakingPlans()]);
 // echo json_encode(['success' => true, 'datum' => $modules->getStakingPlan(2)]);
+// echo json_encode(['success' => true, 'stakings' => $adminModule->fetchAllStakes()]);
+// echo json_encode(['success' => true, 'investments' => $adminModule->fetchAllInvests()]);
+// echo json_encode(['success' => true, 'stakings' => $adminModule->getUserStakes(25)]);
+// echo json_encode(['success' => true, 'investments' => $adminModule->getUserInvests(25)]);
+echo json_encode(['success' => true, 'wallets' => $adminModule->getUserWallets(25)]);
 
 // $date = '0000-00-00';
 
@@ -29,8 +33,8 @@ header('content-type: application/json');
 // $date2 = new DateTime('2024-03-13');
 
 // $interval = $date1->diff($date2);
-$last_updated = 1707425661;
-$next_days = strtotime('2024-03-13');
-$curr_date = time();
-$interval = $next_days - $curr_date;
-echo floor($interval / (60 * 60 * 24));
+// $last_updated = 1707425661;
+// $next_days = strtotime('2024-03-13');
+// $curr_date = time();
+// $interval = $next_days - $curr_date;
+// echo floor($interval / (60 * 60 * 24));

@@ -102,7 +102,13 @@ $data['user_wallets'] = $adminModule->getUserWallets($_GET['userid']);
                                                             }
                                                             ?>
                                                             <td><?= $w['datetime'] ?></td>
-                                                            <td><button class="btn btn-danger">Delete</button></td>
+                                                            <td>
+                                                                <form action="../../backend/actionsAdmin/deleteWallet.php" method="post">
+                                                                    <input type="hidden" name="id" value="<?= $w['id'] ?>">
+                                                                    <input type="hidden" name="uid" value="<?= $w['uid'] ?>">
+                                                                    <button class="btn btn-danger" type="submit" name="delWallet">Delete</button>
+                                                                </form>
+                                                            </td>
                                                         </tr>
                                                     <?php } ?>
                                                 </tbody>

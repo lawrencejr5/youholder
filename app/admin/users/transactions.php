@@ -103,7 +103,14 @@ $data['user_exchanges'] = $adminModule->getUserExchanges('exchange from', 'excha
                                                     <td><?= $d['wallet'] ?></td>
                                                     <td><?= $d['datetime'] ?></td>
                                                     <td><?= $d['approved'] ?></td>
-                                                    <td><button class="btn btn-success">Verify</button>&nbsp;<button class="btn btn-danger">Delete</button></td>
+                                                    <td>
+                                                        <form action="../../backend/actionsAdmin/approveDeposit.php" method="post">
+                                                            <input type="hidden" name="id" value="<?= $d['id'] ?>">
+                                                            <input type="hidden" name="uid" value="<?= $d['uid'] ?>">
+                                                            <button type="submit" name="approveUserDeposit" class="btn btn-success">Approve</button>&nbsp;
+                                                            <button type="submit" name="declineUserDeposit" class="btn btn-danger">Decline</button>
+                                                        </form>
+                                                    </td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>
@@ -143,7 +150,14 @@ $data['user_exchanges'] = $adminModule->getUserExchanges('exchange from', 'excha
                                                     <td><?= $w['crypto_address'] ?></td>
                                                     <td><?= $w['verified'] ?></td>
                                                     <td><?= $w['datetime'] ?></td>
-                                                    <td><button class="btn btn-success">Verify</button>&nbsp;<button class="btn btn-danger">Delete</button></td>
+                                                    <td>
+                                                        <form action="../../backend/actionsAdmin/approveWithdrawal.php" method="post">
+                                                            <input type="hidden" name="id" value="<?= $w['id'] ?>">
+                                                            <input type="hidden" name="uid" value="<?= $w['uid'] ?>">
+                                                            <button type="submit" name="approveUserWithdrawal" class="btn btn-success">Approve</button>&nbsp;
+                                                            <button type="submit" name="declineUserWithdrawal" class="btn btn-danger">Decline</button>
+                                                        </form>
+                                                    </td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>

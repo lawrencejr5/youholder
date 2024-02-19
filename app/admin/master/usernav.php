@@ -10,6 +10,12 @@
             <li class="nav-item">
                 <a class="nav-link " href="../users/wallets.php?userid=<?= $_GET['userid'] ?>">Wallets</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../users/stakes.php?userid=<?= $_GET['userid'] ?>">Stakings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../users/investments.php?userid=<?= $_GET['userid'] ?>">Investments</a>
+            </li>
         </ul>
         <div class="clearfix"></div>
     </div>

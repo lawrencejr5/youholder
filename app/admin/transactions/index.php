@@ -92,7 +92,6 @@ include "../../backend/adminData.php";
                                                         <th title="Group">From to</th>
                                                         <th title="Last Login">Verified</th>
                                                         <th title="IP">Date & time</th>
-                                                        <th title="IP">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -107,7 +106,6 @@ include "../../backend/adminData.php";
                                                             <td><?= $t['from_to'] ?></td>
                                                             <td><?= $t['verified'] ?></td>
                                                             <td><?= $t['datetime'] ?></td>
-                                                            <td><button class="btn btn-success">Verify</button>&nbsp;<button class="btn btn-danger">Delete</button></td>
                                                         </tr>
                                                     <?php } ?>
                                                 </tbody>

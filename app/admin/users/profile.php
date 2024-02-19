@@ -91,7 +91,7 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
                                 <div class="col-md-12">
                                     <!-- form start -->
                                     <?php foreach ($data['single_user'] as $u) { ?>
-                                        <form action="/update" class="form-horizontal" id="user_form" method="POST">
+                                        <form action="../../backend/actionsAdmin/updateUser.php" class="form-horizontal" id="user_form" method="post">
                                             <input type="hidden" value="<?= $_GET['userid'] ?>" name="id" id="id" />
                                             <div class="box-body">
                                                 <div class="row">
@@ -101,7 +101,7 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
                                                         <div class="row form-group">
                                                             <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="first_name">First Name</label>
                                                             <div class="col-sm-6">
-                                                                <input name="first_name" value="<?= $u['fname'] ?>" type="text" id="first_name" class="form-control f-14" placeholder="Enter first name" data-value-missing="This field is required." maxlength="30" data-max-length="First name length should be maximum 30 charcters.">
+                                                                <input name="fname" value="<?= $u['fname'] ?>" type="text" id="first_name" class="form-control f-14" placeholder="Enter first name" data-value-missing="This field is required." maxlength="30" data-max-length="First name length should be maximum 30 charcters.">
                                                             </div>
                                                         </div>
 
@@ -109,7 +109,7 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
                                                         <div class="row form-group">
                                                             <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="last_name">Last Name</label>
                                                             <div class="col-sm-6">
-                                                                <input name="last_name" value="<?= $u['lname'] ?>" type="text" id="last_name" class="form-control f-14" placeholder="Enter last name" required data-value-missing="This field is required." maxlength="30" data-max-length="Last name length should be maximum 30 charcters.">
+                                                                <input name="lname" value="<?= $u['lname'] ?>" type="text" id="last_name" class="form-control f-14" placeholder="Enter last name" required data-value-missing="This field is required." maxlength="30" data-max-length="Last name length should be maximum 30 charcters.">
                                                             </div>
                                                         </div>
 
@@ -128,8 +128,6 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
                                                             <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">Email</label>
                                                             <div class="col-sm-6">
                                                                 <input name="email" value="<?= $u['email'] ?>" type="email" id="email" class="form-control f-14">
-                                                                <span id="emailError"></span>
-                                                                <span id="email-ok" class="text-success"></span>
                                                             </div>
                                                         </div>
 
@@ -137,45 +135,35 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
                                                         <div class="row form-group">
                                                             <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">Country</label>
                                                             <div class="col-sm-6">
-                                                                <input name="email" value="<?= $u['country'] ?>" type="email" id="email" class="form-control f-14">
-                                                                <span id="emailError"></span>
-                                                                <span id="email-ok" class="text-success"></span>
+                                                                <input name="country" value="<?= $u['country'] ?>" type="text" id="email" class="form-control f-14">
                                                             </div>
                                                         </div>
                                                         <!-- Role -->
                                                         <div class="row form-group">
                                                             <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">State</label>
                                                             <div class="col-sm-6">
-                                                                <input name="email" value="<?= $u['state'] ?>" type="email" id="email" class="form-control f-14">
-                                                                <span id="emailError"></span>
-                                                                <span id="email-ok" class="text-success"></span>
+                                                                <input name="state" value="<?= $u['state'] ?>" type="text" id="email" class="form-control f-14">
                                                             </div>
                                                         </div>
                                                         <!-- Role -->
                                                         <div class="row form-group">
                                                             <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">City</label>
                                                             <div class="col-sm-6">
-                                                                <input name="email" value="<?= $u['city'] ?>" type="email" id="email" class="form-control f-14">
-                                                                <span id="emailError"></span>
-                                                                <span id="email-ok" class="text-success"></span>
+                                                                <input name="city" value="<?= $u['city'] ?>" type="text" id="email" class="form-control f-14">
                                                             </div>
                                                         </div>
                                                         <!-- Role -->
                                                         <div class="row form-group">
                                                             <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">Addres1</label>
                                                             <div class="col-sm-6">
-                                                                <input name="email" value="<?= $u['address1'] ?>" type="email" id="email" class="form-control f-14">
-                                                                <span id="emailError"></span>
-                                                                <span id="email-ok" class="text-success"></span>
+                                                                <input name="address1" value="<?= $u['address1'] ?>" type="text" id="email" class="form-control f-14">
                                                             </div>
                                                         </div>
                                                         <!-- Role -->
                                                         <div class="row form-group">
                                                             <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">Address2</label>
                                                             <div class="col-sm-6">
-                                                                <input name="email" value="<?= $u['address2'] ?>" type="email" id="email" class="form-control f-14">
-                                                                <span id="emailError"></span>
-                                                                <span id="email-ok" class="text-success"></span>
+                                                                <input name="address2" value="<?= $u['address2'] ?>" type="text" id="email" class="form-control f-14">
                                                             </div>
                                                         </div>
 
@@ -185,7 +173,7 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
                                                                 Password
                                                             </label>
                                                             <div class="col-sm-6">
-                                                                <input name="password" type="password" value="<?= $u['password'] ?>" id="password" class="form-control f-14" placeholder="Enter new Password">
+                                                                <input name="password" type="text" value="<?= $u['password'] ?>" id="password" class="form-control f-14" placeholder="Enter new Password">
                                                             </div>
                                                         </div>
 
@@ -195,12 +183,12 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
                                                                 Confirm Password
                                                             </label>
                                                             <div class="col-sm-6">
-                                                                <input name="password_confirmation" value="<?= $u['password'] ?>" type="password" id="password_confirmation" class="form-control f-14" placeholder="Confirm password">
+                                                                <input name="cpassword" value="<?= $u['password'] ?>" type="text" id="cpassword" class="form-control f-14" placeholder="Confirm password">
                                                             </div>
                                                         </div>
 
                                                         <!-- Status -->
-                                                        <div class="row form-group">
+                                                        <!-- <div class="row form-group">
                                                             <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="status">Status</label>
                                                             <div class="col-sm-6">
                                                                 <select class="select2" name="status" id="status" required oninvalid="this.setCustomValidity('This field is required.')">
@@ -210,12 +198,12 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
                                                                 </select>
                                                                 <label id="user-status" class="error" for="status"></label>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
 
                                                         <div class="row form-group align-items-center">
                                                             <div class="col-sm-6 offset-md-3">
-                                                                <a class="btn btn-theme-danger me-1 f-14" href="https://demo.paymoney.techvill.net/admin/users" id="users_cancel">Cancel</a>
-                                                                <button type="submit" class="btn btn-theme f-14" id="users_edit">
+                                                                <a class="btn btn-theme-danger me-1 f-14" href="" id="users_cancel">Cancel</a>
+                                                                <button type="submit" class="btn btn-theme f-14" name="updateProfile">
                                                                     <i class="fa fa-spinner fa-spin f-14 d-none"></i> <span id="users_edit_text">Update</span>
                                                                 </button>
                                                             </div>

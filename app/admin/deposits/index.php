@@ -108,7 +108,13 @@ include "../../backend/adminData.php";
                                                             <td><?= $d['wallet'] ?></td>
                                                             <td><?= $d['datetime'] ?></td>
                                                             <td><?= $d['approved'] ?></td>
-                                                            <td><button class="btn btn-success">Verify</button>&nbsp;<button class="btn btn-danger">Delete</button></td>
+                                                            <td>
+                                                                <form action="../../backend/actionsAdmin/approveDeposit.php" method="post">
+                                                                    <input type="hidden" name="id" value="<?= $d['id'] ?>">
+                                                                    <button type="submit" name="approveDeposit" class="btn btn-success">Approve</button>&nbsp;
+                                                                    <button type="submit" name="declineDeposit" class="btn btn-danger">Decline</button>
+                                                                </form>
+                                                            </td>
                                                         </tr>
                                                     <?php } ?>
                                                 </tbody>

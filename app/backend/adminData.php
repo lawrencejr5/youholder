@@ -40,6 +40,8 @@ $data['withdrawals'] = $adminModule->fetchAllWithdrawals('withdrawal');
 $data['transfers'] = $adminModule->fetchAllTransfers('transfer from');
 $data['exchanges'] = $adminModule->fetchAllExchanges('exchange from', 'exchange to');
 $data['documents'] = $adminModule->fetchAllUserDocuments();
+$data['stakings'] = $adminModule->fetchAllStakes();
+$data['investments'] = $adminModule->fetchAllInvests();
 
 
 

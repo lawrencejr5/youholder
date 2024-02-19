@@ -181,7 +181,33 @@ class AdminModule extends Connection
         }
     }
 
+    public function fetchAllStakes()
+    {
+        $this->sql = "SELECT u.fname, u.lname, s.* FROM stakes s LEFT JOIN users u ON s.uid = u.id";
+        try {
+            //code...
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOExceptioN $th) {
+            //throw $th;
+            return $th->getMessage();
+        }
+    }
 
+    public function fetchAllInvests()
+    {
+        $this->sql = "SELECT u.fname, u.lname, i.* FROM investments i LEFT JOIN users u ON i.uid = u.id";
+        try {
+            //code...
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOExceptioN $th) {
+            //throw $th;
+            return $th->getMessage();
+        }
+    }
 
 
 
@@ -294,7 +320,7 @@ class AdminModule extends Connection
     public function getUserWallets($uid)
     {
         try {
-            $this->sql = "SELECT uw.*, w.*
+            $this->sql = "SELECT uw.*, w.wallet_type
              FROM user_wallets uw 
              LEFT JOIN wallets w ON uw.wallet_id = w.id
              WHERE uw.uid = :uid";
@@ -341,6 +367,35 @@ class AdminModule extends Connection
         }
     }
 
+    public function getUserStakes($id)
+    {
+        $this->sql = "SELECT u.fname, u.lname, s.* FROM stakes s LEFT JOIN users u ON s.uid = u.id WHERE s.uid = :id";
+        try {
+            //code...
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOExceptioN $th) {
+            //throw $th;
+            return $th->getMessage();
+        }
+    }
+
+    public function getUserInvests($id)
+    {
+        $this->sql = "SELECT u.fname, u.lname, i.* FROM investments i LEFT JOIN users u ON i.uid = u.id WHERE i.uid = :id";
+        try {
+            //code...
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOExceptioN $th) {
+            //throw $th;
+            return $th->getMessage();
+        }
+    }
 
 
 
@@ -348,6 +403,29 @@ class AdminModule extends Connection
 
 
     // ******** UPDATE ***********
+
+    public function updateUser($id, $fname, $lname, $email, $phone, $country, $state, $city, $address1, $address2, $password)
+    {
+        $this->sql = "UPDATE users SET fname = :fname, lname = :lname, email = :email, address1 = :address1, address2 = :address2, city = :city, state = :state, country = :country, phone = :phone, password = :password WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->bindParam(':fname', $fname);
+            $this->stmt->bindParam(':lname', $lname);
+            $this->stmt->bindParam(':email', $email);
+            $this->stmt->bindParam(':country', $country);
+            $this->stmt->bindParam(':phone', $phone);
+            $this->stmt->bindParam(':address1', $address1);
+            $this->stmt->bindParam(':address2', $address2);
+            $this->stmt->bindParam(':state', $state);
+            $this->stmt->bindParam(':city', $city);
+            $this->stmt->bindParam(':password', $password);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false . $th->getMessage();
+        }
+    }
 
     public function upLevel($id, $level)
     {
@@ -378,8 +456,67 @@ class AdminModule extends Connection
     }
 
 
+    public function approveDeposit($id, $approved)
+    {
+        $this->sql = "UPDATE deposits SET approved = :approved WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->bindParam(':approved', $approved);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false . $th->getMessage();
+        }
+    }
+
+    public function approveWithdrawal($id, $verified)
+    {
+        $this->sql = "UPDATE withdrawals SET verified = :verified WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->bindParam(':verified', $verified);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false . $th->getMessage();
+        }
+    }
+
+    public function unstake($id, $status)
+    {
+        $this->sql = "UPDATE stakes SET status = :status WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->bindParam(':status', $status);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false . $th->getMessage();
+        }
+    }
 
 
+
+
+
+
+    // ******** DELETE ***********
+
+    public function deleteWallet($id)
+    {
+        $this->sql = "DELETE FROM user_wallets WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false . $th->getMessage();
+        }
+    }
 
     // ******** GET ROW COUNT ***********
     public function numOfUsers()
