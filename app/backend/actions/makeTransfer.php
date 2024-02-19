@@ -2,7 +2,7 @@
 
 include '../module.php';
 
-if (isset($_POST['receiver'])) {
+if (isset($_POST['uid'])) {
     $res = [];
     $uid = $_POST['uid'];
     $myuid = $_POST['myuid'];
@@ -19,17 +19,10 @@ if (isset($_POST['receiver'])) {
     $type_from = "transfer from";
     $type_to = "transfer to";
 
-    $sentFrom = $modules->makeTransferFrom($myuid, $wid, $wallet, $amt, $to, $notes, $approved, $type_from);
-    $sentTo = $modules->makeTransferTo($uid, $wid, $curr, $wallet, $amt, $from, $notes, $approved, $type_to);
-    if ($sentTo) {
-        $res['header'] = 'sent';
-        if ($sentFrom) {
-            $res['header'] = 'sent';
-        } else {
-            $res['header'] = $sentTo;
+    if ($modules->makeTransferTo($uid, $wid, $curr, $wallet, $amt, $from, $note, $approved, $type_to)) {
+        if ($modules->makeTransferFrom($myuid, $wid, $wallet, $amt, $to, $note, $approved, $type_from)) {
+            $res['msg'] = 'sent';
         }
-    } else {
-        $res['header'] = $sentFrom;
     }
     echo json_encode($res);
 }

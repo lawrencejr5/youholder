@@ -251,7 +251,7 @@ class Modules extends Connection
         }
     }
 
-    public function makeTransferTo($uid, $wid, $curr, $wallet, $amt, $from_to, $notes, $approved, $type)
+    public function makeTransferTo($uid, $wid, $curr, $wallet, $amt, $from_to, $note, $approved, $type)
     {
         try {
             $this->sql = "INSERT INTO deposits(uid, wallet_id, currency, wallet, deposit_amt, return_amt, from_to, notes, approved, transaction_type) 
@@ -264,17 +264,18 @@ class Modules extends Connection
             $this->stmt->bindParam(':deposit_amt', $amt);
             $this->stmt->bindParam(':return_amt', $amt);
             $this->stmt->bindParam(':from_to', $from_to);
-            $this->stmt->bindParam(':notes', $notes);
+            $this->stmt->bindParam(':notes', $note);
             $this->stmt->bindParam(':approved', $approved);
             $this->stmt->bindParam(':transaction_type', $type);
             $this->stmt->execute();
             return true;
-        } catch (PDOException $e) {
-            return $e->getMessage();
+        } catch (PDOException $th) {
+            //throw $th;
+            echo 'failed' . $th->getMessage();
         }
     }
 
-    public function makeTransferFrom($uid, $wid, $wallet, $amt, $from_to, $notes, $approved, $type)
+    public function makeTransferFrom($uid, $wid, $wallet, $amt, $from_to, $note, $approved, $type)
     {
         try {
             $this->sql = "INSERT INTO withdrawals(uid, wallet_id, wallet_name, amount, from_to, notes, verified, transaction_type) 
@@ -285,13 +286,14 @@ class Modules extends Connection
             $this->stmt->bindParam(':wallet_name', $wallet);
             $this->stmt->bindParam(':amount', $amt);
             $this->stmt->bindParam(':from_to', $from_to);
-            $this->stmt->bindParam(':notes', $notes);
+            $this->stmt->bindParam(':notes', $note);
             $this->stmt->bindParam(':verified', $approved);
             $this->stmt->bindParam(':transaction_type', $type);
             $this->stmt->execute();
             return true;
-        } catch (PDOException $e) {
-            return $e->getMessage();
+        } catch (PDOException $th) {
+            //throw $th;
+            echo 'failed' . $th->getMessage();
         }
     }
 

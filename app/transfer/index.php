@@ -72,6 +72,7 @@ include '../backend/udata.php';
                             <input type="hidden" id="to">
                             <input type="hidden" value="" id="wallet_id">
                             <input type="hidden" value="<?= $uID ?>" id="myUid">
+                            <input type="hidden" id="profile_pic">
                             <input type="hidden" value="" id="balance">
 
                             <!-- Recipient -->
@@ -196,11 +197,13 @@ include '../backend/udata.php';
                 const uid = document.querySelector('#uid')
                 const from = document.querySelector('#from')
                 const to = document.querySelector('#to')
+                const profile_pic = document.querySelector('#profile_pic')
                 const singleUser = users.find((user) => user.email === receiver)
                 uid.value = singleUser.id
                 from.value = `From: <?= $fullname ?>`
                 to.value = `To: ${singleUser.fname} ${singleUser.lname}`
                 username.innerHTML = `${singleUser.fname} ${singleUser.lname}`;
+                profile_pic.value = singleUser.profile_pic
             } catch (err) {
                 return err;
             }
@@ -212,9 +215,9 @@ include '../backend/udata.php';
             document.querySelector('#wallet_id').value = wid
             document.querySelector('#balance').value = bal
         };
-
-        const transferBtn = document.querySelector('#transferBtn').addEventListener('click', () => {
-            document.querySelector('#transferBtn').innerHTML = '......'
+        const transferBtn = document.querySelector('#transferBtn')
+        transferBtn.addEventListener('click', () => {
+            transferBtn.innerHTML = '......'
             const uid = document.querySelector('#uid').value
             const myuid = document.querySelector('#myUid').value
             const bal = document.querySelector('#balance').value
@@ -225,6 +228,7 @@ include '../backend/udata.php';
             const note = document.querySelector('#note').value
             const from = document.querySelector('#from').value
             const to = document.querySelector('#to').value
+            const profile_pic = document.querySelector('#profile_pic').value
             if (!amount || !wallet || !receiver) {
                 toastr.error("All fields are required to proceed", "Required", {
                     positionClass: "toast-top-center",
@@ -244,7 +248,7 @@ include '../backend/udata.php';
                     hideMethod: "fadeOut",
                     tapToDismiss: !1
                 })
-                document.querySelector('#transferBtn').innerHTML = 'Proceed'
+                transferBtn.innerHTML = 'Proceed'
             } else if (!to) {
                 toastr.error("User does not exist", "Required", {
                     positionClass: "toast-top-center",
@@ -264,7 +268,7 @@ include '../backend/udata.php';
                     hideMethod: "fadeOut",
                     tapToDismiss: !1
                 })
-                document.querySelector('#transferBtn').innerHTML = 'Proceed'
+                transferBtn.innerHTML = 'Proceed'
             } else if (from == to) {
                 toastr.error("You cannot make a transfer to yourself", "Error", {
                     positionClass: "toast-top-center",
@@ -284,9 +288,9 @@ include '../backend/udata.php';
                     hideMethod: "fadeOut",
                     tapToDismiss: !1
                 })
-                document.querySelector('#transferBtn').innerHTML = 'Proceed'
+                transferBtn.innerHTML = 'Proceed'
             } else if (amount > bal) {
-                toastr.error("You dont have up to that", "Erro", {
+                toastr.error("You dont have up to that", "Error", {
                     positionClass: "toast-top-center",
                     timeOut: 5e3,
                     closeButton: !0,
@@ -304,7 +308,7 @@ include '../backend/udata.php';
                     hideMethod: "fadeOut",
                     tapToDismiss: !1
                 })
-                document.querySelector('#transferBtn').innerHTML = 'Proceed'
+                transferBtn.innerHTML = 'Proceed'
             } else {
                 $.ajax({
                     url: '../backend/actions/makeTransfer.php',
@@ -322,26 +326,10 @@ include '../backend/udata.php';
                         to
                     },
                     success: (res) => {
-                        document.querySelector('#transferBtn').innerHTML = 'Proceed'
-                        if (res.header == 'sent') {
-                            toastr.success("You have successfully made your transaction", "Success", {
-                                positionClass: "toast-top-center",
-                                timeOut: 5e3,
-                                closeButton: !0,
-                                debug: !1,
-                                newestOnTop: !0,
-                                progressBar: !0,
-                                preventDuplicates: !0,
-                                onclick: null,
-                                showDuration: "300",
-                                hideDuration: "1000",
-                                extendedTimeOut: "1000",
-                                showEasing: "swing",
-                                hideEasing: "linear",
-                                showMethod: "fadeIn",
-                                hideMethod: "fadeOut",
-                                tapToDismiss: !1
-                            })
+                        if (res.msg == 'sent') {
+                            setTimeout(() => {
+                                window.location = `./sent.php?p=${profile_pic}&i=${uid}&r=${receiver}&a=${amount}&w=${wallet_name}`
+                            }, 1000)
                         } else {
                             toastr.error("An error occured", "Error", {
                                 positionClass: "toast-top-center",
