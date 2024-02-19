@@ -65,123 +65,164 @@ include '../backend/udata.php';
                         <p class="mb-0 f-26 gilroy-Semibold text-uppercase text-center">New Staking</p>
                         <p class="mb-0 text-center f-18 gilroy-medium text-dark dark-5B mt-2">Fill Information</p>
                         <p class="mb-0 text-center f-14 gilroy-medium text-gray dark-p mt-20"> You can stake on any plan using your wallet.</p>
+                        <?php if ($level == 3) { ?>
+                            <?php
+                            $data['stake_plan'] = $modules->getStakingPlan($_GET['planid']);
+                            foreach ($data['stake_plan'] as $s) {
+                            ?>
+                                <form>
+                                    <input type="hidden" value="<?= $uID ?>" name="user_id" id="uid">
+                                    <input type="hidden" value="<?= $s['crypto'] ?>" id="currency">
+                                    <input type="hidden" value="" id="wid">
+                                    <input type="hidden" value="" id="bal">
+                                    <input type="hidden" value="<?= $s['min'] ?>" id="min">
+                                    <input type="hidden" value="<?= $s['apy'] ?>" id="apy">
+                                    <input type="hidden" value="<?= $s['id'] ?>" id="plan_id">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="label-top mt-20">
+                                                <label class="gilroy-medium text-gray-100 mb-2 f-15" for="amount">Staking Plan <span class="currency"></span></label>
+                                                <input type="text" class="form-control input-form-control apply-bg l-s2 amount" value="<?= $s['plan'] ?>" disabled name="plan" id="plan">
+                                            </div>
+                                            <div class="custom-error amountLimit"></div>
 
-                        <?php
-                        $data['stake_plan'] = $modules->getStakingPlan($_GET['planid']);
-                        foreach ($data['stake_plan'] as $s) {
-                        ?>
-                            <form>
-                                <input type="hidden" value="<?= $uID ?>" name="user_id" id="uid">
-                                <input type="hidden" value="<?= $s['crypto'] ?>" id="currency">
-                                <input type="hidden" value="" id="wid">
-                                <input type="hidden" value="" id="bal">
-                                <input type="hidden" value="<?= $s['min'] ?>" id="min">
-                                <input type="hidden" value="<?= $s['apy'] ?>" id="apy">
-                                <input type="hidden" value="<?= $s['id'] ?>" id="plan_id">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="label-top mt-20">
-                                            <label class="gilroy-medium text-gray-100 mb-2 f-15" for="amount">Staking Plan <span class="currency"></span></label>
-                                            <input type="text" class="form-control input-form-control apply-bg l-s2 amount" value="<?= $s['plan'] ?>" disabled name="plan" id="plan">
-                                        </div>
-                                        <div class="custom-error amountLimit"></div>
+                                            <div class="d-flex justify-content-between mt-10 d-none" id="amount-limit-div">
 
-                                        <div class="d-flex justify-content-between mt-10 d-none" id="amount-limit-div">
+                                                <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="amount-range"></span></p>
 
-                                            <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="amount-range"></span></p>
-
-                                            <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="maximum-amount"></span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="mt-28 param-ref">
-                                            <label class="gilroy-medium text-gray-100 mb-2 f-15" for="plan">Wallet</label>
-                                            <select class="select2" data-minimum-results-for-search="Infinity" name="wallet" id="wallet">
-                                                <option value="">Select Wallet</option>
-                                                <?php foreach ($data['user_wallets'] as $w) {
-                                                    $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_name']);
-                                                    $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_name']);
-                                                    foreach ($data['total_deposits'] as $td) {
-                                                        foreach ($data['total_withdrawals'] as $tw) {
-
-                                                ?>
-                                                            <option data-wid="<?= $w['wallet_id'] ?>" data-bal="<?= $td['amount'] - $tw['amount'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] . ' - ' . $td['amount'] - $tw['amount'] ?></option>
-                                                <?php }
-                                                    }
-                                                } ?>
-                                            </select>
+                                                <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="maximum-amount"></span></p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="label-top mt-20">
-                                            <label class="gilroy-medium text-gray-100 mb-2 f-15" for="amount">Amount <span class="currency"></span></label>
-                                            <input type="text" class="form-control input-form-control apply-bg l-s2 amount" value="" name="user_amount" placeholder="Give an amount" id="amount" onkeyup="checkAmt()">
-                                        </div>
-                                        <div class="custom-error amountLimit"></div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="mt-28 param-ref">
+                                                <label class="gilroy-medium text-gray-100 mb-2 f-15" for="plan">Wallet</label>
+                                                <select class="select2" data-minimum-results-for-search="Infinity" name="wallet" id="wallet">
+                                                    <option value="">Select Wallet</option>
+                                                    <?php foreach ($data['user_wallets'] as $w) {
+                                                        $data['total_deposits'] = $modules->getTotalDeposits($uID, $w['wallet_name']);
+                                                        $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_name']);
+                                                        foreach ($data['total_deposits'] as $td) {
+                                                            foreach ($data['total_withdrawals'] as $tw) {
 
-                                        <div class="d-flex justify-content-between mt-10 d-none" id="amount-limit-div">
-
-                                            <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="amount-range"></span></p>
-
-                                            <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="maximum-amount"></span></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="label-top mt-20">
-                                            <label class="gilroy-medium text-gray-100 mb-2 f-15" for="amount">Converted Amount <span class="currency"></span></label>
-                                            <input type="text" class="form-control input-form-control apply-bg l-s2 amount" value="" name="user_amount" placeholder="0.00" id="converted_value" disabled>
-                                        </div>
-                                        <div class="custom-error amountLimit"></div>
-
-                                        <div class="d-flex justify-content-between mt-10 d-none" id="amount-limit-div">
-
-                                            <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="amount-range"></span></p>
-
-                                            <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="maximum-amount"></span></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row d-none" id="empty-payment">
-                                    <div class="col-12">
-                                        <div class="mt-20 param-ref">
-                                            <span class="text-danger">Wallet or payment method is not available.</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row d-none" id="payment-method-div">
-                                    <div class="col-12">
-                                        <div class="mt-20 param-ref">
-                                            <label class="gilroy-medium text-gray-100 mb-2 f-15" for="payment-method">Payment Methods</label>
-                                            <div class="avoid-blink">
-                                                <select class="select2 sl_common_bx" data-minimum-results-for-search="Infinity" name="payment_method" id="payment-method" required data-value-missing="This field is required.">
-
+                                                    ?>
+                                                                <option data-wid="<?= $w['wallet_id'] ?>" data-bal="<?= $td['amount'] - $tw['amount'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] . ' - ' . $td['amount'] - $tw['amount'] ?></option>
+                                                    <?php }
+                                                        }
+                                                    } ?>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="label-top mt-20">
+                                                <label class="gilroy-medium text-gray-100 mb-2 f-15" for="amount">Amount <span class="currency"></span></label>
+                                                <input type="text" class="form-control input-form-control apply-bg l-s2 amount" value="" name="user_amount" placeholder="Give an amount" id="amount" onkeyup="checkAmt()">
+                                            </div>
+                                            <div class="custom-error amountLimit"></div>
 
-                                <div class="d-grid">
-                                    <button type="button" class="btn btn-lg btn-primary mt-4" id="stakeBtn">
-                                        <div class="spinner spinner-border text-white spinner-border-sm mx-2 d-none" role="status">
-                                            <span class="visually-hidden"></span>
+                                            <div class="d-flex justify-content-between mt-10 d-none" id="amount-limit-div">
+
+                                                <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="amount-range"></span></p>
+
+                                                <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="maximum-amount"></span></p>
+                                            </div>
                                         </div>
-                                        <span>Stake</span>
-                                        <svg class="position-relative ms-1 rtl-wrap-one nscaleX-1" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.11648 12.216C3.81274 11.9123 3.81274 11.4198 4.11648 11.1161L8.23317 6.99937L4.11648 2.88268C3.81274 2.57894 3.81274 2.08647 4.11648 1.78273C4.42022 1.47899 4.91268 1.47899 5.21642 1.78273L9.88309 6.4494C10.1868 6.75314 10.1868 7.2456 9.88309 7.54934L5.21642 12.216C4.91268 12.5198 4.42022 12.5198 4.11648 12.216Z" fill="currentColor" />
-                                        </svg>
-                                    </button>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="label-top mt-20">
+                                                <label class="gilroy-medium text-gray-100 mb-2 f-15" for="amount">Converted Amount <span class="currency"></span></label>
+                                                <input type="text" class="form-control input-form-control apply-bg l-s2 amount" value="" name="user_amount" placeholder="0.00" id="converted_value" disabled>
+                                            </div>
+                                            <div class="custom-error amountLimit"></div>
+
+                                            <div class="d-flex justify-content-between mt-10 d-none" id="amount-limit-div">
+
+                                                <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="amount-range"></span></p>
+
+                                                <p class="mb-0 f-12 leading-15 gilroy-medium text-gray"><span class="text-gray-100" id="maximum-amount"></span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row d-none" id="empty-payment">
+                                        <div class="col-12">
+                                            <div class="mt-20 param-ref">
+                                                <span class="text-danger">Wallet or payment method is not available.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row d-none" id="payment-method-div">
+                                        <div class="col-12">
+                                            <div class="mt-20 param-ref">
+                                                <label class="gilroy-medium text-gray-100 mb-2 f-15" for="payment-method">Payment Methods</label>
+                                                <div class="avoid-blink">
+                                                    <select class="select2 sl_common_bx" data-minimum-results-for-search="Infinity" name="payment_method" id="payment-method" required data-value-missing="This field is required.">
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-lg btn-primary mt-4" id="stakeBtn">
+                                            <div class="spinner spinner-border text-white spinner-border-sm mx-2 d-none" role="status">
+                                                <span class="visually-hidden"></span>
+                                            </div>
+                                            <span>Stake</span>
+                                            <svg class="position-relative ms-1 rtl-wrap-one nscaleX-1" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.11648 12.216C3.81274 11.9123 3.81274 11.4198 4.11648 11.1161L8.23317 6.99937L4.11648 2.88268C3.81274 2.57894 3.81274 2.08647 4.11648 1.78273C4.42022 1.47899 4.91268 1.47899 5.21642 1.78273L9.88309 6.4494C10.1868 6.75314 10.1868 7.2456 9.88309 7.54934L5.21642 12.216C4.91268 12.5198 4.42022 12.5198 4.11648 12.216Z" fill="currentColor" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </form>
+                            <?php }
+                        } elseif ($level == 2) { ?>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="contact-support bg-white">
+                                        <div class="d-flex">
+                                            <div class="messages-box">
+                                                <img src="../../public/icons/up.png" alt="" width="40px" height="auto">
+                                            </div>
+                                            <div class="ml-12 mt-9">
+                                                <p class="f-18 text-dark leading-22 gilroy-Semibold">You need a level 3 account to stake</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-100 gilroy-medium">You account is currently a level <?= $level ?> account. You will have to verify your documents in order to upgrade to level 3.</p>
+                                        <a href="../personal-verification" class="mt-32 btn btn-sm btn-primary ticket-btn green-btn">
+                                            <span class="text-white">Verify documents</span>
+                                        </a>
+
+                                    </div>
                                 </div>
-                            </form>
+                            </div>
+                        <?php } elseif ($level == 1) { ?>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="contact-support bg-white">
+                                        <div class="d-flex">
+                                            <div class="messages-box">
+                                                <img src="../../public/icons/up.png" alt="" width="40px" height="auto">
+                                            </div>
+                                            <div class="ml-12 mt-9">
+                                                <p class="f-18 text-dark leading-22 gilroy-Semibold">You need a level 3 account to stake</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-100 gilroy-medium">You account is currently a level <?= $level ?> account. You will have to fill in your personal details in order to upgrade to level 2.</p>
+                                        <a href="../profile/#pinfo" class="mt-32 btn btn-sm btn-primary ticket-btn green-btn">
+                                            <span class="text-white">Update personal information</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
                         <?php } ?>
                     </div>
                     <!-- main-containt -->

@@ -18,6 +18,7 @@ if (isset($_POST['fname'])) {
     $updatedProfile = $modules->updateProfile($fname, $lname, $phone, $address1, $address2, $city, $state, $country, $timezone, $_SESSION['id']);
 
     if ($updatedProfile) {
+        $modules->upLevel($_SESSION['id'], 2);
         $response['header'] = 'updated';
     } else {
         $response['header'] = "error";

@@ -182,7 +182,7 @@ include '../backend/udata.php';
 
 
     <script>
-        fetchUsers = async () => {
+        const fetchUsers = async () => {
             const username = document.querySelector('#username')
             username.innerHTML = 'Searching user....'
             const url = 'http://localhost/youholder/app/backend/api/users.php';

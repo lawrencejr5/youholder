@@ -347,8 +347,8 @@ include '../backend/udata.php';
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="label-top mt-withdraw">
-                                                            <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-amount r-mt-6">Phone</label>
-                                                            <input type="tel" class="form-control input-form-control input-form-control-withdraw apply-bg" id="phone" style="color: white;" name="phone" value="<?= $phone ?>">
+                                                            <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-amount r-mt-6">Phone <span class="f-16 text-F30">*</span></label>
+                                                            <input type="tel" class="form-control input-form-control input-form-control-withdraw apply-bg" id="phone" style="color: white;" name="phone" required value="<?= $phone ?>">
                                                             <span id="phone-error"></span>
                                                             <span id="tel-error"></span>
                                                         </div>
@@ -359,8 +359,8 @@ include '../backend/udata.php';
                                                     <div class="col-6 column-pl-unset2">
                                                         <div class="label-top mt-withdraw">
                                                             <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-amount r-mt-6">Adress
-                                                                1</label>
-                                                            <textarea class="form-control input-form-control input-form-control-withdraw apply-bg" name="address_1" id="address_1" rows="2" value=""><?= $address1 ?></textarea>
+                                                                1 <span class="f-16 text-F30">*</span></label>
+                                                            <textarea class="form-control input-form-control input-form-control-withdraw apply-bg" name="address_1" id="address_1" rows="2" required><?= $address1 ?></textarea>
                                                         </div>
                                                     </div>
                                                     <!-- Adress 2 -->
@@ -376,15 +376,15 @@ include '../backend/udata.php';
                                                     <!-- City -->
                                                     <div class="col-6 column-pr-unset2">
                                                         <div class="label-top mt-withdraw">
-                                                            <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-amount r-mt-6">City</label>
-                                                            <input type="text" class="form-control input-form-control input-form-control-withdraw apply-bg" name="city" id="city" value="<?= $city ?>">
+                                                            <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-amount r-mt-6">City <span class="f-16 text-F30">*</span></label>
+                                                            <input type="text" class="form-control input-form-control input-form-control-withdraw apply-bg" name="city" id="city" required value="<?= $city ?>">
                                                         </div>
                                                     </div>
                                                     <!-- State -->
                                                     <div class="col-6 column-pl-unset2">
                                                         <div class="label-top mt-withdraw position-r">
-                                                            <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-amount r-mt-6">State</label>
-                                                            <input type="text" class="form-control input-form-control input-form-control-withdraw apply-bg" name="state" id="state" value="<?= $state ?>">
+                                                            <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-amount r-mt-6">State <span class="f-16 text-F30">*</span></label>
+                                                            <input type="text" class="form-control input-form-control input-form-control-withdraw apply-bg" name="state" id="state" required value="<?= $state ?>">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -394,8 +394,8 @@ include '../backend/udata.php';
                                                     <!-- Country -->
                                                     <div class="col-6 column-pr-unset2">
                                                         <div class="param-ref param-ref-withdraw param-ref-withdraw-modal money-ref-2">
-                                                            <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-0">Country</label>
-                                                            <select class="select2" name="country_id" id="country" value="<?= $country ?>">
+                                                            <label class="gilroy-medium text-gray-100 mb-2 f-14 leading-17 mt-20 r-mt-0">Country <span class="f-16 text-F30">*</span></label>
+                                                            <select class="select2" name="country_id" id="country" required value="<?= $country ?>">
                                                                 <option value="<?= $country ?>"><?= $country ?></option>
                                                                 <option value="Afghanistan">Afghanistan</option>
                                                                 <option value="Albania">Albania</option>
@@ -1617,9 +1617,9 @@ include '../backend/udata.php';
         var CRYPTODP = "0.00000000";
 
         $(document).ready(function() {
-            const updateBtn = $('#updateProfileBtn')
-            updateBtn.on('click', () => {
-                updateBtn.html("Saving...")
+            const updateBtn = document.querySelector('#updateProfileBtn')
+            updateBtn.addEventListener('click', () => {
+                updateBtn.textContent = "Saving..."
                 const fname = $('#first_name').val()
                 const lname = $('#last_name').val()
                 const phone = $('#phone').val()
@@ -1630,8 +1630,8 @@ include '../backend/udata.php';
                 const address1 = $('#address_1').val()
                 const address2 = $('#address_2').val()
 
-                if (!fname) {
-                    toastr.error("Firstname is empty", "Required", {
+                if (!fname || !lname || !phone || !country || !state || !city || !address1) {
+                    toastr.warning("All fields with an asterisk (*) are required", "Required", {
                         positionClass: "toast-top-center",
                         timeOut: 5e3,
                         closeButton: !0,
@@ -1649,27 +1649,7 @@ include '../backend/udata.php';
                         hideMethod: "fadeOut",
                         tapToDismiss: !1
                     })
-                    updateBtn.html('Save Changes')
-                } else if (!lname) {
-                    toastr.error("Lastname is empty", "Required", {
-                        positionClass: "toast-top-center",
-                        timeOut: 5e3,
-                        closeButton: !0,
-                        debug: !1,
-                        newestOnTop: !0,
-                        progressBar: !0,
-                        preventDuplicates: !0,
-                        onclick: null,
-                        showDuration: "300",
-                        hideDuration: "1000",
-                        extendedTimeOut: "1000",
-                        showEasing: "swing",
-                        hideEasing: "linear",
-                        showMethod: "fadeIn",
-                        hideMethod: "fadeOut",
-                        tapToDismiss: !1
-                    })
-                    updateBtn.html('Save Changes')
+                    updateBtn.textContent = "Save changes"
                 } else {
                     $.ajax({
                         url: '../backend/actions/updateProfile.php',
@@ -1688,7 +1668,7 @@ include '../backend/udata.php';
                         },
                         success: (res) => {
                             if (res.header == 'updated') {
-                                toastr.success("Your personal profile was successfully updated", "Updated", {
+                                toastr.success("Your personal profile was successfully updated, your account has been upgraded to level 2", "Updated", {
                                     positionClass: "toast-top-center",
                                     timeOut: 5e3,
                                     closeButton: !0,
@@ -1706,10 +1686,10 @@ include '../backend/udata.php';
                                     hideMethod: "fadeOut",
                                     tapToDismiss: !1
                                 })
-                                updateBtn.html('Save Changes')
-                                window.setTimeout(() => {
-                                    window.location.reload();
-                                }, 1000)
+                                updateBtn.textContent = "Save changes"
+                                setTimeout(() => {
+                                    location.reload();
+                                }, 5000)
                             } else {
                                 toastr.error("An error occurred", "Error", {
                                     positionClass: "toast-top-center",
@@ -1729,7 +1709,7 @@ include '../backend/udata.php';
                                     hideMethod: "fadeOut",
                                     tapToDismiss: !1
                                 })
-                                updateBtn.html('Save Changes')
+                                updateBtn.textContent = "Save changes"
                             }
                         }
                     })

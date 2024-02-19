@@ -110,6 +110,26 @@ class Modules extends Connection
         }
     }
 
+    // Upgrade level
+    public function upLevel($id, $level)
+    {
+        try {
+            //code...
+            $this->sql = "UPDATE users SET level = :level WHERE id = :id";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':level', $level);
+            $this->stmt->bindParam(':id', $id);
+            if ($this->stmt->execute()) {
+                return true;
+            }
+        } catch (PDOException $e) {
+            //throw $e
+            echo 'false ' . $e->getMessage();
+            return false;
+        }
+    }
+
+
     // Update password of user
     public function updatePassword($oldPassword, $newPassword, $id)
     {
