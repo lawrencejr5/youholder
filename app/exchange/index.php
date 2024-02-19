@@ -61,14 +61,14 @@ include '../backend/udata.php';
 
                     <!-- main-containt -->
                     <div class="bg-white pxy-62 pt-62 shadow" id="exchangeMoneyCreate">
-                        <p class="mb-0 f-26 gilroy-Semibold text-uppercase text-center">Exchange Money</p>
-                        <p class="mb-0 text-center f-14 gilroy-medium text-gray dark-p mt-20">Exchange currencies from the comfort of your home, quickly, safely with a minimal fees.Select the wallet &amp; put the amount you want to exchange.</p>
+                        <p class="mb-0 f-26 gilroy-Semibold text-uppercase text-center">Exchange currency</p>
+                        <p class="mb-0 text-center f-14 gilroy-medium text-gray dark-p mt-20">Exchange currencies from the comfort of your home, quickly and safely. Select the wallet &amp; put the amount you want to exchange.</p>
 
                         <form method="post" action="" id="exchangeMoneyCreateForm">
                             <input type="hidden" value="" id="wallet_id_from">
                             <input type="hidden" value="" id="wallet_id_to">
                             <input type="hidden" value="<?= $uID ?>" id="uid">
-                            <input type="hidden" value="" id="balance">
+                            <input type="text" value="" id="balance">
 
                             <div class="row my-auto">
 
@@ -312,7 +312,7 @@ include '../backend/udata.php';
                     tapToDismiss: !1
                 })
                 exchange.innerHTML = "Proceed"
-            } else if (amount > bal) {
+            } else if (parseFloat(amount) > parseFloat(bal)) {
                 toastr.error("Not enough money in wallet", "Error", {
                     positionClass: "toast-top-center",
                     timeOut: 5e3,
@@ -349,25 +349,9 @@ include '../backend/udata.php';
                     },
                     success: (res) => {
                         if (res.header == 'exchanged') {
-                            document.querySelector('#exchangeBtn').innerHTML = "Proceed"
-                            toastr.success("You have successfully made an exchange between wallets", "Success", {
-                                positionClass: "toast-top-center",
-                                timeOut: 5e3,
-                                closeButton: !0,
-                                debug: !1,
-                                newestOnTop: !0,
-                                progressBar: !0,
-                                preventDuplicates: !0,
-                                onclick: null,
-                                showDuration: "300",
-                                hideDuration: "1000",
-                                extendedTimeOut: "1000",
-                                showEasing: "swing",
-                                hideEasing: "linear",
-                                showMethod: "fadeIn",
-                                hideMethod: "fadeOut",
-                                tapToDismiss: !1
-                            })
+                            window.setTimeout(() => {
+                                window.location = `./success.php?wf=${wallet_from}&wt=${wallet_to}&a=${amount}&c=${converted}&`
+                            }, 1000)
                         }
                     }
                 })

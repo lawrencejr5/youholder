@@ -209,7 +209,7 @@ include '../backend/udata.php';
                     tapToDismiss: !1
                 })
                 withdraw.innerHTML = "Continue"
-            } else if (amount > bal) {
+            } else if (parseFloat(amount) > parseFloat(bal)) {
                 toastr.error("Your wallet balance is not up to amount requested", "Error", {
                     positionClass: "toast-top-center",
                     timeOut: 5e3,

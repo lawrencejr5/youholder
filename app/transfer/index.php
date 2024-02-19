@@ -66,7 +66,7 @@ include '../backend/udata.php';
                         <p class="mb-0 text-center f-18 gilroy-medium text-dark dark-5B mt-2">Start Transfer</p>
                         <p class="mb-0 text-center f-14 gilroy-medium text-gray dark-p mt-20">Enter your recipients email address &amp; then add an amount with currency. You can also provide a note for reference.</p>
 
-                        <form method="post" action="https://demo.paymoney.techvill.net/transfer" id="sendMoneyCreateForm">
+                        <form method="post" action="" id="sendMoneyCreateForm">
                             <input type="hidden" id="uid">
                             <input type="hidden" id="from">
                             <input type="hidden" id="to">
@@ -289,7 +289,7 @@ include '../backend/udata.php';
                     tapToDismiss: !1
                 })
                 transferBtn.innerHTML = 'Proceed'
-            } else if (amount > bal) {
+            } else if (parseFloat(amount) > parseFloat(bal)) {
                 toastr.error("You dont have up to that", "Error", {
                     positionClass: "toast-top-center",
                     timeOut: 5e3,

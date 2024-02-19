@@ -2,7 +2,7 @@
 include '../backend/udata.php';
 !$_SESSION['id'] && header('location: ../../login');
 
-if (!$_GET['i'] || !$_GET['r'] || !$_GET['a'] || !$_GET['w']) {
+if (!$_GET['wf'] || !$_GET['wt'] || !$_GET['a'] || !$_GET['c']) {
     header('location: ./');
 }
 ?>
@@ -51,7 +51,7 @@ if (!$_GET['i'] || !$_GET['r'] || !$_GET['a'] || !$_GET['w']) {
 
     <!-- sidebar section -->
     <!-- Sidebar Start -->
-    <?php $page = "transfer"  ?>
+    <?php $page = "exchange"  ?>
     <?php include "../master/sidenav.php" ?>
     <!-- Sidebar End -->
     <!-- end sidebar section -->
@@ -68,31 +68,29 @@ if (!$_GET['i'] || !$_GET['r'] || !$_GET['a'] || !$_GET['w']) {
 
                     <!-- main-containt -->
                     <div class="bg-white pxy-62 shadow">
-                        <p class="mb-0 f-26 gilroy-Semibold text-uppercase text-center">Send Money</p>
-                        <p class="mb-0 text-center f-18 gilroy-medium text-dark dark-5B mt-2">Money transfer complete</p>
+                        <p class="mb-0 f-26 gilroy-Semibold text-uppercase text-center">Exchange currency</p>
+                        <p class="mb-0 text-center f-18 gilroy-medium text-dark dark-5B mt-2">Currency exchange complete</p>
 
                         <div class="mt-36 d-flex justify-content-center position-relative h-44">
                             <lottie-player class="position-absolute success-anim" src="../public/user/templates/animation/confirm.json" background="transparent" style="color: red;" speed="1" autoplay></lottie-player>
                         </div>
                         <p class="mb-0 gilroy-medium f-20 success-text text-dark mt-20 text-center dark-5B r-mt-16">Success!</p>
-                        <p class="mb-0 text-center f-14 gilroy-medium text-gray dark-CDO mt-6 r-mt-8 leading-25">Money has been transferred successfully.</p>
+                        <p class="mb-0 text-center f-14 gilroy-medium text-gray dark-CDO mt-6 r-mt-8 leading-25">Your currency exchange was successfull.</p>
                         <div class="print-mail mt-4">
                             <div class="d-flex gap-18 justify-content-center">
                                 <div class="d-flex align-items-center justify-content-center user-mail mt-20">
-                                    <img src="../backend/actions/uploads/<?= !$_GET['p'] ? '1532005837.jpg' : $_GET['p']; ?>" class="img-fluid">
+                                    <img src="../../public/icons/exchange.png" class="img-fluid">
+
                                 </div>
                                 <div class="d-flex">
                                     <div class="mt-26">
-                                        <p class="mb-0 text-dark gilroy-medium f-16 theme-font"><?= $_GET['r'] ?></p>
-                                        <p class="mb-0 text-gray-100 dark-B87 gilroy-regular f-12 mt-2 leading-20 theme-amount">Transferred Amount</p>
-                                        <p class="mb-0 text-primary dark-B87 gilroy-medium mt-2p f-16 theme-usd"><?= $_GET['a'] . ' ' . $_GET['w'] ?></p>
+                                        <p class="mb-0 text-dark gilroy-medium f-16 theme-font"><?= $_GET['a'] . ' ' . $_GET['wf'] ?></p>
+                                        <p class="mb-0 text-gray-100 dark-B87 gilroy-regular f-12 mt-2 leading-20 theme-amount">Converted to</p>
+                                        <p class="mb-0 text-primary dark-B87 gilroy-medium mt-2p f-16 theme-usd"><?= $_GET['c'] . ' ' . $_GET['wt'] ?></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <p class="mb-0 text-center f-14 gilroy-medium text-gray dark-p trnsfer-details mt-4 r-mt-8 leading-26">
-                            The recipient will be notified via an email or phone number after money has been successfully transferred to their account.
-                        </p>
                         <!-- <div class="d-flex justify-content-center mt-28 r-mt-20">
                             <a href="https://demo.paymoney.techvill.net/moneytransfer/print/155" class="print-btn d-flex justify-content-center align-items-center gap-10 b-none" target="_blank">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
