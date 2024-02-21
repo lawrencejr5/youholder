@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Home page| Yield Financial Services</title>
+  <title>Yield Financial Services</title>
   <meta content="Easy-to-use Web3 crypto &amp; fiat Fintech for all users. Offers services beyond holding &amp; trading. Platform&#x27;s wallet allows easy utilization of digital assets." name="description" />
   <meta content="Home page| Yield Financial Services" property="og:title" />
   <meta content="Easy-to-use Web3 crypto &amp; fiat Fintech for all users. Offers services beyond holding &amp; trading. Platform&#x27;s wallet allows easy utilization of digital assets." property="og:description" />
@@ -510,6 +510,47 @@
         </div>
       </div>
       <div class="content-center-wrap"><a href="/blog" class="btn-big-solid w-button">ALL POSTS</a></div>
+    </div>
+  </div>
+  <div id="blog-preview" class="s-content wide">
+    <div class="content-wrap wide w-container">
+      <div class="wrap-center">
+        <h1 class="h1 hero big">YieldFincs Stats</h1>
+        <p class="paragraph-30">The stats below are updated every month. Last update: 1 Jan 2024 10:00 UTC</p>
+      </div>
+      <div class="s-content wide">
+        <div class="content-wrap wide w-container">
+          <div class="w-row">
+            <div class="column-compensation w-col w-col-6">
+              <h2 class="h3 no-padding-bottom">Avg. user balance</h2>
+              <p class="p">All coins and tokens valued in US Dollars</p>
+              <div class="num-highlight">$6,120</div>
+            </div>
+            <div class="column-compensation w-col w-col-6">
+              <h3 class="h3 no-padding-bottom">BTC dominance</h3>
+              <p class="p">Percentage of BTC holdings among all YouHodler wallets</p>
+              <div class="num-highlight">8.27%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="s-content wide">
+        <div class="content-wrap wide w-container">
+          <div class="w-row">
+            <div class="column-compensation w-col w-col-6">
+              <h3 class="h3 no-padding-bottom">Avg. MultiHODL input</h3>
+              <p class="p">The average input amount of Multi HODL deal in USD</p>
+              <div class="num-highlight">$<strong>740</strong></div>
+            </div>
+            <div class="column-compensation w-col w-col-6">
+              <h3 class="h3 no-padding-bottom">Avg. number of MultiHODL deals</h3>
+              <p class="p">Per-user per month for any coin</p>
+              <div class="num-highlight">82</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-center-wrap"><a href="/blog" class="btn-big-solid w-button">More Stats</a></div>
     </div>
   </div>
   <div class="s-content wide">
