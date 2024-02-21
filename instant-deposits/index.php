@@ -3,8 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Get An Instant Crypto Loan - Borrow Crypto Instantly Online - How to Lend Cryptocurrency With Collateral
-    Lending Site &amp; App Wallet</title>
+  <title>Instant Deposits | Yield Financial Services</title>
   <meta content="Use the TOP 20 coins as collateral for crypto loans with the  highest loan-to-value ratio (90%). Get loans in EUR, USD, CHF and GBP and withdraw instantly to credit card and personal banks." name="description" />
   <meta content="Get An Instant Crypto Loan - Borrow Crypto Instantly Online - How to Lend Cryptocurrency With Collateral Lending Site &amp; App Wallet" property="og:title" />
   <meta content="Use the TOP 20 coins as collateral for crypto loans with the  highest loan-to-value ratio (90%). Get loans in EUR, USD, CHF and GBP and withdraw instantly to credit card and personal banks." property="og:description" />
@@ -15,6 +14,7 @@
   <meta property="og:type" content="website" />
   <meta content="summary_large_image" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta name="theme-color" content="#130e80" />
   <link href="../style.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
@@ -33,8 +33,8 @@
       n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);
   </script>
-  <link href="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5cee8f37e521594bf21e30db_fav_small.png" rel="shortcut icon" type="image/x-icon" />
-  <link href="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5cee8faeaeff6f36241942f1_fav_large.png" rel="apple-touch-icon" />
+  <link href="/youholder/public/icons/yield.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="/youholder/public/icons/yield.png" rel="apple-touch-icon" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta name="facebook-domain-verification" content="9d151kspnzgxeyddfsx424rcf04nh6" />
@@ -263,28 +263,17 @@
 </head>
 
 <body>
-  <div class="toast-wrap w-clearfix">
-    <div id="toast-cookies" class="toast-block-cookies w-clearfix">
-      <div class="toast-txt">We use cookies to improve your experience. <a href="/cookies" target="_blank" class="toast-link">Cookie Declaration</a></div><a href="#" class="toast-button w-inline-block" data-ix="hide-toast-cookies">
-        <div class="toast-button-label">ACCEPT ALL</div>
-      </a>
-    </div>
-  </div>
   <?php include '../master/topnav.php' ?>
   <div class="s-hero wide white">
     <div class="hero-wrap wide w-container">
       <div class="w-row">
         <div class="column-compensation hero-left w-col w-col-6">
-          <h1 class="h1 hero big main">Get Instant Crypto Loans<br /></h1>
+          <h1 class="h1 hero big main">Make instant deposits<br /></h1>
           <p class="h3 subheading hero">Use more than 50 TOP coins as collateral for crypto loans with the highest
             loan-to-value ratio (90%). Get loans in EUR, USD, CHF, GBP or even stablecoins or crypto and withdraw
             instantly to credit cards, banks or exchanges.</p>
           <div class="hero-cta-wrap cta-mobile"><a href="https://app.youhodler.com/sign-up" target="_blank" class="btn-big-solid w-button">GET LOAN</a>
-            <div class="hero-cta-mobile-links"><a href="https://youhodler.onelink.me/IPBU/issaboh4" target="_blank" class="apple-cta-blue w-inline-block">
-                <div class="text-block-23">appstore</div>
-              </a><a href="https://youhodler.onelink.me/IPBU/issaboh4" target="_blank" class="android-cta-blue w-inline-block">
-                <div class="text-block-23">appstore</div>
-              </a></div>
+
             <div data-hover="true" data-delay="0" class="nav-store-icons w-dropdown">
               <div class="nav-store-icons-trigger w-dropdown-toggle"></div>
               <nav class="nav-drop-wrap store-icons-wrap w-dropdown-list">
@@ -292,7 +281,7 @@
               </nav>
             </div>
           </div>
-          <div class="hero-cta-wrap cta-desktop"><a href="https://app.youhodler.com/sign-up" class="btn-big-solid hero w-button">GET LOAN</a>
+          <div class="hero-cta-wrap cta-desktop"><a href="https://app.youhodler.com/sign-up" class="btn-big-solid hero w-button">Deposit</a>
             <div data-hover="true" data-delay="0" class="nav-store-icons w-dropdown">
               <div class="nav-store-icons-trigger w-dropdown-toggle"></div>
               <nav class="nav-drop-wrap store-icons-wrap w-dropdown-list">
@@ -338,7 +327,7 @@ border: none; overflow: hidden;">
   </div>
   <div class="s-content wide">
     <div class="content-wrap wide w-container">
-      <h2 class="h2 center">Collateral Options</h2>
+      <h2 class="h2 center">Wallet Options</h2>
       <div class="w-dyn-list">
         <div role="list" class="nav-drop-tile-grid-four inpage w-dyn-items">
           <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/btc-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="bitcoin loan" src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/5cc1b15dad50d9830d40e177_btc.svg" class="nav-drop-a-tile-icon" />

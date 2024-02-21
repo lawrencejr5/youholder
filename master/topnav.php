@@ -14,19 +14,20 @@
                                 </div>
                                 <nav class="nav-drop-wrap w-dropdown-list">
                                     <div class="nav-drop-bg">
-                                        <div class="nav-drop-tile-grid-five"><a href="/youholder/multi-hodl" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
-                                                <div class="nav-drop-a-tile-heading">Crypto Trading</div>
-                                            </a><a href="/youholder/crypto-loan" class="nav-drop-a tile w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dd2cbe6b0a74b9d00ab4cea_get%20loan.svg" width="24" alt="" class="nav-drop-a-tile-icon menu" />
-                                                <div class="nav-drop-a-tile-heading">Crypto Loans</div>
-                                            </a><a href="/youholder/exchange" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/exchange.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                        <div class="nav-drop-tile-grid-five">
+                                            <a href="/youholder/crypto-staking" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/percent.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                                <div class="nav-drop-a-tile-heading">Crypto staking</div>
+                                            </a>
+                                            <a href="/youholder/instant-deposits" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/down.png" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                                <div class="nav-drop-a-tile-heading">Instant deposits</div>
+                                            </a>
+                                            <a href="/youholder/exchange" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/exchange.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">Exchange</div>
-                                            </a><a href="/youholder/yield" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
-                                                <div class="nav-drop-a-tile-heading">Yield Account</div>
-                                            </a><a href="/youholder/cloud-miner" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
-                                                <div class="nav-drop-a-tile-heading">Cloud Miner</div>
-                                            </a><a href="/youholder/promo" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/gift.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
-                                                <div class="nav-drop-a-tile-heading">Promos</div>
-                                            </a></div>
+                                            </a>
+                                            <a href="/youholder/promo" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                                <div class="nav-drop-a-tile-heading">Investments</div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </nav>
                             </div>
@@ -36,21 +37,23 @@
                                 </div>
                                 <nav class="nav-drop-wrap short w-dropdown-list">
                                     <div class="nav-drop-bg">
-                                        <div class="nav-drop-tile-grid-five"><a href="/company" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/question.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                        <div class="nav-drop-tile-grid-five">
+                                            <a href="/company" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/question.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">About YouHodler</div>
-                                            </a><a href="/youholder/stats" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                            </a>
+                                            <a href="/youholder/stats" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">Company Stats</div>
-                                            </a><a href="/youholder/affiliate-program" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/percent.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                            </a>
+                                            <a href="/youholder/affiliate-program" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/percent.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">Affiliate Program</div>
-                                            </a><a href="/youholder/ambassador" class="nav-drop-a tile w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dd51582608e495a6434c37c_profile.svg" width="24" alt="" class="nav-drop-a-tile-icon menu" />
-                                                <div class="nav-drop-a-tile-heading">Ambassadors </div>
-                                            </a><a href="/youholder/careers" class="nav-drop-a tile w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/60893f96a138c60e748c42be_icon_diploma.svg" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                            </a>
+                                            <a href="/youholder/ambassador" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/user.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                                <div class="nav-drop-a-tile-heading">Ambassadors Program</div>
+                                            </a>
+                                            <a href="/youholder/careers" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/bag.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">Careers</div>
-                                            </a><a href="/youholder/affiliate-program" class="nav-drop-a tile menu-hidden w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dd51582608e495a6434c37c_profile.svg" width="24" alt="" class="nav-drop-a-tile-icon" />
-                                                <div class="nav-drop-a-tile-heading">Affiliates</div>
-                                            </a><a href="/youholder/ambassador" class="nav-drop-a tile menu-hidden w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dc96c75c19d43d6a50db3b9_security.svg" width="24" alt="" class="nav-drop-a-tile-icon" />
-                                                <div class="nav-drop-a-tile-heading">Ambassadors</div>
-                                            </a></div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </nav>
                             </div><a href="/youholder/contact" class="nav-a">Contact</a><a href="/youholder/faq" class="nav-a">FAQs</a><a data-test-id="SIGN_IN_BUTTON" href="/youholder/login" class="nav-a show-small-devices">Sign
@@ -71,20 +74,26 @@
                     <nav class="nav-drop-wrap w-dropdown-list">
                         <div class="nav-drop-bg">
 
-                            <div class="nav-drop-menu-grid"><a href="/youholder/multi-hodl" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Multi HODL" src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
-                                    <div class="nav-drop-a-tile-heading">Crypto Trading</div>
-                                    <div class="nav-drop-a-tile-txt">The most user-friendly trading service in crypto. Fast and real
-                                        execution. No order placements fee.</div>
-                                </a><a href="/youholder/crypto-loan" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Crypto Loans" src="/youholder/public/icons/earn.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
-                                    <div class="nav-drop-a-tile-heading">Crypto Loans</div>
-                                    <div class="nav-drop-a-tile-txt">Get cash loan for more than 50 coins as collateral. LTV up to 90%.
-                                        Bank and credit card withdrawals.</div>
-                                </a><a href="/youholder/exchange" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Crypto Loans" src="/youholder/public/icons/exchange.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
+                            <div class="nav-drop-menu-grid">
+                                <a href="/youholder/crypto-staking" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Multi HODL" src="/youholder/public/icons/percent.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
+                                    <div class="nav-drop-a-tile-heading">Crypto staking</div>
+                                    <div class="nav-drop-a-tile-txt">Earn daily compounding rewards on your crypto.</div>
+                                </a>
+                                <a href="/youholder/instant-deposits" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Crypto Loans" src="/youholder/public/icons/down.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
+                                    <div class="nav-drop-a-tile-heading">Instant deposits</div>
+                                    <div class="nav-drop-a-tile-txt">Deposit crypto from your crypto wallet and instantly swap between fiat and crypto.</div>
+                                </a>
+                                <a href="/youholder/exchange" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Crypto Loans" src="/youholder/public/icons/exchange.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
                                     <div class="nav-drop-a-tile-heading">Exchange</div>
                                     <div class="nav-drop-a-tile-txt">Exchange cryptocurrency, fiat, and stablecoins with real-time
                                         execution prices and low fees.</div>
-                                </a></div>
-                            <div class="nav-drop-menu-list">
+                                </a>
+                                <a href="/youholder/exchange" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Crypto Loans" src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
+                                    <div class="nav-drop-a-tile-heading">Investments</div>
+                                    <div class="nav-drop-a-tile-txt">Invest with yieldfincs and earn monthly interests.</div>
+                                </a>
+                            </div>
+                            <!-- <div class="nav-drop-menu-list">
                                 <div class="nav-drop-menu-list-heading">All Features</div><a href="/promo" class="nav-drop-a tile no-background hidden w-inline-block w-clearfix"><img width="24" alt="Web3 Wallet" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/652e688443d8feb8c4fd99d2_card.svg" class="nav-drop-a-tile-icon no-background" />
                                     <div class="nav-drop-a-tile-heading no-background">Crypto Card</div>
                                 </a><a href="/youholder/yield" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Loyalty program" src="/youholder/public/icons/percent.png" style="width: 15px; height: auto;" class="nav-drop-a-tile-icon no-background" />
@@ -94,7 +103,7 @@
                                 </a><a href="/youholder/promo" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Web3 Wallet" src="/youholder/public/icons/gift.png" style="width: 15px; height: auto;" class="nav-drop-a-tile-icon no-background" />
                                     <div class="nav-drop-a-tile-heading no-background">Promos</div>
                                 </a>
-                            </div>
+                            </div> -->
                         </div>
                     </nav>
                 </div>
@@ -102,33 +111,36 @@
             <li class="nav-li hide-mob">
                 <div data-delay="0" data-hover="true" class="nav-drop w-dropdown">
                     <div class="nav-drop-toggle w-dropdown-toggle">
-                        <div>INFO</div>
+                        <div>COMPANY</div>
                     </div>
                     <nav class="nav-drop-wrap short w-dropdown-list">
                         <div class="nav-drop-bg">
-                            <div class="nav-drop-menu-quote">
+                            <!-- <div class="nav-drop-menu-quote">
                                 <div class="text-block-22"><em>&quot;In our daily life, we all still need traditional financial
                                         services, but we do not want to miss out on opportunities opened by modern finance...&quot;</em>
                                 </div>
                                 <div class="text-block-22-copy">Ilya Volkov, CEO <a href="https://www.linkedin.com/in/ilya-volkov-b4077b28/" target="_blank" class="linkedin-inline">in</a> <a href="https://twitter.com/Ilya_YouHodler" target="_blank" class="twitter-inline">t</a></div>
-                            </div>
-                            <div class="nav-drop-menu-grid _2-column"><a href="/youholder/company" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Company" src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
-                                    <div class="nav-drop-a-tile-heading">About YouHodler</div>
-                                    <div class="nav-drop-a-tile-txt">We innovate with respect for both technologies and traditions.
-                                    </div>
-                                </a><a href="/youholder/stats" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Stats" src="/youholder/public/icons/up.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
+                            </div> -->
+                            <div class="nav-drop-menu-grid _2-column">
+                                <a href="/youholder/company" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Company" src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
+                                    <div class="nav-drop-a-tile-heading">About YieldFincs</div>
+                                    <div class="nav-drop-a-tile-txt">We innovate with respect for both technologies and traditions.</div>
+                                </a>
+                                <a href="/youholder/stats" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Stats" src="/youholder/public/icons/up.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
                                     <div class="nav-drop-a-tile-heading">Company Stats</div>
                                     <div class="nav-drop-a-tile-txt">Monthly data on the performance, community growth and volumes.
                                     </div>
-                                </a></div>
-                            <div class="nav-drop-menu-list">
-                                <div class="nav-drop-menu-list-heading">Join YouHodler Team</div><a href="/youholder/affiliate-program" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Affiliates" src="/youholder/public/icons/percent.png" style="width: 15px; height: auto;" class="nav-drop-a-tile-icon no-background" />
-                                    <div class="nav-drop-a-tile-heading no-background">Affiliate Program</div>
-                                </a><a href="/youholder/ambassador" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Ambassador" src="/youholder/public/icons/user.png" style="width: 15px; height: auto;" class="nav-drop-a-tile-icon no-background" />
-                                    <div class="nav-drop-a-tile-heading no-background">Ambassador Program</div>
-                                </a><a href="/youholder/careers" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Careers" src="/youholder/public/icons/bag.png" style="width: 15px; height: auto;" class="nav-drop-a-tile-icon no-background" />
-                                    <div class="nav-drop-a-tile-heading no-background">Careers</div>
                                 </a>
+                            </div>
+                            <div class="nav-drop-menu-list">
+                                <div class="nav-drop-menu-list-heading">Join YieldFincs Team</div><a href="/youholder/affiliate-program" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Affiliates" src="/youholder/public/icons/percent.png" style="width: 15px; height: auto;" class="nav-drop-a-tile-icon no-background" />
+                                    <div class="nav-drop-a-tile-heading no-background">Affiliate Program</div>
+                                    <a href="/youholder/ambassador" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Ambassador" src="/youholder/public/icons/user.png" style="width: 15px; height: auto;" class="nav-drop-a-tile-icon no-background" />
+                                        <div class="nav-drop-a-tile-heading no-background">Ambassador Program</div>
+                                    </a>
+                                    <a href="/youholder/careers" class="nav-drop-a tile no-background w-inline-block w-clearfix"><img width="24" alt="Careers" src="/youholder/public/icons/bag.png" style="width: 15px; height: auto;" class="nav-drop-a-tile-icon no-background" />
+                                        <div class="nav-drop-a-tile-heading no-background">Careers</div>
+                                    </a>
                             </div>
                         </div>
                     </nav>

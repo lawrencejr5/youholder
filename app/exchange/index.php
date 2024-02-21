@@ -68,7 +68,7 @@ include '../backend/udata.php';
                             <input type="hidden" value="" id="wallet_id_from">
                             <input type="hidden" value="" id="wallet_id_to">
                             <input type="hidden" value="<?= $uID ?>" id="uid">
-                            <input type="text" value="" id="balance">
+                            <input type="hidden" value="" id="balance">
 
                             <div class="row my-auto">
 

@@ -4573,7 +4573,7 @@ blockquote {
   color: var(--black);
 }
 .nav-drop-a-tile-txt {
-  color: rgba(41, 121, 255, 0.8);
+  color: #130e80;
   letter-spacing: 0.25px;
   text-transform: none;
   padding-left: 32px;

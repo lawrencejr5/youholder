@@ -8,13 +8,15 @@
 	<meta name="csrf-token" content="PFhVNJMPXGAl78xl7DN1x28WvuRvz2vpVljgxMPU">
 	<meta name="description" content="Login">
 	<meta name="keywords" content="">
-	<title>Login</title>
-	<script src="./public/frontend/templates/js/flashesh-dark.min.js"></script>
+	<meta name="theme-color" content="#130e80" />
+	<title>Login | Yield Financial Services</title>
+	<!-- <script src="./public/frontend/templates/js/flashesh-dark.min.js"></script> -->
 	<link rel="stylesheet" href="./public/dist/libraries/bootstrap-5.0.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./public/frontend/templates/css/style.min.css">
 	<link rel="stylesheet" href="./public/frontend/templates/css/owl-css/owl.min.css">
 	<link rel="stylesheet" href="./public/dist/plugins/select2-4.1.0-rc.0/css/select2.min.css">
-	<link rel="shortcut icon" href="./public/uploads/logos/1530689937_favicon.png" />
+	<link href="/youholder/public/icons/yield.png" rel="shortcut icon" type="image/x-icon" />
+	<link href="/youholder/public/icons/yield.png" rel="apple-touch-icon" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<!-- <link rel="stylesheet" href="./public/frontend/templates/css/toastr.min.css"> -->
@@ -366,12 +368,12 @@
 	</div>
 	<!-- End Footer -->
 
-	<script src="./public/dist/libraries/jquery-3.6.1/jquery-3.6.1.min.js"></script>
+	<!-- <script src="./public/dist/libraries/jquery-3.6.1/jquery-3.6.1.min.js"></script> -->
 	<script src="./public/frontend/templates/js/owl.carousel.min.js"></script>
 	<script src="./public/dist/libraries/bootstrap-5.0.2/js/bootstrap.min.js"></script>
 	<script src="./public/frontend/templates/js/main.min.js"></script>
 	<script src="./public/dist/plugins/select2-4.1.0-rc.0/js/select2.min.js"></script>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 	<script>
