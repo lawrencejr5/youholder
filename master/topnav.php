@@ -1,5 +1,5 @@
 <div class="s-nav">
-    <div class="nav-wrap w-container"><a href="/youholder" aria-current="page" class="nav-logo-a w-inline-block w--current"><img src="/youholder/public/logos/yield-logo.png" width="80px" height="auto" alt="youhodler logo svg" class="nav-logo-wide" /><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5e60f76edcb1b696b1e2b3cd_fav.svg" alt="youhodler logo svg" width="30" class="nav-logo-fav" /></a>
+    <div class="nav-wrap w-container"><a href="/youholder" aria-current="page" class="nav-logo-a w-inline-block w--current"><img src="/youholder/public/logos/yield-logo.png" width="150px" height="auto" alt="youhodler logo svg" class="nav-logo-wide" /><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5e60f76edcb1b696b1e2b3cd_fav.svg" alt="youhodler logo svg" width="30" class="nav-logo-fav" /></a>
         <ul role="list" class="nav-ul center w-clearfix w-list-unstyled">
             <li class="nav-li show-mob">
                 <div data-delay="0" data-hover="true" class="nav-drop w-dropdown">

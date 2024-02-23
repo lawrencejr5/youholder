@@ -37,85 +37,21 @@
 
 	<!-- Start Header -->
 	<!-- navbar -->
-	<div class="navigation-wrap bg-white start-header start-style d-none">
-		<div class="container-fluid px-240">
-			<div class="row">
-				<div class="col-12">
-					<nav class="navbar navbar-expand-md navbar-light">
-						<a href="/youholder/">
-							<img src="/youholder/public/logos/yield-logo.png" height="auto" width="100px" alt="Brand Logo">
-						</a>
-
-						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<svg class="mt-n4p" width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path class="path-white" fill-rule="evenodd" clip-rule="evenodd" d="M22 14.75C22 14.0597 21.4124 13.5 20.6875 13.5H12.8123C12.0874 13.5 11.4998 14.0597 11.4998 14.75C11.4998 15.4404 12.0874 16 12.8123 16H20.6875C21.4124 16 22 15.4404 22 14.75Z" fill="#403E5B" />
-								<path class="path-white" fill-rule="evenodd" clip-rule="evenodd" d="M22 8.00027C22 7.17183 21.403 6.50024 20.6666 6.50024H7.33307C6.59667 6.50024 5.99971 7.17183 5.99971 8.00027C5.99971 8.82871 6.59667 9.5003 7.33307 9.5003H20.6666C21.403 9.5003 22 8.82871 22 8.00027Z" fill="#403E5B" />
-								<path class="path-white" fill-rule="evenodd" clip-rule="evenodd" d="M22 1.25002C22 0.559654 21.3984 0 20.6562 0H1.84339C1.10124 0 0.499611 0.559654 0.499611 1.25002C0.499611 1.94039 1.10124 2.50005 1.84339 2.50005H20.6562C21.3984 2.50005 22 1.94039 22 1.25002Z" fill="#403E5B" />
-							</svg>
-
-						</button>
-
-						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav ms-auto py-4 py-md-0 gilroy-medium nav-align">
-								<li class="nav-item ">
-									<a class="nav-link" href="https://demo.paymoney.techvill.net">Home</a>
-								</li>
-
-
-								<!-- Custom Addons Header Menu -->
-								<li class="nav-item ">
-									<a href="https://demo.paymoney.techvill.net/crypto-exchange/create" class="nav-link"> Crypto Exchange</a>
-								</li>
-								<!-- Custom Addons Header Menu End -->
-
-								<li class="nav-item ">
-									<a class="nav-link" href="https://demo.paymoney.techvill.net/privacy-policy">Privacy
-										Policy</a>
-								</li>
-
-								<li>
-									<div class="color-parent mt-2p">
-										<div class="switch">
-											<div id="switch">
-												<img src="./public/frontend/templates/images/home/moon.png" class="moon img-none" width="26px" alt="">
-												<img src="./public/frontend/templates/images/home/sun2.png" class="img-none sun" width="26px" alt="">
-											</div>
-										</div>
-									</div>
-								</li>
-
-								<div class="d-flex">
-									<a href="https://demo.paymoney.techvill.net/login" class="border d-flex align-items-center justify-content-center log-btn rounded ml-60 mt-n4p">
-										Login
-									</a>
-
-									<a href="https://demo.paymoney.techvill.net/register" class="border d-flex align-items-center justify-content-center reg-btn rounded ml-18 mt-n4p">
-										Register
-									</a>
-								</div>
-							</ul>
-						</div>
-
-					</nav>
-				</div>
-			</div>
-		</div>
-	</div> <!-- End Header -->
 
 	<!-- Login section start -->
 	<div class="container-fluid container-layout px-0">
 		<div class="main-auth-div">
+			<div class="d-flex justify-content-start mt-24 ml-18 position-fixed">
+				<div class="logo-div">
+					<a href="/youholder/">
+						<img src="/youholder/public/logos/yield-logo.png" height="auto" width="100px" alt="Brand Logo">
+					</a>
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-md-6 col-xl-5 hide-small-device">
 					<div class="bg-pattern">
 						<div class="bg-content">
-							<div class="d-flex justify-content-start">
-								<div class="logo-div">
-									<a href="/youholder/">
-										<img src="/youholder/public/logos/yield-logo.png" height="auto" width="100px" alt="Brand Logo">
-									</a>
-								</div>
-							</div>
 							<div class="transaction-block">
 								<div class="transaction-text">
 									<h3 class="mb-6p">Hassle free money</h3>
@@ -135,7 +71,7 @@
 					<div class="auth-section signin-top d-flex align-items-center">
 						<div class="auth-module">
 							<div class="d-flex align-items-center back-direction mb-2 back-signin">
-								<a href="https://demo.paymoney.techvill.net" class="d-inline-flex align-items-center back-btn">
+								<a onclick="history.go(-1)" class="d-inline-flex align-items-center back-btn">
 									<svg class="position-relative nscaleX-1" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M8.47075 10.4709C8.7311 10.2105 8.7311 9.78842 8.47075 9.52807L4.94216 5.99947L8.47075 2.47087C8.7311 2.21053 8.7311 1.78842 8.47075 1.52807C8.2104 1.26772 7.78829 1.26772 7.52794 1.52807L3.52795 5.52807C3.2676 5.78842 3.2676 6.21053 3.52795 6.47088L7.52794 10.4709C7.78829 10.7312 8.2104 10.7312 8.47075 10.4709Z" fill="currentColor" />
 									</svg>
@@ -144,19 +80,6 @@
 							</div>
 							<form action="" method="post" id="login-form">
 								<input type="hidden" name="_token" value="PFhVNJMPXGAl78xl7DN1x28WvuRvz2vpVljgxMPU" autocomplete="off"> <input type="hidden" name="has_captcha" value="Disabled">
-
-
-
-
-
-								<div class="d-flex align-items-center back-direction auth-back d-none">
-									<a href="" class="d-inline-flex align-items-center back-btn">
-										<svg class="position-relative" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd" d="M8.47075 10.4709C8.7311 10.2105 8.7311 9.78842 8.47075 9.52807L4.94216 5.99947L8.47075 2.47087C8.7311 2.21053 8.7311 1.78842 8.47075 1.52807C8.2104 1.26772 7.78829 1.26772 7.52794 1.52807L3.52795 5.52807C3.2676 5.78842 3.2676 6.21053 3.52795 6.47088L7.52794 10.4709C7.78829 10.7312 8.2104 10.7312 8.47075 10.4709Z" fill="currentColor"></path>
-										</svg>
-										<span class="ms-1">Back</span>
-									</a>
-								</div>
 
 								<div class="auth-module-header">
 									<p class="mb-0 text-start auth-title">Sign In</p>

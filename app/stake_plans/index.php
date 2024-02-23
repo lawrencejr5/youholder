@@ -13,7 +13,7 @@ include '../backend/udata.php';
     <meta name="author" content="Techvillage">
     <meta name="csrf-token" content="qb1QM8RsLbLH2VAZWJopBTfxWK5gnxizsKMLjfI7">
 
-    <title>Investment Plans | Pay Money</title>
+    <title>Staking Plans | Yield Fiancial Services</title>
 
     <!-- css -->
     <link rel="stylesheet" href="../public/dist/libraries/bootstrap-5.0.2/css/bootstrap.min.css">
@@ -22,7 +22,10 @@ include '../backend/udata.php';
     <!-- end css -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="../public/uploads/logos/1530689937_favicon.png">
+    <link rel="shortcut icon" href="/youholder/public/logos/favicon.png">
+
+    <!-- theme-color -->
+    <meta name="theme-color" content="#130e80" />
 
     <script>
         'use strict';
@@ -77,7 +80,7 @@ include '../backend/udata.php';
                                         </div>
                                         <div class="duration text-end">
                                             <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Duration</p>
-                                            <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">365 Days</p>
+                                            <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">1 Year</p>
                                         </div>
                                     </div>
 
@@ -88,17 +91,17 @@ include '../backend/udata.php';
                                         </div>
                                         <div class="min-max-right">
                                             <p class="mb-0 f-13 leading-16 gilroy-medium text-gray-100">Max Amount</p>
-                                            <p class="mb-0 f-16 leading-20 gilroy-Semibold text-dark mt-2" style="text-transform: capitalize;"><?= $s['max'] ?></p>
+                                            <p class="mb-0 f-16 leading-20 gilroy-Semibold text-dark mt-2" style="text-transform: capitalize;"><?= $s['max'] . ' ' . $s['crypto'] ?></p>
                                         </div>
                                     </div>
                                     <div class="terms mt-20">
                                         <div class="d-flex justify-content-between">
-                                            <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Return Term</p>
-                                            <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">15</p>
+                                            <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Annual Percentage Yield (APY)</p>
+                                            <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= $s['apy'] ?>%</p>
                                         </div>
                                         <div class="d-flex justify-content-between mt-16">
                                             <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Withdraw After Matured</p>
-                                            <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">No</p>
+                                            <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">Yes</p>
                                         </div>
                                         <div class="d-flex justify-content-between mt-16">
                                             <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Capital Return</p>

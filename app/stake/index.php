@@ -13,7 +13,7 @@ include '../backend/udata.php';
     <meta name="author" content="Techvillage">
     <meta name="csrf-token" content="qb1QM8RsLbLH2VAZWJopBTfxWK5gnxizsKMLjfI7">
 
-    <title>Invest Create | Pay Money</title>
+    <title>Stake Create | Yield Fiancial Services</title>
 
     <!-- css -->
     <link rel="stylesheet" href="../public/dist/libraries/bootstrap-5.0.2/css/bootstrap.min.css">
@@ -24,7 +24,10 @@ include '../backend/udata.php';
     <!-- end css -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="../public/uploads/logos/1530689937_favicon.png">
+    <link rel="shortcut icon" href="/youholder/public/logos/favicon.png">
+
+    <!-- theme-color -->
+    <meta name="theme-color" content="#130e80" />
 
     <script>
         'use strict';
@@ -76,6 +79,7 @@ include '../backend/udata.php';
                                     <input type="hidden" value="" id="wid">
                                     <input type="hidden" value="" id="bal">
                                     <input type="hidden" value="<?= $s['min'] ?>" id="min">
+                                    <input type="hidden" value="<?= $s['max'] ?>" id="max">
                                     <input type="hidden" value="<?= $s['apy'] ?>" id="apy">
                                     <input type="hidden" value="<?= $s['id'] ?>" id="plan_id">
                                     <div class="row">
@@ -319,6 +323,7 @@ include '../backend/udata.php';
             const uid = document.querySelector('#uid').value
             const wid = document.querySelector('#wid').value
             const min = document.querySelector('#min').value
+            const max = document.querySelector('#max').value
             const apy = document.querySelector('#apy').value
             const bal = document.querySelector('#bal').value
             const amount = document.querySelector('#amount').value
@@ -385,7 +390,26 @@ include '../backend/udata.php';
                     tapToDismiss: !1
                 })
             } else if (parseFloat(staked) < parseFloat(min)) {
-                toastr.warning(`Min is ${min}`, "Below minimum", {
+                toastr.warning("Your staked amount is lower than the minimum amount for this plan", `Min is ${min}`, {
+                    positionClass: "toast-top-center",
+                    timeOut: 5e3,
+                    closeButton: !0,
+                    debug: !1,
+                    newestOnTop: !0,
+                    progressBar: !0,
+                    preventDuplicates: !0,
+                    onclick: null,
+                    showDuration: "300",
+                    hideDuration: "1000",
+                    extendedTimeOut: "1000",
+                    showEasing: "swing",
+                    hideEasing: "linear",
+                    showMethod: "fadeIn",
+                    hideMethod: "fadeOut",
+                    tapToDismiss: !1
+                })
+            } else if (parseFloat(staked) > parseFloat(max)) {
+                toastr.warning("Your staked amount is higher than the maximum amount for this plan", `Max amount is ${max}`, {
                     positionClass: "toast-top-center",
                     timeOut: 5e3,
                     closeButton: !0,

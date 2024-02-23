@@ -262,13 +262,7 @@
 </head>
 
 <body>
-  <div class="toast-wrap w-clearfix">
-    <div id="toast-cookies" class="toast-block-cookies w-clearfix">
-      <div class="toast-txt">We use cookies to improve your experience. <a href="/cookies" target="_blank" class="toast-link">Cookie Declaration</a></div><a href="#" class="toast-button w-inline-block" data-ix="hide-toast-cookies">
-        <div class="toast-button-label">ACCEPT ALL</div>
-      </a>
-    </div>
-  </div>
+
   <?php include '../master/topnav.php' ?>
   <div class="s-hero wide white">
     <div class="hero-wrap wide w-container">

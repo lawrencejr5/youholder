@@ -13,7 +13,7 @@ include '../backend/udata.php';
     <meta name="author" content="Techvillage">
     <meta name="csrf-token" content="qb1QM8RsLbLH2VAZWJopBTfxWK5gnxizsKMLjfI7">
 
-    <title>Invest Create | Pay Money</title>
+    <title>Invest Create | Yield Fiancial Services</title>
 
     <!-- css -->
     <link rel="stylesheet" href="../public/dist/libraries/bootstrap-5.0.2/css/bootstrap.min.css">
@@ -24,7 +24,10 @@ include '../backend/udata.php';
     <!-- end css -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="../public/uploads/logos/1530689937_favicon.png">
+    <link rel="shortcut icon" href="/youholder/public/logos/favicon.png">
+
+    <!-- theme-color -->
+    <meta name="theme-color" content="#130e80" />
 
     <script>
         'use strict';

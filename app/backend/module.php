@@ -645,6 +645,33 @@ class Modules extends Connection
         }
     }
 
+    public function getLastTransaction($uid)
+    {
+        try {
+            //code...
+            $this->sql = "SELECT d.id as id, d.uid as uid, d.return_amt as amount, 
+            d.datetime as datetime, d.transaction_type as transaction_type, d.wallet as wallet, d.from_to as from_to, d.approved as verified, w.wallet_img as wallet_img  
+            FROM deposits d 
+            LEFT JOIN wallets w ON d.wallet = w.wallet_name
+            WHERE uid = :uid
+            UNION ALL
+            SELECT wt.id as id, wt.uid as uid, wt.amount as amount, wt.datetime as datetime, 
+            wt.transaction_type as transaction_type, wt.wallet_name as wallet, wt.from_to as from_to, wt.verified as verified, w.wallet_img as wallet_img 
+            FROM withdrawals wt 
+            LEFT JOIN wallets w ON wt.wallet_name = w.wallet_name
+            WHERE uid = :uid
+            ORDER BY datetime DESC
+            LIMIT 1
+            ";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $th) {
+            echo $th->getMessage();
+        }
+    }
+
 
     public function getUserWalletsLastDeposit($uid, $w_name)
     {

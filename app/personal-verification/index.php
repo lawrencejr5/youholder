@@ -12,7 +12,7 @@ include '../backend/udata.php';
     <meta name="author" content="Techvillage">
     <meta name="csrf-token" content="PFhVNJMPXGAl78xl7DN1x28WvuRvz2vpVljgxMPU">
 
-    <title>Identity Verification | Pay Money</title>
+    <title>Identity Verification | Yield Fiancial Services</title>
 
     <!-- css -->
     <link rel="stylesheet" href="../public/dist/libraries/bootstrap-5.0.2/css/bootstrap.min.css">
@@ -21,7 +21,10 @@ include '../backend/udata.php';
     <!-- end css -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="../public/uploads/logos/1530689937_favicon.png">
+    <link rel="shortcut icon" href="/youholder/public/logos/favicon.png">
+
+    <!-- theme-color -->
+    <meta name="theme-color" content="#130e80" />
 
     <script>
         'use strict';

@@ -17,7 +17,7 @@ if (!$_GET['i'] || !$_GET['r'] || !$_GET['a'] || !$_GET['w']) {
     <meta name="author" content="Techvillage">
     <meta name="csrf-token" content="Iu765mySM14LkDX4k7mvwEQlTNEP6QR7IOPcGUT1">
 
-    <title>Money Transfer | Pay Money</title>
+    <title>Sent | Yield Finacial Services</title>
 
     <!-- css -->
     <link rel="stylesheet" href="../public/dist/libraries/bootstrap-5.0.2/css/bootstrap.min.css">
@@ -26,7 +26,10 @@ if (!$_GET['i'] || !$_GET['r'] || !$_GET['a'] || !$_GET['w']) {
     <!-- end css -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="../public/uploads/logos/1530689937_favicon.png">
+    <link rel="shortcut icon" href="/youholder/public/logos/favicon.png">
+
+    <!-- theme-color -->
+    <meta name="theme-color" content="#130e80" />
 
     <script>
         'use strict';
