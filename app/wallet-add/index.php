@@ -111,14 +111,12 @@ include '../backend/udata.php';
                                                 </div>
                                                 <div class="wallet-right-box mt-n3p span-currency text-end">
                                                     <!-- <span class="f-15 gilroy-medium text-gray">Value</span>
-                                                    <p class="mb-0 mt-6 f-28 gilroy-Semibold text-dark l-s2">1,977.98</p> -->
+                                                    <p class="mb-0 mt-6 f-28 gilroy-Semibold text-dark l-s2">1,977.98 USD</p> -->
                                                 </div>
                                             </div>
                                             <div class="d-flex justify-content-between span-currency">
                                                 <div class="currency-mt-32">
-                                                    <p class="text-gray mb-0 f-4 leading-16 gilroy-medium">Us Dollars
-
-                                                    </p>
+                                                    <p class="text-gray mb-0 f-4 leading-16 gilroy-medium usdVal" data-coin=<?= $w['wallet_name'] ?>>Calculating...</p>
                                                 </div>
                                                 <div class="right-icon-div d-flex">
                                                     <div class="btn-block d-flex mt-20">
@@ -184,6 +182,44 @@ include '../backend/udata.php';
     <script src="../public/user/templates/js/chart.umd.min.js"></script>
     <script src="../public/user/templates/js/main.min.js"></script>
     <script src="../public/user/customs/js/common.min.js"></script>
+
+    <script>
+        const convert = async (wallet, curr, amount) => {
+            try {
+                const res = await fetch(`https://api.coinconvert.net/convert/${curr}/${wallet}?amount=${amount}`);
+                const data = await res.json()
+                const test = Object.values(data)
+                const val = test[2];
+                if (!val) {
+                    return false
+                }
+                return val
+            } catch (error) {
+                // console.log(error);
+            }
+
+        }
+        const setUsdVal = () => {
+            const element = document.querySelectorAll('.usdVal')
+            element.forEach(async (elem) => {
+                try {
+                    const coin = elem.dataset.coin
+                    const val = await convert('USD', coin, 1)
+                    if (val = undefined) {
+                        return false
+                    } else {
+                        elem.textContent = `1 ${coin} = ${val} USD`
+                    }
+                } catch (err) {
+                    elem.textContent = "Network err"
+                }
+            })
+        }
+        setUsdVal()
+        setInterval(() => {
+            setUsdVal()
+        }, 100000000)
+    </script>
 
     <script type="text/javascript">
         var SITE_URL = "https://demo.paymoney.techvill.net";

@@ -10,19 +10,17 @@ if (isset($_POST['amount'])) {
     $curr = $_POST['wname'];
     $pid = $_POST['planId'];
     $plan = $_POST['planName'];
-    $bperc = $_POST['bperc'];
-    $mperc = $_POST['mperc'];
-    $status = "first phase";
+    $perc = $_POST['mperc'];
+    $usdVal = $_POST['usdVal'];
+    $dura = $_POST['duration'];
 
     $start_date = date('Y-m-d H:m:s');
-    $end_date = date('Y-m-d H:m:s', strtotime('+28 days'));
-    $expected = ($mperc / 100) * $amt;
-    $to_earn = ($bperc / 100) * $amt;
+    $end_date = date('Y-m-d H:m:s', strtotime("+$dura days"));
+    $expected = ($perc / 100) * $amt;
+    $to_earn = (($perc / 100) * $amt) / $dura;
 
-    $withdrawn = $modules->investWithdrawal($uid, $wid, $curr, $amount, 1, 'investment');
-
-    if ($withdrawn) {
-        if ($modules->invest($uid, $pid, $plan, $curr, $amt, $to_earn, $expected, $start_date, $end_date, time(), $status)) {
+    if ($modules->investWithdrawal($uid, $wid, $curr, $amt, 1, 'investment')) {
+        if ($modules->invest($uid, $pid, $wid, $plan, $curr, $amt, $usdVal, $to_earn, $expected, $start_date, $end_date, time())) {
             $res['header'] = 'invested';
         }
     }

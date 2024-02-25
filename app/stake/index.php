@@ -320,6 +320,8 @@ include '../backend/udata.php';
 
         const stakeBtn = document.querySelector('#stakeBtn')
         stakeBtn.addEventListener('click', () => {
+            stakeBtn.textContent = "Staking..."
+
             const uid = document.querySelector('#uid').value
             const wid = document.querySelector('#wid').value
             const min = document.querySelector('#min').value
@@ -351,6 +353,7 @@ include '../backend/udata.php';
                     hideMethod: "fadeOut",
                     tapToDismiss: !1
                 })
+                stakeBtn.textContent = "Try again"
             } else if (!amount) {
                 toastr.error("Insert amount you want to stake", "Empty", {
                     positionClass: "toast-top-center",
@@ -370,6 +373,7 @@ include '../backend/udata.php';
                     hideMethod: "fadeOut",
                     tapToDismiss: !1
                 })
+                stakeBtn.textContent = "Try again"
             } else if (parseFloat(bal) < parseFloat(amount)) {
                 toastr.error("Deposit into wallet to invest", "Not enough money", {
                     positionClass: "toast-top-center",
@@ -389,6 +393,7 @@ include '../backend/udata.php';
                     hideMethod: "fadeOut",
                     tapToDismiss: !1
                 })
+                stakeBtn.textContent = "Try again"
             } else if (parseFloat(staked) < parseFloat(min)) {
                 toastr.warning("Your staked amount is lower than the minimum amount for this plan", `Min is ${min}`, {
                     positionClass: "toast-top-center",
@@ -408,6 +413,7 @@ include '../backend/udata.php';
                     hideMethod: "fadeOut",
                     tapToDismiss: !1
                 })
+                stakeBtn.textContent = "Try again"
             } else if (parseFloat(staked) > parseFloat(max)) {
                 toastr.warning("Your staked amount is higher than the maximum amount for this plan", `Max amount is ${max}`, {
                     positionClass: "toast-top-center",
@@ -427,6 +433,7 @@ include '../backend/udata.php';
                     hideMethod: "fadeOut",
                     tapToDismiss: !1
                 })
+                stakeBtn.textContent = "Try again"
             } else if (!staked) {
                 toastr.warning("Please wait for amount to be converted", "Please wait...", {
                     positionClass: "toast-top-center",
@@ -446,7 +453,9 @@ include '../backend/udata.php';
                     hideMethod: "fadeOut",
                     tapToDismiss: !1
                 })
+                stakeBtn.textContent = "Try again"
             } else {
+                stakeBtn.setAttribute('disabled', '')
                 $.ajax({
                     url: '../backend/actions/stake.php',
                     type: 'post',

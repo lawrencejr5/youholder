@@ -123,12 +123,12 @@ include '../backend/udata.php';
                                                 <div class="currency-mt-32">
                                                     <p class="text-gray mb-0 f-12 leading-16 gilroy-medium">Last Action:
                                                         <?php
-                                                        $data['wallet_last_deposit'] = $modules->getUserWalletsLastDeposit($uID, $w['wallet_name']);
-                                                        foreach ($data['wallet_last_deposit'] as $l) {
+                                                        $data['wallet_last_action'] = $modules->getWalletLastAction($uID, $w['wallet_name']);
+                                                        foreach ($data['wallet_last_action'] as $l) {
                                                         ?>
 
-                                                            <span class="text-dark"><?= round($l['amount'], 2) . ' ' . $w['wallet_name'] ?></span>
-                                                            ( Deposit )
+                                                            <span class="text-dark"><?= round($l['amount'], 2) . ' ' . $l['wallet'] ?></span>
+                                                            ( <?= $l['transaction_type'] ?> )
                                                         <?php
                                                         }
                                                         ?>

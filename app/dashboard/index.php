@@ -145,7 +145,7 @@ include '../backend/udata.php';
 
                     </div>
                     <div class="row mt-20 gy-4">
-                        <div class="col-12 col-xl-4">
+                        <div class="col-12 col-xl-12">
                             <div class="dash-profile-qr-div bg-white profile-mt-12">
                                 <div class="d-flex justify-content-between qr-icon">
                                     <p class="mb-0 f-18 leading-22 text-dark gilroy-Semibold">Profile QR Code</p>
@@ -155,40 +155,19 @@ include '../backend/udata.php';
                                 </div>
                                 <div class="d-flex">
                                     <div class="dash-profile-qrCode mt-20">
-                                        <img src="../public/uploads/qrcode/user/1688455489.jpg" alt="QrCode" class="img-fluid">
+                                        <img width="200px" height="auto" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=Email: <?= $email ?> | Fullname: <?= $fullname ?>&choe=UTF-8&chld=H|0" alt="addressqrcode">
                                     </div>
-                                    <!-- <div class="w-154 ml-20 qr-text">
-                                        <p class="mb-0 f-16 leading-22 gilroy-Semibold text-dark mt-25">Send or Receive
-                                            Money</p>
-                                        <p class="mb-0 f-14 leading-22 gilroy-medium text-gray-100 mt-8">Use the QR code
-                                            to easily handle your transactions.</p>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
                         <div class="row mt-20 gy-4">
                             <p class="mb-0 f-18 gilroy-Semibold text-dark">Account summary</p>
-                            <div class="col-12 col-xl-4">
-                                <div class="dash-profile-qr-div bg-white profile-mt-12">
-                                    <div class="d-flex justify-content-between qr-icon">
-                                        <p class="mb-0 f-12 leading-22 text-dark gilroy-Semibold">Your Total Capital</p>
-                                        <a href="../transactions" class="fil-btn-arow ml-12 d-flex align-items-center justify-content-center">
-                                            <svg class="nscaleX-1" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 3.96967C9.67678 4.26256 9.67678 4.73744 9.96967 5.03033L13.1893 8.25H3C2.58579 8.25 2.25 8.58579 2.25 9C2.25 9.41421 2.58579 9.75 3 9.75H13.1893L9.96967 12.9697C9.67678 13.2626 9.67678 13.7374 9.96967 14.0303C10.2626 14.3232 10.7374 14.3232 11.0303 14.0303L15.5303 9.53033C15.8232 9.23744 15.8232 8.76256 15.5303 8.46967L11.0303 3.96967C10.7374 3.67678 10.2626 3.67678 9.96967 3.96967Z" fill="white" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                    <div class="d-flex">
-                                        <p class="mb-0 f-24 leading-30 gilroy-Semibold l-s1 text-dark">5000 USD</p>
-
-                                    </div>
-                                    <button class="btn btn-lg btn-primary dash-print-btn mt-24 green-btn">
-
-                                        <span class="f-14 leading-20 gilroy-medium">View Wallets</span>
-                                    </button>
+                            <div class="col-12 col-xl-6">
+                                <div class="inv-terms bg-white d-flex justify-content-center">
+                                    <canvas id="myChart" style="width:100%;max-width:700px;height:auto;"></canvas>
                                 </div>
                             </div>
-                            <div class="col-12 col-xl-4">
+                            <div class="col-12 col-xl-6">
                                 <?php foreach ($data['last_transaction'] as $d) { ?>
                                     <div class="dash-profile-qr-div bg-white profile-mt-12">
                                         <div class="d-flex justify-content-between qr-icon">
@@ -610,6 +589,30 @@ include '../backend/udata.php';
     <script src="../public/user/customs/js/user-status.min.js"></script>
     <script src="../public/user/customs/js/user-transaction.min.js"></script>
     <script src="../public/user/customs/js/dashboard.min.js" type="text/javascript"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script>
+        var xValues = ["Stakes", "Investments", "Deposits", "Withdrawals", "Transfers", "Exchanges"];
+        var yValues = [1, 1, 0, 2, 3, 1];
+        var barColors = ['blue', 'brown', 'yellow', 'grey', 'red', 'green'];
+        new Chart("myChart", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "Track Investment"
+                },
+            }
+        });
+    </script>
+
     <!-- end js -->
 
 </body>

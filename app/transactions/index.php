@@ -168,7 +168,7 @@ include '../backend/udata.php';
                     <?php foreach ($data['transactions'] as $t) { ?>
 
 
-                        <div class="transac-parent cursor-pointer" data-bs-toggle="modal" data-bs-target="#transaction-Info-0">
+                        <div class="transac-parent cursor-pointer">
                             <div class="d-flex justify-content-between transac-child">
                                 <div class="d-flex w-50">
 

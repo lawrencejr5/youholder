@@ -105,9 +105,9 @@ include '../backend/udata.php';
                                             <tr class="bg-white">
                                                 <td>
                                                     <div class="td-p-20">
-                                                        <p class="mb- d-flex"><a href="" class="mb-0 f-16 leading-20 text-dark gilroy-medium cursor-pointer"><?= $i['plan'] ?> </a></p>
+                                                        <p class="mb- d-flex"><a href="./details.php?investId=<?= $i['id'] ?>" class="mb-0 f-16 leading-20 text-dark gilroy-medium cursor-pointer"><?= $i['plan'] ?> </a></p>
                                                         <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2">
-                                                            <?= $i['to_earn'] . ' ' . $i['currency'] ?> bi-weekly in 30 days
+                                                            <?= $i['to_earn'] . ' ' . $i['currency'] ?> daily for <?= $i['duration'] ?>
                                                         </p>
                                                     </div>
                                                 </td>
@@ -134,10 +134,10 @@ include '../backend/udata.php';
                                                 <td>
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <div class="td-p-20">
-                                                            <p class="mb-0 f-14 leading-14 gilroy-medium l-sp64 inv-status-badge bg-warning text-white" style="text-transform: capitalize;"><?= $i['status'] ?></p>
+                                                            <p class="mb-0 f-14 leading-14 gilroy-medium l-sp64 inv-status-badge bg-warning text-white" style="text-transform: capitalize; width: 65px;"><?= $i['status'] ?></p>
                                                         </div>
                                                         <div class="arrow-hover">
-                                                            <a href="" class="">
+                                                            <a href="./details.php?investId=<?= $i['id'] ?>" class="">
                                                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5312 1.52925C3.27085 1.7896 3.27085 2.21171 3.5312 2.47206L7.0598 6.00065L3.5312 9.52925C3.27085 9.7896 3.27085 10.2117 3.5312 10.4721C3.79155 10.7324 4.21366 10.7324 4.47401 10.4721L8.47401 6.47205C8.73436 6.21171 8.73436 5.7896 8.47401 5.52925L4.47401 1.52925C4.21366 1.2689 3.79155 1.2689 3.5312 1.52925Z" fill="#9998A0" />
                                                                 </svg>

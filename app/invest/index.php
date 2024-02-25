@@ -79,7 +79,7 @@ include '../backend/udata.php';
                                     <input type="hidden" value="<?= $i['min'] ?>" id="min">
                                     <input type="hidden" value="<?= $i['max'] ?>" id="max">
                                     <input type="hidden" value="<?= $i['id'] ?>" id="plan_id">
-                                    <input type="hidden" value="<?= $i['bi_weekly'] ?>" id="bperc">
+                                    <input type="hidden" value="<?= $i['duration'] ?>" id="duration">
                                     <input type="hidden" value="<?= $i['monthly'] ?>" id="mperc">
                                     <div class="row">
                                         <div class="col-md-12">
@@ -284,6 +284,7 @@ include '../backend/udata.php';
 
         const investBtn = document.querySelector('#investBtn')
         investBtn.addEventListener('click', () => {
+            investBtn.textContent = "......"
             const uid = document.querySelector('#uid').value
             const wid = document.querySelector('#wid').value
             const min = document.querySelector('#min').value
@@ -294,7 +295,7 @@ include '../backend/udata.php';
             const planId = document.querySelector('#plan_id').value
             const planName = document.querySelector('#plan').value
             const usdVal = document.querySelector('#converted_value').value
-            const bperc = document.querySelector('#bperc').value
+            const duration = document.querySelector('#duration').value
             const mperc = document.querySelector('#mperc').value
             if (!wname) {
                 toastr.error("Please select wallet", "Empty", {
@@ -315,6 +316,7 @@ include '../backend/udata.php';
                     hideMethod: "fadeOut",
                     tapToDismiss: !1
                 })
+                investBtn.textContent = "Try again"
             } else if (!amount) {
                 toastr.error("Insert amount you want to invest", "Empty", {
                     positionClass: "toast-top-center",
@@ -334,6 +336,7 @@ include '../backend/udata.php';
                     hideMethod: "fadeOut",
                     tapToDismiss: !1
                 })
+                investBtn.textContent = "Try again"
             } else if (parseFloat(bal) < parseFloat(amount)) {
                 toastr.error("Deposit into wallet to invest", "Not enough money", {
                     positionClass: "toast-top-center",
@@ -353,6 +356,7 @@ include '../backend/udata.php';
                     hideMethod: "fadeOut",
                     tapToDismiss: !1
                 })
+                investBtn.textContent = "Try again"
             } else if (parseFloat(usdVal) < parseFloat(min)) {
                 toastr.warning(`Min is ${min}`, "Below minimum", {
                     positionClass: "toast-top-center",
@@ -372,6 +376,7 @@ include '../backend/udata.php';
                     hideMethod: "fadeOut",
                     tapToDismiss: !1
                 })
+                investBtn.textContent = "Try again"
             } else if (parseFloat(usdVal) > parseFloat(max)) {
                 toastr.warning(`Max is ${max}`, "Above maximum", {
                     positionClass: "toast-top-center",
@@ -391,6 +396,7 @@ include '../backend/udata.php';
                     hideMethod: "fadeOut",
                     tapToDismiss: !1
                 })
+                investBtn.textContent = "Try again"
             } else if (!usdVal) {
                 toastr.warning("Please wait for amount to be converted", "Please wait...", {
                     positionClass: "toast-top-center",
@@ -410,6 +416,7 @@ include '../backend/udata.php';
                     hideMethod: "fadeOut",
                     tapToDismiss: !1
                 })
+                investBtn.textContent = "Try again"
             } else {
                 $.ajax({
                     url: '../backend/actions/invest.php',
@@ -422,8 +429,9 @@ include '../backend/udata.php';
                         wname,
                         planId,
                         planName,
-                        bperc,
+                        usdVal,
                         mperc,
+                        duration,
                     },
                     success: (res) => {
                         if (res.header == 'invested') {

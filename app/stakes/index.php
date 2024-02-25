@@ -105,7 +105,7 @@ include '../backend/udata.php';
                                             <tr class="bg-white">
                                                 <td>
                                                     <div class="td-p-20">
-                                                        <p class="mb- d-flex"><a href="https://demo.paymoney.techvill.net/investment-details/7" class="mb-0 f-16 leading-20 text-dark gilroy-medium cursor-pointer"><?= $s['plan_name'] ?> </a></p>
+                                                        <p class="mb- d-flex"><a href="./details.php?stakeId=<?= $s['id'] ?>" class="mb-0 f-16 leading-20 text-dark gilroy-medium cursor-pointer"><?= $s['plan_name'] ?> </a></p>
                                                         <p class="mb-0 f-13 leading-16 text-gray-100 gilroy-regular mt-2">
                                                             <?php echo $s['daily_earned'] . ' ' .  $s['crypto'] . ' daily for 365 days' ?>
                                                         </p>

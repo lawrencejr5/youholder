@@ -81,7 +81,7 @@ include '../backend/udata.php';
                                         </div>
                                         <div class="duration text-end">
                                             <p class="mb-0 f-13 leading-16 gilroy-medium text-dark">Duration</p>
-                                            <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2">30 Days</p>
+                                            <p class="mb-0 f-20 leading-24 text-primary gilroy-Semibold mt-2"><?= $i['dura'] ?></p>
                                         </div>
                                     </div>
 
@@ -98,10 +98,10 @@ include '../backend/udata.php';
                                     <div class="terms mt-20">
                                         <div class="d-flex justify-content-between">
                                             <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Profit cumulation</p>
-                                            <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">Bi-weekly(<?= $i['bi_weekly'] ?>%)</p>
+                                            <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">Daily (Monday - Sunday)</p>
                                         </div>
                                         <div class="d-flex justify-content-between mt-16">
-                                            <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Withdraw After Matured</p>
+                                            <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Withdraw Profit Before Matured</p>
                                             <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">No</p>
                                         </div>
                                         <div class="d-flex justify-content-between mt-16">
