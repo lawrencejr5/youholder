@@ -81,7 +81,7 @@ include '../backend/udata.php';
                             <!-- Recipient -->
                             <div class="mt-28 label-top">
                                 <label class="gilroy-medium text-gray-100 mb-2 f-15">Recipient</label>
-                                <input type="email" class="form-control input-form-control apply-bg" name="receiver" id="receiver" value="" placeholder="Please enter valid email (ex: user@gmail.com)" onkeyup="fetchUsers()">
+                                <input type="text" class="form-control input-form-control apply-bg" name="receiver" id="receiver" value="" placeholder="Please enter valid account no (ex: yf-user001234567)" onkeyup="fetchUsers()">
                                 <span class="receiverError custom-error"></span>
                             </div>
                             <p class="mb-0 text-gray-100 gilroy-regular f-12 mt-2"><em id="username"></em></p>
@@ -201,7 +201,7 @@ include '../backend/udata.php';
                 const from = document.querySelector('#from')
                 const to = document.querySelector('#to')
                 const profile_pic = document.querySelector('#profile_pic')
-                const singleUser = users.find((user) => user.email === receiver)
+                const singleUser = users.find((user) => user.account_no === receiver)
                 uid.value = singleUser.id
                 from.value = `From: <?= $fullname ?>`
                 to.value = `To: ${singleUser.fname} ${singleUser.lname}`

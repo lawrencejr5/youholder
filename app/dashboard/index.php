@@ -76,8 +76,9 @@ include '../backend/udata.php';
                                         </svg>
                                     </a>
                                 </p>
-                                <p class="mb-0 f-16 leading-18 gilroy-medium text-gray-100 mt-1 dash-w-262">Welcome,
-                                    here is a brief summary of your account.</p>
+                                <!-- <p class="mb-0 f-16 leading-18 gilroy-medium text-gray-100 mt-1 dash-w-262">Welcome,
+                                    here is a brief summary of your account.</p> -->
+                                <p class="mb-0 f-16 leading-18 gilroy-medium text-gray-100 mt-1 dash-w-262">Account no: <?= $account_no ?> | Account Level: <?= $level ?></p>
                             </div>
                         </div>
 
@@ -155,13 +156,21 @@ include '../backend/udata.php';
                                 </div>
                                 <div class="d-flex">
                                     <div class="dash-profile-qrCode mt-20">
-                                        <img width="200px" height="auto" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=Email: <?= $email ?> | Fullname: <?= $fullname ?>&choe=UTF-8&chld=H|0" alt="addressqrcode">
+                                        <img width="200px" height="auto" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=<?= $account_no ?>&choe=UTF-8&chld=H|0" alt="account-qrcode">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row mt-20 gy-4">
                             <p class="mb-0 f-18 gilroy-Semibold text-dark">Account summary</p>
+                            <form>
+                                <input type="hidden" value="<?= $numOfDeposits ?>" id="nd">
+                                <input type="hidden" value="<?= $numOfExchanges ?>" id="ne">
+                                <input type="hidden" value="<?= $numOfInvestments ?>" id="ni">
+                                <input type="hidden" value="<?= $numOfStakes ?>" id="ns">
+                                <input type="hidden" value="<?= $numOfTransfers ?>" id="nt">
+                                <input type="hidden" value="<?= $numOfWithdrawals ?>" id="nw">
+                            </form>
                             <div class="col-12 col-xl-6">
                                 <div class="inv-terms bg-white d-flex justify-content-center">
                                     <canvas id="myChart" style="width:100%;max-width:700px;height:auto;"></canvas>
@@ -191,7 +200,7 @@ include '../backend/udata.php';
 
 
                         <?php if ($level == 1) { ?>
-                            <div class="col-12 col-xl-4">
+                            <div class="col-12 col-xl-6">
                                 <div class="contact-support bg-white">
                                     <div class="d-flex">
                                         <div class="messages-box">
@@ -224,7 +233,7 @@ include '../backend/udata.php';
                                 </div>
                             </div>
                         <?php } elseif ($level == 2) { ?>
-                            <div class="col-12 col-xl-4">
+                            <div class="col-12 col-xl-6">
                                 <div class="contact-support bg-white">
                                     <div class="d-flex">
                                         <div class="messages-box">
@@ -592,9 +601,15 @@ include '../backend/udata.php';
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script>
-        var xValues = ["Stakes", "Investments", "Deposits", "Withdrawals", "Transfers", "Exchanges"];
-        var yValues = [1, 1, 0, 2, 3, 1];
-        var barColors = ['blue', 'brown', 'yellow', 'grey', 'red', 'green'];
+        const ne = document.querySelector('#ne').value
+        const ns = document.querySelector('#ns').value
+        const ni = document.querySelector('#ni').value
+        const nw = document.querySelector('#nw').value
+        const nd = document.querySelector('#nd').value
+        const nt = document.querySelector('#nt').value
+        const xValues = ["Stakes", "Investments", "Deposits", "Withdrawals", "Transfers", "Exchanges"];
+        const yValues = [ns, ni, nd, nw, nt, ne];
+        const barColors = ['blue', 'brown', 'yellow', 'grey', 'red', 'green'];
         new Chart("myChart", {
             type: "bar",
             data: {
@@ -607,7 +622,7 @@ include '../backend/udata.php';
             options: {
                 title: {
                     display: true,
-                    text: "Track Investment"
+                    text: "Acccount Summary Chart"
                 },
             }
         });

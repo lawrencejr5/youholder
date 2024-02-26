@@ -43,18 +43,19 @@ class Modules extends Connection
     }
 
     // Function to create account
-    public function register($fname, $lname, $email, $phone, $password, $otp)
+    public function register($fname, $lname, $email, $account_no, $phone, $password, $otp)
     {
         if ($this->checkEmailExists($email) > 0) {
             $this->msg = "exists";
             return $this->msg;
         } else {
-            $this->sql = "INSERT INTO users(fname, lname, email, phone, password, verify_code) VALUES(:fname, :lname, :email, :phone, :password, :verify_code)";
+            $this->sql = "INSERT INTO users(fname, lname, email, account_no, phone, password, verify_code) VALUES(:fname, :lname, :email, :account_no, :phone, :password, :verify_code)";
             try {
                 $this->stmt = $this->conn->prepare($this->sql);
                 $this->stmt->bindParam(':fname', $fname);
                 $this->stmt->bindParam(':lname', $lname);
                 $this->stmt->bindParam(':email', $email);
+                $this->stmt->bindParam(':account_no', $account_no);
                 $this->stmt->bindParam(':phone', $phone);
                 $this->stmt->bindParam(':password', $password);
                 $this->stmt->bindParam(':verify_code', $otp);
@@ -980,6 +981,101 @@ class Modules extends Connection
             return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $th) {
             return $th->getMessage();
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    // ****** DATA ROWCOUNT ********
+
+    public function numOfUserStakes($uid)
+    {
+        $this->sql = "SELECT * FROM stakes WHERE uid = :uid";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->execute();
+            $this->stmt->fetchAll();
+            return $this->stmt->rowCount();
+        } catch (PDOException $e) {
+            return false . $e->getMessage();
+        }
+    }
+
+    public function numOfUserInvestments($uid)
+    {
+        $this->sql = "SELECT * FROM investments WHERE uid = :uid";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->execute();
+            $this->stmt->fetchAll();
+            return $this->stmt->rowCount();
+        } catch (PDOException $e) {
+            return false . $e->getMessage();
+        }
+    }
+
+    public function numOfUserDeposits($uid)
+    {
+        $this->sql = "SELECT * FROM deposits WHERE uid = :uid AND transaction_type = 'deposit' AND approved = '1'";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->execute();
+            $this->stmt->fetchAll();
+            return $this->stmt->rowCount();
+        } catch (PDOException $e) {
+            return false . $e->getMessage();
+        }
+    }
+
+    public function numOfUserTransfers($uid)
+    {
+        $this->sql = "SELECT * FROM deposits WHERE uid = :uid AND transaction_type = 'transfer to' AND approved = '1'";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->execute();
+            $this->stmt->fetchAll();
+            return $this->stmt->rowCount();
+        } catch (PDOException $e) {
+            return false . $e->getMessage();
+        }
+    }
+
+    public function numOfUserExchanges($uid)
+    {
+        $this->sql = "SELECT * FROM deposits WHERE uid = :uid AND transaction_type = 'exchange to' AND approved = '1'";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->execute();
+            $this->stmt->fetchAll();
+            return $this->stmt->rowCount();
+        } catch (PDOException $e) {
+            return false . $e->getMessage();
+        }
+    }
+
+    public function numOfUserWithdrawals($uid)
+    {
+        $this->sql = "SELECT * FROM withdrawals WHERE uid = :uid AND transaction_type = 'withdrawal' AND verified = '1'";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->execute();
+            $this->stmt->fetchAll();
+            return $this->stmt->rowCount();
+        } catch (PDOException $e) {
+            return false . $e->getMessage();
         }
     }
 }

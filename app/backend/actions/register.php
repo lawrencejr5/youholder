@@ -10,8 +10,10 @@ if (isset($_POST['fname'])) {
     $email = $_POST['email'];
     $pass = $_POST['pass'];
     $otp = rand(100000, 999999);
+    $no = rand(1234567, 9999999);
+    $account_no = 'yf-' . strtolower($lname) . '00' . $no;
 
-    $registered = $modules->register($fname, $lname, $email, $phone, $pass, $otp);
+    $registered = $modules->register($fname, $lname, $email, $account_no, $phone, $pass, $otp);
 
     if ($registered == 'exists') {
         $response['header'] = 'exists';

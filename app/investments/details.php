@@ -169,7 +169,7 @@ include '../backend/udata.php';
                                     </div>
                                     <div class="d-flex justify-content-between mt-20">
                                         <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Days Remaining</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= $s['durationInt'] - $s['num_of_days'] ?></p>
+                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= $s['durationInt'] - $s['num_of_days'] ?> Days</p>
                                     </div>
                                     <div class="d-flex justify-content-between mt-20">
                                         <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Available to withdraw</p>

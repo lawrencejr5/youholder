@@ -16,6 +16,7 @@ foreach ($data['user'] as $u) {
     $lname = $u['lname'];
     $fullname = $u['fname'] . ' ' . $u['lname'];
     $email = $u['email'];
+    $account_no = $u['account_no'];
     $phone = $u['phone'];
     $profile_pic = $u['profile_pic'];
     $address1 = $u['address1'];
@@ -43,3 +44,13 @@ $data['myStakes'] = $modules->getStakes($uID);
 $data['invest_plans'] = $modules->getInvestPlans();
 $data['myInvestments'] = $modules->getInvestments($uID);
 $data['last_transaction'] = $modules->getLastTransaction($uID);
+
+
+// Row counts
+
+$numOfDeposits = $modules->numOfUserDeposits($uID);
+$numOfWithdrawals = $modules->numOfUserWithdrawals($uID);
+$numOfInvestments = $modules->numOfUserInvestments($uID);
+$numOfStakes = $modules->numOfUserStakes($uID);
+$numOfExchanges = $modules->numOfUserExchanges($uID);
+$numOfTransfers = $modules->numOfUserTransfers($uID);
