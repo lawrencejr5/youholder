@@ -54,7 +54,7 @@ include '../backend/udata.php';
 
     <!-- sidebar section -->
     <!-- Sidebar Start -->
-    <?php $page = "stakes"  ?>
+    <?php $page = "investments"  ?>
     <?php include "../master/sidenav.php" ?>
     <div class="my-container active-cont bg-white-50">
 
@@ -89,7 +89,11 @@ include '../backend/udata.php';
                                             <p class="mb-0 f-16 leading-20 text-gray gilroy-medium">Investment Plan</p>
                                             <div class="mb-0 d-flex gilroy-Semibold mt-2 gap-12">
                                                 <span class="f-26 leading-32 text-dark platinum"><?= $s['plan'] ?></span>
-                                                <span class="inv-status-badge f-11 leading-14 bg-warning text-white d-flex justify-content-center align-items-center align-self-center"><?= $s['status'] ?></span>
+                                                <?php if ($s['status'] == 'ended') { ?>
+                                                    <span class="inv-status-badge f-11 leading-14 bg-gray text-white d-flex justify-content-center align-items-center align-self-center" style="text-transform: capitalize;"><?= $s['status'] ?></span>
+                                                <?php } elseif ($s['status'] == 'active') { ?>
+                                                    <span class="inv-status-badge f-11 leading-14 bg-warning text-white d-flex justify-content-center align-items-center align-self-center" style="text-transform: capitalize;"><?= $s['status'] ?></span>
+                                                <?php } ?>
                                             </div>
                                             <p class="mb-0 f-16 leading-20 text-gray-100 gilroy-medium mt-2">
                                                 Daily <?= $s['to_earn'] ?> <?= $s['currency'] ?> for <?= $s['duration'] ?>
@@ -123,6 +127,7 @@ include '../backend/udata.php';
                             <div class="col-xl-12">
                                 <div class="invest_capital bg-white h-100 d-flex flex-column">
                                     <p class="mb-0 f-14 leading-17 text-gray-100 gilroy-medium">Available to withdraw</p>
+                                    <p class="mb-0 f-14 leading-17 gilroy-medium text-warning-100 mt-12">Note that this amount is being deposited into your <?= $s['currency'] ?> wallet so make sure to go to wallets and add a/an <?= $s['currency'] ?> wallet before claiming rewards.</p>
                                     <p class="mb-0 f-22 leading-24 text-primary gilroy-Semibold mt-2"><?= $s['available_withdrawal'] ?> <?= $s['currency'] ?></p>
 
 
@@ -167,14 +172,6 @@ include '../backend/udata.php';
                                         <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Staking ends at</p>
                                         <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= $s['start_date'] ?></p>
                                     </div>
-                                    <div class="d-flex justify-content-between mt-20">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Days Remaining</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= $s['durationInt'] - $s['num_of_days'] ?> Days</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-20">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Available to withdraw</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= $s['available_withdrawal'] ?> <?= $s['currency'] ?></p>
-                                    </div>
                                     <form action="">
                                         <input type="hidden" value="<?= $s['num_of_days'] ?>" id="num_of_days">
                                         <input type="hidden" value="<?= $d = ($s['durationInt'] - $s['num_of_days']) ?>" id="days_remaining">
@@ -186,62 +183,6 @@ include '../backend/udata.php';
 
                     <!-- main-containt -->
 
-                </div>
-            </div>
-        </div>
-        <div class="modal fade modal-overly" id="transaction-Info-0" tabindex="-1" aria-hidden="true">
-            <div class="transac modal-dialog modal-dialog-centered modal-lg res-dialog">
-                <div class="modal-content modal-transac transaction-modal">
-                    <div class="modal-body modal-themeBody">
-                        <div class="d-flex position-relative modal-res">
-                            <button type="button" class="cursor-pointer close-btn" data-bs-dismiss="modal" aria-label="Close">
-                                <svg class="position-absolute close-btn text-gray-100" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.24408 5.24408C5.56951 4.91864 6.09715 4.91864 6.42259 5.24408L10 8.82149L13.5774 5.24408C13.9028 4.91864 14.4305 4.91864 14.7559 5.24408C15.0814 5.56951 15.0814 6.09715 14.7559 6.42259L11.1785 10L14.7559 13.5774C15.0814 13.9028 15.0814 14.4305 14.7559 14.7559C14.4305 15.0814 13.9028 15.0814 13.5774 14.7559L10 11.1785L6.42259 14.7559C6.09715 15.0814 5.56951 15.0814 5.24408 14.7559C4.91864 14.4305 4.91864 13.9028 5.24408 13.5774L8.82149 10L5.24408 6.42259C4.91864 6.09715 4.91864 5.56951 5.24408 5.24408Z" fill="currentColor" />
-                                </svg>
-                            </button>
-
-                            <div class="ml-20 trans-details">
-                                <p class="mb-0 mt-9 text-dark dark-5B f-20 gilroy-Semibold transac-title">
-                                    Are you sure you would like to unstake?</p>
-
-                                <!-- Crypto Address -->
-                                <?php foreach ($data['singleStaking'] as $s) { ?>
-                                    <div class="row gx-sm-5">
-                                        <div class="col-6">
-                                            <p class="mb-0 mt-4 text-gray-100 gilroy-medium f-13 leading-20 r-f-9 r-mt-11">
-                                                Total Earned</p>
-                                            <p class="mb-0 mt-5p text-dark gilroy-medium f-15 leading-22 r-text">
-                                                <?= $s['earned'] ?> <?= $s['crypto'] ?></p>
-                                        </div>
-                                        <div class="col-6">
-                                            <p class="mb-0 mt-4 text-gray-100 gilroy-medium f-13 leading-20 r-f-9 r-mt-11">
-                                                Expected Earnings</p>
-                                            <p class="mb-0 mt-5p text-dark gilroy-medium f-15 leading-22 r-text">
-                                                <?= $s['expected'] ?> <?= $s['crypto'] ?></p>
-                                        </div>
-                                        <div class="col-12 mt-32">
-                                            <form>
-                                                <input type="hidden" value="<?= $_GET['stakeId'] ?>" id="stakeId">
-                                                <button type="button" class="btn btn-xs btn-danger w-160" id="unstakeBtn">
-                                                    <span class="mb-0 f-14 leading-20 gilroy-medium">Yes, go ahead</span>
-                                                </button>
-                                                <a class="btn btn-xs btn-warning cursor-pointer ml-12 w-160 yellow-btn" data-bs-dismiss="modal" aria-label="Close">
-                                                    <span class="mb-0 f-14 leading-20 gilroy-medium text-dark">Cancel</span>
-                                                </a>
-                                            </form>
-                                        </div>
-                                    </div>
-                                <?php } ?>
-
-                                <!-- Transaction Note -->
-
-
-                                <!-- Accept and Cancel button -->
-
-                                <!-- Open dispute -->
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

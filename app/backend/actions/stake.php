@@ -20,7 +20,7 @@ if (isset($_POST['staked'])) {
     $expected = ($apy / 100) * $staked;
 
     if ($modules->stakeWithdrawal($uid, $wid, $wname, $amount, 1, 'staking')) {
-        if ($modules->stake($uid, $planId, $planName, $staked, $expected, $earned, $start_date, $end_date, $last_updated)) {
+        if ($modules->stake($uid, $planId, $wid, $planName, $staked, $expected, $earned, $start_date, $end_date, $last_updated)) {
             $res['header'] = 'staked';
         }
     }

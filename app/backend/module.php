@@ -339,13 +339,14 @@ class Modules extends Connection
         }
     }
 
-    public function stake($uid, $plan_id, $plan_name, $staked, $expected, $earned, $start, $end, $last_updated)
+    public function stake($uid, $plan_id, $wid, $plan_name, $staked, $expected, $earned, $start, $end, $last_updated)
     {
-        $this->sql = "INSERT INTO stakes(uid, plan_id, plan_name, staked, daily_earned, earned, expected, start_date, end_date, last_updated) VALUES(:uid, :plan_id, :plan_name, :staked, :daily_earned, :earned, :expected, :start_date, :end_date, :last_updated)";
+        $this->sql = "INSERT INTO stakes(uid, plan_id, wid, plan_name, staked, daily_earned, earned, expected, start_date, end_date, last_updated) VALUES(:uid, :plan_id, :wid, :plan_name, :staked, :daily_earned, :earned, :expected, :start_date, :end_date, :last_updated)";
         try {
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':uid', $uid);
             $this->stmt->bindParam(':plan_id', $plan_id);
+            $this->stmt->bindParam(':wid', $wid);
             $this->stmt->bindParam(':plan_name', $plan_name);
             $this->stmt->bindParam(':staked', $staked);
             $this->stmt->bindParam(':daily_earned', $earned);
@@ -361,13 +362,12 @@ class Modules extends Connection
         }
     }
 
-    public function stakeUp($id, $earned, $status, $time)
+    public function stakeUp($id, $earned, $time)
     {
-        $this->sql = "UPDATE stakes SET earned = :earned, last_updated = :last_updated WHERE id = :id AND status = :status";
+        $this->sql = "UPDATE stakes SET earned = :earned, last_updated = :last_updated WHERE id = :id";
         try {
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':earned', $earned);
-            $this->stmt->bindParam(':status', $status);
             $this->stmt->bindParam(':last_updated', $time);
             $this->stmt->bindParam(':id', $id);
             $this->stmt->execute();
@@ -402,6 +402,83 @@ class Modules extends Connection
             return true;
         } catch (PDOException $th) {
             return $th->getMessage();
+        }
+    }
+
+    public function stakeAddDay($id, $num_of_days)
+    {
+        $this->sql = "UPDATE stakes SET num_of_days = :num_of_days WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':num_of_days', $num_of_days);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function stakeReduceWithdrawDay($id, $days_until_withdrawal, $last_updated)
+    {
+        $this->sql = "UPDATE stakes SET days_until_withdrawal = :days_until_withdrawal, last_updated = :last_updated WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':days_until_withdrawal', $days_until_withdrawal);
+            $this->stmt->bindParam(':last_updated', $last_updated);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function stakeAvailableWithdrawal($id, $available_withdrawal)
+    {
+        $this->sql = "UPDATE stakes SET available_withdrawal = :available_withdrawal WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':available_withdrawal', $available_withdrawal);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function stakeCapitalReturned($id)
+    {
+        $this->sql = "UPDATE stakes SET capital_returned = '1' WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function claimStakeProfit($uid, $wallet_id, $currency, $wallet, $deposit_amt, $return_amt, $transaction_type, $approved)
+    {
+        $this->sql = "INSERT INTO deposits(uid, wallet_id, currency, wallet, deposit_amt, return_amt, transaction_type, approved) 
+        VALUES(:uid, :wallet_id, :currency, :wallet, :deposit_amt, :return_amt, :transaction_type, :approved)";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->bindParam(':wallet_id', $wallet_id);
+            $this->stmt->bindParam(':currency', $currency);
+            $this->stmt->bindParam(':wallet', $wallet);
+            $this->stmt->bindParam(':deposit_amt', $deposit_amt);
+            $this->stmt->bindParam(':return_amt', $return_amt);
+            $this->stmt->bindParam(':transaction_type', $transaction_type);
+            $this->stmt->bindParam(':approved', $approved);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $e) {
+            return false . $e->getMessage();
         }
     }
 

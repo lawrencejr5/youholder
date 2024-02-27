@@ -20,6 +20,8 @@ include '../backend/udata.php';
     <link rel="stylesheet" href="../public/dist/libraries/bootstrap-5.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/dist/plugins/select2-4.1.0-rc.0/css/select2.min.css">
     <link rel="stylesheet" href="../public/user/templates/css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- end css -->
 
     <!-- favicon -->
@@ -86,7 +88,13 @@ include '../backend/udata.php';
                                             <p class="mb-0 f-16 leading-20 text-gray gilroy-medium">Staking Plan</p>
                                             <div class="mb-0 d-flex gilroy-Semibold mt-2 gap-12">
                                                 <span class="f-26 leading-32 text-dark platinum"><?= $s['plan_name'] ?></span>
-                                                <span class="inv-status-badge f-11 leading-14 bg-warning text-white d-flex justify-content-center align-items-center align-self-center"><?= $s['status'] ?></span>
+                                                <?php if ($s['status'] == 'ended') { ?>
+                                                    <span class="inv-status-badge f-11 leading-14 bg-gray text-white d-flex justify-content-center align-items-center align-self-center" style="text-transform: capitalize;"><?= $s['status'] ?></span>
+                                                <?php } elseif ($s['status'] == 'staking') { ?>
+                                                    <span class="inv-status-badge f-11 leading-14 bg-warning text-white d-flex justify-content-center align-items-center align-self-center" style="text-transform: capitalize;"><?= $s['status'] ?></span>
+                                                <?php } elseif ($s['status'] == 'unstaked') { ?>
+                                                    <span class="inv-status-badge f-11 leading-14 bg-danger text-white d-flex justify-content-center align-items-center align-self-center style=" text-transform: capitalize;"><?= $s['status'] ?></span>
+                                                <?php } ?>
                                             </div>
                                             <p class="mb-0 f-16 leading-20 text-gray-100 gilroy-medium mt-2">
                                                 Daily <?= $s['daily_earned'] ?> <?= $s['crypto'] ?> for 365 days
@@ -106,12 +114,8 @@ include '../backend/udata.php';
                                             <p class="mb-0 f-22 leading-24 text-dark gilroy-Semibold mt-2 text-start"><?= $s['earned'] ?> <?= $s['crypto'] ?></p>
                                         </div>
                                     </div>
-                                    <div class="dash-right-profile mt-24 d-flex align-items-end">
-                                        <?php if ($s['status'] == 'unstaked' || $s['status'] == 'ended') { ?>
-                                            <a class="btn btn-lg btn-success cursor-pointer ml-12 w-160 yellow-btn">
-                                                <span class="mb-0 f-14 leading-20 gilroy-medium text-dark">Withdraw</span>
-                                            </a>
-                                        <?php } elseif ($s['status'] == 'staking') { ?>
+                                    <div class="dash-right-profile mt-12 d-flex align-items-end">
+                                        <?php if ($s['status'] == 'staking') { ?>
                                             <a class="btn btn-xs btn-danger w-160" data-bs-toggle="modal" data-bs-target="#transaction-Info-0">
                                                 <span class="mb-0 f-14 leading-20 gilroy-medium">Unstake</span>
                                             </a>
@@ -120,10 +124,45 @@ include '../backend/udata.php';
                                 </div>
                             </div>
                         </div>
+                        <?php if ($s['status'] == 'ended' || $s['status'] == 'unstaked') { ?>
+                            <div class="row mt-24 inv-row-gaps">
+                                <div class="col-xl-12">
+                                    <div class="inv-terms bg-white d-flex justify-content-center">
+                                        <canvas id="myChart2" style="width:100%;max-width:700px;height:auto;"></canvas>
+                                    </div>
+                                    <form>
+                                        <input type="hidden" value="<?= $s['days_until_withdrawal'] ?>" id="days_until_withdrawal">
+                                    </form>
+                                </div>
+                            </div>
+                        <?php } elseif ($s['status'] == 'staking') { ?>
+                            <div class="row mt-24 inv-row-gaps">
+                                <div class="col-xl-12">
+                                    <div class="inv-terms bg-white d-flex justify-content-center">
+                                        <canvas id="myChart" style="width:100%;max-width:700px;height:auto;"></canvas>
+                                    </div>
+                                    <form>
+                                        <input type="hidden" value="<?= $s['num_of_days'] ?>" id="stakeDays">
+                                    </form>
+                                </div>
+                            </div>
+                        <?php } ?>
                         <div class="row mt-24 inv-row-gaps">
                             <div class="col-xl-12">
-                                <div class="inv-terms bg-white d-flex justify-content-center">
-                                    <canvas id="myChart" style="width:100%;max-width:700px;height:auto;"></canvas>
+                                <div class="invest_capital bg-white h-100 d-flex flex-column">
+                                    <p class="mb-0 f-14 leading-17 text-gray-100 gilroy-medium">Available to claim</p>
+                                    <p class="mb-0 f-14 leading-17 gilroy-medium text-warning-100 mt-12">Note that this amount is being deposited into your <?= $s['crypto'] ?> wallet so make sure to go to wallets and add a/an <?= $s['crypto'] ?> wallet before claiming rewards.</p>
+                                    <p class="mb-0 f-22 leading-24 text-primary gilroy-Semibold mt-2"><?= $s['available_withdrawal'] ?> <?= $s['crypto'] ?></p>
+                                    <form class="d-flex justify-content-end">
+                                        <input type="hidden" value="<?= $s['available_withdrawal'] ?>" id="amt">
+                                        <input type="hidden" value="<?= $s['crypto'] ?>" id="cur">
+                                        <input type="hidden" value="<?= $s['uid'] ?>" id="uid">
+                                        <input type="hidden" value="<?= $s['wid'] ?>" id="wid">
+                                        <input type="hidden" value="<?= $s['id'] ?>" id="id">
+                                        <?php if ($s['available_withdrawal'] > 0) { ?>
+                                            <button type="button" id="withdrawProfit" class="btn btn-success fw-bold">Claim</button>
+                                        <?php } ?>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -138,12 +177,8 @@ include '../backend/udata.php';
                                         <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= $s['staked'] ?> <?= $s['crypto'] ?></p>
                                     </div>
                                     <div class="d-flex justify-content-between mt-20">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Net profit</p>
+                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Expected profit</p>
                                         <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= $s['expected'] ?> <?= $s['crypto'] ?></p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-20">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Payment method</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark">Wallet</p>
                                     </div>
                                     <div class="d-flex justify-content-between mt-20">
                                         <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Staking started at</p>
@@ -151,11 +186,15 @@ include '../backend/udata.php';
                                     </div>
                                     <div class="d-flex justify-content-between mt-20">
                                         <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Staking ends at</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= $s['start_date'] ?></p>
+                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= $s['end_date'] ?></p>
                                     </div>
                                     <div class="d-flex justify-content-between mt-20">
                                         <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Daily earn</p>
                                         <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= $s['earned'] ?> <?= $s['crypto'] ?></p>
+                                    </div>
+                                    <div class="d-flex justify-content-between mt-20">
+                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Last updated</p>
+                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= date('D, M d Y h:m:s a', $s['last_updated']) ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -323,6 +362,7 @@ include '../backend/udata.php';
     <script src="../public/user/templates/js/chart.umd.min.js"></script>
     <script src="../public/user/templates/js/main.min.js"></script>
     <script src="../public/user/customs/js/common.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
     <script>
@@ -351,9 +391,60 @@ include '../backend/udata.php';
             }
         })
     </script>
+    <script type="text/javascript">
+        const withdrawProfit = document.querySelector('#withdrawProfit')
+        withdrawProfit.addEventListener('click', () => {
+            withdrawProfit.textContent = "Claiming..."
+            const id = document.querySelector('#id').value
+            const uid = document.querySelector('#uid').value
+            const wid = document.querySelector('#wid').value
+            const cur = document.querySelector('#cur').value
+            const amt = document.querySelector('#amt').value
+
+            $.ajax({
+                url: '../backend/actions/claimStakeProfit.php',
+                dataType: 'json',
+                type: 'post',
+                data: {
+                    id,
+                    uid,
+                    wid,
+                    cur,
+                    amt
+                },
+                success: (res) => {
+                    if (res.header == 'claimed') {
+                        toastr.success(`${amt} ${cur} has been deposited in your ${cur} wallet`, "Claimed", {
+                            positionClass: "toast-top-center",
+                            timeOut: 5e3,
+                            closeButton: !0,
+                            debug: !1,
+                            newestOnTop: !0,
+                            progressBar: !0,
+                            preventDuplicates: !0,
+                            onclick: null,
+                            showDuration: "300",
+                            hideDuration: "1000",
+                            extendedTimeOut: "1000",
+                            showEasing: "swing",
+                            hideEasing: "linear",
+                            showMethod: "fadeIn",
+                            hideMethod: "fadeOut",
+                            tapToDismiss: !1
+                        })
+                        setTimeout(() => {
+                            window.location.reload()
+                        }, 3000)
+                    }
+                }
+            })
+        })
+    </script>
     <script>
+        const stakeDays = document.querySelector('#stakeDays').value
+        const remainingDays = 365 - stakeDays;
         var xValues = ["Days stayed", "Days remaining"];
-        var yValues = [1, 2];
+        var yValues = [stakeDays, remainingDays];
         var barColors = ['#130e80', 'brown'];
         new Chart("myChart", {
             type: "doughnut",
@@ -367,7 +458,28 @@ include '../backend/udata.php';
             options: {
                 title: {
                     display: true,
-                    text: "Track Staking"
+                    text: "Staking days"
+                }
+            }
+        });
+
+        const days_until_withdrawal = document.querySelector('#days_until_withdrawal').value
+        var xValues = ["Total days", "Days remaining"];
+        var yValues = [29, days_until_withdrawal];
+        var barColors = ['#130e80', 'red'];
+        new Chart("myChart2", {
+            type: "doughnut",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "Days until capital return"
                 }
             }
         });

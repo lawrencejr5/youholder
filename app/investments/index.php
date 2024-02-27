@@ -134,7 +134,11 @@ include '../backend/udata.php';
                                                 <td>
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <div class="td-p-20">
-                                                            <p class="mb-0 f-14 leading-14 gilroy-medium l-sp64 inv-status-badge bg-warning text-white" style="text-transform: capitalize; width: 65px;"><?= $i['status'] ?></p>
+                                                            <?php if ($i['status'] == 'ended') { ?>
+                                                                <p class="mb-0 f-14 leading-14 gilroy-medium l-sp64 inv-status-badge bg-dark text-white" style="text-transform: capitalize;"><?= $i['status'] ?></p>
+                                                            <?php } elseif ($i['status'] == 'active') { ?>
+                                                                <p class="mb-0 f-14 leading-14 gilroy-medium l-sp64 inv-status-badge bg-success text-white" style="text-transform: capitalize;"><?= $i['status'] ?></p>
+                                                            <?php } ?>
                                                         </div>
                                                         <div class="arrow-hover">
                                                             <a href="./details.php?investId=<?= $i['id'] ?>" class="">
