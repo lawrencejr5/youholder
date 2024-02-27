@@ -1,3 +1,10 @@
+<div class="loading-container my-container bg-white-50">
+    <div class="loading-center">
+        <div class="loading1 loading"></div>
+        <div class="loading2 loading"></div>
+        <div class="loading3 loading"></div>
+    </div>
+</div>
 <!-- sidebar section -->
 <!-- Sidebar Start -->
 <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
@@ -240,3 +247,11 @@
 </div>
 <!-- Sidebar End -->
 <!-- end sidebar section -->
+
+<script type="text/javascript">
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            document.querySelector('.loading-container').style.display = 'none'
+        }, 1000)
+    })
+</script>
