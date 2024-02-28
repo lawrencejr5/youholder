@@ -167,7 +167,7 @@ include '../backend/udata.php';
                 const test = Object.values(data)
                 const val = test[2];
                 if (!val) {
-                    return false
+                    return amount
                 }
                 return val
             } catch (error) {
@@ -181,11 +181,7 @@ include '../backend/udata.php';
                 try {
                     const coin = elem.dataset.coin
                     const val = await convert('USD', coin, 1)
-                    if (val = undefined) {
-                        return false
-                    } else {
-                        elem.textContent = `1 ${coin} = ${val} USD`
-                    }
+                    elem.textContent = `1 ${coin} = ${val} USD`
                 } catch (err) {
                     elem.textContent = "Network err"
                 }
@@ -194,7 +190,7 @@ include '../backend/udata.php';
         setUsdVal()
         setInterval(() => {
             setUsdVal()
-        }, 100000000)
+        }, 10000)
     </script>
 
     <script type="text/javascript">

@@ -165,6 +165,10 @@ include '../backend/udata.php';
                             </div>
                         </form>
                     </div>
+                    <?php if ($numOfTransactions == 0) { ?>
+                        <p class="mb-0 f-18 leading-22 text-dark gilroy-Semibold">Nothing to see here...</p>
+                        <img src="../public/dist/images/not-found.png" class="mt-24" alt="">
+                    <?php } ?>
                     <?php foreach ($data['transactions'] as $t) { ?>
 
 

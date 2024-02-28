@@ -160,7 +160,10 @@ include '../backend/udata.php';
                         </div>
                     </div>
                     <!-- main-containt -->
-
+                    <?php if ($numOfInvestments == 0) { ?>
+                        <p class="mb-0 f-18 leading-22 text-dark gilroy-Semibold">Nothing to see here...</p>
+                        <img src="../public/dist/images/not-found.png" class="mt-24" alt="">
+                    <?php } ?>
                 </div>
             </div>
         </div>

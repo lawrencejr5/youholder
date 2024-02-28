@@ -15,8 +15,8 @@
 	<link rel="stylesheet" href="./public/frontend/templates/css/style.min.css">
 	<link rel="stylesheet" href="./public/frontend/templates/css/owl-css/owl.min.css">
 	<link rel="stylesheet" href="./public/dist/plugins/select2-4.1.0-rc.0/css/select2.min.css">
-	<link href="/youholder/public/icons/yield.png" rel="shortcut icon" type="image/x-icon" />
-	<link href="/youholder/public/icons/yield.png" rel="apple-touch-icon" />
+	<link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+	<link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" type="text/css" href="./public/dist/plugins/intl-tel-input-17.0.19/css/intlTelInput.min.css">
 
@@ -39,7 +39,7 @@
 			<div class="d-flex justify-content-start position-fixed mt-24 ml-18">
 				<div class="logo-div">
 					<a href="/youholder/">
-						<img src="/youholder/public/logos/yield-logo.png" height="auto" width="100px" alt="Brand Logo">
+						<img src="/youholder/public/logos/yield-logo.png" height="auto" width="150px" alt="Brand Logo">
 					</a>
 				</div>
 			</div>

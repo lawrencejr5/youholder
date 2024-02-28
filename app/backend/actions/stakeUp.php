@@ -17,18 +17,7 @@ foreach ($data['stakes'] as $s) {
     $capital_available_withdrawal = $s['available_withdrawal'] + $s['staked'];
     $dura = '365';
 
-    if ($stat == 'ended' && $interval >= 21600) {
-        if ($s['days_until_withdrawal'] == 1) {
-            $modules->stakeReduceWithdrawDay($id, $days_until_withdrawal, time());
-            if ($s['capital_returned'] == 0) {
-                if ($modules->stakeAvailableWithdrawal($id, $capital_available_withdrawal)) {
-                    $modules->stakeCapitalReturned($id);
-                }
-            }
-        } else {
-            $modules->stakeReduceWithdrawDay($id, $days_until_withdrawal, time());
-        }
-    } elseif ($stat == 'unstaked' && $interval >= 21600) {
+    if (($stat == 'ended' || $stat == 'unstaked') && $interval >= 21600) {
         if ($s['days_until_withdrawal'] == 1) {
             $modules->stakeReduceWithdrawDay($id, $days_until_withdrawal, time());
             if ($s['capital_returned'] == 0) {

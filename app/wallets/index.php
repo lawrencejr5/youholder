@@ -92,6 +92,10 @@ include '../backend/udata.php';
                                 </a>
                             </div>
                             <br>
+                            <?php if ($numOfWallets == 0) { ?>
+                                <p class="mb-0 f-18 leading-22 text-dark gilroy-Semibold">Nothing to see here...</p>
+                                <img src="../public/dist/images/not-found.png" class="mt-24" alt="">
+                            <?php } ?>
                             <div class="row r-mt-n">
                                 <?php foreach ($data['user_wallets'] as $w) { ?>
                                     <div class="col-12 col-xl-6 mt-19">

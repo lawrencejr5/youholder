@@ -1155,6 +1155,33 @@ class Modules extends Connection
             return false . $e->getMessage();
         }
     }
+
+    public function numOfUserWallets($uid)
+    {
+        $this->sql = "SELECT * FROM user_wallets WHERE uid = :uid";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->execute();
+            $this->stmt->fetchAll();
+            return $this->stmt->rowCount();
+        } catch (PDOException $e) {
+            return false . $e->getMessage();
+        }
+    }
+
+    public function numOfUserTransactions($uid)
+    {
+        $this->sql = "SELECT id FROM deposits WHERE uid = :uid UNION SELECT id FROM withdrawals WHERE uid = :uid";
+        $this->stmt = $this->conn->prepare($this->sql);
+        $this->stmt->bindParam(':uid', $uid);
+        $this->stmt->execute();
+        $this->stmt->fetchAll();
+        return $this->stmt->rowCount();
+        try {
+        } catch (PDOException $e) {
+        }
+    }
 }
 
 

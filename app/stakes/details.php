@@ -124,29 +124,30 @@ include '../backend/udata.php';
                                 </div>
                             </div>
                         </div>
-                        <?php if ($s['status'] == 'ended' || $s['status'] == 'unstaked') { ?>
-                            <div class="row mt-24 inv-row-gaps">
-                                <div class="col-xl-12">
-                                    <div class="inv-terms bg-white d-flex justify-content-center">
-                                        <canvas id="myChart2" style="width:100%;max-width:700px;height:auto;"></canvas>
-                                    </div>
-                                    <form>
-                                        <input type="hidden" value="<?= $s['days_until_withdrawal'] ?>" id="days_until_withdrawal">
-                                    </form>
+                        <div class="row mt-24 inv-row-gaps">
+                            <div class="col-xl-12">
+                                <div class="inv-terms bg-white d-flex justify-content-center">
+                                    <canvas id="myChart" style="width:100%;max-width:700px;height:auto;"></canvas>
                                 </div>
-                            </div>
-                        <?php } elseif ($s['status'] == 'staking') { ?>
-                            <div class="row mt-24 inv-row-gaps">
-                                <div class="col-xl-12">
-                                    <div class="inv-terms bg-white d-flex justify-content-center">
-                                        <canvas id="myChart" style="width:100%;max-width:700px;height:auto;"></canvas>
-                                    </div>
+                                <?php if ($s['status'] == 'staking') { ?>
                                     <form>
-                                        <input type="hidden" value="<?= $s['num_of_days'] ?>" id="stakeDays">
+                                        <input type="hidden" value="Days staked" id="x1">
+                                        <input type="hidden" value="Days Remaining" id="x2">
+                                        <input type="hidden" value="Track staking days" id="title">
+                                        <input type="hidden" value="<?= $s['num_of_days'] ?>" id="total_days">
+                                        <input type="hidden" value="<?= 365 - $s['num_of_days'] ?>" id="days_remaining">
                                     </form>
-                                </div>
+                                <?php } elseif ($s['status'] == 'ended' || $s['status'] == 'unstaked') { ?>
+                                    <form>
+                                        <input type="hidden" value="Days stayed" id="x1">
+                                        <input type="hidden" value="Remaining days" id="x2">
+                                        <input type="hidden" value="Days until capital return" id="title">
+                                        <input type="hidden" value="<?= 29 - $s['days_until_withdrawal'] ?>" id="total_days">
+                                        <input type="hidden" value="<?= $s['days_until_withdrawal'] ?>" id="days_remaining">
+                                    </form>
+                                <?php } ?>
                             </div>
-                        <?php } ?>
+                        </div>
                         <div class="row mt-24 inv-row-gaps">
                             <div class="col-xl-12">
                                 <div class="invest_capital bg-white h-100 d-flex flex-column">
@@ -417,10 +418,13 @@ include '../backend/udata.php';
         })
     </script>
     <script>
-        const stakeDays = document.querySelector('#stakeDays').value
-        const remainingDays = 365 - stakeDays;
-        var xValues = ["Days stayed", "Days remaining"];
-        var yValues = [stakeDays, remainingDays];
+        const remaining = document.querySelector('#days_remaining').value
+        const total = document.querySelector('#total_days').value
+        const x1 = document.querySelector('#x1').value
+        const x2 = document.querySelector('#x2').value
+        const title = document.querySelector('#title').value
+        var xValues = [x1, x2];
+        var yValues = [total, remaining];
         var barColors = ['#130e80', 'brown'];
         new Chart("myChart", {
             type: "doughnut",
@@ -434,32 +438,13 @@ include '../backend/udata.php';
             options: {
                 title: {
                     display: true,
-                    text: "Staking days"
+                    text: title
                 }
             }
         });
 
-        const days_until_withdrawal = document.querySelector('#days_until_withdrawal').value
         var xValues = ["Total days", "Days remaining"];
         var yValues = [29, days_until_withdrawal];
-        var barColors = ['#130e80', 'red'];
-        const ctx2 = document.querySelector('#myChart2')
-        new Chart(ctx2, {
-            type: "doughnut",
-            data: {
-                labels: xValues,
-                datasets: [{
-                    backgroundColor: barColors,
-                    data: yValues
-                }]
-            },
-            options: {
-                title: {
-                    display: true,
-                    text: "Days until capital return"
-                }
-            }
-        });
     </script>
     <script type="text/javascript">
         var SITE_URL = "https://demo.paymoney.techvill.net";

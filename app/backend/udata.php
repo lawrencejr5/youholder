@@ -48,9 +48,11 @@ $data['last_transaction'] = $modules->getLastTransaction($uID);
 
 // Row counts
 
+$numOfWallets = $modules->numOfUserWallets($uID);
 $numOfDeposits = $modules->numOfUserDeposits($uID);
 $numOfWithdrawals = $modules->numOfUserWithdrawals($uID);
 $numOfInvestments = $modules->numOfUserInvestments($uID);
 $numOfStakes = $modules->numOfUserStakes($uID);
 $numOfExchanges = $modules->numOfUserExchanges($uID);
 $numOfTransfers = $modules->numOfUserTransfers($uID);
+$numOfTransactions = $modules->numOfUserTransactions($uID);
