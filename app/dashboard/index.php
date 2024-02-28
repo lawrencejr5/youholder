@@ -198,7 +198,7 @@ include '../backend/udata.php';
                                     <div class="dash-profile-qr-div bg-white profile-mt-12">
                                         <div class="d-flex justify-content-between qr-icon">
                                             <p class="mb-0 f-12 leading-22 text-dark gilroy-Semibold">Your Last Transaction (<?= $d['transaction_type'] ?>)</p>
-                                            <a href="../transactions" class="fil-btn-arow ml-12 d-flex align-items-center justify-content-center">
+                                            <a href="../transactions/details.php?transac_id=<?= $d['id'] ?>&transac_type=<?= $d['transaction_type'] ?>" class="fil-btn-arow ml-12 d-flex align-items-center justify-content-center">
                                                 <svg class="nscaleX-1" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 3.96967C9.67678 4.26256 9.67678 4.73744 9.96967 5.03033L13.1893 8.25H3C2.58579 8.25 2.25 8.58579 2.25 9C2.25 9.41421 2.58579 9.75 3 9.75H13.1893L9.96967 12.9697C9.67678 13.2626 9.67678 13.7374 9.96967 14.0303C10.2626 14.3232 10.7374 14.3232 11.0303 14.0303L15.5303 9.53033C15.8232 9.23744 15.8232 8.76256 15.5303 8.46967L11.0303 3.96967C10.7374 3.67678 10.2626 3.67678 9.96967 3.96967Z" fill="white" />
                                                 </svg>
@@ -207,8 +207,8 @@ include '../backend/udata.php';
                                         <div class="d-flex">
                                             <p class="mb-0 f-24 leading-30 gilroy-Semibold l-s1 text-dark"><?= $d['amount'] ?> <?= $d['wallet'] ?></p>
                                         </div>
-                                        <button class="btn btn-lg btn-primary dash-print-btn mt-24 green-btn">
-                                            <span class="f-14 leading-20 gilroy-medium">Transactions</span>
+                                        <button class="btn btn-lg btn-primary dash-print-btn mt-24 green-btn" onclick="window.location = '../transactions'">
+                                            <span class="f-14 leading-20 gilroy-medium">All Transactions</span>
                                         </button>
                                     </div>
                                 <?php } ?>
@@ -304,8 +304,8 @@ include '../backend/udata.php';
 
                     <!-- Transaction List -->
                     <?php foreach ($data['latest_transactions'] as $t) { ?>
-                        <div class="transac-parent">
-                            <div class="transac-parent cursor-pointer" data-bs-toggle="modal" data-bs-target="#transaction-Info-0">
+                        <div class="transac-parent" data-id="<?= $t['id'] ?>" data-type="<?= $t['transaction_type'] ?>">
+                            <div class="transac-parent cursor-pointer open-transac_modal">
                                 <div class="d-flex justify-content-between transac-child">
                                     <div class="d-flex w-50">
 
@@ -386,128 +386,7 @@ include '../backend/udata.php';
                                 </div>
                             </div>
 
-                            <!-- Transaction Modal -->
-                            <div class="modal fade modal-overly" id="transaction-Info-0" tabindex="-1" aria-hidden="true">
-                                <div class="transac modal-dialog modal-dialog-centered modal-lg res-dialog">
-                                    <div class="modal-content modal-transac transaction-modal">
-                                        <div class="modal-body modal-themeBody">
-                                            <div class="d-flex position-relative modal-res">
-                                                <button type="button" class="cursor-pointer close-btn" data-bs-dismiss="modal" aria-label="Close">
-                                                    <svg class="position-absolute close-btn text-gray-100" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.24408 5.24408C5.56951 4.91864 6.09715 4.91864 6.42259 5.24408L10 8.82149L13.5774 5.24408C13.9028 4.91864 14.4305 4.91864 14.7559 5.24408C15.0814 5.56951 15.0814 6.09715 14.7559 6.42259L11.1785 10L14.7559 13.5774C15.0814 13.9028 15.0814 14.4305 14.7559 14.7559C14.4305 15.0814 13.9028 15.0814 13.5774 14.7559L10 11.1785L6.42259 14.7559C6.09715 15.0814 5.56951 15.0814 5.24408 14.7559C4.91864 14.4305 4.91864 13.9028 5.24408 13.5774L8.82149 10L5.24408 6.42259C4.91864 6.09715 4.91864 5.56951 5.24408 5.24408Z" fill="currentColor" />
-                                                    </svg>
-                                                </button>
-                                                <div class="deposit-transac d-flex flex-column justify-content-center p-4 text-wrap">
-                                                    <div class="d-flex justify-content-center text-primary align-items-center transac-img">
-                                                        <img src="../public/uploads/user-profile/1532333460.png" alt="Transaction" class="img-fluid">
-                                                    </div>
-                                                    <p class="mb-0 mt-28 text-dark gilroy-medium f-15 r-f-12 r-mt-18 text-center">
-                                                        Received&nbsp;Amount</p>
-                                                    <p class="mb-0 text-dark gilroy-Semibold f-24 leading-29 r-f-26 text-center l-s2 mt-10">
-                                                        Ɖ 2</p>
-                                                    <p class="mb-0 mt-18 text-gray-100 gilroy-medium f-13 leading-20 r-f-14 text-center">
-                                                        11-12-2023 12:16 AM</p>
-                                                    <div class="d-flex justify-content-center">
-                                                        <a href="https://demo.paymoney.techvill.net/transactions/crypto-sent-received-print/eyJpdiI6IlhTaDNIQVVKRmh4YWxWcHFNVU1sM3c9PSIsInZhbHVlIjoidEJQczIwQzhUY1hRdEFXZzMwSHJJUT09IiwibWFjIjoiNTc0NDI2NTA2YzAxNzA5Y2U5M2RiMDg0NzQ0M2NkYjQ5YWI4MWM3Y2QxYTgyNjQ5NjU2MjQ2YWQ0MzBlMTBiYiIsInRhZyI6IiJ9" class="infoBtn-print cursor-pointer f-14 gilroy-medium text-dark mt-35 d-flex justify-content-center align-items-center" target="__blank">
-                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M4.15385 16.5H13.8462V13.5H4.15385V16.5ZM4.15385 9H13.8462V4.5H12.1154C11.8269 4.5 11.5817 4.39062 11.3798 4.17188C11.1779 3.95312 11.0769 3.6875 11.0769 3.375V1.5H4.15385V9ZM16.6154 9.75C16.6154 9.54688 16.5469 9.37109 16.4099 9.22266C16.2728 9.07422 16.1106 9 15.9231 9C15.7356 9 15.5733 9.07422 15.4363 9.22266C15.2993 9.37109 15.2308 9.54688 15.2308 9.75C15.2308 9.95312 15.2993 10.1289 15.4363 10.2773C15.5733 10.4258 15.7356 10.5 15.9231 10.5C16.1106 10.5 16.2728 10.4258 16.4099 10.2773C16.5469 10.1289 16.6154 9.95312 16.6154 9.75ZM18 9.75V14.625C18 14.7266 17.9657 14.8145 17.8972 14.8887C17.8287 14.9629 17.7476 15 17.6538 15H15.2308V16.875C15.2308 17.1875 15.1298 17.4531 14.9279 17.6719C14.726 17.8906 14.4808 18 14.1923 18H3.80769C3.51923 18 3.27404 17.8906 3.07212 17.6719C2.87019 17.4531 2.76923 17.1875 2.76923 16.875V15H0.346154C0.252404 15 0.171274 14.9629 0.102764 14.8887C0.0342548 14.8145 0 14.7266 0 14.625V9.75C0 9.13281 0.203726 8.60352 0.611178 8.16211C1.01863 7.7207 1.50721 7.5 2.07692 7.5H2.76923V1.125C2.76923 0.8125 2.87019 0.546875 3.07212 0.328125C3.27404 0.109375 3.51923 0 3.80769 0H11.0769C11.3654 0 11.6827 0.078125 12.0288 0.234375C12.375 0.390625 12.649 0.578125 12.851 0.796875L14.4952 2.57812C14.6971 2.79688 14.8702 3.09375 15.0144 3.46875C15.1587 3.84375 15.2308 4.1875 15.2308 4.5V7.5H15.9231C16.4928 7.5 16.9814 7.7207 17.3888 8.16211C17.7963 8.60352 18 9.13281 18 9.75Z" fill="currentColor" />
-                                                            </svg>&nbsp;
-                                                            <span>Print</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="ml-20 trans-details">
-                                                    <p class="mb-0 mt-9 text-dark dark-5B f-20 gilroy-Semibold transac-title">
-                                                        Transaction Details</p>
 
-                                                    <!-- Crypto Address -->
-                                                    <div class="row gx-sm-5">
-                                                        <div class="col-12">
-                                                            <p class="mb-0 mt-4 text-gray-100 gilroy-medium f-13 leading-20 r-f-9 r-mt-11">
-                                                                Sender
-                                                                Address</p>
-                                                            <p class="mb-0 mt-5p text-dark gilroy-medium f-15 leading-22 r-text">
-                                                                njsBLaRgk66e1yzqdvAK4SFNapuLfMZugE
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row gx-sm-5">
-                                                        <div class="col-6">
-                                                            <p class="mb-0 mt-4 text-gray-100 gilroy-medium f-13 leading-20 r-f-9 r-mt-11">
-                                                                Sender</p>
-                                                            <p class="mb-0 mt-5p text-dark gilroy-medium f-15 leading-22 r-text">
-                                                                Kyla Sarah</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="mb-0 mt-4 text-gray-100 gilroy-medium f-13 leading-20 r-f-9 r-mt-11">
-                                                                Currency</p>
-                                                            <p class="mb-0 mt-5p text-dark gilroy-medium f-15 leading-22 r-text">
-                                                                DOGETEST</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row gx-sm-5">
-                                                        <div class="col-6">
-                                                            <p class="mb-0 mt-20 text-gray-100 gilroy-medium f-13 leading-20 r-f-9 r-mt-11">
-                                                                Transaction ID</p>
-                                                            <p class="mb-0 mt-5p text-dark gilroy-medium f-15 leading-22 r-text">
-                                                                C346154FE1948</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="mb-0 mt-20 text-gray-100 gilroy-medium f-13 leading-20 r-f-9 r-mt-11">
-                                                                Transaction Fee</p>
-                                                            <p class="mb-0 mt-5p text-dark gilroy-medium f-15 leading-22 r-text">
-
-                                                                -
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row gx-sm-5">
-                                                        <div class="col-6">
-                                                            <p class="mb-0 mt-20 text-gray-100 gilroy-medium f-13 leading-20 r-f-9 r-mt-11">
-                                                                Payment Method</p>
-                                                            <p class="mb-0 mt-5p text-dark gilroy-medium f-15 leading-22 r-text">
-                                                                TatumIo</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="mb-0 mt-20 text-gray-100 gilroy-medium f-13 leading-20 r-f-9 r-mt-11">
-                                                                Status</p>
-                                                            <p id="status_150" class="mb-0 mt-5p text-success gilroy-medium f-15 leading-22 r-text">
-                                                                Success</p>
-                                                        </div>
-                                                    </div>
-                                                    <p class="hr-border w-100 mb-0"></p>
-                                                    <div class="row gx-sm-5">
-
-                                                        <!-- Amount -->
-                                                        <div class="col-6">
-                                                            <p class="mb-0 mt-4 text-gray-100 dark-B87 gilroy-medium f-13 leading-20 r-f-9 r-mt-11">
-                                                                Received&nbsp;Amount</p>
-                                                            <p class="mb-0 mt-5p text-dark dark-CDO gilroy-medium f-15 leading-22 r-text">
-                                                                Ɖ 2</p>
-                                                        </div>
-
-                                                        <!-- Total Amount -->
-                                                        <div class="col-6">
-                                                            <p class="mb-0 mt-4 text-gray-100 dark-B87 gilroy-medium f-13 leading-20 r-f-9 r-mt-11">
-                                                                Total Amount</p>
-                                                            <p class="mb-0 mt-5p text-dark dark-CDO gilroy-medium f-15 leading-22 r-text">
-                                                                Ɖ 2</p>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Transaction Note -->
-
-
-                                                    <!-- Accept and Cancel button -->
-
-                                                    <!-- Open dispute -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     <?php } ?>
 
@@ -593,7 +472,7 @@ include '../backend/udata.php';
         <?php } ?>
     </script>
     <script src="../public/user/customs/js/user-status.min.js"></script>
-    <script src="../public/user/customs/js/user-transaction.min.js"></script>
+    <!-- <script src="../public/user/customs/js/user-transaction.min.js"></script> -->
     <script src="../public/user/customs/js/dashboard.min.js" type="text/javascript"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
@@ -623,6 +502,16 @@ include '../backend/udata.php';
                 },
             }
         });
+    </script>
+
+    <script type="text/javascript">
+        document.querySelectorAll('.transac-parent').forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                const transac_id = e.currentTarget.dataset.id
+                const transac_type = e.currentTarget.dataset.type
+                window.location = `../transactions/details.php?transac_id=${transac_id}&transac_type=${transac_type}`
+            })
+        })
     </script>
 
     <!-- end js -->

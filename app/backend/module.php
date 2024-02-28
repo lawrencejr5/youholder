@@ -804,6 +804,33 @@ class Modules extends Connection
         }
     }
 
+    public function getSingleTransaction($id, $transaction_type)
+    {
+        try {
+            //code...
+            $this->sql = "SELECT d.id as id, d.uid as uid, d.return_amt as amount, d.crypto_address, d.currency, d.deposit_amt,
+            d.datetime as datetime, d.transaction_type as transaction_type, d.wallet as wallet, d.from_to as from_to, d.approved as verified, w.wallet_img as wallet_img, d.notes
+            FROM deposits d 
+            LEFT JOIN wallets w ON d.wallet = w.wallet_name
+            WHERE d.id = :id AND transaction_type = :transaction_type
+            UNION ALL
+            SELECT wt.id as id, wt.uid as uid, wt.amount as amount, wt.crypto_address, wt.wallet_name, wt.amount, wt.datetime as datetime, 
+            wt.transaction_type as transaction_type, wt.wallet_name as wallet, wt.from_to as from_to, wt.verified as verified, w.wallet_img as wallet_img, wt.notes
+            FROM withdrawals wt 
+            LEFT JOIN wallets w ON wt.wallet_name = w.wallet_name
+            WHERE wt.id = :id AND transaction_type = :transaction_type
+            ORDER BY datetime DESC
+            ";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->bindParam(':transaction_type', $transaction_type);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $th) {
+            echo $th->getMessage();
+        }
+    }
+
     public function getLastTransaction($uid)
     {
         try {

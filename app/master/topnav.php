@@ -50,7 +50,7 @@
                             <img src="<?= $profile_pic ? "../backend/actions/uploads/" . $profile_pic : '../public/uploads/user-profile/1532005837.jpg' ?>" alt="Profile" class="img-fluid">
                         </div>
                         <div class="ms-3 text-white">
-                            <p class="mb-0 f-15 gilroy-medium text-white"><?php echo $fullname ?></p>
+                            <p class="mb-0 f-15 gilroy-medium text-dark"><?php echo $fullname ?></p>
                             <p class="mb-0 f-13 mt-3p gilroy-regular text-info-100"><?php echo $email ?></p>
                         </div>
                     </li>
@@ -70,14 +70,14 @@
                             <span class="ms-3">Check Wallet</span>
                         </a>
                     </li>
-                    <li class="d-flex align-items-center">
+                    <!-- <li class="d-flex align-items-center">
                         <a href="../personal-verification" class="f-13 gilroy-medium">
                             <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.03788 0H1.82273V6.25H3.03788V0ZM10.4503 6.25H6.56183L6.07577 5.5625V4.3125L6.56183 3.75H10.4503L10.9364 4.375V5.625L10.4503 6.25ZM4.37455 10H0.486061L0 9.375V8.125L0.486061 7.5H4.37455L4.86061 8.125V9.375L4.37455 10ZM9.11365 0H7.8985V2.5H9.11365V0ZM7.8985 7.5H9.11365V15H7.8985V7.5ZM3.03788 11.25H1.82273V15H3.03788V11.25ZM12.6376 11.25H16.5139L17 10.625V9.4375L16.5139 8.8125H12.6376L12.1515 9.4375V10.625L12.6376 11.25ZM15.1894 0H13.9743V7.5H15.1894V0ZM13.9743 12.5H15.1894V15H13.9743V12.5Z" fill="currentColor" />
                             </svg>
                             <span class="ms-3">Settings</span>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="d-flex align-items-center border-top h-63">
                         <a href="../logout" class="f-13 gilroy-medium">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
