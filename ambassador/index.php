@@ -14,6 +14,7 @@
   <meta property="og:type" content="website" />
   <meta content="summary_large_image" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta name="theme-color" content="#130e80" />
   <link href="../style.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
@@ -32,8 +33,8 @@
       n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);
   </script>
-  <link href="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5cee8f37e521594bf21e30db_fav_small.png" rel="shortcut icon" type="image/x-icon" />
-  <link href="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5cee8faeaeff6f36241942f1_fav_large.png" rel="apple-touch-icon" />
+  <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta name="facebook-domain-verification" content="9d151kspnzgxeyddfsx424rcf04nh6" />

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Earn up to 15% on Crypto &amp; Stablecoins | YouHodler Yield Account</title>
+  <title>Investments | Yield Fiancial Services</title>
   <meta content="Boost your earnings with a yield account. Get increased rates on 55+ assets." name="description" />
   <meta content="Earn up to 15% on Crypto &amp; Stablecoins | YouHodler Yield Account" property="og:title" />
   <meta content="Boost your earnings with a yield account. Get increased rates on 55+ assets." property="og:description" />
@@ -32,8 +32,8 @@
       n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);
   </script>
-  <link href="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5cee8f37e521594bf21e30db_fav_small.png" rel="shortcut icon" type="image/x-icon" />
-  <link href="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5cee8faeaeff6f36241942f1_fav_large.png" rel="apple-touch-icon" />
+  <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta name="facebook-domain-verification" content="9d151kspnzgxeyddfsx424rcf04nh6" />
@@ -307,7 +307,7 @@
           </ul>
         </div>
         <div class="column-compensation w-col w-col-4 w-col-stack"></div>
-      </div><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dbdd557eda85d5272c7b08_hero-yield.jpg" loading="lazy" width="972" sizes="(max-width: 767px) 100vw, 880px" alt="" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dbdd557eda85d5272c7b08_hero-yield-p-500.jpg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dbdd557eda85d5272c7b08_hero-yield-p-800.jpg 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dbdd557eda85d5272c7b08_hero-yield-p-1080.jpg 1080w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dbdd557eda85d5272c7b08_hero-yield.jpg 1944w" class="hero-pic-yield" />
+      </div><img src="/youholder/public/images/mokup.png" loading="lazy" width="972" sizes="(max-width: 767px) 100vw, 880px" alt="" class="hero-pic-yield" />
     </div>
   </div>
   <section class="s-content wide">

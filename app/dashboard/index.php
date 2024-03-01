@@ -78,7 +78,7 @@ include '../backend/udata.php';
                                 </p>
                                 <!-- <p class="mb-0 f-16 leading-18 gilroy-medium text-gray-100 mt-1 dash-w-262">Welcome,
                                     here is a brief summary of your account.</p> -->
-                                <p class="mb-0 f-16 leading-18 gilroy-medium text-gray-100 mt-1 dash-w-262">Account no: <?= $account_no ?> | Account Level: <?= $level ?></p>
+                                <p class="mb-0 f-16 leading-18 gilroy-medium text-gray-100 mt-1 dash-w-262">Account no: <?= $account_no ?></p>
                             </div>
                         </div>
 

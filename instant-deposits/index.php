@@ -33,8 +33,8 @@
       n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);
   </script>
-  <link href="/youholder/public/icons/yield.png" rel="shortcut icon" type="image/x-icon" />
-  <link href="/youholder/public/icons/yield.png" rel="apple-touch-icon" />
+  <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta name="facebook-domain-verification" content="9d151kspnzgxeyddfsx424rcf04nh6" />
@@ -313,7 +313,7 @@
           </ul>
         </div>
         <div class="column-compensation loan-hero w-col w-col-6">
-          <div class="calc-wrap"></div><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/636bbb544247aa213c570a66_Illustration_loans.jpg" alt="youhodler mobile app" sizes="(max-width: 479px) 100vw, 700px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/636bbb544247aa213c570a66_Illustration_loans-p-500.jpg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/636bbb544247aa213c570a66_Illustration_loans-p-800.jpg 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/636bbb544247aa213c570a66_Illustration_loans-p-1080.jpg 1080w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/636bbb544247aa213c570a66_Illustration_loans.jpg 1600w" width="700" class="image-hero loan" />
+          <div class="calc-wrap"></div><img src="/youholder/public/images/mokup.png" alt="youhodler mobile app" sizes="(max-width: 479px) 100vw, 700px" width="700" class="image-hero loan" />
         </div>
       </div>
     </div>

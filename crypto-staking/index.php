@@ -33,8 +33,8 @@
       n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);
   </script>
-  <link href="/youholder/public/icons/yield.png" rel="shortcut icon" type="image/x-icon" />
-  <link href="/youholder/public/icons/yield.png" rel="apple-touch-icon" />
+  <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta name="facebook-domain-verification" content="9d151kspnzgxeyddfsx424rcf04nh6" />
@@ -311,42 +311,62 @@
           </ul>
         </div>
         <div class="column-compensation loan-hero w-col w-col-6">
-          <div class="calc-wrap"></div><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/636bbb544247aa213c570a66_Illustration_loans.jpg" alt="youhodler mobile app" sizes="(max-width: 479px) 100vw, 700px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/636bbb544247aa213c570a66_Illustration_loans-p-500.jpg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/636bbb544247aa213c570a66_Illustration_loans-p-800.jpg 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/636bbb544247aa213c570a66_Illustration_loans-p-1080.jpg 1080w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/636bbb544247aa213c570a66_Illustration_loans.jpg 1600w" width="700" class="image-hero loan" />
+          <div class="calc-wrap"></div><img src="/youholder/public/images/mokup.png" alt="yieldfincs mobile app" width="100%" class="image-hero loan" />
         </div>
       </div>
     </div>
   </div>
-  <div class="s-content wide">
+  <!-- <div class="s-content wide">
     <div class="content-wrap wide w-container">
       <div class="calc-embed-inline w-embed w-iframe"><iframe src="https://app.youhodler.com/widgets/loan" width="100%" height="100%" scrolling="no" importance="hight" style="border-radius: 5px;
 border: none; overflow: hidden;">
         </iframe></div>
     </div>
-  </div>
+  </div> -->
   <div class="s-content wide">
     <div class="content-wrap wide w-container">
       <h2 class="h2 center">Crypto Staking Options</h2>
       <div class="w-dyn-list">
         <div role="list" class="nav-drop-tile-grid-two inpage w-dyn-items">
-          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/btc-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="bitcoin loan" src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/5cc1b15dad50d9830d40e177_btc.svg" class="nav-drop-a-tile-icon" />
+          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/btc-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="bitcoin loan" src="/youholder/app/public/uploads/currency_logos/1661050287.png" class="nav-drop-a-tile-icon" />
               <div class="nav-drop-a-tile-coin-ticker">BTC</div>
-              <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 22% APY</div>
+              <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 29% APY</div>
             </a></div>
           <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/eth-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="eth loan" src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/5cea77bf8cdd0a26392d345b_eth.svg" class="nav-drop-a-tile-icon" />
               <div class="nav-drop-a-tile-coin-ticker">ETH</div>
-              <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 22% APY</div>
+              <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 32% APY</div>
             </a></div>
-          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/chainlink-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="link chainlink logo" src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/5dfb39cd5b1818391fb6dd9d_link.svg" class="nav-drop-a-tile-icon" />
+          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/chainlink-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="link chainlink logo" src="/youholder/app/public/uploads/currency_logos/solana.png" class="nav-drop-a-tile-icon" />
               <div class="nav-drop-a-tile-coin-ticker">SOL</div>
               <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 22% APY</div>
             </a></div>
-          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/uni-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="uni uniswap" src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/5fbe7320f9ba0782b681aa71_uniswap.svg" class="nav-drop-a-tile-icon" />
-              <div class="nav-drop-a-tile-coin-ticker">UNI</div>
-              <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 22% APY</div>
+          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/uni-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="uni uniswap" src="/youholder/app/public/uploads/currency_logos/ada.png" class="nav-drop-a-tile-icon" />
+              <div class="nav-drop-a-tile-coin-ticker">ADA</div>
+              <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 30% APY</div>
             </a></div>
-          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/comp-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="compound comp" src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/5fbe71abd5be68a6e3221857_comp.svg" class="nav-drop-a-tile-icon" />
-              <div class="nav-drop-a-tile-coin-ticker">COMP</div>
-              <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 22% APY</div>
+          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/uni-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="uni uniswap" src="/youholder/app/public/uploads/currency_logos/bnb.png" class="nav-drop-a-tile-icon" />
+              <div class="nav-drop-a-tile-coin-ticker">BNB</div>
+              <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 17% APY</div>
+            </a></div>
+          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/comp-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="compound comp" src="/youholder/app/public/uploads/currency_logos/polkadot.png" class="nav-drop-a-tile-icon" />
+              <div class="nav-drop-a-tile-coin-ticker">DOT</div>
+              <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 25% APY</div>
+            </a></div>
+          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/comp-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="compound comp" src="/youholder/app/public/uploads/currency_logos/avax.png" class="nav-drop-a-tile-icon" />
+              <div class="nav-drop-a-tile-coin-ticker">AVAX</div>
+              <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 15% APY</div>
+            </a></div>
+          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/comp-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="compound comp" src="/youholder/app/public/uploads/currency_logos/xrp.png" class="nav-drop-a-tile-icon" />
+              <div class="nav-drop-a-tile-coin-ticker">XRP</div>
+              <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 40% APY</div>
+            </a></div>
+          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/comp-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="compound comp" src="/youholder/app/public/uploads/currency_logos/1660982923.png" class="nav-drop-a-tile-icon" />
+              <div class="nav-drop-a-tile-coin-ticker">LTC</div>
+              <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 50% APY</div>
+            </a></div>
+          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/comp-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="compound comp" src="/youholder/app/public/uploads/currency_logos/1660982923.png" class="nav-drop-a-tile-icon" />
+              <div class="nav-drop-a-tile-coin-ticker">LINK</div>
+              <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 27% APY</div>
             </a></div>
 
         </div>
@@ -357,7 +377,7 @@ border: none; overflow: hidden;">
     <div class="content-wrap wide last w-container">
       <h2 class="h2 center">What is Crypto Staking?</h2>
       <div class="how-to-block w-row">
-        <div class="column-compensation content-center w-col w-col-5 w-col-medium-6"><a href="https://app.youhodler.com/" class="image-content-link w-inline-block"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create.png" width="380" alt="crypto backed loan yieldfincs" sizes="(max-width: 479px) 68vw, (max-width: 767px) 320px, (max-width: 991px) 37vw, (max-width: 1279px) 36vw, 380px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create.png 920w" class="image-content" /></a></div>
+        <div class="column-compensation content-center w-col w-col-5 w-col-medium-6"><a href="../login/" class="image-content-link w-inline-block"><img src="/youholder/public/images/mokup.png" width="100%" alt="crypto backed loan yieldfincs" class="image-content" /></a></div>
         <div class="column-compensation w-col w-col-7 w-col-medium-6">
           <div class="top-padding-wrap">
             <h3 class="h5 with-padding w-clearfix"><span class="badge-num">1</span> What is Crypto Staking?</h3>

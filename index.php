@@ -8,7 +8,7 @@
   <meta content="Home page| Yield Financial Services" property="og:title" />
   <meta content="Easy-to-use Web3 crypto &amp; fiat Fintech for all users. Offers services beyond holding &amp; trading. Platform&#x27;s wallet allows easy utilization of digital assets." property="og:description" />
   <meta content="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63cff935ac61a5351292d95f_main_opengraph_new.jpg" property="og:image" />
-  <meta content="Home page| Yield Financial Services" property="twitter:title" />
+  <meta content="Home page | Yield Financial Services" property="twitter:title" />
   <meta content="Easy-to-use Web3 crypto &amp; fiat Fintech for all users. Offers services beyond holding &amp; trading. Platform&#x27;s wallet allows easy utilization of digital assets." property="twitter:description" />
   <meta content="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63cff935ac61a5351292d95f_main_opengraph_new.jpg" property="twitter:image" />
   <meta property="og:type" content="website" />
@@ -324,7 +324,7 @@
             <div class="w-row">
               <div class="column-compensation image-wrap-earn w-col w-col-12 w-col-stack">
                 <div class="product-tabs-content-mobile">
-                  <h3 class="h3">Earn <span class="span-blue">up to 22%</span> on Crypto &amp; Stablecoins</h3>
+                  <h3 class="h3">Earn <span class="span-blue">up to 50%</span> on Crypto &amp; Stablecoins</h3>
                   <p class="h3 subheading">Boost your earnings. Get increased rates on 55+ assets.</p>
                 </div>
                 <div class="product-tabs-content-desktop">
@@ -346,7 +346,15 @@
                           <div class="nav-drop-a-tile-coin-ticker caps">Btc</div>
                           <div class="nav-drop-a-apr-wrap">
                             <div class="nav-drop-a-tile-text"> up to </div>
-                            <div class="nav-drop-a-tile-interest">22.0</div>
+                            <div class="nav-drop-a-tile-interest">29.0</div>
+                            <div class="nav-drop-a-tile-text">%</div>
+                          </div>
+                        </a></div>
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/1661050287.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                          <div class="nav-drop-a-tile-coin-ticker caps">Eth</div>
+                          <div class="nav-drop-a-apr-wrap">
+                            <div class="nav-drop-a-tile-text"> up to </div>
+                            <div class="nav-drop-a-tile-interest">32.0</div>
                             <div class="nav-drop-a-tile-text">%</div>
                           </div>
                         </a></div>
@@ -358,18 +366,66 @@
                             <div class="nav-drop-a-tile-text">%</div>
                           </div>
                         </a></div>
-                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/1671520294.png" loading="lazy" class="nav-drop-a-tile-icon" />
-                          <div class="nav-drop-a-tile-coin-ticker caps">eth</div>
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/ada.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                          <div class="nav-drop-a-tile-coin-ticker caps">ada</div>
                           <div class="nav-drop-a-apr-wrap">
                             <div class="nav-drop-a-tile-text"> up to </div>
-                            <div class="nav-drop-a-tile-interest">22.0</div>
+                            <div class="nav-drop-a-tile-interest">30.0</div>
+                            <div class="nav-drop-a-tile-text">%</div>
+                          </div>
+                        </a></div>
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/polkadot.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                          <div class="nav-drop-a-tile-coin-ticker caps">dot</div>
+                          <div class="nav-drop-a-apr-wrap">
+                            <div class="nav-drop-a-tile-text"> up to </div>
+                            <div class="nav-drop-a-tile-interest">25.0</div>
+                            <div class="nav-drop-a-tile-text">%</div>
+                          </div>
+                        </a></div>
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/avax.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                          <div class="nav-drop-a-tile-coin-ticker caps">avax</div>
+                          <div class="nav-drop-a-apr-wrap">
+                            <div class="nav-drop-a-tile-text"> up to </div>
+                            <div class="nav-drop-a-tile-interest">15.0</div>
+                            <div class="nav-drop-a-tile-text">%</div>
+                          </div>
+                        </a></div>
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/bnb.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                          <div class="nav-drop-a-tile-coin-ticker caps">bnb</div>
+                          <div class="nav-drop-a-apr-wrap">
+                            <div class="nav-drop-a-tile-text"> up to </div>
+                            <div class="nav-drop-a-tile-interest">17.0</div>
+                            <div class="nav-drop-a-tile-text">%</div>
+                          </div>
+                        </a></div>
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/1660982923.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                          <div class="nav-drop-a-tile-coin-ticker caps">ltc</div>
+                          <div class="nav-drop-a-apr-wrap">
+                            <div class="nav-drop-a-tile-text"> up to </div>
+                            <div class="nav-drop-a-tile-interest">50.0</div>
+                            <div class="nav-drop-a-tile-text">%</div>
+                          </div>
+                        </a></div>
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/link.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                          <div class="nav-drop-a-tile-coin-ticker caps">link</div>
+                          <div class="nav-drop-a-apr-wrap">
+                            <div class="nav-drop-a-tile-text"> up to </div>
+                            <div class="nav-drop-a-tile-interest">27.0</div>
+                            <div class="nav-drop-a-tile-text">%</div>
+                          </div>
+                        </a></div>
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/xrp.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                          <div class="nav-drop-a-tile-coin-ticker caps">xrp</div>
+                          <div class="nav-drop-a-apr-wrap">
+                            <div class="nav-drop-a-tile-text"> up to </div>
+                            <div class="nav-drop-a-tile-interest">40.0</div>
                             <div class="nav-drop-a-tile-text">%</div>
                           </div>
                         </a></div>
                     </div>
                   </div>
                 </div>
-                <div class="product-tabs-cta"><a href="/yield" class="btn-big-solid w-button">Explore</a></div>
+                <div class="product-tabs-cta"><a href="/youholder/crypto-staking" class="btn-big-solid w-button">Explore</a></div>
               </div>
               <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account-p-500.jpg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg 800w" alt="youhodler app loyalty program" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg" loading="lazy" class="product-tabs-image" /></div> -->
             </div>
@@ -386,7 +442,7 @@
                     Send, receive, instantly top up and withdraw currencies with Faster
                     Payment Service (FPS). Effortlessly add crypto in seconds from your crypto wallet. Fund your account with a single tap using your existing digital wallet.</p>
                 </div>
-                <div class="product-tabs-cta"><a href="/crypto-loan" class="btn-big-solid w-button">More info</a>
+                <div class="product-tabs-cta"><a href="/youholder/instant-deposits" class="btn-big-solid w-button">More info</a>
                 </div>
               </div>
               <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create.png 920w" alt="youhodler app crypto loans" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create.png" loading="lazy" class="product-tabs-image" /></div> -->
@@ -411,7 +467,7 @@
                   <p>Simple crypto deposits and withdrawals open the door to a suite of tools like: crypto exchange and
                     much more.<br /></p>
                 </div>
-                <div class="product-tabs-cta"><a href="/exchange" class="btn-big-solid w-button">Exchange</a></div>
+                <div class="product-tabs-cta"><a href="/youholder/exchange" class="btn-big-solid w-button">Exchange</a></div>
               </div>
               <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert.png 920w" alt="youhodler app exchange" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert.png" loading="lazy" class="product-tabs-image" /></div> -->
             </div>
@@ -431,32 +487,12 @@
                     private placement, distribution, trading, and operating are at the service.<br /></p>
                 </div>
               </div>
-              <div class="product-tabs-cta"><a href="/yield" class="btn-big-solid w-button">Explore</a></div>
+              <div class="product-tabs-cta"><a href="/youholder/yield" class="btn-big-solid w-button">Yield</a></div>
             </div>
             <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account-p-500.jpg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg 800w" alt="youhodler app loyalty program" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg" loading="lazy" class="product-tabs-image" /></div> -->
           </div>
         </div>
-        <div data-w-tab="Cloud Miner" class="product-tabs-pane w-tab-pane">
-          <div class="w-row">
-            <div class="column-compensation image-wrap-earn w-col w-col-12 w-col-stack">
-              <div class="product-tabs-content-mobile">
-                <h3 class="h3">Earn <span class="span-blue">Real Bitcoins</span> With Cloud Miner</h3>
-                <p class="h3 subheading">Discover this unique reward system. Earn bitcoin on an hourly basis and earn
-                  up to 0.2 BTC per month in a few clicks.</p>
-              </div>
-              <div class="product-tabs-content-desktop">
-                <p>Immerse yourself in Cloud Miner&#x27;s rewarding journey. Just by signing up, you&#x27;re
-                  immediately greeted with basic miner rewards. As you transition from registration to active trading,
-                  your rewards intensify.<br /></p>
-                <p>Cloud Miner’s gamified approach lets you earn bitcoins while having fun, and the best part? No
-                  strain on your device&#x27;s CPU. Dive into this innovative, efficient world of mining.<br /></p>
-              </div>
-              <div class="product-tabs-cta"><a href="/cloud-miner" class="btn-big-solid w-button">HOW MINER WORKS</a>
-              </div>
-            </div>
-            <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7df2438412945011fe233_screen_miner-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7df2438412945011fe233_screen_miner-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7df2438412945011fe233_screen_miner.png 920w" alt="youhodler app loyalty program" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7df2438412945011fe233_screen_miner.png" loading="lazy" class="product-tabs-image" /></div> -->
-          </div>
-        </div>
+
       </div>
     </div>
   </div>
@@ -468,20 +504,19 @@
       </div>
       <div class="collection-blog-wrap w-dyn-list">
         <div role="list" class="collection-blog-ul w-dyn-items">
-          <div role="listitem" class="collection-blog-li w-dyn-item"><a href="/blog/year-in-review-2023" class="collection-blog-li-a w-inline-block">
-              <div class="collection-blog-li-a-preview"><img src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/658edd78b836add2cf52f950_2023%20review-small.jpeg" loading="lazy" alt="YouHodler Year in Review: 2023" sizes="100vw" srcset="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/658edd78b836add2cf52f950_2023%20review-small-p-500.jpeg 500w, https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/658edd78b836add2cf52f950_2023%20review-small.jpeg 600w" class="collection-blog-li-a-picture" /></div>
+          <div role="listitem" class="collection-blog-li w-dyn-item"><a href="./blog/usdc-vs-usdt.php" class="collection-blog-li-a w-inline-block">
+              <div class="collection-blog-li-a-preview"><img src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/64d087946577cae16153b659_USDC_USDT.jpeg" loading="lazy" sizes="100vw" class="collection-blog-li-a-picture" /></div>
               <div class="collection-blog-li-a-info w-clearfix">
                 <div class="label-tiny left">Dec 29, 2023</div>
                 <div class="label-tiny right">Anthony Cerullo</div>
               </div>
-              <h3 class="collection-blog-li-a-title">Yield Year in Review: 2023</h3>
-              <p class="collection-blog-li-a-summary">2023 was a whirlwind year! Before we storm into 2024, let&#x27;s
-                take time to reflect on everything we accomplished this year at Yield</p>
+              <h3 class="collection-blog-li-a-title">USDC vs. USDT: Which Stablecoin to Use</h3>
+              <p class="collection-blog-li-a-summary">Traders are well-aware of cryptocurrency’s fast-paced market movements. In fact, traders often consider
+                digital currency’s volatility as more of a feature than a bug, using it to their advantage. </p>
             </a>
-            <div class="collection-blog-li-hashtag-wrap"><a href="https://www.youhodler.com/hashtag/company-news" class="collection-blog-li-hashtag">COMPANY NEWS</a></div>
           </div>
-          <div role="listitem" class="collection-blog-li w-dyn-item"><a href="/blog/position-sizing" class="collection-blog-li-a w-inline-block">
-              <div class="collection-blog-li-a-preview"><img src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/655efe8eff1706f70f5fcf9c_Position_sizing_small.png" loading="lazy" alt="Position Sizing: The Key to Crypto Trading Success" sizes="100vw" srcset="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/655efe8eff1706f70f5fcf9c_Position_sizing_small-p-500.png 500w, https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/655efe8eff1706f70f5fcf9c_Position_sizing_small.png 600w" class="collection-blog-li-a-picture" /></div>
+          <div role="listitem" class="collection-blog-li w-dyn-item"><a href="./blog/position-sizing.php" class="collection-blog-li-a w-inline-block">
+              <div class="collection-blog-li-a-preview"><img src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/655efe8eff1706f70f5fcf9c_Position_sizing_small.png" loading="lazy" alt="Position Sizing: The Key to Crypto Trading Success" sizes="100vw" class="collection-blog-li-a-picture" /></div>
               <div class="collection-blog-li-a-info w-clearfix">
                 <div class="label-tiny left">Nov 23, 2023</div>
                 <div class="label-tiny right">Anthony Cerullo</div>
@@ -491,32 +526,28 @@
                 analysis and willing to take on more risk. MultiHODL makes this easy with the new &quot;Increase
                 Position&quot; feature.</p>
             </a>
-            <div class="collection-blog-li-hashtag-wrap"><a href="https://www.youhodler.com/hashtag/company-news" class="collection-blog-li-hashtag">COMPANY NEWS</a></div>
           </div>
-          <div role="listitem" class="collection-blog-li w-dyn-item"><a href="/blog/crypto-etfs" class="collection-blog-li-a w-inline-block">
-              <div class="collection-blog-li-a-preview"><img src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/64faa719c9070a94b51f48af_Crypto_ETF_small.jpeg" loading="lazy" alt="Navigating the World of Crypto ETFs: Finding the Best Crypto ETF for Your Portfolio" sizes="100vw" srcset="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/64faa719c9070a94b51f48af_Crypto_ETF_small-p-500.jpeg 500w, https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/64faa719c9070a94b51f48af_Crypto_ETF_small.jpeg 600w" class="collection-blog-li-a-picture" /></div>
+          <div role="listitem" class="collection-blog-li w-dyn-item"><a href="./blog/crypto-lending-vs-staking.php" class="collection-blog-li-a w-inline-block">
+              <div class="collection-blog-li-a-preview"><img src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/647a30cc30f8384f1067b5e2_Lending_staking.jpeg" loading="lazy" alt="Navigating the World of Crypto ETFs: Finding the Best Crypto ETF for Your Portfolio" sizes="100vw" class="collection-blog-li-a-picture" /></div>
               <div class="collection-blog-li-a-info w-clearfix">
                 <div class="label-tiny left">Sep 8, 2023</div>
                 <div class="label-tiny right">Anthony Cerullo</div>
               </div>
-              <h3 class="collection-blog-li-a-title">Navigating the World of Crypto ETFs: Finding the Best Crypto ETF
-                for Your Portfolio</h3>
-              <p class="collection-blog-li-a-summary">ETFs can offer amazing benefits, but the advantages depend on your
-                crypto selection. Discover how to find the best crypto ETF to add to your investments.
+              <h3 class="collection-blog-li-a-title">Crypto Lending vs. Staking: Everything You Need to Know</h3>
+              <p class="collection-blog-li-a-summary">Many traders live busy lives, and they’re not able to constantly watch the market or make trades quickly.
+                There are several creative ways traders can invest their crypto beyond simple transactions.
               </p>
             </a>
-            <div class="collection-blog-li-hashtag-wrap"><a href="https://www.youhodler.com/hashtag/company-news" class="collection-blog-li-hashtag">COMPANY NEWS</a></div>
           </div>
         </div>
       </div>
-      <div class="content-center-wrap"><a href="/blog" class="btn-big-solid w-button">ALL POSTS</a></div>
+      <!-- <div class="content-center-wrap"><a href="/blog" class="btn-big-solid w-button">ALL POSTS</a></div> -->
     </div>
   </div>
   <div id="blog-preview" class="s-content wide">
     <div class="content-wrap wide w-container">
       <div class="wrap-center">
         <h1 class="h1 hero big">YieldFincs Stats</h1>
-        <p class="paragraph-30">The stats below are updated every month. Last update: 1 Jan 2024 10:00 UTC</p>
       </div>
       <div class="s-content wide">
         <div class="content-wrap wide w-container">
@@ -538,19 +569,19 @@
         <div class="content-wrap wide w-container">
           <div class="w-row">
             <div class="column-compensation w-col w-col-6">
-              <h3 class="h3 no-padding-bottom">Avg. MultiHODL input</h3>
-              <p class="p">The average input amount of Multi HODL deal in USD</p>
+              <h3 class="h3 no-padding-bottom">Avg. Staking input</h3>
+              <p class="p">The average input amount of Staking deal in USD</p>
               <div class="num-highlight">$<strong>740</strong></div>
             </div>
             <div class="column-compensation w-col w-col-6">
-              <h3 class="h3 no-padding-bottom">Avg. number of MultiHODL deals</h3>
+              <h3 class="h3 no-padding-bottom">Avg. number of Staking deals</h3>
               <p class="p">Per-user per month for any coin</p>
               <div class="num-highlight">82</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="content-center-wrap"><a href="/blog" class="btn-big-solid w-button">More Stats</a></div>
+      <div class="content-center-wrap"><a href="/youholder/stats/" class="btn-big-solid w-button">More Stats</a></div>
     </div>
   </div>
   <div class="s-content wide">

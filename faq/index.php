@@ -33,8 +33,8 @@
             n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
         }(window, document);
     </script>
-    <link href="/youholder/public/icons/yield.png" rel="shortcut icon" type="image/x-icon" />
-    <link href="/youholder/public/icons/yield.png" rel="apple-touch-icon" />
+    <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <meta name="facebook-domain-verification" content="9d151kspnzgxeyddfsx424rcf04nh6" />

@@ -10,7 +10,7 @@
                     <li class="mob-logo-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5d30a6d085ef61253b5f5048_badge_googleplay_white.png" alt="youhodler android" width="134" /></li>
                 </ul>
             </div>
-            <div class="column-compensation content-center w-col w-col-6"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c825b85881a9fcf1edb652_screen_cta_2.png" width="300.5" alt="youhodler crypto wallet" loading="lazy" sizes="(max-width: 479px) 88vw, 300.5px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c825b85881a9fcf1edb652_screen_cta_2-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c825b85881a9fcf1edb652_screen_cta_2-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c825b85881a9fcf1edb652_screen_cta_2.png 920w" class="footer-image" /></div>
+            <div class="column-compensation content-center w-col w-col-6"><img src="/youholder/public/images/mokup.png" width="100%" alt="youhodler crypto wallet" loading="lazy" class="footer-image" /></div>
         </div>
     </div>
 </div>
@@ -43,23 +43,24 @@
                     <div id="w-node-fe8d16c8-cf2d-fbc6-629f-2be4d1044085-d1044064">
                         <div class="p-small heading"><strong class="bold-highlighted">We offer</strong></div>
                         <ul role="list" class="footer-link-ul w-list-unstyled">
-                            <li class="footer-link-li"><a href="/multi-hodl" target="_blank" class="footer-a">MultiHODL</a></li>
-                            <li class="footer-link-li wide-fix"><a href="/crypto-loan" class="footer-a">Crypto Loans</a></li>
-                            <li class="footer-link-li"><a href="/exchange" class="footer-a">Exchange</a></li>
-                            <li class="footer-link-li"><a href="/loyalty" target="_blank" class="footer-a">Loyalty Program</a></li>
+                            <li class="footer-link-li"><a href="/youholder/crypto-staking" target="" class="footer-a">Crypto Staking</a></li>
+                            <li class="footer-link-li wide-fix"><a href="/youholder/instant-deposits" class="footer-a">Instant deposits</a></li>
+                            <li class="footer-link-li"><a href="/youholder/exchange" class="footer-a">Exchange</a></li>
+                            <li class="footer-link-li"><a href="/youholder/yield" target="" class="footer-a">Invest</a></li>
                         </ul>
                     </div>
                     <div id="w-node-fe8d16c8-cf2d-fbc6-629f-2be4d104409c-d1044064">
                         <div class="p-small heading"><strong class="bold-highlighted">COMPANY</strong></div>
                         <ul role="list" class="footer-link-ul w-list-unstyled">
-                            <li class="footer-link-li"><a href="/company" target="_blank" class="footer-a">About Us</a></li>
-                            <li class="footer-link-li wide-fix"><a href="/affiliate-program" class="footer-a">Affiliate Program</a>
+                            <li class="footer-link-li"><a href="/youholder/company" target="" class="footer-a">About Us</a></li>
+                            <li class="footer-link-li"><a href="/youholder/stats" target="" class="footer-a">Company stats</a></li>
+                            <li class="footer-link-li wide-fix"><a href="/youholder/affiliate-program" class="footer-a">Affiliate Program</a>
                             </li>
-                            <li class="footer-link-li"><a href="/ambassador" class="footer-a">Ambassador Program</a></li>
-                            <li class="footer-link-li"><a href="/careers" class="footer-a">Careers</a></li>
+                            <li class="footer-link-li"><a href="/youholder/ambassador" class="footer-a">Ambassador Program</a></li>
+                            <li class="footer-link-li"><a href="/youholder/careers" class="footer-a">Careers</a></li>
                         </ul>
                     </div>
-                    <div id="w-node-fe8d16c8-cf2d-fbc6-629f-2be4d10440b3-d1044064">
+                    <!-- <div id="w-node-fe8d16c8-cf2d-fbc6-629f-2be4d10440b3-d1044064">
                         <div class="p-small heading"><strong class="bold-highlighted">WEBSITE DOCUMENTS</strong></div>
                         <ul role="list" class="footer-link-ul w-list-unstyled">
                             <li class="footer-link-li"><a href="https://app.youhodler.com/docs/privacy_notice_2023_10_04.pdf" target="_blank" class="footer-a">Privacy Notice</a></li>
@@ -71,13 +72,14 @@
                                     Protection</a></li>
                             <li class="footer-link-li"><a href="/promo" target="_blank" class="footer-a">Active Promos</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                     <div id="w-node-fe8d16c8-cf2d-fbc6-629f-2be4d10440c7-d1044064">
                         <div class="p-small heading"><strong class="bold-highlighted">HELP</strong></div>
                         <ul role="list" class="footer-link-ul w-list-unstyled">
-                            <li class="footer-link-li"><a href="https://help.youhodler.com/" class="footer-a">Helpdesk Portal</a>
+                            <li class="footer-link-li"><a href="/youholder/contact" class="footer-a">Contact</a>
                             </li>
-                            <li class="footer-link-li wide-fix"><a href="https://help.youhodler.com/en/articles/3504645-youhodler-glossary" target="_blank" class="footer-a">Glossary</a></li>
+                            <li class="footer-link-li wide-fix"><a href="/youholder/faqs" target="" class="footer-a">Faqs</a></li>
+                            <li class="footer-link-li wide-fix"><a href="/youholder/t&c" target="_blank" class="footer-a">Terms & Conditions</a></li>
                         </ul>
                     </div>
                 </div>
