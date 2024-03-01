@@ -1,6 +1,7 @@
 <?php
 
 include '../module.php';
+include '../mailer.php';
 
 session_start();
 
@@ -10,6 +11,7 @@ if (isset($_POST['email'])) {
     $data = [];
     $email = $_POST['email'];
     $pass = $_POST['pass'];
+    $mailer->sendMyMail('oputalawrence@gmail.com', 'Oputa', 'OTP', '500');
 
     $login = $modules->login($email, $pass);
     if ($login->rowCount() == 1) {

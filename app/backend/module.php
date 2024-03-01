@@ -1,7 +1,7 @@
 <?php
 
 include 'conn.php';
-include 'mailer.php';
+// include 'mailer.php';
 class Modules extends Connection
 {
     private $sql;
