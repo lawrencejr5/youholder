@@ -97,9 +97,13 @@ include '../backend/udata.php';
                                                 $data['total_withdrawals'] = $modules->getTotalWithdrawals($uID, $w['wallet_name']);
                                                 foreach ($data['total_deposits'] as $td) {
                                                     foreach ($data['total_withdrawals'] as $tw) {
+                                                        $d_am = floatval($td['amount']);
+                                                        $w_am = floatval($tw['amount']);
+                                                        $amt = $d_am - $w_am;
+                                                        $w_name = $w['wallet_name']
 
                                             ?>
-                                                        <option data-wid="<?= $w['wallet_id'] ?>" data-bal="<?= $td['amount'] - $tw['amount'] ?>" value="<?= $w['wallet_name'] ?>"><?= $w['wallet_name'] . ' - ' . $td['amount'] - $tw['amount'] ?></option>
+                                                        <option data-wid="<?= $w['wallet_id'] ?>" data-bal="<?= $amt ?>" value="<?= $w['wallet_name'] ?>"><?= $w_name . '-' . $amt ?></option>
                                             <?php }
                                                 }
                                             } ?>
@@ -165,7 +169,7 @@ include '../backend/udata.php';
         const fetchUsers = async () => {
             const username = document.querySelector('#username')
             username.innerHTML = 'Searching user....'
-            const url = 'http://localhost/youholder/app/backend/api/users.php';
+            const url = 'https://www.yieldfincs.com/youholder/app/backend/api/users.php';
             try {
                 const res = await fetch(url);
                 const data = await res.json();

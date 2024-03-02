@@ -12,6 +12,7 @@ include '../backend/udata.php';
     <meta name="description" content="">
     <meta name="author" content="Techvillage">
     <meta name="csrf-token" content="PFhVNJMPXGAl78xl7DN1x28WvuRvz2vpVljgxMPU">
+    <meta name="theme-color" content="#130e80" />
 
     <title>Wallet List | Yield Fiancial Services</title>
 
@@ -23,7 +24,8 @@ include '../backend/udata.php';
     <!-- end css -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="/youholder/public/logos/favicon.png">
+    <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
 
     <script>
         'use strict';

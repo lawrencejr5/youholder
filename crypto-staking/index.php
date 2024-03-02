@@ -267,7 +267,7 @@
   <div class="s-hero wide white">
     <div class="hero-wrap wide w-container">
       <div class="w-row">
-        <div class="column-compensation hero-left w-col w-col-6">
+        <div class="column-compensation hero-left w-col w-col-12">
           <h1 class="h1 hero big main">YieldFincs Crypto Staking<br /></h1>
           <p class="h3 subheading hero">Earn passive income with your crypto investments.</p>
           <div class="hero-cta-wrap cta-mobile"><a href="/youholder/register" target="_blank" class="btn-big-solid w-button">Stake Now</a>
@@ -288,11 +288,11 @@
             </div>
           </div>
           <div class="block-sla w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0d4f7f3ef469679f59758a_doc_address.svg" alt="doc icon" class="sla-icon" />
-            <p class="p grey-sla"><a href="https://www.youhodler-swiss.com" target="_blank" class="grey-a">YouHodler
+            <p class="p grey-sla"><a href="https://www.youhodler-swiss.com" target="_blank" class="grey-a">YieldFincs
                 SA</a> crypto-backed lending solutions structured in the form of collateralised (pawnshop) loans.<a href="#naumard-ltd" class="grey-a"></a></p>
           </div>
           <div class="block-sla w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0d4f7f3ef469679f59758a_doc_address.svg" alt="doc icon" class="sla-icon" />
-            <p class="p grey-sla"><a href="/company" class="grey-a">YouHodler (NAUMARD LTD)</a> crypto-lending solutions
+            <p class="p grey-sla"><a href="/company" class="grey-a">YieldFincs(NAUMARD LTD)</a> crypto-lending solutions
               is structured in the form of token purchase/re-purchase agreements.</p>
           </div>
           <ul role="list" class="testimonial-list w-clearfix w-list-unstyled">
@@ -310,9 +310,9 @@
               </a></li>
           </ul>
         </div>
-        <div class="column-compensation loan-hero w-col w-col-6">
-          <div class="calc-wrap"></div><img src="/youholder/public/images/mokup.png" alt="yieldfincs mobile app" width="100%" class="image-hero loan" />
-        </div>
+        <!-- <div class="column-compensation loan-hero w-col w-col-6">
+          <div class="calc-wrap"></div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -377,8 +377,8 @@ border: none; overflow: hidden;">
     <div class="content-wrap wide last w-container">
       <h2 class="h2 center">What is Crypto Staking?</h2>
       <div class="how-to-block w-row">
-        <div class="column-compensation content-center w-col w-col-5 w-col-medium-6"><a href="../login/" class="image-content-link w-inline-block"><img src="/youholder/public/images/mokup.png" width="100%" alt="crypto backed loan yieldfincs" class="image-content" /></a></div>
-        <div class="column-compensation w-col w-col-7 w-col-medium-6">
+        <!-- <div class="column-compensation content-center w-col w-col-5 w-col-medium-6"><a href="../login/" class="image-content-link w-inline-block"><img src="/youholder/public/images/mokup.png" width="100%" alt="crypto backed loan yieldfincs" class="image-content" /></a></div> -->
+        <div class="column-compensation w-col w-col-12 w-col-medium-6">
           <div class="top-padding-wrap">
             <h3 class="h5 with-padding w-clearfix"><span class="badge-num">1</span> What is Crypto Staking?</h3>
             <p class="p">Staking is a popular way to earn passive income with your crypto investments.</p>

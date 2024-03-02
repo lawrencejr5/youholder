@@ -553,22 +553,6 @@
         <div class="content-wrap wide w-container">
           <div class="w-row">
             <div class="column-compensation w-col w-col-6">
-              <h2 class="h3 no-padding-bottom">Avg. user balance</h2>
-              <p class="p">All coins and tokens valued in US Dollars</p>
-              <div class="num-highlight">$6,120</div>
-            </div>
-            <div class="column-compensation w-col w-col-6">
-              <h3 class="h3 no-padding-bottom">BTC dominance</h3>
-              <p class="p">Percentage of BTC holdings among all YouHodler wallets</p>
-              <div class="num-highlight">8.27%</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="s-content wide">
-        <div class="content-wrap wide w-container">
-          <div class="w-row">
-            <div class="column-compensation w-col w-col-6">
               <h3 class="h3 no-padding-bottom">Avg. Staking input</h3>
               <p class="p">The average input amount of Staking deal in USD</p>
               <div class="num-highlight">$<strong>740</strong></div>

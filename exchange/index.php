@@ -270,13 +270,9 @@
         <div class="column-compensation hero-left w-col w-col-7">
           <h1 class="h1 hero big main">YieldFincs Fiat and Crypto Exchange.<br /></h1>
           <p class="h3 subheading hero">Exchange cryptocurrency, fiat, and stablecoins with real-time execution prices
-            and low fees. Buy crypto with credit card, (Visa, Mastercard) and your SEPA bank account.<br /></p>
-          <div class="hero-cta-wrap cta-mobile"><a data-test-id="EXCHANGE_BUTTON" href="https://app.youhodler.com/sign-up" class="btn-big-solid w-button">EXCHANGE</a>
-            <div class="hero-cta-mobile-links"><a data-test-id="APPSTORE_BUTTONS" href="https://youhodler.onelink.me/IPBU/issaboh4" target="_blank" class="apple-cta-blue w-inline-block">
-                <div class="text-block-23">appstore</div>
-              </a><a data-test-id="APPSTORE_BUTTONS" href="https://youhodler.onelink.me/IPBU/issaboh4" target="_blank" class="android-cta-blue w-inline-block">
-                <div class="text-block-23">appstore</div>
-              </a></div>
+            and low fees.<br /></p>
+          <div class="hero-cta-wrap cta-mobile"><a data-test-id="EXCHANGE_BUTTON" href="/youholder/register/" class="btn-big-solid w-button">EXCHANGE</a>
+
             <div data-hover="true" data-delay="0" class="nav-store-icons w-dropdown">
               <div class="nav-store-icons-trigger w-dropdown-toggle"></div>
               <nav class="nav-drop-wrap store-icons-wrap w-dropdown-list">
@@ -284,7 +280,7 @@
               </nav>
             </div>
           </div>
-          <div class="hero-cta-wrap cta-desktop"><a data-test-id="EXCHANGE_BUTTON" href="https://app.youhodler.com/sign-up" class="btn-big-solid hero w-button">EXCHANGE</a>
+          <div class="hero-cta-wrap cta-desktop"><a data-test-id="EXCHANGE_BUTTON" href="/youholder/register/" class="btn-big-solid hero w-button">EXCHANGE</a>
             <div data-hover="true" data-delay="0" class="nav-store-icons w-dropdown">
               <div class="nav-store-icons-trigger w-dropdown-toggle"></div>
               <nav class="nav-drop-wrap store-icons-wrap w-dropdown-list">
@@ -293,7 +289,7 @@
             </div>
           </div>
           <div class="block-sla w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0d4f7f3ef469679f59758a_doc_address.svg" alt="doc icon" class="sla-icon" />
-            <p class="p grey-sla">Exchange service is provided by <a href="https://www.youhodler-swiss.com" target="_blank" class="grey-a">YouHodler SA</a>.</p>
+            <p class="p grey-sla">Exchange service is provided by <a class="grey-a">YieldFincs SA</a>.</p>
           </div>
           <ul role="list" class="testimonial-list w-clearfix w-list-unstyled">
             <li class="testimonial-item"><a href="/company" target="_blank" class="testimonial-link w-inline-block">
@@ -310,9 +306,9 @@
               </a></li>
           </ul>
         </div>
-        <div class="column-compensation calc-wrap-column w-col w-col-5">
+        <!-- <div class="column-compensation calc-wrap-column w-col w-col-5">
           <div class="calc-wrap"></div><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f7ea1e70046a356e36a6dd4_illustration_convert_swiss.jpg" width="600" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, 600px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f7ea1e70046a356e36a6dd4_illustration_convert_swiss-p-500.jpeg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f7ea1e70046a356e36a6dd4_illustration_convert_swiss-p-800.jpeg 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f7ea1e70046a356e36a6dd4_illustration_convert_swiss-p-1080.jpeg 1080w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f7ea1e70046a356e36a6dd4_illustration_convert_swiss.jpg 1088w" alt="" class="image-hero exchange" />
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -327,17 +323,17 @@ border: none; overflow: hidden;">
     <div class="content-wrap wide last w-container">
       <h2 class="h2 center">Buy and exchange cryptocurrency with a platform you can trust</h2>
       <div class="how-to-block w-row">
-        <div class="column-compensation content-center w-col w-col-5 w-col-medium-6"><a href="https://app.youhodler.com/" class="image-content-link w-inline-block"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c60dce32edc3d3a919270_convert_phone.jpg" alt="crypto exchange" width="380" sizes="(max-width: 479px) 68vw, (max-width: 767px) 320px, (max-width: 991px) 37vw, (max-width: 1279px) 36vw, 380px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c60dce32edc3d3a919270_convert_phone-p-500.jpeg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c60dce32edc3d3a919270_convert_phone-p-800.jpeg 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c60dce32edc3d3a919270_convert_phone.jpg 926w" class="image-content" /></a></div>
-        <div class="column-compensation w-col w-col-7 w-col-medium-6">
+        <!-- <div class="column-compensation content-center w-col w-col-5 w-col-medium-6"><a href="https://app.youhodler.com/" class="image-content-link w-inline-block"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c60dce32edc3d3a919270_convert_phone.jpg" alt="crypto exchange" width="380" sizes="(max-width: 479px) 68vw, (max-width: 767px) 320px, (max-width: 991px) 37vw, (max-width: 1279px) 36vw, 380px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c60dce32edc3d3a919270_convert_phone-p-500.jpeg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c60dce32edc3d3a919270_convert_phone-p-800.jpeg 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c60dce32edc3d3a919270_convert_phone.jpg 926w" class="image-content" /></a></div> -->
+        <div class="column-compensation w-col w-col-12 w-col-medium-6">
           <div class="top-padding-wrap">
-            <p class="p">With YouHodler’s full range of crypto conversion tools, you can buy and exchange cryptocurrency
+            <p class="p">With YieldFincs full range of crypto conversion tools, you can buy and exchange cryptocurrency
               right here on the platform, saving you time, money, and avoiding risk on external crypto exchange
               platforms.</p>
           </div>
           <div class="top-padding-wrap">
             <h3 class="h5 with-padding w-clearfix">Buy or exchange cryptocurrency with a platform you can trust
               offering:</h3>
-            <p class="p"><strong>Secure wallets: </strong>YouHodler’s cold and hot crypto wallet technology offers top
+            <p class="p"><strong>Secure wallets: </strong>YieldFincs’ cold and hot crypto wallet technology offers top
               of the line security backed by our talented team of developers. All credit card operations are under PCI
               Security Standards, all crypto operations – in accordance with Cryptocurrency Security Standard (CCSS). We
               run external security audits on a regular basis.</p>
@@ -346,17 +342,17 @@ border: none; overflow: hidden;">
               Bitcoin Cash (BCH) and more. New coins added every month.</p>
             <p class="p"><strong>FIAT currency support:</strong> US dollar (USD), Euro (EUR), Swiss franc (CHF), British
               pounds (GBP).</p>
-            <p class="p"><strong>A worldwide community: </strong>Clients from over 100 countries come to YouHodler to
+            <p class="p"><strong>A worldwide community: </strong>Clients from over 100 countries come to YieldFincs to
               buy crypto and exchange cryptocurrency right on our platform.</p>
           </div>
-          <h3 class="h5 with-padding w-clearfix">Bitcoin to GBP: Convert crypto to fiat on YouHodler</h3>
+          <h3 class="h5 with-padding w-clearfix">Bitcoin to GBP: Convert crypto to fiat on YieldFincs</h3>
           <p class="p">Convert crypto and Bitcoin to GBP, CHF, EUR, stablecoins, and vice versa. Buy Bitcoin online and
             use your Bitcoin purchase as collateral for an instant crypto loan or deposit stablecoins into our
-            interest-earning wallets (up to 8% APR). Take care of all your crypto-related needs right here on YouHodler.
+            interest-earning wallets (up to 8% APR). Take care of all your crypto-related needs right here on YieldFincs.
           </p>
-          <div class="section-cta-wrap"><a data-test-id="EXCHANGE_BUTTON" href="https://app.youhodler.com/sign-up" class="btn-big-solid w-button">EXCHANGE CRYPTO</a></div>
+          <div class="section-cta-wrap"><a data-test-id="EXCHANGE_BUTTON" href="/youholder/register/" class="btn-big-solid w-button">EXCHANGE CRYPTO</a></div>
           <div class="block-sla hidden w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0d4f7f3ef469679f59758a_doc_address.svg" alt="doc icon" class="sla-icon" />
-            <p class="p grey-sla">Exchange service provided by <a href="/swiss" class="grey-a">YouHodler SA</a></p>
+            <p class="p grey-sla">Exchange service provided by <a href="/swiss" class="grey-a">YieldFincs SA</a></p>
           </div>
         </div>
       </div>

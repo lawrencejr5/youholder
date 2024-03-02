@@ -171,74 +171,46 @@
                 <div class="faq-wrap">
                     <div class="faq-item">
                         <div class="faq-link w-clearfix" data-ix="show-faq-yield">
-                            <div class="faq-link-txt">How to boost my crypto-payouts?<span class="faq-link-arr-expand">vv</span><br />
+                            <div class="faq-link-txt">What qualifies me for staking?<br />
                             </div>
                         </div>
                         <div class="faq-content">
-                            <p>The classic and the simplest way to do that is to reach certain trading volume. Together with the
-                                trading volume you will get an increased Loyalty level, increased crypto payouts, and number of selected
-                                currencies.<br /></p>
-                            <p>Alternative is to request a <a href="https://help.youhodler.com/en/articles/8232683" target="_blank">fixed term</a> for your crypto portfolio. We offer Gold loyalty level with 9.5%
-                                crypto-payouts.<br /></p>
+                            <p>A user must complete the necessary verification before being granted access to our staking services.<br /></p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-link w-clearfix" data-ix="show-faq-yield">
-                            <div class="faq-link-txt">How to start earning crypto with Loyalty Program<a href="#" class="faq-link-arr-expand">v</a><br /></div>
+                            <div class="faq-link-txt">What crypto assets can I earn rewards on?<br /></div>
                         </div>
                         <div class="faq-content">
-                            <p>Simply click on the Start Earning button on the top of your Wallet. Pick the assets that will generate
-                                crypto reward for you in the next 7 days<br /></p><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dba7f437eee06e1fccf187_Yield%20Account%20Widget.png" loading="lazy" width="358" sizes="100vw" alt="" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dba7f437eee06e1fccf187_Yield%20Account%20Widget-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dba7f437eee06e1fccf187_Yield%20Account%20Widget.png 716w" />
+                            <p>You can see all the assets you can earn rewards on from your back office. </p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-link w-clearfix" data-ix="show-faq-yield">
-                            <div class="faq-link-txt">What is Yield Limit<span class="faq-link-arr-expand">v</span><br /></div>
+                            <div class="faq-link-txt">Can I Deposit in Fiat?<br /></div>
                         </div>
                         <div class="faq-content">
-                            <p>It is the maximum amount of funds that can generate crypto from your wallets in accordance with your
-                                Loyalty Level<br /></p><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dbaa278e9e44c6a9569641_Yield%20Account.png" loading="lazy" width="358" sizes="100vw" alt="" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dbaa278e9e44c6a9569641_Yield%20Account-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dbaa278e9e44c6a9569641_Yield%20Account.png 716w" />
+                            <p> We only accept Digital Assets as Payment/Deposit methods<br /></p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-link w-clearfix" data-ix="show-faq-yield">
-                            <div class="faq-link-txt">How often I can get profit to my balance<span class="faq-link-arr-expand">v</span><br /></div>
+                            <div class="faq-link-txt">How do I earn?<br /></div>
                         </div>
                         <div class="faq-content">
-                            <p>Commonly every 7 days. But for different accounts conditions may vary and will be indicated in your
-                                account<br /></p><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dba95a1230008a94a8fd4c_Yield%20Account%20Widget.png" loading="lazy" width="358" sizes="100vw" alt="" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dba95a1230008a94a8fd4c_Yield%20Account%20Widget-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dba95a1230008a94a8fd4c_Yield%20Account%20Widget.png 716w" />
+                            <p>Your earnings are determined by your investment Portfolio. Take a deep dive into our investment Strategies/Portfolios, and pick the perfect Portfolio to kick-start your Financial Journey with us <br /></p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-link w-clearfix" data-ix="show-faq-yield">
-                            <div class="faq-link-txt">What will happen with my earnings if my level changes within the earning
-                                period<span class="faq-link-arr-expand">v</span><br /></div>
+                            <div class="faq-link-txt">HIs KYC Mandatory?<br /></div>
                         </div>
                         <div class="faq-content">
-                            <p>They are perfectly safe! All the funds that were generated will be ready to be claimed right away and
-                                you will be able to launch the new earning period on your new level conditions<br /></p>
+                            <p>KYC is not mandatory, but to have a full access to our services and Portfolio Levels, a user must complete the KYC procedures. <br /></p>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <div class="faq-link w-clearfix" data-ix="show-faq-yield">
-                            <div class="faq-link-txt">Can I deposit funds during the earning period<span class="faq-link-arr-expand">v</span><br /></div>
-                        </div>
-                        <div class="faq-content">
-                            <p>Of course. The system is checking balances a few times a day and will generate more profit if you
-                                increase your balance<br /></p>
-                        </div>
-                    </div>
-                    <div class="faq-item last">
-                        <div class="faq-link w-clearfix" data-ix="show-faq-yield">
-                            <div class="faq-link-txt">How to maximize profit with the Yield Account<span class="faq-link-arr-expand">v</span><br /></div>
-                        </div>
-                        <div class="faq-content">
-                            <p>With a combination of MultiHODL and Yield Account. Funds that are used in MultiHODL still generate
-                                rewards from the Yield Account. And by increasing trading volume you upgrade your account level. This
-                                means higher rewards and higher limits.<br /></p>
-                            <p>And don’t forget that you will generate Sparks with which you can mine BTC for free<br /></p><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dba9c02c31841a934a7e2a_Level%3D6.png" loading="lazy" width="342" sizes="100vw" alt="" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dba9c02c31841a934a7e2a_Level%3D6-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dba9c02c31841a934a7e2a_Level%3D6.png 684w" />
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>

@@ -264,22 +264,16 @@
 
 <body>
   <?php include '../master/topnav.php' ?>
-  <div class="s-hero wide ceo">
+  <div class="s-hero wide">
     <div class="hero-wrap wide ceo w-container">
       <div class="w-row">
-        <div class="column-compensation w-col w-col-7">
-          <h1 class="h1 hero big">About Yield Financial Services</h1>
-          <div class="h3 subheading hero ceo-quote"><em>“In our daily life, we all still need traditional financial
-              services, but we do not want to miss out on opportunities opened by modern finance. Our Future is “Web3
-              Finance” that connects the old world with the new, offering enhanced  and secure services for anyone with
-              a smartphone. Welcome to Yield Financial Services, your guide to the Web 3!”</em></div>
-          <div class="ceo-quote-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5ce13a7524b02e03775131f9_ceo-avatar.jpg" width="124" alt="Ilya Volkov CEO YouHodler" class="ceo-avatar" />
-            <div class="w-clearfix">
-              <div class="ceo-quote-author">Ilya Volkov <a href="https://www.linkedin.com/in/ilya-volkov-b4077b28/" target="_blank" class="linkedin">LI</a><a href="https://twitter.com/Ilya_YouHodler" target="_blank" class="twitter">TW</a></div>
-              <div class="ceo-quote-author position">CEO Yield Finacial Services, <a href="https://members.cryptovalley.swiss/news/427869" target="_blank">CVA Board Member</a> and <a href="https://www.innovaud.ch/en/about/about-innovaud/ambassadors" target="_blank">Innovaud
-                  Ambassador</a></div>
-            </div>
-          </div>
+        <div class="column-compensation w-col w-col-12">
+          <h1 class="h1 hero big">WHO WE ARE</h1>
+          <div class="h3 subheading hero ceo-quote">We officially launched in 2018 with an international partnership of AU, UK, US, and Hong Kong founders, our main business is AU stocks, UK Stocks, HK stocks, US stock trading, short-term quantitative funds, digital asset funds, blockchain product development, supernode operations, e-commerce, cultural communications, real estate, real economy projects, Agricultural Projects, Gold Projects. During our work in venture capital we have invested in 21 companies, some of which were sold to major market players.
+            Over the years, our clients have placed their trust in our ability to help select the highest quality and most appropriate investment strategies for their portfolios. Whether you are a first-time investor or looking to expand your current portfolio, we’re committed to bringing you a superio customer experience</div>
+          <!-- <div class="ceo-quote-wrap"> -->
+          <!-- <img src="/youholder/public/images/business-2.jpg" width="124" alt="Ilya Volkov CEO YouHodler" class="ceo-avatar" /> -->
+          <!-- </div> -->
           <ul role="list" class="testimonial-list w-clearfix w-list-unstyled">
             <li class="testimonial-item"><a href="/company" target="_blank" aria-current="page" class="testimonial-link w-inline-block w--current">
                 <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb1cdaada6d30231e75_testimonial_eu_swiss_combined.svg" loading="lazy" alt="youhodler eu and swiss" class="testimonial-pic" /></div>
@@ -295,7 +289,7 @@
               </a></li>
           </ul>
         </div>
-        <div class="column-compensation w-col w-col-5"></div>
+        <!-- <div class="column-compensation w-col w-col-5"></div> -->
       </div>
     </div>
   </div>
@@ -333,7 +327,7 @@
             supplemented by all traditional payment systems (bank and card payments).<br /></p>
           <p>The platform complies with stringent global Know Your Customer (KYC) and Anti-Money Laundering (AML) regulations. Our global compliance partners provide a range of services, including customer verification, independent audits and attestations, and legal advisory.<br />
           </p>
-          <p>Yield Financial Services is an Australian brand with regulated institutions in Switzerland, Italy and other EU
+          <p>Yield Financial Services is an Australian brand with regulated institutions in the UK, US and Hong Kong
             countries.<br /></p>
           <p>Yield Financial Services is an active member of the Crypto Valley Association.<br /></p>
         </div>
@@ -478,39 +472,26 @@
   <div class="s-content wide">
     <div class="content-wrap wide w-container">
       <div class="wrap-center padding-bottom mobile-left">
-        <h2 class="h2 center">Why You Choose Yield Financial Services</h2>
+        <h2 class="h2 center">WHY YOU SHOULD CHOOSE US</h2>
+        <p>YIELD Fincs was founded in 2013 by market experts and has served more than 900,000 clients worldwide.</p>
       </div>
       <div class="w-layout-grid grid-3-row">
-        <div class="product-a-content brandline w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5da8d257dae2a4e2440cd59c_security.svg" alt="Secured wallet" class="product-a-icon" />
-          <h3 class="h5 no-padding-top">Secured crypto wallet</h3>
-          <p class="p">Yield Financial Services uses Ledger Vault&#x27;s industry leading information technology infrastructure to
-            securely control its crypto assets. Ledger Vault provides security solutions and $150M pooled crime
-            insurance.</p>
+        <div class="product-a-content brandline w-clearfix"><img src="/youholder/public/icons/user.png" alt="Secured wallet" class="product-a-icon" />
+          <h3 class="h5 no-padding-top">PERSONALIZED SERVICE </h3>
+          <p class="p">Your Client–Connect Advantage approach means we work to establish a long-term relationship with you by helping you formulate a personalized diversification strategy that meets your individual needs. </p>
         </div>
-        <div class="product-a-content brandline w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5da8d258cbc040c25a538123_safety.svg" alt="Safety" class="product-a-icon" />
-          <h3 class="h5 no-padding-top">Safety of fiat funds</h3>
-          <p class="p">Yield Financial Services has its bank accounts at reputable banks at Europe and Switzerland and partnerships
-            with trusted fiat payment providers. We do not avoid banks. We partner with them.</p>
+        <div class="product-a-content brandline w-clearfix"><img src="/youholder/public/icons/zero.png" alt="Safety" class="product-a-icon" />
+          <h3 class="h5 no-padding-top">SAFEGUARD PROMISE </h3>
+          <p class="p">
+            Nothing is more important than your security. We keep your personal information private and every purchase safe with insured and discreet shipping. </p>
         </div>
-        <div class="product-a-content brandline w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5da8d257e2439620ab3e210a_team.svg" alt="Team" class="product-a-icon" />
-          <h3 class="h5 no-padding-top">Team experience</h3>
-          <p class="p">Yield Financial Services management and engineering teams have 15+ years in FinTech and technology development.
-            We&#x27;re not an ICO backed!</p>
-        </div>
-        <div class="product-a-content brandline w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5d65135dca4f1a3669bf0aee_ftp.svg" alt="Risk control" class="product-a-icon" />
-          <h3 class="h5 no-padding-top">Risk control</h3>
-          <p class="p">Yield Financial Services team has extensive expertise in currency exchange risk management. We know how to save
-            our funds so we know how to save yours.</p>
-        </div>
-        <div class="product-a-content brandline w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5da8d257f117aa8c6ad6a715_code.svg" alt="Development" class="product-a-icon" />
-          <h3 class="h5 no-padding-top">Dynamic development</h3>
-          <p class="p">We implement at least 1 new feature every week. All of them based on real customer demand. We’d
-            like to hear from you and do it for you.</p>
-        </div>
-        <div class="product-a-content brandline w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5da8d256cbc0405cf7538122_support.svg" alt="Customer Support" class="product-a-icon" />
-          <h3 class="h5 no-padding-top">Better customer support</h3>
-          <p class="p">All our clients get VIP level support 24/7. Traders, miners, hodlers are happy with our service.
-            Yield Financial Services never sleeps.</p>
+        <div class="product-a-content brandline w-clearfix"><img src="/youholder/public/icons/global.png" alt="Team" class="product-a-icon" />
+          <h3 class="h5 no-padding-top">CUSTOMER EDUCATION </h3>
+          <p class="p">From our special reports and executive insights to our courtesy calls and market news alerts, we strongly believe that all decisions begin with having the right information.
+
+            We have a proven record of excellence
+
+            With a track record of trustworthy and ethical business practices, we’re dedicated to providing the experience, support, and resources you deserve.</p>
         </div>
       </div>
     </div>

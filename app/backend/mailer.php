@@ -4,9 +4,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-include "../../phpMailer/src/PHPMailer.php";
-include "../../phpMailer/src/SMTP.php";
-include "../../phpMailer/src/Exception.php";
+include "../../../phpMailer/src/PHPMailer.php";
+include "../../../phpMailer/src/SMTP.php";
+include "../../../phpMailer/src/Exception.php";
 
 
 class Mailer

@@ -24,8 +24,8 @@
                                             <a href="/youholder/exchange" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/exchange.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">Exchange</div>
                                             </a>
-                                            <a href="/youholder/promo" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
-                                                <div class="nav-drop-a-tile-heading">Investments</div>
+                                            <a href="/youholder/yield" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                                <div class="nav-drop-a-tile-heading">Earn</div>
                                             </a>
                                         </div>
                                     </div>
@@ -38,7 +38,7 @@
                                 <nav class="nav-drop-wrap short w-dropdown-list">
                                     <div class="nav-drop-bg">
                                         <div class="nav-drop-tile-grid-five">
-                                            <a href="/company" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/question.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                            <a href="/youholder/company" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/question.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">About YouHodler</div>
                                             </a>
                                             <a href="/youholder/stats" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
@@ -89,7 +89,7 @@
                                         execution prices and low fees.</div>
                                 </a>
                                 <a href="/youholder/exchange" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Crypto Loans" src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
-                                    <div class="nav-drop-a-tile-heading">Investments</div>
+                                    <div class="nav-drop-a-tile-heading">Earn</div>
                                     <div class="nav-drop-a-tile-txt">Invest with yieldfincs and earn monthly interests.</div>
                                 </a>
                             </div>

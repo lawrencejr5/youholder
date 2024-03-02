@@ -9,8 +9,9 @@
                     <li class="mob-logo-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5d30a6d085ef6151745f5047_badge_appstore_white.png" alt="youhodler ios iphone" width="134" /></li>
                     <li class="mob-logo-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5d30a6d085ef61253b5f5048_badge_googleplay_white.png" alt="youhodler android" width="134" /></li>
                 </ul>
+                <br><br>
             </div>
-            <div class="column-compensation content-center w-col w-col-6"><img src="/youholder/public/images/mokup.png" width="100%" alt="youhodler crypto wallet" loading="lazy" class="footer-image" /></div>
+            <div class="column-compensation content-center w-col w-col-6"><img src="" width="100%" alt="" loading="lazy" class="footer-image" /></div>
         </div>
     </div>
 </div>
@@ -80,6 +81,8 @@
                             </li>
                             <li class="footer-link-li wide-fix"><a href="/youholder/faqs" target="" class="footer-a">Faqs</a></li>
                             <li class="footer-link-li wide-fix"><a href="/youholder/t&c" target="_blank" class="footer-a">Terms & Conditions</a></li>
+                            <li class="footer-link-li wide-fix"><a href="/youholder/policy" target="_blank" class="footer-a">Privacy Policy</a></li>
+                            <li class="footer-link-li wide-fix"><a href="/youholder/use-of-website" target="_blank" class="footer-a">Use Of Website</a></li>
                         </ul>
                     </div>
                 </div>
@@ -160,13 +163,13 @@
                             <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dc9ba833fffe20ad8f5c63e_in.svg" width="24" alt="youhodler instagram" loading="lazy" class="footer-link-li-icon social" /></li>
                             <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dc9ba80052d67a88aac906f_yt.svg" width="24" alt="youhodler youtube" loading="lazy" class="footer-link-li-icon social" /></li>
                         </ul>
-                        <ul role="list" class="footer-link-ul w-clearfix w-list-unstyled">
+                        <!-- <ul role="list" class="footer-link-ul w-clearfix w-list-unstyled">
                             <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dc9bd735995c478f6c3664c_visa.svg" width="24" alt="visa" loading="lazy" class="footer-link-li-icon" /></li>
                             <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/6275429976ecdceafc31b581_visa-3ds.svg" width="24" alt="visa" loading="lazy" class="footer-link-li-icon" /></li>
                             <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5e70f93ea4d49011a84ff814_mastercard.svg" width="24" alt="mastercard" loading="lazy" class="footer-link-li-icon" /></li>
                             <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5e70f93d18292368aba5c4ff_maestro.svg" width="24" alt="maestro" loading="lazy" class="footer-link-li-icon" /></li>
                             <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/62795c5179bcd12c1ad2d872_mc_idcheck.svg" loading="lazy" alt="mc id check" class="footer-link-li-icon wide" /></li>
-                        </ul>
+                        </ul> -->
                         <div id="lang" class="lang"></div>
                     </div>
                 </div>

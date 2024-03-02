@@ -1,6 +1,7 @@
 <?php
 
 include '../module.php';
+include '../mailer.php';
 
 session_start();
 

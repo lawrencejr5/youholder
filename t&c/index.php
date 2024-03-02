@@ -113,6 +113,16 @@
             <h4>Taxation</h4>
             <p>The tax treatment of Digital Assets is uncertain, and it is your responsibility to determine whether taxes arise from your use of the Yield Fincs Services. You acknowledge and agree that Yield Fincs does not provide investment, legal or tax advice and that you shall be solely responsible for reporting and paying any applicable taxes arising from your use of the Yield Fincs Services
             </p>
+
+            <h4>Miscellaneous </h4>
+
+            <p><strong>10.1.</strong> These Terms constitute the entire agreement between you and Yield Financial Services regarding your use of the Site.</p>
+
+            <p><strong>10.2.</strong> If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect.</p>
+
+            <p><strong>10.3.</strong> Yield Financial Services failure to enforce any right or provision of these Terms shall not be deemed a waiver of such right or provision.</p>
+
+            <p><strong>10.4.</strong> These Terms are not assignable, transferable, or sublicensable by you except with Yield Financial Services prior written consent.</p>
         </div>
     </section>
 
