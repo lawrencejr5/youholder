@@ -11,7 +11,7 @@ include "../../../phpMailer/src/Exception.php";
 
 class Mailer
 {
-    function sendMyMail($toEmail,  $toName, $subject, $body)
+    function sendMyMail($toEmail, $toName, $subject, $body)
     {
         $mail = new PHPMailer;
         $mail->SMTPOptions = array(
@@ -29,12 +29,12 @@ class Mailer
         $mail->Password   = 'ravensfinance123';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
         $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-        $mail->IsHTML(true);
-        $mail->setFrom('support@ravens-finance.com', 'Youhodler');
-        $mail->addReplyTo('support@ravens-finance.com', 'Youhodler');
+        $mail->setFrom('support@ravens-finance.com', 'Yield Financial Services');
+        $mail->addReplyTo('support@ravens-finance.com', 'Yield Financial Services');
         $mail->addAddress($toEmail, $toName);
         $mail->Subject = $subject;
         $mail->Body = $body;
+        $mail->IsHTML(true);
         try {
             ob_end_clean();
             if ($mail->send()) {

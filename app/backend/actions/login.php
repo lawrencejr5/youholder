@@ -14,12 +14,16 @@ if (isset($_POST['email'])) {
 
     $login = $modules->login($email, $pass);
     if ($login->rowCount() == 1) {
-        $data['user'] = $login->fetchAll();
-        foreach ($data['user'] as $u) {
-            $_SESSION['id'] = $u['id'];
-            $_SESSION['admin'] = $u['admin'];
+        if ($modules->checkEmailVerified($email) == '1') {
+            $data['user'] = $login->fetchAll();
+            foreach ($data['user'] as $u) {
+                $_SESSION['id'] = $u['id'];
+                $_SESSION['admin'] = $u['admin'];
+            }
+            $response['header'] = 'signin';
+        } else {
+            $response['header'] = 'not_verified';
         }
-        $response['header'] = 'signin';
     } elseif ($login->rowCount() == 0) {
         $response['header'] = 'error';
     }

@@ -3,16 +3,20 @@
 include '../module.php';
 include '../mailer.php';
 
-if (isset($_POST['fname'])) {
-    $response = [];
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $phone = $_POST['phone'];
+if (isset($_POST['resend_code'])) {
+    $res = [];
     $email = $_POST['email'];
-    $pass = $_POST['pass'];
-    $otp = rand(100000, 999999);
-    $no = rand(1234567, 9999999);
-    $account_no = 'yf-' . strtolower($lname) . '00' . $no;
+    $fname = $_POST['fname'];
+    $code = $_POST['resend_code'];
+
+    if (!$fname) {
+        $data['user'] = $modules->getUserDataWithEmail($email);
+        foreach ($data['user'] as $u) {
+            $fname = $u['fname'];
+        }
+    } else {
+        $fname = $_POST['fname'];
+    }
 
     $body = "
         <!DOCTYPE html>
@@ -27,7 +31,7 @@ if (isset($_POST['fname'])) {
                     <p>Do not share this code with any body</p>
                </center>
                <p>Email: $email</p>
-               <p>Verification Code: $otp</p>
+               <p>Verification Code: $code</p>
                <br/>
                <br/>
                <p>Please, if this is not you, kindly reply this email saying it's not you so that we can terminate this registration.</p>
@@ -38,18 +42,15 @@ if (isset($_POST['fname'])) {
             </body>
         </html>
     ";
-
-    $registered = $modules->register($fname, $lname, $email, $account_no, $phone, $pass, $otp);
-
-    if ($registered == 'exists') {
-        $response['header'] = 'exists';
-    } elseif ($registered == 'chuwa') {
-        if ($mailer->sendMyMail($email, $fname, 'Verification Code', $body)) {
-            $response['header'] = 'good';
-        } else {
-            $response['header'] = 'wrong';
+    if ($modules->checkEmailExists($email) == 0) {
+        $res['header'] = "err";
+    } else {
+        if ($modules->updateVerifyCode($code, $email)) {
+            $mailer->sendMyMail($email, $fname, 'Verification Code', $body);
+            $res['header'] = "resent";
         }
     }
 
-    echo json_encode($response);
+
+    echo json_encode($res);
 }

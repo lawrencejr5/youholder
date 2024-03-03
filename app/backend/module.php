@@ -9,7 +9,7 @@ class Modules extends Connection
     private $otp;
 
     // Function to check if user already exists
-    private function checkEmailExists($email)
+    public function checkEmailExists($email)
     {
         $this->sql = "SELECT email FROM users WHERE email = :email";
         $this->stmt = $this->conn->prepare($this->sql);
@@ -20,12 +20,33 @@ class Modules extends Connection
     }
 
     // Check if old password is correct
-    private function checkPassword($password, $id)
+    public function checkPassword($password, $id)
     {
         $this->sql = "SELECT password FROM users WHERE password = :password AND id = :id";
         $this->stmt = $this->conn->prepare($this->sql);
         $this->stmt->bindParam(':id', $id);
         $this->stmt->bindParam(':password', $password);
+        $this->stmt->execute();
+        $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $this->stmt->rowCount();
+    }
+
+    public function checkVerifyCode($code, $email)
+    {
+        $this->sql = "SELECT verify_code FROM users WHERE verify_code = :verify_code AND email = :email";
+        $this->stmt = $this->conn->prepare($this->sql);
+        $this->stmt->bindParam(':email', $email);
+        $this->stmt->bindParam(':verify_code', $code);
+        $this->stmt->execute();
+        $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $this->stmt->rowCount();
+    }
+
+    public function checkEmailVerified($email)
+    {
+        $this->sql = "SELECT email FROM users WHERE verified = '1' AND email = :email";
+        $this->stmt = $this->conn->prepare($this->sql);
+        $this->stmt->bindParam(':email', $email);
         $this->stmt->execute();
         $this->stmt->fetchAll(PDO::FETCH_ASSOC);
         return $this->stmt->rowCount();
@@ -65,6 +86,34 @@ class Modules extends Connection
             } catch (PDOException $e) {
                 echo "Failed," . $e->getMessage();
             }
+        }
+    }
+
+    // Verify email
+    public function verifyEmail($email)
+    {
+        $this->sql = "UPDATE users SET verified = '1' WHERE email = :email";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':email', $email);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
+
+    public function updateVerifyCode($code, $email)
+    {
+        $this->sql = "UPDATE users SET verify_code = :verify_code WHERE email = :email";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':email', $email);
+            $this->stmt->bindParam(':verify_code', $code);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $e) {
+            return false;
         }
     }
 
@@ -657,6 +706,19 @@ class Modules extends Connection
             $this->sql = 'SELECT * FROM users WHERE id = :id';
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "Error " . $e->getMessage();
+        }
+    }
+
+    public function getUserDataWithEmail($email)
+    {
+        try {
+            $this->sql = 'SELECT * FROM users WHERE email = :email';
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':email', $email);
             $this->stmt->execute();
             return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
