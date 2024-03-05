@@ -8,29 +8,21 @@ include "../../../phpMailer/src/PHPMailer.php";
 include "../../../phpMailer/src/SMTP.php";
 include "../../../phpMailer/src/Exception.php";
 
-
 class Mailer
 {
     function sendMyMail($toEmail, $toName, $subject, $body)
     {
-        $mail = new PHPMailer;
-        $mail->SMTPOptions = array(
-            'ssl' => array(
-                'verify_peer' => false,
-                'verify_peer_name' => false,
-                'allow_self_signed' => true
-            )
-        );
-        $mail->SMTPDebug = 0;                      //Enable verbose debug output
+        $mail = new PHPMailer(true);
+        $mail->SMTPDebug = SMTP::DEBUG_OFF;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'server188.web-hosting.com';                     //Set the SMTP server to send through
+        $mail->Host       = 'wghp6.wghservers.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'support@ravens-finance.com';                     //SMTP username
-        $mail->Password   = 'ravensfinance123';                               //SMTP password
+        $mail->Username   = 'support@yieldfincs.com';                     //SMTP username
+        $mail->Password   = 'yieldfincs123';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
         $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-        $mail->setFrom('support@ravens-finance.com', 'Yield Financial Services');
-        $mail->addReplyTo('support@ravens-finance.com', 'Yield Financial Services');
+        $mail->setFrom('support@yieldfincs.com', 'Yield Financial Services');
+        $mail->addReplyTo('support@yieldfincs.com', 'Yield Financial Services');
         $mail->addAddress($toEmail, $toName);
         $mail->Subject = $subject;
         $mail->Body = $body;

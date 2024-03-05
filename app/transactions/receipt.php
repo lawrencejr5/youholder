@@ -93,7 +93,7 @@ include '../backend/udata.php';
                                         <!-- Total -->
                                         <div class="d-flex justify-content-between mt-3 total">
                                             <p class="mb-0 f-16 gilroy-medium text-dark">Notes</p>
-                                            <p class="mb-0 f-16 gilroy-medium text-dark"></p>
+                                            <p class="mb-0 f-16 gilroy-medium text-dark"><?= $t['notes'] ?></p>
                                         </div>
                                         <hr>
                                     <?php } ?>

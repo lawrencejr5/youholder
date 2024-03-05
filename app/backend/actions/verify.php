@@ -29,8 +29,8 @@ if (isset($_POST['code'])) {
                     <img src='https://yieldfincs.com/youholder/public/logos/yield-logo.png' height='auto' width='200px' />
                     <h1>You're welcome, $fname</h1>
                </center>
-               <p>The Yield Financial Services team officially welcomes you to our platform.</p>
-               <p>You can get started by Loging in <a href='https://yieldfincs.com/youholder/login'>here</a>. Get started by adding wallets, </p>
+               <p>Your email $email has been verified and the Yield Financial Services team officially welcomes you to our platform.</p>
+               <p>You can get started by Loging in <a href='https://yieldfincs.com/youholder/login'>here</a>. </p>
                <br/>
                <br/>
                <p>Please, if this is not you, kindly reply this email saying it's not you so that we can terminate this account.</p>
