@@ -4,7 +4,7 @@
 
                 <a href="" class="logo pt-6 text-decoration-none">
                     <span class="logo-mini"><b>Yield</b></span>
-                    <img src="/youholder/public/logos/yield-logo.png" width="100px" height="auto" class="company-logo">
+                    <img src="/youholder/public/logos/yield-logo.png" width="150px" height="auto" class="company-logo">
                 </a>
             </div>
 
@@ -15,7 +15,7 @@
                 </a>
                 <div class="mobile-width">
                     <a href="" class="mobile-logo">
-                        <span class="logo-lg f-13"><b>Pay Money</b></span>
+                        <span class="logo-lg f-13"><b>Yield</b></span>
                     </a>
                 </div>
                 <div class="navbar-custom-menu">

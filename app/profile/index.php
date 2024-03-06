@@ -112,7 +112,7 @@ include '../backend/udata.php';
                                 </div>
                             </div>
                             <!-- Default Wallet Div -->
-                            <div class="default-wallet-div d-flex justify-content-between bg-white mt-24">
+                            <!-- <div class="default-wallet-div d-flex justify-content-between bg-white mt-24">
                                 <div class="wallet-text d-flex">
 
                                     <p class="wallet-text-hover mb-0 text-dark f-20 leading-25 gilroy-Semibold">Default
@@ -180,7 +180,7 @@ include '../backend/udata.php';
                                     </div>
                                 </div>
                                 <p class="mb-0 f-20 leading-25 gilroy-Semibold text-uppercase text-primary">USD</p>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="col-xl-12 col-xxl-6">
@@ -327,7 +327,7 @@ include '../backend/udata.php';
                                         </div>
                                         <div class="modal-body modal-body-pxy">
                                             <form id="profileUpdateForm">
-
+                                                <input type="hidden" value="<?php $level ?>" id="level">
                                                 <div class="row">
                                                     <!-- First Name -->
                                                     <div class="col-6 column-pr-unset2">
@@ -1599,6 +1599,7 @@ include '../backend/udata.php';
             const updateBtn = document.querySelector('#updateProfileBtn')
             updateBtn.addEventListener('click', () => {
                 updateBtn.textContent = "Saving..."
+                const level = document.querySelector('#level').value
                 const fname = $('#first_name').val()
                 const lname = $('#last_name').val()
                 const phone = $('#phone').val()
@@ -1628,25 +1629,48 @@ include '../backend/udata.php';
                         hideMethod: "fadeOut",
                         tapToDismiss: !1
                     })
-                    updateBtn.textContent = "Save changes"
+                    updateBtn.textContent = "Try again"
                 } else {
                     $.ajax({
                         url: '../backend/actions/updateProfile.php',
                         type: 'post',
                         dataType: 'json',
                         data: {
-                            fname: fname,
-                            lname: lname,
-                            phone: phone,
-                            address1: address1,
-                            address2: address2,
-                            state: state,
-                            country: country,
-                            city: city,
-                            timezone: timezone
+                            level,
+                            fname,
+                            lname,
+                            phone,
+                            address1,
+                            address2,
+                            state,
+                            country,
+                            city,
+                            timezone
                         },
                         success: (res) => {
                             if (res.header == 'updated') {
+                                toastr.success("Your personal profile was successfully updated", "Updated", {
+                                    positionClass: "toast-top-center",
+                                    timeOut: 5e3,
+                                    closeButton: !0,
+                                    debug: !1,
+                                    newestOnTop: !0,
+                                    progressBar: !0,
+                                    preventDuplicates: !0,
+                                    onclick: null,
+                                    showDuration: "300",
+                                    hideDuration: "1000",
+                                    extendedTimeOut: "1000",
+                                    showEasing: "swing",
+                                    hideEasing: "linear",
+                                    showMethod: "fadeIn",
+                                    hideMethod: "fadeOut",
+                                    tapToDismiss: !1
+                                })
+                                setTimeout(() => {
+                                    location.reload();
+                                }, 2000)
+                            } else if (res.header == 'updated_and_upgraded') {
                                 toastr.success("Your personal profile was successfully updated, your account has been upgraded to level 2", "Updated", {
                                     positionClass: "toast-top-center",
                                     timeOut: 5e3,
@@ -1665,10 +1689,9 @@ include '../backend/udata.php';
                                     hideMethod: "fadeOut",
                                     tapToDismiss: !1
                                 })
-                                updateBtn.textContent = "Save changes"
                                 setTimeout(() => {
                                     location.reload();
-                                }, 5000)
+                                }, 3000)
                             } else {
                                 toastr.error("An error occurred", "Error", {
                                     positionClass: "toast-top-center",
@@ -1743,8 +1766,8 @@ include '../backend/udata.php';
                         tapToDismiss: !1
                     })
                     updatePasswordBtn.html('Save changes')
-                } else if (!cPass) {
-                    toastr.error("Confirm your new password", "Required", {
+                } else if (newpass < 6) {
+                    toastr.warning("Password must be a minimum of 6 characters", "Warning", {
                         positionClass: "toast-top-center",
                         timeOut: 5e3,
                         closeButton: !0,

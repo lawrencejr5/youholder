@@ -42,6 +42,7 @@ $data['exchanges'] = $adminModule->fetchAllExchanges('exchange from', 'exchange 
 $data['documents'] = $adminModule->fetchAllUserDocuments();
 $data['stakings'] = $adminModule->fetchAllStakes();
 $data['investments'] = $adminModule->fetchAllInvests();
+$data['wallets'] = $adminModule->fetchAllWallets();
 
 
 

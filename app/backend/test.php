@@ -1,7 +1,7 @@
 <?php
 
-include 'module.php';
-// include 'adminModule.php';
+// include 'module.php';
+include 'adminModule.php';
 header('content-type: application/json');
 // echo json_encode(['wallets' => $modules->getAllUserWallets(25)]);
 // echo json_encode(['deposits' => $modules->getAllUserDeposits(25)]);
@@ -16,7 +16,7 @@ header('content-type: application/json');
 // echo json_encode(['datum' => $modules->getWalletLastAction(25, 'USD')]);
 // echo json_encode(['datum' => $modules->getAllInvestments()]);
 // echo json_encode(['datum' => $modules->numOfUserTransactions(25)]);
-echo json_encode(['withdrawal' => $modules->getSingleTransaction(43, 'withdrawal'), 'deposit' => $modules->getSingleTransaction(9, 'deposit'), 'transfer' => $modules->getSingleTransaction(28, 'transfer to')]);
+// echo json_encode(['withdrawal' => $modules->getSingleTransaction(43, 'withdrawal'), 'deposit' => $modules->getSingleTransaction(9, 'deposit'), 'transfer' => $modules->getSingleTransaction(28, 'transfer to')]);
 // echo json_encode(['admins' => $adminModule->fetchAllAdminAccounts(1)]);
 // echo json_encode(['deposits' => $adminModule->fetchAllDeposits('deposit')]);
 // echo json_encode(['withdrawals' => $adminModule->fetchAllWithdrawals('withdrawal')]);
@@ -32,6 +32,7 @@ echo json_encode(['withdrawal' => $modules->getSingleTransaction(43, 'withdrawal
 // echo json_encode(['success' => true, 'stakings' => $adminModule->getUserStakes(25)]);
 // echo json_encode(['success' => true, 'investments' => $adminModule->getUserInvests(25)]);
 // echo json_encode(['success' => true, 'wallets' => $adminModule->getUserWallets(25)]);
+echo json_encode(['success' => true, 'wallets' => $adminModule->getTotalWalletWtAmt('BTC')]);
 
 // $date = '0000-00-00';
 

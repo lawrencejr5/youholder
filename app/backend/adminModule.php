@@ -397,6 +397,32 @@ class AdminModule extends Connection
         }
     }
 
+    public function getTotalWalletDpAmt($wallet)
+    {
+        $this->sql = "SELECT SUM(return_amt) as amt FROM deposits WHERE wallet = :wallet AND approved = '1'";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':wallet', $wallet);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            return false . $e->getMessage();
+        }
+    }
+
+    public function getTotalWalletWtAmt($wallet)
+    {
+        $this->sql = "SELECT SUM(amount) as amt FROM withdrawals WHERE wallet_name = :wallet_name AND verified = '1'";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':wallet_name', $wallet);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            return false . $e->getMessage();
+        }
+    }
+
 
 
 

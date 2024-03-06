@@ -133,88 +133,33 @@ include "../../backend/adminData.php";
                                 <div class="box box-info">
                                     <div class="box-header">
                                         <div class="fs-5 fw-bold ms-2">
-                                            Wallet Balance
+                                            Wallet Balances
                                         </div>
                                     </div>
                                     <div class="box box-body f-14">
-                                        <div class="wallet-parent">
-                                            <div class="float-start w-60pct">
-                                                <div class="min-h-25">USD</div>
-                                                <div class="clearfix"></div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                            <div class="wal-amount">
-                                                45,715.24
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="wallet-parent">
-                                            <div class="float-start w-60pct">
-                                                <div class="min-h-25">GBP</div>
-                                                <div class="clearfix"></div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                            <div class="wal-amount">
-                                                25,824.98
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="wallet-parent">
-                                            <div class="float-start w-60pct">
-                                                <div class="min-h-25">EUR</div>
-                                                <div class="clearfix"></div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                            <div class="wal-amount">
-                                                1,689.99
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="wallet-parent">
-                                            <div class="float-start w-60pct">
-                                                <div class="min-h-25">LTCTEST</div>
-                                                <div class="clearfix"></div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                            <div class="wal-amount">
-                                                0.03380000
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="wallet-parent">
-                                            <div class="float-start w-60pct">
-                                                <div class="min-h-25">BTC</div>
-                                                <div class="clearfix"></div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                            <div class="wal-amount">
-                                                0.00000000
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="wallet-parent">
-                                            <div class="float-start w-60pct">
-                                                <div class="min-h-25">ETH</div>
-                                                <div class="clearfix"></div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                            <div class="wal-amount">
-                                                0.61720000
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="wallet-parent">
-                                            <div class="float-start w-60pct">
-                                                <div class="min-h-25">DOGETEST</div>
-                                                <div class="clearfix"></div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                            <div class="wal-amount">
-                                                6.48633521
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-
+                                        <?php
+                                        foreach ($data['wallets'] as $w) {
+                                            $dpAmt = $adminModule->getTotalWalletDpAmt($w['wallet_name']);
+                                            $wtAmt = $adminModule->getTotalWalletWtAmt($w['wallet_name']);
+                                            foreach ($dpAmt as $a) {
+                                                foreach ($wtAmt as $b) {
+                                        ?>
+                                                    <div class="wallet-parent">
+                                                        <div class="float-start w-60pct">
+                                                            <div class="min-h-25"><?= $w['wallet_name'] ?></div>
+                                                            <div class="clearfix"></div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                        <div class="wal-amount">
+                                                            <?= $a['amt'] - $b['amt'] ?>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                        <?php
+                                                }
+                                            }
+                                        }
+                                        ?>
                                     </div>
                                 </div>
                             </div>

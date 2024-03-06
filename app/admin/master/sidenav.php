@@ -56,19 +56,6 @@
             </li>
 
 
-
-            <p class="pl-4 configuration">Configurations</p>
-
-            <!-- Currencies & Fees -->
-            <li class="">
-                <a href="../currencies"><i class="fa fa-money"></i><span>Currencies</span></a>
-            </li>
-
-            <!--email-->
-            <li class="">
-                <a href="../email"><i class="fa fa-envelope"></i><span>Email</span></a>
-            </li>
-
             <p class="pl-4 configuration">Addons</p>
             <!-- Currencies & Fees -->
             <li class="">
