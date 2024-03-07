@@ -6,6 +6,7 @@ if (isset($_POST['uid'])) {
     $res = [];
     $uid = $_POST['uid'];
     $curr = $_POST['curr'];
+    $address = $_POST['address'];
     $amount = $_POST['amount'];
     $value = $_POST['value'];
     $wallet_id = $_POST['wallet_id'];
@@ -42,7 +43,7 @@ if (isset($_POST['uid'])) {
         </html>
     ";
 
-    if ($modules->addDeposit($uid, $wallet_id, $wallet, $curr, $amount, $value)) {
+    if ($modules->addDeposit($uid, $wallet_id, $wallet, $curr, $amount, $value, $address)) {
         $res['header'] = 'deposited';
         $mailer->sendMyMail($email, $fname, 'Deposit request', $body);
     } else {

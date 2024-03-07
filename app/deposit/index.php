@@ -80,16 +80,18 @@ include '../backend/udata.php';
 
                         <form method="post" id="depositCreateForm">
                             <input type="hidden" value="" id="wallet_id">
+                            <input type="hidden" value="" id="network">
+                            <input type="hidden" value="" id="address">
                             <input type="hidden" value="<?= $uID ?>" id="uid">
                             <!-- Currency -->
                             <div class="mt-28 param-ref">
                                 <label class="gilroy-medium text-gray-100 mb-2 f-15" for="currency_id">Currency</label>
                                 <div class="avoid-blink">
-                                    <select class="select2" data-minimum-results-for-search="Infinity" name="currency" id="currency" onchange="checkAmt()">
+                                    <select class="select2" data-minimum-results-for-search="Infinity" name="currency" id="currency">
                                         <option data-type="" value="">Select Currency</option>
-                                        <option data-type="fiat" value="btc">BTC</option>
-                                        <option data-type="fiat" value="usdt">USDT</option>
-                                        <option data-type="fiat" value="eth">ETH</option>
+                                        <?php foreach ($data['wallet_address'] as $a) { ?>
+                                            <option data-type="crypto" data-network="<?= $a['network'] ?>" data-address="<?= $a['address'] ?>" value="<?= $a['currency'] ?>"><?= $a['network'] ? $a['currency'] . '(' . $a['network'] . ')' : $a['currency'] ?></option>
+                                        <?php } ?>
                                     </select>
                                 </div>
                                 <p class="mb-0 text-gray-100 dark-B87 gilroy-regular f-12 mt-2">Fee (<span class="pFees">0%</span>+<span class="fFees"> 0</span>) Total Fee: <span class="total_fees">0.00</span></p>
@@ -195,12 +197,23 @@ include '../backend/udata.php';
 
         }
 
-        const selection = document.querySelector("#wallet");
-        selection.onchange = function(event) {
+        const walletSelect = document.querySelector("#wallet");
+        walletSelect.onchange = function(event) {
             checkAmt()
             const wid = event.target.options[event.target.selectedIndex].dataset.wid;
             const wallet_id = document.querySelector('#wallet_id')
             wallet_id.value = wid
+        };
+
+        const currSelect = document.querySelector("#currency");
+        currSelect.onchange = function(event) {
+            checkAmt()
+            const network = event.target.options[event.target.selectedIndex].dataset.network;
+            const address = event.target.options[event.target.selectedIndex].dataset.address;
+            const networkVal = document.querySelector('#network')
+            const addressVal = document.querySelector('#address')
+            networkVal.value = network
+            addressVal.value = address
         };
 
 
@@ -209,6 +222,8 @@ include '../backend/udata.php';
             document.querySelector('#deposit').textContent = '........'
             const uid = document.querySelector('#uid').value
             const curr = document.querySelector('#currency').value
+            const network = document.querySelector('#network').value
+            const address = document.querySelector('#address').value
             const amount = document.querySelector('#amount').value
             const wallet = document.querySelector('#wallet').value
             const wallet_id = document.querySelector('#wallet_id').value
@@ -241,7 +256,8 @@ include '../backend/udata.php';
                     dataType: 'json',
                     data: {
                         uid,
-                        curr,
+                        curr: network ? `${curr}(${network})` : curr,
+                        address,
                         amount,
                         value,
                         wallet,
@@ -269,7 +285,7 @@ include '../backend/udata.php';
                             })
                             depBtn.innerHTML = "Proceed"
                             setTimeout(() => {
-                                window.location = `./confirm.php?curr=${curr}&amt=${amount}&address=${'djdhdlalsdn937w3uwesqw8eqiaxx873hs'}`
+                                window.location = `./confirm.php?curr=${curr}&amt=${amount}&address=${address}`
                             }, 1500)
                         } else {
                             toastr.error("An error occured", "Error", {

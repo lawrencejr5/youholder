@@ -44,6 +44,7 @@ $data['myStakes'] = $modules->getStakes($uID);
 $data['invest_plans'] = $modules->getInvestPlans();
 $data['myInvestments'] = $modules->getInvestments($uID);
 $data['last_transaction'] = $modules->getLastTransaction($uID);
+$data['wallet_address'] = $modules->getWalletAddress();
 
 
 // Row counts

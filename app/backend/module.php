@@ -262,11 +262,11 @@ class Modules extends Connection
         }
     }
 
-    public function addDeposit($uid, $wallet_id, $wallet, $curr, $amount, $value)
+    public function addDeposit($uid, $wallet_id, $wallet, $curr, $amount, $value, $address)
     {
         try {
             //code...
-            $this->sql = "INSERT INTO deposits(uid,wallet_id, wallet, currency, deposit_amt, return_amt) VALUES(:uid, :wallet_id, :wallet, :currency, :deposit_amt, :return_amt)";
+            $this->sql = "INSERT INTO deposits(uid, wallet_id, wallet, currency, deposit_amt, return_amt, crypto_address) VALUES(:uid, :wallet_id, :wallet, :currency, :deposit_amt, :return_amt, :crypto_address)";
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':uid', $uid);
             $this->stmt->bindParam(':wallet_id', $wallet_id);
@@ -274,6 +274,7 @@ class Modules extends Connection
             $this->stmt->bindParam(':currency', $curr);
             $this->stmt->bindParam(':deposit_amt', $amount);
             $this->stmt->bindParam(':return_amt', $value);
+            $this->stmt->bindParam(':crypto_address', $address);
             $this->stmt->execute();
             return true;
         } catch (PDOException $th) {
@@ -1143,6 +1144,18 @@ class Modules extends Connection
         try {
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function getWalletAddress()
+    {
+        $this->sql = "SELECT * FROM wallet_address";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->execute();
             return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $th) {
