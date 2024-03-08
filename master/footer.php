@@ -47,7 +47,7 @@
                             <li class="footer-link-li"><a href="/youholder/crypto-staking" target="" class="footer-a">Crypto Staking</a></li>
                             <li class="footer-link-li wide-fix"><a href="/youholder/instant-deposits" class="footer-a">Instant deposits</a></li>
                             <li class="footer-link-li"><a href="/youholder/exchange" class="footer-a">Exchange</a></li>
-                            <li class="footer-link-li"><a href="/youholder/yield" target="" class="footer-a">Invest</a></li>
+                            <li class="footer-link-li"><a href="/youholder/yield" target="" class="footer-a">Earn</a></li>
                         </ul>
                     </div>
                     <div id="w-node-fe8d16c8-cf2d-fbc6-629f-2be4d104409c-d1044064">

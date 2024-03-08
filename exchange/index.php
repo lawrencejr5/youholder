@@ -267,7 +267,7 @@
   <div class="s-hero wide white">
     <div class="hero-wrap wide w-container">
       <div class="w-row">
-        <div class="column-compensation hero-left w-col w-col-7">
+        <div class="column-compensation hero-left w-col w-col-12">
           <h1 class="h1 hero big main">YieldFincs Fiat and Crypto Exchange.<br /></h1>
           <p class="h3 subheading hero">Exchange cryptocurrency, fiat, and stablecoins with real-time execution prices
             and low fees.<br /></p>
@@ -280,21 +280,16 @@
               </nav>
             </div>
           </div>
-          <div class="hero-cta-wrap cta-desktop"><a data-test-id="EXCHANGE_BUTTON" href="/youholder/register/" class="btn-big-solid hero w-button">EXCHANGE</a>
-            <div data-hover="true" data-delay="0" class="nav-store-icons w-dropdown">
-              <div class="nav-store-icons-trigger w-dropdown-toggle"></div>
-              <nav class="nav-drop-wrap store-icons-wrap w-dropdown-list">
-                <div class="nav-drop-bg store-icons store-icons-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/650020567c3dbfa357180951_AppsFlyerLink.svg" loading="lazy" alt="youhodler appstore qr" class="store-qr" /></div>
-              </nav>
-            </div>
+          <div class="hero-cta-wrap cta-desktop">
+            <a data-test-id="EXCHANGE_BUTTON" href="/youholder/register/" class="btn-big-solid hero w-button">EXCHANGE</a>
           </div>
           <div class="block-sla w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0d4f7f3ef469679f59758a_doc_address.svg" alt="doc icon" class="sla-icon" />
-            <p class="p grey-sla">Exchange service is provided by <a class="grey-a">YieldFincs SA</a>.</p>
+            <p class="p grey-sla">Exchange service is provided by <a class="grey-a">Yield Financial Services</a>.</p>
           </div>
           <ul role="list" class="testimonial-list w-clearfix w-list-unstyled">
             <li class="testimonial-item"><a href="/company" target="_blank" class="testimonial-link w-inline-block">
                 <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb1cdaada6d30231e75_testimonial_eu_swiss_combined.svg" loading="lazy" alt="youhodler eu and swiss" class="testimonial-pic" /></div>
-                <div class="testimonial-txt">Regulated EU and Swiss Financial institutions</div>
+                <div class="testimonial-txt">Regulated Australian Financial institutions</div>
               </a></li>
             <li class="testimonial-item"><a href="https://twitter.com/ledger_business/status/1275806038613274631" target="_blank" class="testimonial-link w-inline-block">
                 <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb0cdaada6a20231e71_testimonial_ledger.svg" loading="lazy" alt="ledger vault" class="testimonial-pic" /></div>
@@ -340,20 +335,17 @@ border: none; overflow: hidden;">
             <p class="p"><strong>Top 20 coin support: </strong>Buy Bitcoin online instantly with a click of a button.
               Buy cryptocurrency including the top 20 options like Ethereum (ETH), Ripple (XRP), Chainlink (LINK),
               Bitcoin Cash (BCH) and more. New coins added every month.</p>
-            <p class="p"><strong>FIAT currency support:</strong> US dollar (USD), Euro (EUR), Swiss franc (CHF), British
+            <p class="p"><strong>FIAT currency support:</strong> US dollar (USD), Euro (EUR), Australian Dollar (AUD) British
               pounds (GBP).</p>
             <p class="p"><strong>A worldwide community: </strong>Clients from over 100 countries come to YieldFincs to
               buy crypto and exchange cryptocurrency right on our platform.</p>
           </div>
-          <h3 class="h5 with-padding w-clearfix">Bitcoin to GBP: Convert crypto to fiat on YieldFincs</h3>
+          <!-- <h3 class="h5 with-padding w-clearfix">Bitcoin to GBP: Convert crypto to fiat on YieldFincs</h3>
           <p class="p">Convert crypto and Bitcoin to GBP, CHF, EUR, stablecoins, and vice versa. Buy Bitcoin online and
             use your Bitcoin purchase as collateral for an instant crypto loan or deposit stablecoins into our
             interest-earning wallets (up to 8% APR). Take care of all your crypto-related needs right here on YieldFincs.
-          </p>
+          </p> -->
           <div class="section-cta-wrap"><a data-test-id="EXCHANGE_BUTTON" href="/youholder/register/" class="btn-big-solid w-button">EXCHANGE CRYPTO</a></div>
-          <div class="block-sla hidden w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0d4f7f3ef469679f59758a_doc_address.svg" alt="doc icon" class="sla-icon" />
-            <p class="p grey-sla">Exchange service provided by <a href="/swiss" class="grey-a">YieldFincs SA</a></p>
-          </div>
         </div>
       </div>
     </div>

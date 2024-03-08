@@ -279,14 +279,7 @@
               </nav>
             </div>
           </div>
-          <div class="hero-cta-wrap cta-desktop"><a href="/youholder/register" class="btn-big-solid hero w-button">Stake Now</a>
-            <div data-hover="true" data-delay="0" class="nav-store-icons w-dropdown">
-              <div class="nav-store-icons-trigger w-dropdown-toggle"></div>
-              <nav class="nav-drop-wrap store-icons-wrap w-dropdown-list">
-                <div class="nav-drop-bg store-icons store-icons-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/650020567c3dbfa357180951_AppsFlyerLink.svg" loading="lazy" alt="youhodler appstore qr" class="store-qr" /></div>
-              </nav>
-            </div>
-          </div>
+          <div class="hero-cta-wrap cta-desktop"><a href="/youholder/register" class="btn-big-solid hero w-button">Stake Now</a></div>
           <div class="block-sla w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0d4f7f3ef469679f59758a_doc_address.svg" alt="doc icon" class="sla-icon" />
             <p class="p grey-sla"><a href="https://www.youhodler-swiss.com" target="_blank" class="grey-a">YieldFincs
                 SA</a> crypto-backed lending solutions structured in the form of collateralised (pawnshop) loans.<a href="#naumard-ltd" class="grey-a"></a></p>
@@ -328,43 +321,43 @@ border: none; overflow: hidden;">
       <h2 class="h2 center">Crypto Staking Options</h2>
       <div class="w-dyn-list">
         <div role="list" class="nav-drop-tile-grid-two inpage w-dyn-items">
-          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/btc-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="bitcoin loan" src="/youholder/app/public/uploads/currency_logos/1661050287.png" class="nav-drop-a-tile-icon" />
+          <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="bitcoin loan" src="/youholder/app/public/uploads/currency_logos/1661050287.png" class="nav-drop-a-tile-icon" />
               <div class="nav-drop-a-tile-coin-ticker">BTC</div>
               <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 29% APY</div>
             </a></div>
-          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/eth-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="eth loan" src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/5cea77bf8cdd0a26392d345b_eth.svg" class="nav-drop-a-tile-icon" />
+          <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="eth loan" src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/5cea77bf8cdd0a26392d345b_eth.svg" class="nav-drop-a-tile-icon" />
               <div class="nav-drop-a-tile-coin-ticker">ETH</div>
               <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 32% APY</div>
             </a></div>
-          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/chainlink-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="link chainlink logo" src="/youholder/app/public/uploads/currency_logos/solana.png" class="nav-drop-a-tile-icon" />
+          <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="link chainlink logo" src="/youholder/app/public/uploads/currency_logos/solana.png" class="nav-drop-a-tile-icon" />
               <div class="nav-drop-a-tile-coin-ticker">SOL</div>
               <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 22% APY</div>
             </a></div>
-          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/uni-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="uni uniswap" src="/youholder/app/public/uploads/currency_logos/ada.png" class="nav-drop-a-tile-icon" />
+          <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="uni uniswap" src="/youholder/app/public/uploads/currency_logos/ada.png" class="nav-drop-a-tile-icon" />
               <div class="nav-drop-a-tile-coin-ticker">ADA</div>
               <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 30% APY</div>
             </a></div>
-          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/uni-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="uni uniswap" src="/youholder/app/public/uploads/currency_logos/bnb.png" class="nav-drop-a-tile-icon" />
+          <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="uni uniswap" src="/youholder/app/public/uploads/currency_logos/bnb.png" class="nav-drop-a-tile-icon" />
               <div class="nav-drop-a-tile-coin-ticker">BNB</div>
               <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 17% APY</div>
             </a></div>
-          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/comp-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="compound comp" src="/youholder/app/public/uploads/currency_logos/polkadot.png" class="nav-drop-a-tile-icon" />
+          <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="compound comp" src="/youholder/app/public/uploads/currency_logos/polkadot.png" class="nav-drop-a-tile-icon" />
               <div class="nav-drop-a-tile-coin-ticker">DOT</div>
               <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 25% APY</div>
             </a></div>
-          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/comp-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="compound comp" src="/youholder/app/public/uploads/currency_logos/avax.png" class="nav-drop-a-tile-icon" />
+          <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="compound comp" src="/youholder/app/public/uploads/currency_logos/avax.png" class="nav-drop-a-tile-icon" />
               <div class="nav-drop-a-tile-coin-ticker">AVAX</div>
               <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 15% APY</div>
             </a></div>
-          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/comp-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="compound comp" src="/youholder/app/public/uploads/currency_logos/xrp.png" class="nav-drop-a-tile-icon" />
+          <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="compound comp" src="/youholder/app/public/uploads/currency_logos/xrp.png" class="nav-drop-a-tile-icon" />
               <div class="nav-drop-a-tile-coin-ticker">XRP</div>
               <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 40% APY</div>
             </a></div>
-          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/comp-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="compound comp" src="/youholder/app/public/uploads/currency_logos/1660982923.png" class="nav-drop-a-tile-icon" />
+          <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="compound comp" src="/youholder/app/public/uploads/currency_logos/1660982923.png" class="nav-drop-a-tile-icon" />
               <div class="nav-drop-a-tile-coin-ticker">LTC</div>
               <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 50% APY</div>
             </a></div>
-          <div role="listitem" class="w-dyn-item"><a href="/crypto-loans/comp-loan" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="compound comp" src="/youholder/app/public/uploads/currency_logos/1660982923.png" class="nav-drop-a-tile-icon" />
+          <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a tile-inpage w-inline-block w-clearfix"><img alt="compound comp" src="/youholder/app/public/uploads/currency_logos/1660982923.png" class="nav-drop-a-tile-icon" />
               <div class="nav-drop-a-tile-coin-ticker">LINK</div>
               <div class="nav-drop-a-tile-coin-name" style="display: block;">up to 27% APY</div>
             </a></div>
@@ -387,8 +380,6 @@ border: none; overflow: hidden;">
             <h3 class="h5 with-padding w-clearfix"><span class="badge-num">2</span>Crypto staking offers
             </h3>
             <p class="p">Staking offers crypto holders a way of putting their digital assets to work and earning passive income without needing to sell them.</p>
-
-
           </div>
           <div class="top-padding-wrap">
             <h3 class="h5 with-padding w-clearfix"><span class="badge-num">3</span> <strong>High yield savings account.</strong></h3>

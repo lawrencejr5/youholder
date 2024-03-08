@@ -24,7 +24,7 @@
                                             <a href="/youholder/exchange" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/exchange.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">Exchange</div>
                                             </a>
-                                            <a href="/youholder/yield" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
+                                            <a href="/youholder/yield" class="nav-drop-a tile w-inline-block w-clearfix"><img src="/youholder/public/icons/earn.png" style="width: 20px; height: auto;" width="24" alt="" class="nav-drop-a-tile-icon menu" />
                                                 <div class="nav-drop-a-tile-heading">Earn</div>
                                             </a>
                                         </div>
@@ -88,7 +88,7 @@
                                     <div class="nav-drop-a-tile-txt">Exchange cryptocurrency, fiat, and stablecoins with real-time
                                         execution prices and low fees.</div>
                                 </a>
-                                <a href="/youholder/exchange" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Crypto Loans" src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
+                                <a href="/youholder/yield" class="nav-drop-a tile w-inline-block w-clearfix"><img width="24" alt="Crypto Loans" src="/youholder/public/icons/earn.png" style="width: 20px; height: auto;" class="nav-drop-a-tile-icon" />
                                     <div class="nav-drop-a-tile-heading">Earn</div>
                                     <div class="nav-drop-a-tile-txt">Invest with yieldfincs and earn monthly interests.</div>
                                 </a>

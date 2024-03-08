@@ -343,11 +343,11 @@
       <div class="w-row">
         <div class="column-compensation w-col w-col-6">
           <h3 class="h3 no-padding-bottom">Avg. Crypto staking input</h3>
-          <p class="p">The average input amount of Multi HODL deal in USD</p>
+          <p class="p">The average input amount of Crypto Staking deal in USD</p>
           <div class="num-highlight">$<strong>740</strong></div>
         </div>
         <div class="column-compensation w-col w-col-6">
-          <h3 class="h3 no-padding-bottom">Avg. number of MultiHODL deals</h3>
+          <h3 class="h3 no-padding-bottom">Avg. number of Crypto Staking deals</h3>
           <p class="p">Per-user per month for any coin</p>
           <div class="num-highlight">82</div>
         </div>
@@ -396,7 +396,7 @@
   </div>
   <div class="s-content wide">
     <div class="content-wrap wide w-container">
-      <h3 class="h3 no-padding-bottom">Coin Popularity Map in MultiHODL</h3>
+      <h3 class="h3 no-padding-bottom">Coin Popularity Map in Crypto Staking</h3>
       <p class="p">Percent of unique deals by coins for the last month</p>
       <div class="embed-chart w-embed w-script">
         <div class="infogram-embed" data-id="ae92239a-19c8-4d7e-bf1a-6b0f7a14f56d" data-type="interactive" data-title="Coin Popularity in MH"></div>

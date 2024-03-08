@@ -53,7 +53,7 @@
 
                 Further, for commercial, security, technical, maintenance, legal or regulatory reasons, or due to any breach of these Terms or any of the terms of our Third Party Service Providers, we may withdraw the website or your access to the website at any time and without notice to you.</p>
             <h3>Intellectual Property</h3>
-            <p>All remarks, suggestions, ideas, materials or other information provided by you through this website will forever be our property. You acknowledge that you are responsible for any submissions provided through your username or password, and you, not us, have full responsibility for such submissions, including their accuracy, legality, reliability, appropriateness, originality and copyright. Notwithstanding the foregoing, we have the right to refuse to post, remove, edit or abridge any submission for any reason and to disclose any submission as we deem necessary, including without limitation, to achieve compliance with any applicable law, regulation, legal process or governmental request, all in our sole discretion.</p>
+            <p>All remarks, suggestions, ideas, materials or other information provided by you through this website will forever be our property. You acknowledge that you are responsible for any submissions provided through your username or password, and you, not us, have full responsibility for such submissions, including their accuracy, legality, reliability, appropriateness, originality and copyright.</p>
 
             <h3>Copyright and Trademarks</h3>
             <p>The website and its Content are our property or the property of our licensors and are protected by copyright, trademark, patent and other Applicable Laws.</p>

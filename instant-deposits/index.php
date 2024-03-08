@@ -269,38 +269,26 @@
       <div class="w-row">
         <div class="column-compensation hero-left w-col w-col-12">
           <h1 class="h1 hero big main">Make instant deposits<br /></h1>
-          <p class="h3 subheading hero">Use more than 50 TOP coins as collateral for crypto loans with the highest
-            loan-to-value ratio (90%). Get loans in EUR, USD, CHF, GBP or even stablecoins or crypto and withdraw
-            instantly to credit cards, banks or exchanges.</p>
+          <p class="h3 subheading hero">Securely and instantly deposit crypto currencies and swap to fiat or any other crypto with confidence.
+            Send, receive, instantly top up and withdraw currencies with Faster
+            Payment Service (FPS). Effortlessly add crypto in seconds from your crypto wallet. Fund your account with a single tap using your existing digital wallet.</p>
           <div class="hero-cta-wrap cta-mobile"><a href="/youholder/register" target="_blank" class="btn-big-solid w-button">GET STARTED</a>
-
-            <div data-hover="true" data-delay="0" class="nav-store-icons w-dropdown">
-              <div class="nav-store-icons-trigger w-dropdown-toggle"></div>
-              <nav class="nav-drop-wrap store-icons-wrap w-dropdown-list">
-                <div class="nav-drop-bg store-icons store-icons-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/639c957ee0327b20c4e9782b_Untitled.svg" loading="lazy" alt="youhodler appstore" class="store-qr" /></div>
-              </nav>
-            </div>
           </div>
           <div class="hero-cta-wrap cta-desktop"><a href="/youholder/register" class="btn-big-solid hero w-button">GET STARTED</a>
-            <div data-hover="true" data-delay="0" class="nav-store-icons w-dropdown">
-              <div class="nav-store-icons-trigger w-dropdown-toggle"></div>
-              <nav class="nav-drop-wrap store-icons-wrap w-dropdown-list">
-                <div class="nav-drop-bg store-icons store-icons-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/650020567c3dbfa357180951_AppsFlyerLink.svg" loading="lazy" alt="youhodler appstore qr" class="store-qr" /></div>
-              </nav>
-            </div>
+
           </div>
           <div class="block-sla w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0d4f7f3ef469679f59758a_doc_address.svg" alt="doc icon" class="sla-icon" />
             <p class="p grey-sla"><a class="grey-a">YieldFincs
                 SA</a> crypto-backed lending solutions structured in the form of collateralised (pawnshop) loans.<a href="#naumard-ltd" class="grey-a"></a></p>
           </div>
           <div class="block-sla w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0d4f7f3ef469679f59758a_doc_address.svg" alt="doc icon" class="sla-icon" />
-            <p class="p grey-sla"><a href="/youholder/company" class="grey-a">YieldFincs (NAUMARD LTD)</a> crypto-lending solutions
+            <p class="p grey-sla"><a href="/youholder/company" class="grey-a">YieldFincs </a> crypto-lending solutions
               is structured in the form of token purchase/re-purchase agreements.</p>
           </div>
           <ul role="list" class="testimonial-list w-clearfix w-list-unstyled">
             <li class="testimonial-item"><a href="/company" target="_blank" class="testimonial-link w-inline-block">
                 <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb1cdaada6d30231e75_testimonial_eu_swiss_combined.svg" loading="lazy" alt="youhodler eu and swiss" class="testimonial-pic" /></div>
-                <div class="testimonial-txt">Regulated EU and Swiss Financial institutions</div>
+                <div class="testimonial-txt">Regulated Australian Financial institutions</div>
               </a></li>
             <li class="testimonial-item"><a href="https://twitter.com/ledger_business/status/1275806038613274631" target="_blank" class="testimonial-link w-inline-block">
                 <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb0cdaada6a20231e71_testimonial_ledger.svg" loading="lazy" alt="ledger vault" class="testimonial-pic" /></div>
@@ -541,57 +529,24 @@ border: none; overflow: hidden;">
         <!-- <div class="column-compensation content-center w-col w-col-5 w-col-medium-6"><a href="https://app.youhodler.com/" class="image-content-link w-inline-block"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create.png" width="380" alt="crypto backed loan youhodler" sizes="(max-width: 479px) 68vw, (max-width: 767px) 320px, (max-width: 991px) 37vw, (max-width: 1279px) 36vw, 380px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create.png 920w" class="image-content" /></a></div> -->
         <div class="column-compensation w-col w-col-12 w-col-medium-6">
           <div class="top-padding-wrap">
-            <h3 class="h5 with-padding w-clearfix"><span class="badge-num">1</span> Transfer crypto to your YieldFincs
+            <h3 class="h5 with-padding w-clearfix"><span class="badge-num">1</span> Add YieldFincs wallet.
               wallet</h3>
-            <p class="p">YieldFincs accepts more than 50 cryptocurrencies as collateral. No fees for crypto deposits or
-              withdrawals.</p>
+            <p class="p">YieldFincs offers wallets for over 20 different fiat and crypto currencies. Simply add wallet with a single button click.</p>
           </div>
           <div class="top-padding-wrap">
-            <h3 class="h5 with-padding w-clearfix"><span class="badge-num">2</span>Get a crypto loan and withdraw funds
+            <h3 class="h5 with-padding w-clearfix"><span class="badge-num">2</span>Transfer from crypto digital wallet.
             </h3>
-            <p class="p">Use our crypto loan calculator to choose loan settings. Your loan approves instantly. No need
-              to find a lender like in peer-to-peer (p2p) platforms. You instantly receive cash in EUR, USD, CHF, GBP or
-              stablecoins, or popular cryptocurrencies.</p>
-            <p class="p">YieldFincs works like a pawnshop. There is a temporary sale of cryptocurrency, where YOU are the
-              seller and YieldFincs is the buyer. Following a predefined period of time, you repurchase the
-              cryptocurrency from YieldFincs.</p>
-            <p class="p"><strong><em>Our cash withdrawal options:</em></strong></p>
-            <ul role="list">
-              <li><em>Bank wire withdrawal via SEPA and SWIFT. Available worldwide.</em></li>
-              <li><em>Crypto withdrawal: buy any crypto or stablecoins using our integrated crypto exchange.</em></li>
-            </ul>
+            <p class="p">YieldFincs only accepts selected digital assets as Payment/Deposit methods which includes Bitcoin (BTC), Etherum (ETH), Tether (USDT), Binance coin (BNB) and others.</p>
           </div>
           <div class="top-padding-wrap">
-            <h3 class="h5 with-padding w-clearfix"><span class="badge-num">3</span> <strong>Manage your
-                payments</strong></h3>
-            <p class="p">By default, the loan daily fee is calculated every 24 hours from the loan opening moment and is
-              charged from your wallet in borrowed currency. If there are no funds in the wallet to pay the daily fee,
-              the system will add the fee to the repayment amount. You are free to repay the loan at any time and get
-              back your collateral. You pay only for days when the loan was active.</p>
+            <h3 class="h5 with-padding w-clearfix"><span class="badge-num">3</span>Instant conversion
+            </h3>
+            <p class="p">YieldFincs automatically converts to the desired wallet coin on deposit.</p>
           </div>
           <div class="top-padding-wrap">
-            <h3 class="h5 with-padding w-clearfix"><span class="badge-num">4</span> Get your crypto collateral back
-              anytime</h3>
-            <p class="p">You can repay your loan using your YieldFincs wallet, via AdvCash, bank wire, and even part of
-              your loan collateral to get your crypto back.</p>
-          </div>
-          <div class="top-padding-wrap">
-            <h3 class="h5 with-padding w-clearfix"><span class="badge-num">5</span> Manage your loan</h3>
-            <p class="p">Use our list of advanced features to manage your loan conditions and react to the market’s
-              movements:</p>
-            <div class="nav-inline inpage">
-              <div class="w-layout-grid nav-drop-tile-grid-two inpage"><a href="https://help.youhodler.com/en/articles/3061180-how-to-increase-ltv" target="_blank" class="nav-drop-a tile-coin w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5d65135eca4f1a06e4bf0aef_increase.svg" width="24" alt="increase LTV" class="product-a-icon" />
-                  <div class="nav-drop-a-tile-heading-small">Increase loan-to-value</div>
-                </a><a href="https://help.youhodler.com/en/articles/3206184-how-to-extend-pdl" class="nav-drop-a tile-coin w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5d65135d437276127c403223_extend.svg" alt="extend PDL" class="product-a-icon" />
-                  <div class="nav-drop-a-tile-heading-small">Extend Price Down Limit</div>
-                </a><a href="https://help.youhodler.com/en/articles/3133220-how-the-close-now-feature-works-on-an-opened-loan" class="nav-drop-a tile-coin w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5d65135c9093d70b25c5806a_close%20now.svg" alt="close now" class="product-a-icon" />
-                  <div class="nav-drop-a-tile-heading-small">Close without repay</div>
-                </a><a href="https://help.youhodler.com/en/articles/3325776-how-the-set-close-price-feature-works" class="nav-drop-a tile-coin w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5d65135dca4f1a3669bf0aee_ftp.svg" alt="take profit" class="product-a-icon" />
-                  <div class="nav-drop-a-tile-heading-small">Set take profit price</div>
-                </a><a href="https://help.youhodler.com/en/articles/3433013-how-to-borrow-bitcoin" target="_blank" class="nav-drop-a tile-coin w-inline-block w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dc96c94d6571e74b1ce2ff2_qr%20code.svg" alt="qr code" class="product-a-icon" />
-                  <div class="nav-drop-a-tile-heading-small">Borrow Bitcoin</div>
-                </a></div>
-            </div>
+            <h3 class="h5 with-padding w-clearfix"><span class="badge-num">4</span>Deposit Confirmation
+            </h3>
+            <p class="p">After deposit, the user can head back to the dashboard. You would be alerted through mail when your transfer has been confirmed.</p>
           </div>
           <div class="section-cta-wrap"><a href="/youholder/register/" class="btn-big-solid w-button">GET STARTED</a></div>
         </div>

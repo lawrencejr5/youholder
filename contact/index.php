@@ -196,8 +196,26 @@
                     <h1 class="h1 hero big main">Contact <span class="span-blue">us</span> <br />
                     </h1>
                     <div class="wrap-half-width">
-                        <p class="h3 subheading hero">Boost your crypto-earnings with the YouHodler Loyalty program. Get increased
-                            rates on 55+ cryptos.<br /></p>
+                        <div id="w-node-fe8d16c8-cf2d-fbc6-629f-2be4d10440e1-d1044064">
+                            <div class="p-small heading"><strong class="bold-highlighted">FOLLOW US</strong></div>
+                            <ul role="list" class="footer-link-ul w-clearfix w-list-unstyled">
+                                <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dc9ba805995c4fa17c3469d_tw.svg" width="24" alt="youhodler twitter" loading="lazy" class="footer-link-li-icon social" /></li>
+                                <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/633d54a4e4c2cf1d916315bc_discord.svg" width="24" alt="telegram channel" loading="lazy" class="footer-link-li-icon social" /></li>
+                                <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dc9ba80cd9d012bfcb844f0_te.svg" width="24" alt="telegram chatroom" loading="lazy" class="footer-link-li-icon social" /></li>
+                                <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dc9ba805995c43f4cc3469b_fb.svg" width="24" alt="youhodler facebook" loading="lazy" class="footer-link-li-icon social" /></li>
+                                <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dc9ba82052d676625ac908c_li.svg" width="24" alt="youhodler company linkedin" loading="lazy" class="footer-link-li-icon social" /></li>
+                                <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dc9ba833fffe20ad8f5c63e_in.svg" width="24" alt="youhodler instagram" loading="lazy" class="footer-link-li-icon social" /></li>
+                                <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dc9ba80052d67a88aac906f_yt.svg" width="24" alt="youhodler youtube" loading="lazy" class="footer-link-li-icon social" /></li>
+                            </ul>
+                            <!-- <ul role="list" class="footer-link-ul w-clearfix w-list-unstyled">
+                            <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5dc9bd735995c478f6c3664c_visa.svg" width="24" alt="visa" loading="lazy" class="footer-link-li-icon" /></li>
+                            <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/6275429976ecdceafc31b581_visa-3ds.svg" width="24" alt="visa" loading="lazy" class="footer-link-li-icon" /></li>
+                            <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5e70f93ea4d49011a84ff814_mastercard.svg" width="24" alt="mastercard" loading="lazy" class="footer-link-li-icon" /></li>
+                            <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5e70f93d18292368aba5c4ff_maestro.svg" width="24" alt="maestro" loading="lazy" class="footer-link-li-icon" /></li>
+                            <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/62795c5179bcd12c1ad2d872_mc_idcheck.svg" loading="lazy" alt="mc id check" class="footer-link-li-icon wide" /></li>
+                        </ul> -->
+                            <div id="lang" class="lang"></div>
+                        </div>
                     </div>
 
                 </div>

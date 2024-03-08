@@ -29,6 +29,7 @@
       }
     });
   </script>
+
   <script type="text/javascript">
     ! function(o, c) {
       var n = c.documentElement,
@@ -260,7 +261,7 @@
           </div>
           <div class="column-compensation card-preorder-image w-col w-col-6 w-col-stack">
             <h4>I need more info on <span class="span-blue">Yield Financial Services</span></h4>
-            <form id="wf-form-formPreorder-2" name="wf-form-formPreorder-2" data-name="formPreorder" method="get" class="form-contest-id-wrap" data-wf-page-id="65719812835ab1dfc00c38f5" data-wf-element-id="7609e9a9-d9c1-8078-460f-a1be3d70195b">
+            <form id="wf-form-formPreorder-2" class="form-contest-id-wrap">
               <div class="form-contest-inputs-wrap"><select id="country" name="Country" data-name="Country" required="" class="form-contest-id-input country-select w-select">
                   <option value="">Select country</option>
                   <option value="Austria">Austria</option>
@@ -296,7 +297,10 @@
                   <option value="United States">United States</option>
                   <option value="United Kingdom">United Kingdom</option>
                   <option value="Other">Other</option>
-                </select><input class="form-contest-id-input w-input" maxlength="256" name="email" data-name="email" placeholder="Email" type="email" id="email-2" required="" /></div><input type="submit" data-wait="Please wait..." class="form-contest-id-button w-button" value="I&#x27;m Interested!" />
+                </select>
+                <input class="form-contest-id-input w-input my_input" maxlength="256" name="email" data-name="email" placeholder="Email" type="email" id="email-2" required="" />
+              </div>
+              <button type="button" class="form-contest-id-button w-button" id="send_btn">I'm Interested</button>
             </form>
           </div>
         </div>
@@ -315,8 +319,8 @@
           <a data-w-tab="Exchange" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img loading="lazy" src="/youholder/public/icons/exchange.png" style="width: 20px; height: auto;" alt="Exchange" class="nav-drop-a-tile-icon tab" />
             <div class="nav-drop-a-tile-heading tab">Exchange</div>
           </a>
-          <a data-w-tab="Loyalty Program" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img loading="lazy" src="/youholder/public/icons/yield.png" style="width: 20px; height: auto;" alt="Loyalty Program" class="nav-drop-a-tile-icon tab" />
-            <div class="nav-drop-a-tile-heading tab">Invest</div>
+          <a data-w-tab="Loyalty Program" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img loading="lazy" src="/youholder/public/icons/earn.png" style="width: 20px; height: auto;" alt="Loyalty Program" class="nav-drop-a-tile-icon tab" />
+            <div class="nav-drop-a-tile-heading tab">Earn</div>
           </a>
         </div>
         <div class="product-tabs-content w-tab-content">
@@ -324,7 +328,7 @@
             <div class="w-row">
               <div class="column-compensation image-wrap-earn w-col w-col-12 w-col-stack">
                 <div class="product-tabs-content-mobile">
-                  <h3 class="h3">Earn <span class="span-blue">up to 50%</span> on Crypto &amp; Stablecoins</h3>
+                  <h3 class="h3">Earn <span class="span-blue">up to 50%</span> on Crypto &amp; Fiat</h3>
                   <p class="h3 subheading">Boost your earnings. Get increased rates on 55+ assets.</p>
                 </div>
                 <div class="product-tabs-content-desktop">
@@ -425,7 +429,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="product-tabs-cta"><a href="/youholder/crypto-staking" class="btn-big-solid w-button">Explore</a></div>
+                <div class="product-tabs-cta"><a href="/youholder/crypto-staking" class="btn-big-solid w-button">More Info</a></div>
               </div>
               <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account-p-500.jpg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg 800w" alt="youhodler app loyalty program" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg" loading="lazy" class="product-tabs-image" /></div> -->
             </div>
@@ -467,7 +471,7 @@
                   <p>Simple crypto deposits and withdrawals open the door to a suite of tools like: crypto exchange and
                     much more.<br /></p>
                 </div>
-                <div class="product-tabs-cta"><a href="/youholder/exchange" class="btn-big-solid w-button">Exchange</a></div>
+                <div class="product-tabs-cta"><a href="/youholder/exchange" class="btn-big-solid w-button">More Info</a></div>
               </div>
               <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert.png 920w" alt="youhodler app exchange" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert.png" loading="lazy" class="product-tabs-image" /></div> -->
             </div>
@@ -487,7 +491,7 @@
                     private placement, distribution, trading, and operating are at the service.<br /></p>
                 </div>
               </div>
-              <div class="product-tabs-cta"><a href="/youholder/yield" class="btn-big-solid w-button">Yield</a></div>
+              <div class="product-tabs-cta"><a href="/youholder/yield" class="btn-big-solid w-button">More Info</a></div>
             </div>
             <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account-p-500.jpg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg 800w" alt="youhodler app loyalty program" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg" loading="lazy" class="product-tabs-image" /></div> -->
           </div>
@@ -542,30 +546,6 @@
         </div>
       </div>
       <!-- <div class="content-center-wrap"><a href="/blog" class="btn-big-solid w-button">ALL POSTS</a></div> -->
-    </div>
-  </div>
-  <div id="blog-preview" class="s-content wide">
-    <div class="content-wrap wide w-container">
-      <div class="wrap-center">
-        <h1 class="h1 hero big">YieldFincs Stats</h1>
-      </div>
-      <div class="s-content wide">
-        <div class="content-wrap wide w-container">
-          <div class="w-row">
-            <div class="column-compensation w-col w-col-6">
-              <h3 class="h3 no-padding-bottom">Avg. Staking input</h3>
-              <p class="p">The average input amount of Staking deal in USD</p>
-              <div class="num-highlight">$<strong>740</strong></div>
-            </div>
-            <div class="column-compensation w-col w-col-6">
-              <h3 class="h3 no-padding-bottom">Avg. number of Staking deals</h3>
-              <p class="p">Per-user per month for any coin</p>
-              <div class="num-highlight">82</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="content-center-wrap"><a href="/youholder/stats/" class="btn-big-solid w-button">More Stats</a></div>
     </div>
   </div>
   <div class="s-content wide">
@@ -645,6 +625,20 @@
   </section>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5cc19fbd198b8d31a9c64876" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/js/youhodler.d4bcac773.js" type="text/javascript"></script>
+  <script>
+    const send_btn = document.querySelector('#send_btn')
+    send_btn.addEventListener('click', () => {
+      const input = document.querySelector('.my_input')
+      if (input.value) {
+        send_btn.textContent = "Sending...."
+        setTimeout(() => {
+          input.value = ''
+          send_btn.textContent = "Sent"
+          send_btn.setAttribute('disabled', '');
+        }, 2000)
+      }
+    })
+  </script>
   <script>
     VANTA.DOTS({
       el: ".bankai",
