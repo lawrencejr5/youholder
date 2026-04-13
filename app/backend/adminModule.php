@@ -444,6 +444,55 @@ class AdminModule extends Connection
 
  // ******** INSERT ***********
     
+    public function adminAddDeposit($uid, $wallet_id, $wallet_name, $amount, $transaction_type, $approved)
+    {
+        try {
+            $this->sql = "INSERT INTO deposits(uid, wallet_id, wallet, currency, deposit_amt, return_amt, transaction_type, approved, crypto_address, from_to) 
+                            VALUES(:uid, :wallet_id, :wallet, :currency, :deposit_amt, :return_amt, :transaction_type, :approved, :crypto_address, :from_to)";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $empty = '';
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->bindParam(':wallet_id', $wallet_id);
+            $this->stmt->bindParam(':wallet', $wallet_name);
+            $this->stmt->bindParam(':currency', $wallet_name);
+            $this->stmt->bindParam(':deposit_amt', $amount);
+            $this->stmt->bindParam(':return_amt', $amount);
+            $this->stmt->bindParam(':transaction_type', $transaction_type);
+            $this->stmt->bindParam(':approved', $approved);
+            $this->stmt->bindParam(':crypto_address', $empty);
+            $this->stmt->bindParam(':from_to', $empty);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            echo "failed" . $th->getMessage();
+            return false;
+        }
+    }
+
+    public function adminAddWithdrawal($uid, $wallet_id, $wallet_name, $amount, $transaction_type, $verified)
+    {
+        try {
+            $this->sql = "INSERT INTO withdrawals(uid, wallet_id, wallet_name, amount, transaction_type, verified, crypto_address, from_to, notes) 
+                            VALUES(:uid, :wallet_id, :wallet_name, :amount, :transaction_type, :verified, :crypto_address, :from_to, :notes)";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $empty = '';
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->bindParam(':wallet_id', $wallet_id);
+            $this->stmt->bindParam(':wallet_name', $wallet_name);
+            $this->stmt->bindParam(':amount', $amount);
+            $this->stmt->bindParam(':transaction_type', $transaction_type);
+            $this->stmt->bindParam(':verified', $verified);
+            $this->stmt->bindParam(':crypto_address', $empty);
+            $this->stmt->bindParam(':from_to', $empty);
+            $this->stmt->bindParam(':notes', $empty);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            echo "failed" . $th->getMessage();
+            return false;
+        }
+    }
+
     public function addRefBonus($uid, $wallet_id, $wallet, $curr, $amount, $value, $type, $approved, $from_to)
     {
         try {
@@ -572,6 +621,19 @@ class AdminModule extends Connection
 
 
     // ******** DELETE ***********
+
+    public function deleteUser($id)
+    {
+        $this->sql = "DELETE FROM users WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false . $th->getMessage();
+        }
+    }
 
     public function deleteWallet($id)
     {

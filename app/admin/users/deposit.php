@@ -1,3 +1,9 @@
+<?php
+include "../../backend/adminData.php";
+
+$data['single_user'] = $adminModule->getUserData($_GET['userid']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,66 +64,61 @@
                 <?php include "../master/usernav.php" ?>
                 <div class="row">
                     <div class="col-md-4">
-                        <h3 class="f-24">Nishat Nuzhat</h3>
+                        <?php foreach ($data['single_user'] as $u) { ?>
+                            <h3 class="f-24"><?= $u['fname'] . ' ' . $u['lname'] ?></h3>
+                        <?php } ?>
                     </div>
                     <div class="col-md-3"></div>
                     <div class="col-md-5">
                         <div class="pull-right">
-                            <a href="./profile.php" class="pull-right btn btn-theme f-14 active">Back</a>
+                            <a href="./profile.php?userid=<?= $_GET['userid'] ?>" class="pull-right btn btn-theme f-14 active">Back</a>
                         </div>
                     </div>
                 </div>
+
+                <?php if (isset($_SESSION['msg'])) { ?>
+                    <div class="alert alert-info alert-dismissible bg-info text-white border-0 fade show mt-20" role="alert">
+                        <?= $_SESSION['msg'] ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php unset($_SESSION['msg']); } ?>
 
                 <div class="box mt-20">
                     <div class="box-body">
                         <div class="panel panel-info">
                             <div class="panel-body">
-                                <form action="" method="post" accept-charset='UTF-8' id="admin-user-deposit-create">
-                                    <input type="hidden" value="AFPUgjA9zxV2UPj9WMPFDAGWhz5OzqNQTrudrvui" name="_token" id="token">
-                                    <input type="hidden" name="user_id" id="user_id" value="4">
-                                    <input type="hidden" name="fullname" id="fullname" value="Nishat Nuzhat">
-                                    <input type="hidden" name="percentage_fee" id="percentage_fee" value="">
-                                    <input type="hidden" name="fixed_fee" id="fixed_fee" value="">
-                                    <input type="hidden" name="fee" class="total_fees" value="0.00">
+                                <form action="../../backend/actionsAdmin/depositAccount.php" method="post" accept-charset='UTF-8' id="admin-user-deposit-create">
+                                    <input type="hidden" name="user_id" id="user_id" value="<?= $_GET['userid'] ?>">
 
                                     <div class="row">
-
                                         <div class="col-md-4">
                                             <div class="form-group f-14">
-                                                <label class="mb-1" for="currency_id">Currency</label>
-                                                <select class="select2 wallet" name="currency_id" id="currency_id">
-                                                    <option data-type="fiat" value="1">USD</option>
-                                                    <option data-type="fiat" value="2">GBP</option>
-                                                    <option data-type="crypto" value="11">ETH</option>
+                                                <label class="mb-1" for="currency_id">Wallet (Currency)</label>
+                                                <select class="select2 wallet" name="currency_id" id="currency_id" required>
+                                                    <?php $walletsList = [
+                                                        1 => "USD", 2 => "BTC", 3 => "ETH", 4 => "EUR", 5 => "GBP", 6 => "DOGE", 
+                                                        7 => "USDC", 8 => "USDT", 9 => "ADA", 10 => "SHIB", 11 => "BNB", 12 => "LTC", 
+                                                        13 => "SOL", 14 => "LINK", 15 => "DOT", 16 => "MATIC", 17 => "TRX", 18 => "AVAX", 19 => "XRP"
+                                                    ]; 
+                                                    foreach($walletsList as $id => $name) { ?>
+                                                        <option value="<?= $id ?>"><?= $name ?></option>
+                                                    <?php } ?>
                                                 </select>
                                             </div>
-                                            <small id="walletlHelp" class="form-text text-muted f-12">
-                                                Fee(<span class="pFees">0</span>%+<span class="fFees">0</span>), Total: <span class="total_fees">0.00</span>
-                                            </small>
                                         </div>
 
                                         <div class="col-md-4">
                                             <div class="form-group f-14">
                                                 <label class="mb-1" for="amount">Amount</label>
-                                                <input type="text" class="form-control amount f-14" name="amount" placeholder="0.00" type="text" id="amount" onkeypress="return isNumberOrDecimalPointKey(this, event);" value="" oninput="restrictNumberToPrefdecimalOnInput(this)">
-                                                <span class="amountLimit text-danger fw-bold"></span>
+                                                <input type="number" step="any" class="form-control amount f-14" name="amount" placeholder="0.00" id="amount" required>
                                                 <div class="clearfix"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-5 dis-none">
-                                            <div class="form-group">
-                                                <label for="payment_method">Payment Method</label>
-                                                <select class="form-control payment_method" name="payment_method" id="payment_method">
-                                                    <option value="1">Mts</option>
-                                                </select>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="mt-3">
-                                        <a href="https://demo.paymoney.techvill.net/admin/users/edit//4" class="btn btn-theme-danger me-1"><span class="f-14"><i class="fa fa-angle-left"></i>&nbsp;Back</span></a>
                                         <button type="submit" class="btn btn-theme" id="deposit-create">
                                             <i class="fa fa-spinner fa-spin f-14 d-none"></i>
-                                            <span id="deposit-create-text" class="f-14">Next&nbsp;<i class="fa fa-angle-right"></i></span>
+                                            <span id="deposit-create-text" class="f-14">Add Deposit&nbsp;<i class="fa fa-angle-right"></i></span>
                                         </button>
                                     </div>
                                 </form>
@@ -294,50 +295,8 @@
         });
 
         function checkAmountLimitAndFeesLimit() {
-            var token = $("#token").val();
-            var amount = $('#amount').val();
-            var currency_id = $('#currency_id').val();
-            var payment_method_id = $('#payment_method').val();
-
-            $.ajax({
-                    method: "POST",
-                    url: SITE_URL + "/" + ADMIN_PREFIX + "/users/deposit/amount-fees-limit-check",
-                    dataType: "json",
-                    data: {
-                        "_token": token,
-                        'amount': amount,
-                        'currency_id': currency_id,
-                        'payment_method_id': payment_method_id,
-                        'user_id': '4',
-                        'transaction_type_id': '1'
-                    }
-                })
-                .done(function(response) {
-                    // console.log(response.success);
-
-                    if (response.success.status == 200) {
-                        $("#percentage_fee").val(response.success.feesPercentage);
-                        $("#fixed_fee").val(response.success.feesFixed);
-                        $(".percentage_fees").html(response.success.feesPercentage);
-                        $(".fixed_fees").html(response.success.feesFixed);
-                        $(".total_fees").val(response.success.totalFees);
-                        $('.total_fees').html(response.success.totalFeesHtml);
-                        $('.pFees').html(response.success.pFeesHtml);
-                        $('.fFees').html(response.success.fFeesHtml);
-
-                        $('.amountLimit').text('');
-                        $("#deposit-create").attr("disabled", false);
-                        return true;
-                    } else {
-                        if (amount == '') {
-                            $('.amountLimit').text('');
-                        } else {
-                            $('.amountLimit').text(response.success.message);
-                            $("#deposit-create").attr("disabled", true);
-                            return false;
-                        }
-                    }
-                });
+            // Unused
+            return true;
         }
     </script>
 

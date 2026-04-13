@@ -79,7 +79,7 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
 
                         <div class="col-md-5">
                             <div class="pull-right">
-                                <a class="btn btn-danger f-14 ms-1">Delete User</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#delete-warning-modal" class="btn btn-danger f-14 ms-1">Delete User</a>
                             </div>
                         </div>
                     </div>
@@ -306,7 +306,7 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
                             <p><strong>Are you sure you want to delete?</strong></p>
                         </div>
                         <div class="modal-footer">
-                            <a class="btn btn-danger f-14" id="delete-modal-yes" href="javascript:void(0)">Yes</a>
+                            <a class="btn btn-danger f-14" id="delete-modal-yes" href="../../backend/actionsAdmin/deleteUser.php?id=<?= $_GET['userid'] ?>">Yes</a>
                             <button type="button" class="btn btn-default f-14" data-bs-dismiss="modal">No</button>
                         </div>
                     </div>
