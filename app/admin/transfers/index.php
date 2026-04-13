@@ -81,8 +81,7 @@ include "../../backend/adminData.php";
                             <div class="col-md-12">
                                 <div class="panel panel-info">
                                     <div class="panel-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-striped table-hover f-14 dt-responsive" id="transferTable" width="100%" cellspacing="0">
+                                        <table class="table table-striped table-hover f-14 dt-responsive" id="transferTable" width="100%" cellspacing="0">
                                                 <thead>
                                                     <tr>
                                                         <th title="ID">ID</th>
@@ -107,7 +106,6 @@ include "../../backend/adminData.php";
                                                     <?php } ?>
                                                 </tbody>
                                             </table>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -188,8 +186,9 @@ include "../../backend/adminData.php";
         $(function() {
             $("#transferTable").DataTable({
                 "order": [],
-                "language": '',
-                "pageLength": '10'
+                "pageLength": 10,
+                "responsive": true,
+                "autoWidth": false
             });
         });
     </script>

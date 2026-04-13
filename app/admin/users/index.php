@@ -94,8 +94,7 @@ include "../../backend/adminData.php";
                             <div class="col-md-12">
                                 <div class="panel panel-info">
                                     <div class="panel-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-striped table-hover f-14 dt-responsive" id="usersTable" width="100%" cellspacing="0">
+                                        <table class="table table-striped table-hover f-14 dt-responsive" id="usersTable" width="100%" cellspacing="0">
                                                 <thead>
                                                     <tr>
                                                         <th title="ID">ID</th>
@@ -133,7 +132,6 @@ include "../../backend/adminData.php";
                                                     <?php } ?>
                                                 </tbody>
                                             </table>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -214,8 +212,9 @@ include "../../backend/adminData.php";
         $(function() {
             $("#usersTable").DataTable({
                 "order": [],
-                "language": '',
-                "pageLength": '25'
+                "pageLength": 25,
+                "responsive": true,
+                "autoWidth": false
             });
         });
     </script>
