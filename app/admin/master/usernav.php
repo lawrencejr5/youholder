@@ -16,6 +16,12 @@
             <li class="nav-item">
                 <a class="nav-link " href="../users/investments.php?userid=<?= $_GET['userid'] ?>">Investments</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../users/deposit.php?userid=<?= $_GET['userid'] ?>">Deposit</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../users/withdraw.php?userid=<?= $_GET['userid'] ?>">Withdraw</a>
+            </li>
         </ul>
         <div class="clearfix"></div>
     </div>

@@ -44,7 +44,8 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
     <link rel="stylesheet" type="text/css" href="../public/admin/templates/adminLte/skins/_all-skins.min.css">
 
 
-    <link rel="stylesheet" type="text/css" href="../public/dist/plugins/intl-tel-input-17.0.19/css/intlTelInput.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="../public/dist/plugins/intl-tel-input-17.0.19/css/intlTelInput.min.css">
 
     <!-- custom styles -->
     <link rel="stylesheet" type="text/css" href="../public/admin/templates/css/style.min.css">
@@ -76,12 +77,11 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
                         </div>
                         <div class="col-md-3"></div>
 
-                        <!-- <div class="col-md-5">
+                        <div class="col-md-5">
                             <div class="pull-right">
-                                <a href="./deposit.php" class="btn btn-theme f-14">Deposit</a>
-                                <a href="./withdraw.php" class="btn btn-theme f-14 ms-1">Withdraw</a>
+                                <a class="btn btn-danger f-14 ms-1">Delete User</a>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
 
 
@@ -91,7 +91,8 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
                                 <div class="col-md-12">
                                     <!-- form start -->
                                     <?php foreach ($data['single_user'] as $u) { ?>
-                                        <form action="../../backend/actionsAdmin/updateUser.php" class="form-horizontal" id="user_form" method="post">
+                                        <form action="../../backend/actionsAdmin/updateUser.php" class="form-horizontal"
+                                            id="user_form" method="post">
                                             <input type="hidden" value="<?= $_GET['userid'] ?>" name="id" id="id" />
                                             <div class="box-body">
                                                 <div class="row">
@@ -99,25 +100,42 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
 
                                                         <!-- FirstName -->
                                                         <div class="row form-group">
-                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="first_name">First Name</label>
+                                                            <label
+                                                                class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14"
+                                                                for="first_name">First Name</label>
                                                             <div class="col-sm-6">
-                                                                <input name="fname" value="<?= $u['fname'] ?>" type="text" id="first_name" class="form-control f-14" placeholder="Enter first name" data-value-missing="This field is required." maxlength="30" data-max-length="First name length should be maximum 30 charcters.">
+                                                                <input name="fname" value="<?= $u['fname'] ?>" type="text"
+                                                                    id="first_name" class="form-control f-14"
+                                                                    placeholder="Enter first name"
+                                                                    data-value-missing="This field is required."
+                                                                    maxlength="30"
+                                                                    data-max-length="First name length should be maximum 30 charcters.">
                                                             </div>
                                                         </div>
 
                                                         <!-- LastName -->
                                                         <div class="row form-group">
-                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="last_name">Last Name</label>
+                                                            <label
+                                                                class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14"
+                                                                for="last_name">Last Name</label>
                                                             <div class="col-sm-6">
-                                                                <input name="lname" value="<?= $u['lname'] ?>" type="text" id="last_name" class="form-control f-14" placeholder="Enter last name" required data-value-missing="This field is required." maxlength="30" data-max-length="Last name length should be maximum 30 charcters.">
+                                                                <input name="lname" value="<?= $u['lname'] ?>" type="text"
+                                                                    id="last_name" class="form-control f-14"
+                                                                    placeholder="Enter last name" required
+                                                                    data-value-missing="This field is required."
+                                                                    maxlength="30"
+                                                                    data-max-length="Last name length should be maximum 30 charcters.">
                                                             </div>
                                                         </div>
 
                                                         <!-- Phone -->
                                                         <div class="row form-group">
-                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="phone">Phone</label>
+                                                            <label
+                                                                class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14"
+                                                                for="phone">Phone</label>
                                                             <div class="col-sm-6">
-                                                                <input type="tel" class="form-control f-14" value="<?= $u['phone'] ?>" id="phone" name="phone">
+                                                                <input type="tel" class="form-control f-14"
+                                                                    value="<?= $u['phone'] ?>" id="phone" name="phone">
                                                                 <span id="duplicate-phone-error"></span>
                                                                 <span id="tel-error"></span>
                                                             </div>
@@ -125,65 +143,92 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
 
                                                         <!-- Email -->
                                                         <div class="row form-group">
-                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">Email</label>
+                                                            <label
+                                                                class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require"
+                                                                for="email">Email</label>
                                                             <div class="col-sm-6">
-                                                                <input name="email" value="<?= $u['email'] ?>" type="email" id="email" class="form-control f-14">
+                                                                <input name="email" value="<?= $u['email'] ?>" type="email"
+                                                                    id="email" class="form-control f-14">
                                                             </div>
                                                         </div>
 
                                                         <!-- Role -->
                                                         <div class="row form-group">
-                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">Country</label>
+                                                            <label
+                                                                class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require"
+                                                                for="email">Country</label>
                                                             <div class="col-sm-6">
-                                                                <input name="country" value="<?= $u['country'] ?>" type="text" id="email" class="form-control f-14">
+                                                                <input name="country" value="<?= $u['country'] ?>"
+                                                                    type="text" id="email" class="form-control f-14">
                                                             </div>
                                                         </div>
                                                         <!-- Role -->
                                                         <div class="row form-group">
-                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">State</label>
+                                                            <label
+                                                                class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require"
+                                                                for="email">State</label>
                                                             <div class="col-sm-6">
-                                                                <input name="state" value="<?= $u['state'] ?>" type="text" id="email" class="form-control f-14">
+                                                                <input name="state" value="<?= $u['state'] ?>" type="text"
+                                                                    id="email" class="form-control f-14">
                                                             </div>
                                                         </div>
                                                         <!-- Role -->
                                                         <div class="row form-group">
-                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">City</label>
+                                                            <label
+                                                                class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require"
+                                                                for="email">City</label>
                                                             <div class="col-sm-6">
-                                                                <input name="city" value="<?= $u['city'] ?>" type="text" id="email" class="form-control f-14">
+                                                                <input name="city" value="<?= $u['city'] ?>" type="text"
+                                                                    id="email" class="form-control f-14">
                                                             </div>
                                                         </div>
                                                         <!-- Role -->
                                                         <div class="row form-group">
-                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">Addres1</label>
+                                                            <label
+                                                                class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require"
+                                                                for="email">Addres1</label>
                                                             <div class="col-sm-6">
-                                                                <input name="address1" value="<?= $u['address1'] ?>" type="text" id="email" class="form-control f-14">
+                                                                <input name="address1" value="<?= $u['address1'] ?>"
+                                                                    type="text" id="email" class="form-control f-14">
                                                             </div>
                                                         </div>
                                                         <!-- Role -->
                                                         <div class="row form-group">
-                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="email">Address2</label>
+                                                            <label
+                                                                class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require"
+                                                                for="email">Address2</label>
                                                             <div class="col-sm-6">
-                                                                <input name="address2" value="<?= $u['address2'] ?>" type="text" id="email" class="form-control f-14">
+                                                                <input name="address2" value="<?= $u['address2'] ?>"
+                                                                    type="text" id="email" class="form-control f-14">
                                                             </div>
                                                         </div>
 
                                                         <!-- Password -->
                                                         <div class="row form-group">
-                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="password">
+                                                            <label
+                                                                class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14"
+                                                                for="password">
                                                                 Password
                                                             </label>
                                                             <div class="col-sm-6">
-                                                                <input name="password" type="text" value="<?= $u['password'] ?>" id="password" class="form-control f-14" placeholder="Enter new Password">
+                                                                <input name="password" type="text"
+                                                                    value="<?= $u['password'] ?>" id="password"
+                                                                    class="form-control f-14"
+                                                                    placeholder="Enter new Password">
                                                             </div>
                                                         </div>
 
                                                         <!-- Password Confirmation -->
                                                         <div class="row form-group">
-                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="password_confirmation">
+                                                            <label
+                                                                class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14"
+                                                                for="password_confirmation">
                                                                 Confirm Password
                                                             </label>
                                                             <div class="col-sm-6">
-                                                                <input name="cpassword" value="<?= $u['password'] ?>" type="text" id="cpassword" class="form-control f-14" placeholder="Confirm password">
+                                                                <input name="cpassword" value="<?= $u['password'] ?>"
+                                                                    type="text" id="cpassword" class="form-control f-14"
+                                                                    placeholder="Confirm password">
                                                             </div>
                                                         </div>
 
@@ -202,9 +247,12 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
 
                                                         <div class="row form-group align-items-center">
                                                             <div class="col-sm-6 offset-md-3">
-                                                                <a class="btn btn-theme-danger me-1 f-14" href="" id="users_cancel">Cancel</a>
-                                                                <button type="submit" class="btn btn-theme f-14" name="updateProfile">
-                                                                    <i class="fa fa-spinner fa-spin f-14 d-none"></i> <span id="users_edit_text">Update</span>
+                                                                <a class="btn btn-theme-danger me-1 f-14" href=""
+                                                                    id="users_cancel">Cancel</a>
+                                                                <button type="submit" class="btn btn-theme f-14"
+                                                                    name="updateProfile">
+                                                                    <i class="fa fa-spinner fa-spin f-14 d-none"></i> <span
+                                                                        id="users_edit_text">Update</span>
                                                                 </button>
                                                             </div>
                                                         </div>
@@ -226,7 +274,8 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
             <?php include "../master/footer.php" ?>
 
             <!-- Delete Modal for buttons-->
-            <div class="modal fade" id="confirmDelete" role="dialog" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
+            <div class="modal fade" id="confirmDelete" role="dialog" aria-labelledby="confirmDeleteLabel"
+                aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content w-100 h-100 aliceblue">
                         <div class="modal-header">
@@ -285,7 +334,8 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
     </script>
     <script src="../public/admin/customs/js/body_script.min.js"></script>
     <script src="../public/dist/plugins/html5-validation-1.0.0/validation.min.js" type="text/javascript"></script>
-    <script src="../public/dist/plugins/intl-tel-input-17.0.19/js/intlTelInput-jquery.min.js" type="text/javascript"></script>
+    <script src="../public/dist/plugins/intl-tel-input-17.0.19/js/intlTelInput-jquery.min.js"
+        type="text/javascript"></script>
     <script src="../public/dist/js/isValidPhoneNumber.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         'use strict';
