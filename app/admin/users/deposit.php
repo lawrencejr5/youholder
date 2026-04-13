@@ -2,6 +2,7 @@
 include "../../backend/adminData.php";
 
 $data['single_user'] = $adminModule->getUserData($_GET['userid']);
+$data['user_deposits'] = $adminModule->getUserDeposits('deposit', $_GET['userid']);
 ?>
 
 <!DOCTYPE html>
@@ -47,6 +48,10 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
 
     <!-- custom styles -->
     <link rel="stylesheet" type="text/css" href="../public/admin/templates/css/style.min.css">
+
+    <!-- dataTables -->
+    <link rel="stylesheet" type="text/css" href="../public/dist/plugins/DataTables/DataTables-1.10.18/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/dist/plugins/DataTables/Responsive-2.2.2/css/responsive.dataTables.min.css">
 
     <!-- jQuery 3.2.1 -->
     <script src="../public/dist/libraries/jquery-3.2.1/dist/jquery.min.js"></script>
@@ -125,6 +130,57 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
                             </div>
                         </div>
                     </div>
+                <div class="box mt-20">
+                    <div class="box-body">
+                        <h4>Deposit History</h4>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover f-14 dt-responsive" id="depositHistoryTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th title="ID">ID</th>
+                                                <th title="First Name">Name</th>
+                                                <th title="Phone">Deposit amount</th>
+                                                <th title="Email">Converted amount</th>
+                                                <th title="Email">Wallet</th>
+                                                <th title="Group">Datetime</th>
+                                                <th title="Status">Verified</th>
+                                                <th title="Action">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $sn = 1;
+                                            foreach ($data['user_deposits'] as $d) { ?>
+                                                <tr>
+                                                    <td><?= $sn++ ?></td>
+                                                    <td><?= $d['fname'] . ' ' . $d['lname'] ?></td>
+                                                    <td><?= $d['deposit_amt'] . ' ' . strtoupper($d['currency']) ?></td>
+                                                    <td><?= $d['return_amt'] . ' ' . $d['wallet'] ?></td>
+                                                    <td><?= $d['wallet'] ?></td>
+                                                    <td><?= $d['datetime'] ?></td>
+                                                    <td><?= $d['approved'] ?></td>
+                                                    <td>
+                                                        <form action="../../backend/actionsAdmin/approveDeposit.php" method="post">
+                                                            <input type="hidden" name="id" value="<?= $d['id'] ?>">
+                                                            <input type="hidden" name="uid" value="<?= $d['uid'] ?>">
+                                                            <input type="hidden" name="deposit_amt" value="<?= $d['deposit_amt'] ?>">
+                                                            <input type="hidden" name="return_amt" value="<?= $d['return_amt'] ?>">
+                                                            <input type="hidden" name="wallet" value="<?= $d['wallet'] ?>">
+                                                            <input type="hidden" name="wallet_id" value="<?= $d['wallet_id'] ?>">
+                                                            <input type="hidden" name="currency" value="<?= $d['currency'] ?>">
+                                                            <button type="submit" name="approveUserDeposit" class="btn btn-success">Approve</button>&nbsp;
+                                                            <button type="submit" name="declineUserDeposit" class="btn btn-danger">Decline</button>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
@@ -185,6 +241,10 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
     <script src="../public/dist/js/moment.min.js" type="text/javascript"></script>
     <!-- AdminLTE App -->
     <script src="../public/admin/templates/js/app.min.js" type="text/javascript"></script>
+
+    <!-- jquery.dataTables js -->
+    <script src="../public/dist/plugins/DataTables/DataTables-1.10.18/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="../public/dist/plugins/DataTables/Responsive-2.2.2/js/dataTables.responsive.min.js" type="text/javascript"></script>
 
     <script type="text/javascript">
         "use strict";
@@ -298,6 +358,16 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
             // Unused
             return true;
         }
+
+        $(function() {
+            $("#depositHistoryTable").DataTable({
+                "order": [],
+                "pageLength": 10,
+                "responsive": true,
+                "autoWidth": false,
+                "stateSave": true
+            });
+        });
     </script>
 
 </body>

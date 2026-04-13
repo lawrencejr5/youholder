@@ -25,9 +25,8 @@ if (isset($_POST['approveUserWithdrawal'])) {
     $id = $_POST['id'];
     $uid = $_POST['uid'];
     $verified = 1;
-
     if ($adminModule->approveWithdrawal($id, $verified)) {
-        header("location: ../../admin/users/transactions.php?userid=$uid");
+        header("location: " . $_SERVER['HTTP_REFERER']);
     }
 }
 
@@ -37,6 +36,6 @@ if (isset($_POST['declineUserWithdrawal'])) {
     $verified = 2;
 
     if ($adminModule->approveWithdrawal($id, $verified)) {
-        header("location: ../../admin/users/transactions.php?userid=$uid");
+        header("location: " . $_SERVER['HTTP_REFERER']);
     }
 }

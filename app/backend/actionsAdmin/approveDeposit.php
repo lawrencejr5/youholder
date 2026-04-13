@@ -55,8 +55,7 @@ if (isset($_POST['approveUserDeposit'])) {
             $from_to = $user[0]["lname"] . " " . $user[0]["fname"];
             $adminModule->addRefBonus($userdata[0]["id"], $wallet_id, $wallet, $curr, $amount, $amount, $type, $verified, $from_to);
         }
-        
-        header("location: ../../admin/users/transactions.php?userid=$uid");
+        header("location: " . $_SERVER['HTTP_REFERER']);
     }
 }
 
@@ -66,6 +65,6 @@ if (isset($_POST['declineUserDeposit'])) {
     $verified = 2;
 
     if ($adminModule->approveDeposit($id, $verified)) {
-        header("location: ../../admin/users/transactions.php?userid=$uid");
+        header("location: " . $_SERVER['HTTP_REFERER']);
     }
 }
