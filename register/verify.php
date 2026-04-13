@@ -16,10 +16,22 @@
     <link rel="stylesheet" href="./public/frontend/templates/css/style.min.css">
     <link rel="stylesheet" href="./public/frontend/templates/css/owl-css/owl.min.css">
     <link rel="stylesheet" href="./public/dist/plugins/select2-4.1.0-rc.0/css/select2.min.css">
-    <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
-    <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
+    <link href="https://yfincs.com/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://yfincs.com/public/logos/favicon.png" rel="apple-touch-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/669fa1fd32dca6db2cb3efef/1i3fp1icd';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
     <!-- <link rel="stylesheet" href="./public/frontend/templates/css/toastr.min.css"> -->
 
     <script type="text/javascript">
@@ -44,8 +56,8 @@
         <div class="main-auth-div">
             <div class="d-flex justify-content-start mt-24 ml-18 position-fixed">
                 <div class="logo-div">
-                    <a href="/youholder/">
-                        <img src="/youholder/public/logos/yield-logo.png" height="auto" width="150px" alt="Brand Logo">
+                    <a href="https://yfincs.com/">
+                        <img src="https://yfincs.com/public/logos/yield-logo.png" height="auto" width="150px" alt="Brand Logo">
                     </a>
                 </div>
             </div>

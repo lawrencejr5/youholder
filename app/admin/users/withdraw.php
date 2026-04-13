@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="MTS">
-    <title>Withdrawals | Pay Money</title>
+    <title>Withdrawals | Yield Financial Services</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <meta name="csrf-token" content="AFPUgjA9zxV2UPj9WMPFDAGWhz5OzqNQTrudrvui"><!-- for ajax -->
@@ -121,10 +121,7 @@
 
         <!-- footer -->
         <footer class="main-footer">
-            <div class="pull-right hidden-xs f-14">
-                <b>Version</b> 4.1.1
-            </div>
-            <strong class="f-14">Copyright &copy; 2024 <a href="https://demo.paymoney.techvill.net/admin/home" target="_blank">Pay Money</a> | </strong> <span class="f-14">All rights reserved</span>
+            <?php include "../master/footer.php" ?>
 
             <!-- Delete Modal for buttons-->
             <div class="modal fade" id="confirmDelete" role="dialog" aria-labelledby="confirmDeleteLabel" aria-hidden="true">

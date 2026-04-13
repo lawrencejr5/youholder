@@ -1,15 +1,15 @@
 <!DOCTYPE html><!-- Last Published: Fri Jan 12 2024 17:37:06 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="www.youhodler.com" data-wf-page="65719812835ab1dfc00c38fb" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
+<html data-wf-domain="www.yieldfincs.com" data-wf-page="65719812835ab1dfc00c38fb" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
 
 <head>
   <meta charset="utf-8" />
   <title>Ambassador Program | Yield Financial Services</title>
-  <meta content="The YouHodler Ambassador Program is an exclusive global network of blockchain and DeFi enthusiasts focused on learning and helping others to expand their knowledge about the details and potential of DeFi." name="description" />
+  <meta content="The yieldfincs Ambassador Program is an exclusive global network of blockchain and DeFi enthusiasts focused on learning and helping others to expand their knowledge about the details and potential of DeFi." name="description" />
   <meta content="Ambassador Program" property="og:title" />
-  <meta content="The YouHodler Ambassador Program is an exclusive global network of blockchain and DeFi enthusiasts focused on learning and helping others to expand their knowledge about the details and potential of DeFi." property="og:description" />
+  <meta content="The yieldfincs Ambassador Program is an exclusive global network of blockchain and DeFi enthusiasts focused on learning and helping others to expand their knowledge about the details and potential of DeFi." property="og:description" />
   <meta content="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/60366badba1dcd412c7a6efe_5f23d3f42b71fb71236f3a63_Ambassador-Program-p-1080.jpeg" property="og:image" />
   <meta content="Ambassador Program" property="twitter:title" />
-  <meta content="The YouHodler Ambassador Program is an exclusive global network of blockchain and DeFi enthusiasts focused on learning and helping others to expand their knowledge about the details and potential of DeFi." property="twitter:description" />
+  <meta content="The yieldfincs Ambassador Program is an exclusive global network of blockchain and DeFi enthusiasts focused on learning and helping others to expand their knowledge about the details and potential of DeFi." property="twitter:description" />
   <meta content="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/60366badba1dcd412c7a6efe_5f23d3f42b71fb71236f3a63_Ambassador-Program-p-1080.jpeg" property="twitter:image" />
   <meta property="og:type" content="website" />
   <meta content="summary_large_image" name="twitter:card" />
@@ -33,8 +33,8 @@
       n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);
   </script>
-  <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
-  <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
+  <link href="https://yfincs.com/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="https://yfincs.com/public/logos/favicon.png" rel="apple-touch-icon" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta name="facebook-domain-verification" content="9d151kspnzgxeyddfsx424rcf04nh6" />
@@ -71,28 +71,28 @@
     {
       "@context": "http://schema.org",
       "@type": "Organization",
-      "name": "YouHodler",
-      "url": "http://www.youhodler.com",
+      "name": "yieldfincs",
+      "url": "http://www.yieldfincs.com",
       "logo": "https://global-uploads.webflow.com/5cc19fbd198b8d31a9c64876/5cee8faeaeff6f36241942f1_fav_large.png",
       "contactPoint": [{
           "@type": "ContactPoint",
-          "url": "support@youhodler.com",
+          "url": "support@yieldfincs.com",
           "contactType": "customer service",
           "availableLanguage": ["English"]
         },
         {
           "@type": "ContactPoint",
-          "url": "welcome@youhodler.com",
+          "url": "welcome@yieldfincs.com",
           "contactType": "public relations",
           "availableLanguage": ["English"]
         }
       ],
       "sameAs": [
-        "https://twitter.com/youhodler",
-        "https://t.me/youhodler_official",
-        "https://www.facebook.com/YouHodler/",
-        "https://www.linkedin.com/company/youhodler",
-        "https://www.instagram.com/youhodler/",
+        "https://twitter.com/yieldfincs",
+        "https://t.me/yieldfincs_official",
+        "https://www.facebook.com/yieldfincs/",
+        "https://www.linkedin.com/company/yieldfincs",
+        "https://www.instagram.com/yieldfincs/",
         "https://www.youtube.com/channel/UC-Kxvqm8Q-l_WGxQL0VpEEQ"
       ]
     }
@@ -104,7 +104,7 @@
   <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
   <!-- End TrustBox script -->
 
-  <!-- Hotjar Tracking Code for https://www.youhodler.com -->
+  <!-- Hotjar Tracking Code for https://www.yieldfincs.com -->
   <script>
     (function(h, o, t, j, a, r) {
       h.hj = h.hj || function() {
@@ -135,12 +135,12 @@
     gtag('config', 'G-N8Q9NJR9K1');
   </script>
 
-  <link rel="alternate" hreflang="en" href="https://www.youhodler.com">
-  <link rel="alternate" hreflang="fr" href="https://fr.youhodler.com">
-  <link rel="alternate" hreflang="it" href="https://it.youhodler.com">
-  <link rel="alternate" hreflang="es" href="https://es.youhodler.com">
-  <link rel="alternate" hreflang="latam" href="https://latam.youhodler.com">
-  <link rel="alternate" hreflang="de" href="https://de.youhodler.com">
+  <link rel="alternate" hreflang="en" href="https://www.yieldfincs.com">
+  <link rel="alternate" hreflang="fr" href="https://fr.yieldfincs.com">
+  <link rel="alternate" hreflang="it" href="https://it.yieldfincs.com">
+  <link rel="alternate" hreflang="es" href="https://es.yieldfincs.com">
+  <link rel="alternate" hreflang="latam" href="https://latam.yieldfincs.com">
+  <link rel="alternate" hreflang="de" href="https://de.yieldfincs.com">
   <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
   <script>
     Weglot.initialize({
@@ -273,7 +273,7 @@
           <p class="h3 subheading">Are you happy with YieldFincs’s platform and passionate about the crypto community?
             Let&#x27;s be friends then. We are launching our Ambassador Program and you can now apply to become one of
             our most trusted friends.<br /></p>
-          <div class="section-cta-wrap"><a href="/youholder/login/" target="_blank" class="btn-big-solid w-button">join now</a></div>
+          <div class="section-cta-wrap"><a href="https://yfincs.com/login/" target="_blank" class="btn-big-solid w-button">join now</a></div>
         </div>
         <div class="column-compensation w-col w-col-6">
           <div class="mob-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f928caf6f3af2b383af060c_Affiliates_program.jpg" width="412" sizes="(max-width: 479px) 86vw, (max-width: 767px) 412px, (max-width: 991px) 45vw, 412px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f928caf6f3af2b383af060c_Affiliates_program-p-500.jpeg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f928caf6f3af2b383af060c_Affiliates_program.jpg 800w" alt="YieldFincs Ambassador Program" /></div>
@@ -328,14 +328,14 @@
           <div class="product-a-content no-padding-bottom">
             <h3 class="h5 no-padding-top">Insights</h3>
             <p class="p">Provide local insights in your native language. Share the news from our main social media
-              channels to help YouHodler be locally relevant.</p>
+              channels to help yieldfincs be locally relevant.</p>
           </div>
         </a><a class="product-a w-inline-block w-clearfix">
           <div class="product-a-icon number">5</div>
           <div class="product-a-content no-padding-bottom">
             <h3 class="h5 no-padding-top">Guide</h3>
             <p class="p">Help drive brand awareness and inspire community engagement. Direct people to resources that
-              increase YouHodler brand awareness. e.g. media posts, press releases, YouTube videos.</p>
+              increase yieldfincs brand awareness. e.g. media posts, press releases, YouTube videos.</p>
           </div>
         </a><a class="product-a w-inline-block w-clearfix">
           <div class="product-a-icon number">6</div>
@@ -349,7 +349,7 @@
   </div>
   <?php include '../master/footer.php' ?>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5cc19fbd198b8d31a9c64876" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/js/youhodler.d4bcac773.js" type="text/javascript"></script>
+  <script src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/js/yieldfincs.d4bcac773.js" type="text/javascript"></script>
   <script>
     const getCookie = (name) => {
       var matches = document.cookie.match(new RegExp(
@@ -446,13 +446,13 @@
         setCookie('search-params-from-landing', JSON.stringify(paramsNew), {
           expires: 120 * 24 * 60 * 60,
           path: '/',
-          domain: '.youhodler.com'
+          domain: '.yieldfincs.com'
         });
 
         setCookie('search-params-from-landing', JSON.stringify(paramsNew), {
           expires: 120 * 24 * 60 * 60,
           path: '/',
-          domain: 'youhodler.webflow.io',
+          domain: 'yieldfincs.webflow.io',
         });
       }
     };
@@ -572,12 +572,12 @@
           setCookie('ALLOW_COOKIES', '1', {
             expires: 120 * 24 * 60 * 60,
             path: '/',
-            domain: 'youhodler.com',
+            domain: 'yieldfincs.com',
           });
           setCookie('ALLOW_COOKIES', '1', {
             expires: 120 * 24 * 60 * 60,
             path: '/',
-            domain: 'youhodler.webflow.io',
+            domain: 'yieldfincs.webflow.io',
           });
 
           loadScripts();

@@ -1,18 +1,10 @@
 <!DOCTYPE html><!-- Last Published: Wed Feb 28 2024 14:19:43 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="www.youhodler.com" data-wf-page="65719812835ab1dfc00c39e7" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
+<html data-wf-domain="www.yfincs.com" data-wf-page="65719812835ab1dfc00c39e7" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
 
 <head>
     <meta charset="utf-8" />
     <title>Bancor (BNT): What it Means, Purpose and Trends</title>
-    <meta content="USDC and USDT are two popular stablecoins, but which one is best? Find out the differences and unique benefits of USDC vs USDT and see which one is best for you.  By , Aug 07, 2023" name="description" />
-    <meta content="USDC vs. USDT: Which Stablecoin to Use" property="og:title" />
-    <meta content="USDC and USDT are two popular stablecoins, but which one is best? Find out the differences and unique benefits of USDC vs USDT and see which one is best for you." property="og:description" />
-    <meta content="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/64d087946577cae16153b659_USDC_USDT.jpeg" property="og:image" />
-    <meta content="USDC vs. USDT: Which Stablecoin to Use" property="twitter:title" />
-    <meta content="USDC and USDT are two popular stablecoins, but which one is best? Find out the differences and unique benefits of USDC vs USDT and see which one is best for you." property="twitter:description" />
-    <meta content="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/64d087946577cae16153b659_USDC_USDT.jpeg" property="twitter:image" />
-    <meta property="og:type" content="website" />
-    <meta content="summary_large_image" name="twitter:card" />
+    
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="../style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -32,8 +24,8 @@
             n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
         }(window, document);
     </script>
-    <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
-    <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
+    <link href="https://yfincs.com/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://yfincs.com/public/logos/favicon.png" rel="apple-touch-icon" />
     <link href="rss.xml" rel="alternate" title="RSS Feed" type="application/rss+xml" />
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -50,7 +42,7 @@
     <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
     <!-- End TrustBox script -->
 
-    <!-- Hotjar Tracking Code for https://www.youhodler.com -->
+    <!-- Hotjar Tracking Code for https://www.yfincs.com -->
     <script>
         (function(h, o, t, j, a, r) {
             h.hj = h.hj || function() {
@@ -68,12 +60,12 @@
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
 
-    <link rel="alternate" hreflang="en" href="https://www.youhodler.com">
-    <link rel="alternate" hreflang="fr" href="https://fr.youhodler.com">
-    <link rel="alternate" hreflang="it" href="https://it.youhodler.com">
-    <link rel="alternate" hreflang="es" href="https://es.youhodler.com">
-    <link rel="alternate" hreflang="latam" href="https://latam.youhodler.com">
-    <link rel="alternate" hreflang="de" href="https://de.youhodler.com">
+    <link rel="alternate" hreflang="en" href="https://www.yfincs.com">
+    <link rel="alternate" hreflang="fr" href="https://fr.yieldfincs.com">
+    <link rel="alternate" hreflang="it" href="https://it.yieldfincs.com">
+    <link rel="alternate" hreflang="es" href="https://es.yieldfincs.com">
+    <link rel="alternate" hreflang="latam" href="https://latam.yieldfincs.com">
+    <link rel="alternate" hreflang="de" href="https://de.yieldfincs.com">
     <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
     <script>
         Weglot.initialize({
@@ -131,17 +123,17 @@
             </div>
             <h1 class="h1 hero blog">Bancor (BNT): What it Means, Purpose and Trends</h1>
             <div class="post-content-data w-clearfix">
-                <div class="post-content-data-author">The YouHodler Team</div>
+                <div class="post-content-data-author">The yieldfincs Team</div>
                 <div class="post-content-data-published">August 16, 2023</div>
             </div>
             <div class="w-row">
                 <div class="column-compensation post-content-left w-col w-col-8"><img alt="A photo of the Bancor (BNT) logo" src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/64dcd5fd2840daa7392e5acb_What%20is%20bancor_.jpeg" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 61vw, (max-width: 1439px) 59vw, 826.6640625px" srcset="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/64dcd5fd2840daa7392e5acb_What%20is%20bancor_-p-500.jpeg 500w, https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/64dcd5fd2840daa7392e5acb_What%20is%20bancor_-p-800.jpeg 800w, https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/64dcd5fd2840daa7392e5acb_What%20is%20bancor_-p-1080.jpeg 1080w, https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/64dcd5fd2840daa7392e5acb_What%20is%20bancor_.jpeg 1600w" class="post-pic" />
                     <div class="w-condition-invisible w-dyn-bind-empty w-video w-embed"></div>
                     <div class="blog-rich-text w-richtext">
-                        <p>Hey, YouHodler fam! Welcome to the first edition of our “Token/Coin of the Week” series. Each week, we
+                        <p>Hey, yieldfincs fam! Welcome to the first edition of our “Token/Coin of the Week” series. Each week, we
                             will feature a new coin or token that is showing recent signs of activity. We’ll also introduce each one
                             to the community so you can better understand this market and learn of new opportunities.</p>
-                        <p>This week, <a href="https://www.youhodler.com/price/bnt"><strong>Bancor (BNT)</strong></a> is our focus.
+                        <p>This week, <a href="https://www.yfincs.com/price/bnt"><strong>Bancor (BNT)</strong></a> is our focus.
                             It’s been a very exciting seven days for BNT and we’ll get into all of that shortly. But first, let’s
                             start with an introduction. </p>
                         <h2><strong>What is Bancor (BNT)?</strong></h2>
@@ -150,7 +142,7 @@
                             it’s a DeFi protocol that lets users swap cryptocurrencies directly and instantly as opposed to exchanging
                             them on cryptocurrency exchanges. </p>
                         <p>To fund these trades, Bancor uses something called an automated market maker (AMM). An AMM uses smart
-                            contracts to execute trades and <a href="https://www.youhodler.com/blog/liquidity-pools-liquidity-mining">liquidity pools</a> to fund them.
+                            contracts to execute trades and <a href="https://www.yfincs.com/blog/liquidity-pools-liquidity-mining">liquidity pools</a> to fund them.
                             These liquidity pools consist entirely of cryptocurrency deposited by Bancor clients. Then, Bancor rewards
                             these clients with interest payments - similar to a savings account at your traditional banks. The
                             interest payments are funded via trading fees that other users pay for trading on Bancor. </p>
@@ -184,7 +176,7 @@
                         <p>BNT and other cryptocurrency markets are showing signs of recovery in recent months. We expect this
                             recovery to continue although with plenty of volatility in between. Be prepared for both bullish and
                             bearish swings and be sure you have the tools to help you capitalize on those movements. </p>
-                        <p>With YouHodler’s MultiHODL service, for example, you can multiply BNT in both bull and bear markets
+                        <p>With yieldfincs’s MultiHODL service, for example, you can multiply BNT in both bull and bear markets
                             thanks to the feature’s unique “chain of loans” engine. To learn more about MultiHODL and to open a BNT
                             position, simply click the button below. </p>
                         <p><strong><em>Disclaimer: </em></strong><em>“The content should not be construed as investment advice and
@@ -199,7 +191,7 @@
                         <div class="cta-blog-subheading">Trade BNT like a pro on crypto staking, the ultimate platform for crypto
                             enthusiasts! Whether you&#x27;re a seasoned trader or just dipping your toes into the exciting world of
                             cryptocurrency, Crypto staking offers the tools, insights, and user-friendly interface you need to make the
-                            most of your BNT trading.</div><a href="/youhodler/login" target="_blank" class="cta-blog-button w-button">Trade now</a>
+                            most of your BNT trading.</div><a href="/yieldfincs/login" target="_blank" class="cta-blog-button w-button">Trade now</a>
                     </div>
 
                 </div>

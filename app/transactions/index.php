@@ -23,7 +23,7 @@ include '../backend/udata.php';
     <!-- end css -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="/youholder/public/logos/favicon.png">
+    <link rel="shortcut icon" href="https://yfincs.com/public/logos/favicon.png">
 
     <!-- theme-color -->
     <meta name="theme-color" content="#130e80" />
@@ -206,32 +206,26 @@ include '../backend/udata.php';
                                 <div class="d-flex justify-content-center align-items-center">
                                     <div>
                                         <p class="mb-0 gilroy-medium text-gray-100 r-f-12 f-16 ph-20">
-                                            <?php if ($t['transaction_type'] == 'deposit') { ?>
-                                                <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.89992 3.84617L7.02742 5.71867L5.88409 6.86784C5.65113 7.10045 5.33538 7.23109 5.00617 7.23109C4.67697 7.23109 4.36122 7.10045 4.12826 6.86784L1.10659 3.84617C0.709923 3.4495 0.995756 2.77284 1.54992 2.77284H8.45659C9.01659 2.77284 9.29659 3.4495 8.89992 3.84617Z" fill="#2AAA5E" />
-                                                </svg>
-                                            <?php } elseif ($t['transaction_type'] == 'withdrawal') { ?>
-                                                <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.89992 6.15383L7.02742 4.28133L5.88409 3.13216C5.65113 2.89955 5.33538 2.76891 5.00617 2.76891C4.67697 2.76891 4.36122 2.89955 4.12826 3.13216L1.10659 6.15383C0.709923 6.5505 0.995756 7.22716 1.54992 7.22716H8.45659C9.01659 7.22716 9.29659 6.5505 8.89992 6.15383Z" fill="#D9204C"></path>
-                                                </svg>
-                                            <?php } elseif ($t['transaction_type'] == 'transfer from') { ?>
-
-                                                <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.89992 6.15383L7.02742 4.28133L5.88409 3.13216C5.65113 2.89955 5.33538 2.76891 5.00617 2.76891C4.67697 2.76891 4.36122 2.89955 4.12826 3.13216L1.10659 6.15383C0.709923 6.5505 0.995756 7.22716 1.54992 7.22716H8.45659C9.01659 7.22716 9.29659 6.5505 8.89992 6.15383Z" fill="#D9204C"></path>
-                                                </svg>
-                                            <?php } elseif ($t['transaction_type'] == 'transfer to') { ?>
-                                                <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.89992 3.84617L7.02742 5.71867L5.88409 6.86784C5.65113 7.10045 5.33538 7.23109 5.00617 7.23109C4.67697 7.23109 4.36122 7.10045 4.12826 6.86784L1.10659 3.84617C0.709923 3.4495 0.995756 2.77284 1.54992 2.77284H8.45659C9.01659 2.77284 9.29659 3.4495 8.89992 3.84617Z" fill="#2AAA5E" />
-                                                </svg>
-                                            <?php } elseif ($t['transaction_type'] == 'exchange from') { ?>
-                                                <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.89992 6.15383L7.02742 4.28133L5.88409 3.13216C5.65113 2.89955 5.33538 2.76891 5.00617 2.76891C4.67697 2.76891 4.36122 2.89955 4.12826 3.13216L1.10659 6.15383C0.709923 6.5505 0.995756 7.22716 1.54992 7.22716H8.45659C9.01659 7.22716 9.29659 6.5505 8.89992 6.15383Z" fill="#D9204C"></path>
-                                                </svg>
-                                            <?php } elseif ($t['transaction_type'] == 'exchange to') { ?>
-                                                <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.89992 3.84617L7.02742 5.71867L5.88409 6.86784C5.65113 7.10045 5.33538 7.23109 5.00617 7.23109C4.67697 7.23109 4.36122 7.10045 4.12826 6.86784L1.10659 3.84617C0.709923 3.4495 0.995756 2.77284 1.54992 2.77284H8.45659C9.01659 2.77284 9.29659 3.4495 8.89992 3.84617Z" fill="#2AAA5E" />
-                                                </svg>
-                                            <?php } ?>
+                                            <?php 
+                                                $svgAttributes = 'class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"';
+                                                switch ($t['transaction_type']) { 
+                                                    case "deposit":
+                                                    case "exchange to":
+                                                    case "transfer to":
+                                                    case "ref bonus":
+                                                    case "Investment return":
+                                                    case "Stake return":
+                                                        echo "<svg $svgAttributes><path d='M8.89992 3.84617L7.02742 5.71867L5.88409 6.86784C5.65113 7.10045 5.33538 7.23109 5.00617 7.23109C4.67697 7.23109 4.36122 7.10045 4.12826 6.86784L1.10659 3.84617C0.709923 3.4495 0.995756 2.77284 1.54992 2.77284H8.45659C9.01659 2.77284 9.29659 3.4495 8.89992 3.84617Z' fill='#2AAA5E'></path></svg>";
+                                                        break;
+                                                    case "withdrawal":
+                                                    case "exchange from":
+                                                    case "transfer from": 
+                                                    case "investment": 
+                                                    case "staking": 
+                                                        echo "<svg $svgAttributes><path d='M8.89992 6.15383L7.02742 4.28133L5.88409 3.13216C5.65113 2.89955 5.33538 2.76891 5.00617 2.76891C4.67697 2.76891 4.36122 2.89955 4.12826 3.13216L1.10659 6.15383C0.709923 6.5505 0.995756 7.22716 1.54992 7.22716H8.45659C9.01659 7.22716 9.29659 6.5505 8.89992 6.15383Z' fill='#D9204C'></path></svg>";
+                                                        break;
+                                                } 
+                                            ?>
                                             <?= $t['amount'] . ' ' . $t['wallet'] ?>
                                         </p>
 

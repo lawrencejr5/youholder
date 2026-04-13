@@ -25,6 +25,7 @@ foreach ($data['user'] as $u) {
     $state = $u['state'];
     $country = $u['country'];
     $timezone = $u['timezone'];
+    $verify_code = $u['verify_code'];
     $level = $u['level'];
     $admin = $u['admin'];
 }

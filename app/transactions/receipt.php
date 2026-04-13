@@ -18,7 +18,7 @@ include '../backend/udata.php';
     <!-- end css -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="/youholder/public/logos/favicon.png">
+    <link rel="shortcut icon" href="https://yfincs.com/public/logos/favicon.png">
 
 </head>
 
@@ -29,7 +29,7 @@ include '../backend/udata.php';
 
                 <!-- main-containt -->
                 <div class="bg-white pxy-62 shadow" id="depositConfirm">
-                    <center><img src="/youholder/public/logos/yield-logo.png" width="150px" height="auto" alt=""></center>
+                    <center><img src="https://yfincs.com//public/logos/yield-logo.png" width="150px" height="auto" alt=""></center>
 
                     <form>
                         <input type="hidden" name="_token" value="kIte8862DuGRvS3wAffFj2TC0j1SygL6deKEbxei" autocomplete="off"> <input type="hidden" name="method" id="method" value="6">

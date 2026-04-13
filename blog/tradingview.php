@@ -1,18 +1,9 @@
 <!DOCTYPE html><!-- Last Published: Wed Feb 28 2024 14:19:43 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="www.youhodler.com" data-wf-page="65719812835ab1dfc00c39e7" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
+<html data-wf-domain="www.yfincs.com" data-wf-page="65719812835ab1dfc00c39e7" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
 
 <head>
     <meta charset="utf-8" />
     <title>What is TradingView? Master the Art of Technical Analysis With this Platform</title>
-    <meta content="USDC and USDT are two popular stablecoins, but which one is best? Find out the differences and unique benefits of USDC vs USDT and see which one is best for you.  By , Aug 07, 2023" name="description" />
-    <meta content="USDC vs. USDT: Which Stablecoin to Use" property="og:title" />
-    <meta content="USDC and USDT are two popular stablecoins, but which one is best? Find out the differences and unique benefits of USDC vs USDT and see which one is best for you." property="og:description" />
-    <meta content="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/64d087946577cae16153b659_USDC_USDT.jpeg" property="og:image" />
-    <meta content="USDC vs. USDT: Which Stablecoin to Use" property="twitter:title" />
-    <meta content="USDC and USDT are two popular stablecoins, but which one is best? Find out the differences and unique benefits of USDC vs USDT and see which one is best for you." property="twitter:description" />
-    <meta content="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/64d087946577cae16153b659_USDC_USDT.jpeg" property="twitter:image" />
-    <meta property="og:type" content="website" />
-    <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="../style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -32,8 +23,8 @@
             n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
         }(window, document);
     </script>
-    <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
-    <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
+    <link href="https://yfincs.com/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://yfincs.com/public/logos/favicon.png" rel="apple-touch-icon" />
     <link href="rss.xml" rel="alternate" title="RSS Feed" type="application/rss+xml" />
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -50,7 +41,7 @@
     <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
     <!-- End TrustBox script -->
 
-    <!-- Hotjar Tracking Code for https://www.youhodler.com -->
+    <!-- Hotjar Tracking Code for https://www.yfincs.com -->
     <script>
         (function(h, o, t, j, a, r) {
             h.hj = h.hj || function() {
@@ -68,12 +59,12 @@
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
 
-    <link rel="alternate" hreflang="en" href="https://www.youhodler.com">
-    <link rel="alternate" hreflang="fr" href="https://fr.youhodler.com">
-    <link rel="alternate" hreflang="it" href="https://it.youhodler.com">
-    <link rel="alternate" hreflang="es" href="https://es.youhodler.com">
-    <link rel="alternate" hreflang="latam" href="https://latam.youhodler.com">
-    <link rel="alternate" hreflang="de" href="https://de.youhodler.com">
+    <link rel="alternate" hreflang="en" href="https://www.yfincs.com">
+    <link rel="alternate" hreflang="fr" href="https://fr.yieldfincs.com">
+    <link rel="alternate" hreflang="it" href="https://it.yieldfincs.com">
+    <link rel="alternate" hreflang="es" href="https://es.yieldfincs.com">
+    <link rel="alternate" hreflang="latam" href="https://latam.yieldfincs.com">
+    <link rel="alternate" hreflang="de" href="https://de.yieldfincs.com">
     <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
     <script>
         Weglot.initialize({
@@ -177,7 +168,7 @@
                         <p>Whether a novice trader wants to look at a simple line chart or a veteran wants to dive into complex
                             tools like <a href="https://en.wikipedia.org/wiki/Renko_chart">Renko charts</a>, Fibonacci retracements,
                             and Bollinger Bands, TradingView has something for everyone. </p>
-                        <p><strong><em>Suggested Reading: </em></strong><a href="https://www.youhodler.com/blog/cryptocurrency-trading-course"><strong><em>Cryptocurrency Trading
+                        <p><strong><em>Suggested Reading: </em></strong><a href="https://www.yfincs.com/blog/cryptocurrency-trading-course"><strong><em>Cryptocurrency Trading
                                         Course - Best Free Resources</em></strong></a></p>
                         <h2><strong>The social aspect of trading</strong></h2>
                         <p>Before TradingView, there wasn’t an efficient platform for the trading community to truly come together
@@ -192,12 +183,12 @@
                             designed just for custom indicator creation.</p>
                         <p>There is no shortage of flexibility and affluence catering to every trading and investing style. </p>
                         <h2><strong>TradingView: The Bottom line</strong></h2>
-                        <p>In YouHodler’s opinion, TradingView shares our thirst for innovation in finance. Its charts are the
+                        <p>In yieldfincs’s opinion, TradingView shares our thirst for innovation in finance. Its charts are the
                             perfect combination of TradingView’s unique technology and unmatched expertise. Some of our favorite tools
                             are the <a href="https://www.tradingview.com/economic-calendar/">economic calendar</a> and the <a href="https://www.tradingview.com/screener/">stock screener</a> but it’s hard to stop there.</p>
                         <p>When factoring in all the latest financial news, real-time asset data, and endless content available for
                             traders and investors, it’s easy to see what this platform is at the very top of its industry. </p>
-                        <p>TradingView offers the solution to have their charts into other platforms, and we, at YouHodler, believe
+                        <p>TradingView offers the solution to have their charts into other platforms, and we, at yieldfincs, believe
                             that this is a significant improvement for the user experience and we are working on integrating
                             TradingView’s chart on our platform…<strong>stay tuned for more news</strong> on that shortly!</p>
                         <h2><strong>TradingView FAQs</strong></h2>
@@ -215,12 +206,12 @@
                             you’ll need to connect to one of the brokers integrated into the platform.</p>
                         <h3><strong>Can you buy crypto on TradingView?</strong></h3>
                         <p>While you can use TradingView for price analysis, you cannot buy crypto directly on TradingView. To buy
-                            crypto on YouHodler, follow <a href="https://help.youhodler.com/en/articles/4831633-how-to-buy-crypto">these instructions</a>.</p>
+                            crypto on yieldfincs, follow <a href="https://help.yieldfincs.com/en/articles/4831633-how-to-buy-crypto">these instructions</a>.</p>
                     </div>
                     <div class="blog-cta-wrap">
                         <div class="cta-blog-text">Buy crypto</div>
                         <div class="cta-blog-subheading">Put your new TradingView knowledge to use! First, head on over to YieldFincs
-                            and buy some cryptocurrency. Just click the button below to get started. </div><a href="/youhodler/login" target="_blank" class="cta-blog-button w-button">Buy crypto</a>
+                            and buy some cryptocurrency. Just click the button below to get started. </div><a href="/yieldfincs/login" target="_blank" class="cta-blog-button w-button">Buy crypto</a>
                     </div>
 
                 </div>

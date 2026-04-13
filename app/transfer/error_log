@@ -1,0 +1,27 @@
+[05-Jun-2024 05:17:21 UTC] PHP Warning:  Undefined array key "id" in /home/yfiniqvq/public_html/app/backend/udata.php on line 8
+[05-Jun-2024 05:17:21 UTC] PHP Warning:  Undefined array key "id" in /home/yfiniqvq/public_html/app/transfer/index.php on line 3
+[05-Jun-2024 05:17:21 UTC] PHP Warning:  Undefined variable $admin in /home/yfiniqvq/public_html/app/master/sidenav.php on line 231
+[05-Jun-2024 05:17:21 UTC] PHP Warning:  Undefined variable $profile_pic in /home/yfiniqvq/public_html/app/master/topnav.php on line 36
+[05-Jun-2024 05:17:21 UTC] PHP Warning:  Undefined variable $fullname in /home/yfiniqvq/public_html/app/master/topnav.php on line 39
+[05-Jun-2024 05:17:21 UTC] PHP Warning:  Undefined variable $profile_pic in /home/yfiniqvq/public_html/app/master/topnav.php on line 50
+[05-Jun-2024 05:17:21 UTC] PHP Warning:  Undefined variable $fullname in /home/yfiniqvq/public_html/app/master/topnav.php on line 53
+[05-Jun-2024 05:17:21 UTC] PHP Warning:  Undefined variable $email in /home/yfiniqvq/public_html/app/master/topnav.php on line 54
+[05-Jun-2024 05:17:21 UTC] PHP Warning:  Undefined variable $fullname in /home/yfiniqvq/public_html/app/transfer/index.php on line 186
+[05-Jun-2024 05:17:22 UTC] PHP Warning:  Undefined array key "id" in /home/yfiniqvq/public_html/app/backend/udata.php on line 8
+[05-Jun-2024 05:17:22 UTC] PHP Warning:  Undefined array key "id" in /home/yfiniqvq/public_html/app/transfer/index.php on line 3
+[05-Jun-2024 05:17:22 UTC] PHP Warning:  Undefined variable $admin in /home/yfiniqvq/public_html/app/master/sidenav.php on line 231
+[05-Jun-2024 05:17:22 UTC] PHP Warning:  Undefined variable $profile_pic in /home/yfiniqvq/public_html/app/master/topnav.php on line 36
+[05-Jun-2024 05:17:22 UTC] PHP Warning:  Undefined variable $fullname in /home/yfiniqvq/public_html/app/master/topnav.php on line 39
+[05-Jun-2024 05:17:22 UTC] PHP Warning:  Undefined variable $profile_pic in /home/yfiniqvq/public_html/app/master/topnav.php on line 50
+[05-Jun-2024 05:17:22 UTC] PHP Warning:  Undefined variable $fullname in /home/yfiniqvq/public_html/app/master/topnav.php on line 53
+[05-Jun-2024 05:17:22 UTC] PHP Warning:  Undefined variable $email in /home/yfiniqvq/public_html/app/master/topnav.php on line 54
+[05-Jun-2024 05:17:22 UTC] PHP Warning:  Undefined variable $fullname in /home/yfiniqvq/public_html/app/transfer/index.php on line 186
+[13-Jul-2025 19:27:36 UTC] PHP Warning:  Undefined array key "id" in /home/yfiniqvq/public_html/app/backend/udata.php on line 8
+[13-Jul-2025 19:27:36 UTC] PHP Warning:  Undefined array key "id" in /home/yfiniqvq/public_html/app/transfer/index.php on line 3
+[13-Jul-2025 19:27:36 UTC] PHP Warning:  Undefined variable $admin in /home/yfiniqvq/public_html/app/master/sidenav.php on line 231
+[13-Jul-2025 19:27:36 UTC] PHP Warning:  Undefined variable $profile_pic in /home/yfiniqvq/public_html/app/master/topnav.php on line 36
+[13-Jul-2025 19:27:36 UTC] PHP Warning:  Undefined variable $fullname in /home/yfiniqvq/public_html/app/master/topnav.php on line 39
+[13-Jul-2025 19:27:36 UTC] PHP Warning:  Undefined variable $profile_pic in /home/yfiniqvq/public_html/app/master/topnav.php on line 50
+[13-Jul-2025 19:27:36 UTC] PHP Warning:  Undefined variable $fullname in /home/yfiniqvq/public_html/app/master/topnav.php on line 53
+[13-Jul-2025 19:27:36 UTC] PHP Warning:  Undefined variable $email in /home/yfiniqvq/public_html/app/master/topnav.php on line 54
+[13-Jul-2025 19:27:36 UTC] PHP Warning:  Undefined variable $fullname in /home/yfiniqvq/public_html/app/transfer/index.php on line 186

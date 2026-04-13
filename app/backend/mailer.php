@@ -15,14 +15,14 @@ class Mailer
         $mail = new PHPMailer(true);
         $mail->SMTPDebug = SMTP::DEBUG_OFF;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'wghp6.wghservers.com';                     //Set the SMTP server to send through
+        $mail->Host       = 'server212.web-hosting.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'support@yieldfincs.com';                     //SMTP username
-        $mail->Password   = 'yieldfincs123';                               //SMTP password
+        $mail->Username   = 'support@yfincs.com';                     //SMTP username
+        $mail->Password   = 'Yield123##00';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
         $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-        $mail->setFrom('support@yieldfincs.com', 'Yield Financial Services');
-        $mail->addReplyTo('support@yieldfincs.com', 'Yield Financial Services');
+        $mail->setFrom('support@yfincs.com', 'Yield Financial Services');
+        $mail->addReplyTo('support@yfincs.com', 'Yield Financial Services');
         $mail->addAddress($toEmail, $toName);
         $mail->Subject = $subject;
         $mail->Body = $body;

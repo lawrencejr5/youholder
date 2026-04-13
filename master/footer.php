@@ -44,21 +44,21 @@
                     <div id="w-node-fe8d16c8-cf2d-fbc6-629f-2be4d1044085-d1044064">
                         <div class="p-small heading"><strong class="bold-highlighted">We offer</strong></div>
                         <ul role="list" class="footer-link-ul w-list-unstyled">
-                            <li class="footer-link-li"><a href="/youholder/crypto-staking" target="" class="footer-a">Crypto Staking</a></li>
-                            <li class="footer-link-li wide-fix"><a href="/youholder/instant-deposits" class="footer-a">Instant deposits</a></li>
-                            <li class="footer-link-li"><a href="/youholder/exchange" class="footer-a">Exchange</a></li>
-                            <li class="footer-link-li"><a href="/youholder/yield" target="" class="footer-a">Earn</a></li>
+                            <li class="footer-link-li"><a href="https://yfincs.com/crypto-staking" target="" class="footer-a">Crypto Staking</a></li>
+                            <li class="footer-link-li wide-fix"><a href="https://yfincs.com/instant-deposits" class="footer-a">Instant deposits</a></li>
+                            <li class="footer-link-li"><a href="https://yfincs.com/exchange" class="footer-a">Exchange</a></li>
+                            <li class="footer-link-li"><a href="https://yfincs.com/yield" target="" class="footer-a">Earn</a></li>
                         </ul>
                     </div>
                     <div id="w-node-fe8d16c8-cf2d-fbc6-629f-2be4d104409c-d1044064">
                         <div class="p-small heading"><strong class="bold-highlighted">COMPANY</strong></div>
                         <ul role="list" class="footer-link-ul w-list-unstyled">
-                            <li class="footer-link-li"><a href="/youholder/company" target="" class="footer-a">About Us</a></li>
-                            <li class="footer-link-li"><a href="/youholder/stats" target="" class="footer-a">Company stats</a></li>
-                            <li class="footer-link-li wide-fix"><a href="/youholder/affiliate-program" class="footer-a">Affiliate Program</a>
+                            <li class="footer-link-li"><a href="https://yfincs.com/company" target="" class="footer-a">About Us</a></li>
+                            <li class="footer-link-li"><a href="https://yfincs.com/stats" target="" class="footer-a">Company stats</a></li>
+                            <li class="footer-link-li wide-fix"><a href="https://yfincs.com/affiliate-program" class="footer-a">Affiliate Program</a>
                             </li>
-                            <li class="footer-link-li"><a href="/youholder/ambassador" class="footer-a">Ambassador Program</a></li>
-                            <li class="footer-link-li"><a href="/youholder/careers" class="footer-a">Careers</a></li>
+                            <li class="footer-link-li"><a href="https://yfincs.com/ambassador" class="footer-a">Ambassador Program</a></li>
+                            <li class="footer-link-li"><a href="https://yfincs.com/careers" class="footer-a">Careers</a></li>
                         </ul>
                     </div>
                     <!-- <div id="w-node-fe8d16c8-cf2d-fbc6-629f-2be4d10440b3-d1044064">
@@ -77,12 +77,12 @@
                     <div id="w-node-fe8d16c8-cf2d-fbc6-629f-2be4d10440c7-d1044064">
                         <div class="p-small heading"><strong class="bold-highlighted">HELP</strong></div>
                         <ul role="list" class="footer-link-ul w-list-unstyled">
-                            <li class="footer-link-li"><a href="/youholder/contact" class="footer-a">Contact</a>
+                            <li class="footer-link-li"><a href="https://yfincs.com/contact" class="footer-a">Contact</a>
                             </li>
-                            <li class="footer-link-li wide-fix"><a href="/youholder/faqs" target="" class="footer-a">Faqs</a></li>
-                            <li class="footer-link-li wide-fix"><a href="/youholder/t&c" target="_blank" class="footer-a">Terms & Conditions</a></li>
-                            <li class="footer-link-li wide-fix"><a href="/youholder/policy" target="_blank" class="footer-a">Privacy Policy</a></li>
-                            <li class="footer-link-li wide-fix"><a href="/youholder/use-of-website" target="_blank" class="footer-a">Use Of Website</a></li>
+                            <li class="footer-link-li wide-fix"><a href="https://yfincs.com/faqs" target="" class="footer-a">Faqs</a></li>
+                            <li class="footer-link-li wide-fix"><a href="https://yfincs.com/t&c" target="_blank" class="footer-a">Terms & Conditions</a></li>
+                            <li class="footer-link-li wide-fix"><a href="https://yfincs.com/policy" target="_blank" class="footer-a">Privacy Policy</a></li>
+                            <li class="footer-link-li wide-fix"><a href="https://yfincs.com/use-of-website" target="_blank" class="footer-a">Use Of Website</a></li>
                         </ul>
                     </div>
                 </div>
@@ -170,7 +170,42 @@
                             <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5e70f93d18292368aba5c4ff_maestro.svg" width="24" alt="maestro" loading="lazy" class="footer-link-li-icon" /></li>
                             <li class="footer-icon-li"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/62795c5179bcd12c1ad2d872_mc_idcheck.svg" loading="lazy" alt="mc id check" class="footer-link-li-icon wide" /></li>
                         </ul> -->
-                        <div id="lang" class="lang"></div>
+        <div id="google_translate_element" ></div>
                     </div>
                 </div>
             </div>
+            
+            
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,ar,fr,de,nl,pt,ru,es,tr,zh-TW',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            
+                 
+<script>
+    window.__lc = window.__lc || {};
+    window.__lc.license = 18004584;
+    window.__lc.integration_name = "manual_onboarding";
+    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/669fa1fd32dca6db2cb3efef/1i3fp1icd';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->

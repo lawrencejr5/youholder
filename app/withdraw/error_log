@@ -1,0 +1,16 @@
+[04-Apr-2025 11:51:03 UTC] PHP Warning:  Undefined array key "id" in /home/yfiniqvq/public_html/app/backend/udata.php on line 8
+[04-Apr-2025 11:51:03 UTC] PHP Warning:  Undefined array key "id" in /home/yfiniqvq/public_html/app/withdraw/index.php on line 3
+[04-Apr-2025 11:51:03 UTC] PHP Warning:  Undefined variable $admin in /home/yfiniqvq/public_html/app/master/sidenav.php on line 231
+[04-Apr-2025 11:51:03 UTC] PHP Warning:  Undefined variable $profile_pic in /home/yfiniqvq/public_html/app/master/topnav.php on line 36
+[04-Apr-2025 11:51:03 UTC] PHP Warning:  Undefined variable $fullname in /home/yfiniqvq/public_html/app/master/topnav.php on line 39
+[04-Apr-2025 11:51:03 UTC] PHP Warning:  Undefined variable $profile_pic in /home/yfiniqvq/public_html/app/master/topnav.php on line 50
+[04-Apr-2025 11:51:03 UTC] PHP Warning:  Undefined variable $fullname in /home/yfiniqvq/public_html/app/master/topnav.php on line 53
+[04-Apr-2025 11:51:03 UTC] PHP Warning:  Undefined variable $email in /home/yfiniqvq/public_html/app/master/topnav.php on line 54
+[16-Apr-2025 09:58:10 UTC] PHP Warning:  Undefined array key "id" in /home/yfiniqvq/public_html/app/backend/udata.php on line 8
+[16-Apr-2025 09:58:10 UTC] PHP Warning:  Undefined array key "id" in /home/yfiniqvq/public_html/app/withdraw/index.php on line 3
+[16-Apr-2025 09:58:10 UTC] PHP Warning:  Undefined variable $admin in /home/yfiniqvq/public_html/app/master/sidenav.php on line 231
+[16-Apr-2025 09:58:10 UTC] PHP Warning:  Undefined variable $profile_pic in /home/yfiniqvq/public_html/app/master/topnav.php on line 36
+[16-Apr-2025 09:58:10 UTC] PHP Warning:  Undefined variable $fullname in /home/yfiniqvq/public_html/app/master/topnav.php on line 39
+[16-Apr-2025 09:58:10 UTC] PHP Warning:  Undefined variable $profile_pic in /home/yfiniqvq/public_html/app/master/topnav.php on line 50
+[16-Apr-2025 09:58:10 UTC] PHP Warning:  Undefined variable $fullname in /home/yfiniqvq/public_html/app/master/topnav.php on line 53
+[16-Apr-2025 09:58:10 UTC] PHP Warning:  Undefined variable $email in /home/yfiniqvq/public_html/app/master/topnav.php on line 54

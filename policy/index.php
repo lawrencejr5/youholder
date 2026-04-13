@@ -7,13 +7,13 @@
     <meta name="theme-color" content="#130e80" />
     <link href="../style.css" rel="stylesheet" type="text/css" />
     <title>Privacy Policy | Yield Financial Services</title>
-    <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
-    <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
+    <link href="https://yfincs.com/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://yfincs.com/public/logos/favicon.png" rel="apple-touch-icon" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+    <script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 
     <script type="text/javascript">
         WebFont.load({

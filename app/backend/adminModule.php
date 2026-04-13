@@ -422,9 +422,51 @@ class AdminModule extends Connection
             return false . $e->getMessage();
         }
     }
+    
+    
+    public function getUserByAcc($acc)
+    {
+        $this->sql = "SELECT * FROM users WHERE account_no = :account_no";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':account_no', $acc);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            return false . $e->getMessage();
+        }
+    }
+    
+    
 
 
 
+
+ // ******** INSERT ***********
+    
+    public function addRefBonus($uid, $wallet_id, $wallet, $curr, $amount, $value, $type, $approved, $from_to)
+    {
+        try {
+            //code...
+            $this->sql = "INSERT INTO deposits(uid, wallet_id, wallet, currency, deposit_amt, return_amt, transaction_type, approved, from_to) 
+                            VALUES(:uid, :wallet_id, :wallet, :currency, :deposit_amt, :return_amt, :transaction_type, :approved, :from_to)";
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':uid', $uid);
+            $this->stmt->bindParam(':wallet_id', $wallet_id);
+            $this->stmt->bindParam(':wallet', $wallet);
+            $this->stmt->bindParam(':currency', $curr);
+            $this->stmt->bindParam(':deposit_amt', $amount);
+            $this->stmt->bindParam(':return_amt', $value);
+            $this->stmt->bindParam(':transaction_type', $type);
+            $this->stmt->bindParam(':approved', $approved);
+            $this->stmt->bindParam(':from_to', $from_to);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            //throw $th;
+            echo "failed" . $th->getMessage();
+        }
+    }
 
 
 
@@ -534,6 +576,32 @@ class AdminModule extends Connection
     public function deleteWallet($id)
     {
         $this->sql = "DELETE FROM user_wallets WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false . $th->getMessage();
+        }
+    }
+    
+    public function deleteDeposit($id)
+    {
+        $this->sql = "DELETE FROM deposits WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false . $th->getMessage();
+        }
+    }
+    
+    public function deleteWithdrawal($id)
+    {
+        $this->sql = "DELETE FROM withdrawals WHERE id = :id";
         try {
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':id', $id);

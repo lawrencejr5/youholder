@@ -1,14 +1,14 @@
 <!DOCTYPE html><!-- Last Published: Fri Jan 12 2024 17:37:06 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="www.youhodler.com" data-wf-page="65719812835ab1dfc00c38fa" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
+<html data-wf-domain="www.yieldfincs.com" data-wf-page="65719812835ab1dfc00c38fa" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
 
 <head>
   <meta charset="utf-8" />
-  <title>YieldFIncs Affiliates Program - Yield Financial Services</title>
-  <meta content="Become an affiliate with the best term on the market. High payouts, monthly payments, CPA and CPL models are available. Crypto and Bitcoin affiliates can get cash or crypto for each lead or active client you invite to YouHodler." name="description" />
-  <meta content="YouHodler Crypto Affiliates Program - Bitcoin &amp; Cryptocurrency Affiliate Programs" property="og:title" />
-  <meta content="Become an affiliate with the best term on the market. High payouts, monthly payments, CPA and CPL models are available. Crypto and Bitcoin affiliates can get cash or crypto for each lead or active client you invite to YouHodler." property="og:description" />
-  <meta content="YouHodler Crypto Affiliates Program - Bitcoin &amp; Cryptocurrency Affiliate Programs" property="twitter:title" />
-  <meta content="Become an affiliate with the best term on the market. High payouts, monthly payments, CPA and CPL models are available. Crypto and Bitcoin affiliates can get cash or crypto for each lead or active client you invite to YouHodler." property="twitter:description" />
+  <title>YieldFincs Affiliates Program - Yield Financial Services</title>
+  <meta content="Become an affiliate with the best term on the market. High payouts, monthly payments, CPA and CPL models are available. Crypto and Bitcoin affiliates can get cash or crypto for each lead or active client you invite to yieldfincs." name="description" />
+  <meta content="yieldfincs Crypto Affiliates Program - Bitcoin &amp; Cryptocurrency Affiliate Programs" property="og:title" />
+  <meta content="Become an affiliate with the best term on the market. High payouts, monthly payments, CPA and CPL models are available. Crypto and Bitcoin affiliates can get cash or crypto for each lead or active client you invite to yieldfincs." property="og:description" />
+  <meta content="yieldfincs Crypto Affiliates Program - Bitcoin &amp; Cryptocurrency Affiliate Programs" property="twitter:title" />
+  <meta content="Become an affiliate with the best term on the market. High payouts, monthly payments, CPA and CPL models are available. Crypto and Bitcoin affiliates can get cash or crypto for each lead or active client you invite to yieldfincs." property="twitter:description" />
   <meta property="og:type" content="website" />
   <meta content="summary_large_image" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -31,8 +31,8 @@
       n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);
   </script>
-  <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
-  <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
+  <link href="https://yfincs.com/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="https://yfincs.com/public/logos/favicon.png" rel="apple-touch-icon" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta name="facebook-domain-verification" content="9d151kspnzgxeyddfsx424rcf04nh6" />
@@ -69,28 +69,28 @@
     {
       "@context": "http://schema.org",
       "@type": "Organization",
-      "name": "YouHodler",
-      "url": "http://www.youhodler.com",
+      "name": "yieldfincs",
+      "url": "http://www.yieldfincs.com",
       "logo": "https://global-uploads.webflow.com/5cc19fbd198b8d31a9c64876/5cee8faeaeff6f36241942f1_fav_large.png",
       "contactPoint": [{
           "@type": "ContactPoint",
-          "url": "support@youhodler.com",
+          "url": "support@yieldfincs.com",
           "contactType": "customer service",
           "availableLanguage": ["English"]
         },
         {
           "@type": "ContactPoint",
-          "url": "welcome@youhodler.com",
+          "url": "welcome@yieldfincs.com",
           "contactType": "public relations",
           "availableLanguage": ["English"]
         }
       ],
       "sameAs": [
-        "https://twitter.com/youhodler",
-        "https://t.me/youhodler_official",
-        "https://www.facebook.com/YouHodler/",
-        "https://www.linkedin.com/company/youhodler",
-        "https://www.instagram.com/youhodler/",
+        "https://twitter.com/yieldfincs",
+        "https://t.me/yieldfincs_official",
+        "https://www.facebook.com/yieldfincs/",
+        "https://www.linkedin.com/company/yieldfincs",
+        "https://www.instagram.com/yieldfincs/",
         "https://www.youtube.com/channel/UC-Kxvqm8Q-l_WGxQL0VpEEQ"
       ]
     }
@@ -102,7 +102,7 @@
   <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
   <!-- End TrustBox script -->
 
-  <!-- Hotjar Tracking Code for https://www.youhodler.com -->
+  <!-- Hotjar Tracking Code for https://www.yieldfincs.com -->
   <script>
     (function(h, o, t, j, a, r) {
       h.hj = h.hj || function() {
@@ -133,12 +133,12 @@
     gtag('config', 'G-N8Q9NJR9K1');
   </script>
 
-  <link rel="alternate" hreflang="en" href="https://www.youhodler.com">
-  <link rel="alternate" hreflang="fr" href="https://fr.youhodler.com">
-  <link rel="alternate" hreflang="it" href="https://it.youhodler.com">
-  <link rel="alternate" hreflang="es" href="https://es.youhodler.com">
-  <link rel="alternate" hreflang="latam" href="https://latam.youhodler.com">
-  <link rel="alternate" hreflang="de" href="https://de.youhodler.com">
+  <link rel="alternate" hreflang="en" href="https://www.yieldfincs.com">
+  <link rel="alternate" hreflang="fr" href="https://fr.yieldfincs.com">
+  <link rel="alternate" hreflang="it" href="https://it.yieldfincs.com">
+  <link rel="alternate" hreflang="es" href="https://es.yieldfincs.com">
+  <link rel="alternate" hreflang="latam" href="https://latam.yieldfincs.com">
+  <link rel="alternate" hreflang="de" href="https://de.yieldfincs.com">
   <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
   <script>
     Weglot.initialize({
@@ -290,13 +290,13 @@
     <div class="hero-wrap wide w-container">
       <div class="w-row">
         <div class="column-compensation mob-content w-col w-col-6">
-          <h1 class="h1 hero">Join YouHodler Partner Program. We are the best.<br /></h1>
+          <h1 class="h1 hero">Join YieldFincs Partner Program. We are the best.<br /></h1>
           <p class="h3 subheading">Be a part of a fast-growing company and get commissions for each active client you
-            bring to YouHodler.<br /></p>
-          <div class="section-cta-wrap"><a href="/youholder/register" target="_blank" class="btn-big-solid w-button">Become an affiliate</a></div>
+            bring to yieldfincs.<br /></p>
+          <div class="section-cta-wrap"><a href="https://yfincs.com/register" target="_blank" class="btn-big-solid w-button">Become an affiliate</a></div>
         </div>
         <div class="column-compensation w-col w-col-6">
-          <div class="mob-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5fabeea973389867060a536a_youhodler-affiliate-program.jpg" width="412" sizes="(max-width: 479px) 90vw, (max-width: 767px) 412px, (max-width: 991px) 45vw, 412px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5fabeea973389867060a536a_youhodler-affiliate-program-p-500.jpeg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5fabeea973389867060a536a_youhodler-affiliate-program.jpg 800w" alt="" /></div>
+          <div class="mob-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5fabeea973389867060a536a_yieldfincs-affiliate-program.jpg" width="412" sizes="(max-width: 479px) 90vw, (max-width: 767px) 412px, (max-width: 991px) 45vw, 412px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5fabeea973389867060a536a_yieldfincs-affiliate-program-p-500.jpeg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5fabeea973389867060a536a_yieldfincs-affiliate-program.jpg 800w" alt="" /></div>
         </div>
       </div>
     </div>
@@ -306,7 +306,7 @@
       <div class="wrap-center padding-bottom">
         <h2 class="h2 center">How it works</h2>
         <h3 class="h3 subheading">Be a part of a fast-growing company and get commissions for each active client you
-          bring to YouHodler.</h3>
+          bring to yieldfincs.</h3>
       </div>
       <div class="w-layout-grid grid-4-row"><a href="#" class="link-affiliates w-inline-block">
           <div class="txt-large w-clearfix"><span class="badge-num affiliates">1</span>Sign up</div>
@@ -372,7 +372,7 @@
         <div class="number-affiliates"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5da7007cbc6da7e8a68d10ee_cva_logo_member.png" alt="crypto valley association logo" height="32" class="number-affiliate-logo" />
           <div class="number-affiliates-small">Member of the Crypto Valley Association</div>
         </div>
-        <div class="number-affiliates"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/61d83f692586c50155984c57_ledger-entreprise-solutions-logo-blue.svg" alt="YouHodler Ledger" height="32" class="number-affiliate-logo" />
+        <div class="number-affiliates"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/61d83f692586c50155984c57_ledger-entreprise-solutions-logo-blue.svg" alt="yieldfincs Ledger" height="32" class="number-affiliate-logo" />
           <div class="number-affiliates-small">Partnership with Ledger Vault<br /></div>
         </div>
         <div class="number-affiliates"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f92f6c35983ac80a99be17b_icon_service.svg" width="24" alt="" class="number-affiliate-icon" />
@@ -439,14 +439,14 @@
               <h1 class="h3 no-padding-bottom">⭐️⭐️⭐️⭐️⭐️</h1>
               <h1 class="h3 no-padding-bottom">John Waters</h1>
               <p class="p-small">Affiliate</p>
-              <p class="p">YouHodler is an awesome platform and their affiliate program is absolutely top notch from my
+              <p class="p">yieldfincs is an awesome platform and their affiliate program is absolutely top notch from my
                 personal experience so far.</p>
               <p class="p">Right now I have been a member for a few weeks and I have only ran one campaign. I received a
                 lot of very detailed help and resources from my affiliate &quot;personal manager&quot; aka the person
                 designated to help me with anything relating to the program. I had a few nuanced questions about
                 specific things and he was very helpful and encouraging throughout the entire process before the
                 campaign was launched.</p>
-              <p class="p">The YouHodler affiliate user interface is quite basic which gives it a clean look and makes
+              <p class="p">The yieldfincs affiliate user interface is quite basic which gives it a clean look and makes
                 it very simple and easy to understand. They have an extensive number of &quot;supportive advertising
                 materials&quot; including things like: different variations of their logos, in depth-product explanation
                 articles geared towards helping the affiliate understand their basket of services better, different
@@ -462,7 +462,7 @@
               <h1 class="h3 no-padding-bottom">⭐️⭐️⭐️⭐️⭐️</h1>
               <h1 class="h3 no-padding-bottom">Ronen</h1>
               <p class="p-small">Affiliate</p>
-              <p class="p">I&#x27;ve been working with Youhodler Affiliate program since late February 2020. Here are my
+              <p class="p">I&#x27;ve been working with yieldfincs Affiliate program since late February 2020. Here are my
                 pros and cons.</p>
               <p class="p">Pros:<br />1) They pay on time, and sometimes even a bit earlier mentioned hold period
                 (Net-5).<br />2) Their support is really great and helpful, true professionals.<br />3) What is
@@ -471,7 +471,7 @@
                 use Affise as a tracking software, so, I have full access to the statistics, can be sure that I&#x27;m
                 not cheated.<br />6) They offer private terms and higher payouts for the affiliates with best traffic
                 (since I&#x27;m on the crypto market since 2016, I&#x27;m the one of those affiliates, hehe)<br />7)
-                Since I&#x27;m one of the users of their platform, payments are made directly to my Youhodler wallet,
+                Since I&#x27;m one of the users of their platform, payments are made directly to my yieldfincs wallet,
                 very convenient.</p>
               <p class="p">Cons:<br />1) So far they have only 2 offers, but I was told that they are working on some
                 new offers and will release it soon. Nevertheless I earned several thouthands of USD with those offers,
@@ -484,7 +484,7 @@
               <h1 class="h3 no-padding-bottom">⭐️⭐️⭐️⭐️⭐️</h1>
               <h1 class="h3 no-padding-bottom">Ines</h1>
               <p class="p-small">YouTube Blogger</p>
-              <p class="p">I have to say, quite frankly, I love working with Youhodler.</p>
+              <p class="p">I have to say, quite frankly, I love working with yieldfincs.</p>
               <p class="p">Payments are always made precisely. They have an excellent and precise dashboard with a
                 responsive and professional manager.</p>
               <p class="p">In addition, and this is perhaps what I appreciate the most, we know that we send users to a
@@ -497,13 +497,13 @@
               <h1 class="h3 no-padding-bottom">⭐️⭐️⭐️⭐️⭐️</h1>
               <h1 class="h3 no-padding-bottom">NTNDO</h1>
               <p class="p-small">Affiliate</p>
-              <p class="p">I started working with YouHodler&#x27;s Affiliate program some months ago. Here are my pros
+              <p class="p">I started working with yieldfincs&#x27;s Affiliate program some months ago. Here are my pros
                 and cons.</p>
               <p class="p">1. Tracking works perfect; 2. Payments are always on time; 3. Different Offers to choose from
                 (10USD / 100USD / Compound up to 90$ -for more information check their offers); 4. Dashboard is very
                 informative; 5. Support is super helpful and answers within 1-5 hours; 6. Payments in EURO or Crypto</p>
               <p class="p">Cons: None ;)</p>
-              <p class="p">Work with YouHodler is great and I am sure that we can keep doing business for many more
+              <p class="p">Work with yieldfincs is great and I am sure that we can keep doing business for many more
                 years.</p>
             </div>
           </div>
@@ -512,11 +512,11 @@
               <h1 class="h3 no-padding-bottom">⭐️⭐️⭐️⭐️⭐️</h1>
               <h1 class="h3 no-padding-bottom">SEBASTIAN</h1>
               <p class="p-small">Affiliate</p>
-              <p class="p">Good morning. I am Sebastian from Argentina. I am very happy with the Youhodler affiliate
+              <p class="p">Good morning. I am Sebastian from Argentina. I am very happy with the yieldfincs affiliate
                 program. It is available to everyone, it is easy to convert and you have constant assistance from an
                 account agent.</p>
               <p class="p">The month of June, I billed $270 and on July 3 it was already deposited in my ETH wallet.</p>
-              <p class="p">Go ahead YOUHODLER!</p>
+              <p class="p">Go ahead yieldfincs!</p>
             </div>
           </div>
           <div class="affiliates-slider-slide w-slide">
@@ -525,7 +525,7 @@
               <h1 class="h3 no-padding-bottom">Facundo Garcia</h1>
               <p class="p-small">Affiliate</p>
               <p class="p">Excelente plataforma, muy confiable , dinamica y practica, la verdad muy conforme con
-                youhodler espero que siga creciendo mas y con nuevos proyectos, los interes son muy buenos para poder
+                yieldfincs espero que siga creciendo mas y con nuevos proyectos, los interes son muy buenos para poder
                 ganar en criptomonedas, siempre muy atentos en el soporte y pude resolver las dudas que tenia! lo
                 recomiendo al 100%.</p>
             </div>
@@ -547,16 +547,16 @@
         <p class="p"><em>Do you know other people who have a crypto audience?<br />You might not have your own audience,
             but you know who does?</em></p>
         <h3 class="h2">Become a Master-Partner</h3>
-        <div class="h3 subheading center-smaller">Earn <strong>5% for a lifetime</strong> of partner’ commissions you
+        <div class="h3 subheading center-smaller">Earn <strong>10% for a lifetime</strong> of partner’ commissions you
           bring to us. We truly believe we created a thriving win-win program, where our partners have multiple ways to
           benefit and grow together.</div>
-        <div class="bottom-cta-wrap padding-bottom"><a href="/youholder/register/" target="_blank" class="btn-big-solid w-button">join us now</a></div>
+        <div class="bottom-cta-wrap padding-bottom"><a href="https://yfincs.com/register/" target="_blank" class="btn-big-solid w-button">join us now</a></div>
       </div>
     </div>
   </div>
   <?php include '../master/footer.php' ?>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5cc19fbd198b8d31a9c64876" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/js/youhodler.d4bcac773.js" type="text/javascript"></script>
+  <script src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/js/yieldfincs.d4bcac773.js" type="text/javascript"></script>
   <script>
     const getCookie = (name) => {
       var matches = document.cookie.match(new RegExp(
@@ -653,13 +653,13 @@
         setCookie('search-params-from-landing', JSON.stringify(paramsNew), {
           expires: 120 * 24 * 60 * 60,
           path: '/',
-          domain: '.youhodler.com'
+          domain: '.yieldfincs.com'
         });
 
         setCookie('search-params-from-landing', JSON.stringify(paramsNew), {
           expires: 120 * 24 * 60 * 60,
           path: '/',
-          domain: 'youhodler.webflow.io',
+          domain: 'yieldfincs.webflow.io',
         });
       }
     };
@@ -779,12 +779,12 @@
           setCookie('ALLOW_COOKIES', '1', {
             expires: 120 * 24 * 60 * 60,
             path: '/',
-            domain: 'youhodler.com',
+            domain: 'yieldfincs.com',
           });
           setCookie('ALLOW_COOKIES', '1', {
             expires: 120 * 24 * 60 * 60,
             path: '/',
-            domain: 'youhodler.webflow.io',
+            domain: 'yieldfincs.webflow.io',
           });
 
           loadScripts();

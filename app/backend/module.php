@@ -64,13 +64,13 @@ class Modules extends Connection
     }
 
     // Function to create account
-    public function register($fname, $lname, $email, $account_no, $phone, $password, $otp)
+    public function register($fname, $lname, $email, $account_no, $phone, $password, $otp, $referer)
     {
         if ($this->checkEmailExists($email) > 0) {
             $this->msg = "exists";
             return $this->msg;
         } else {
-            $this->sql = "INSERT INTO users(fname, lname, email, account_no, phone, password, verify_code) VALUES(:fname, :lname, :email, :account_no, :phone, :password, :verify_code)";
+            $this->sql = "INSERT INTO users(fname, lname, email, account_no, phone, password, verify_code, referer) VALUES(:fname, :lname, :email, :account_no, :phone, :password, :verify_code, :referer)";
             try {
                 $this->stmt = $this->conn->prepare($this->sql);
                 $this->stmt->bindParam(':fname', $fname);
@@ -80,6 +80,7 @@ class Modules extends Connection
                 $this->stmt->bindParam(':phone', $phone);
                 $this->stmt->bindParam(':password', $password);
                 $this->stmt->bindParam(':verify_code', $otp);
+                $this->stmt->bindParam(':referer', $referer);
                 $this->stmt->execute();
                 $this->msg = 'chuwa';
                 return $this->msg;
@@ -720,6 +721,19 @@ class Modules extends Connection
             $this->sql = 'SELECT * FROM users WHERE email = :email';
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':email', $email);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "Error " . $e->getMessage();
+        }
+    }
+    
+    public function getReferals($referer)
+    {
+        try {
+            $this->sql = 'SELECT * FROM users WHERE referer = :referer';
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':referer', $referer);
             $this->stmt->execute();
             return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {

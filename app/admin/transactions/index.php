@@ -9,7 +9,7 @@ include "../../backend/adminData.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="MTS">
-    <title>Users | Pay Money</title>
+    <title>Users | Yield Fincancial Services</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <script type="text/javascript">
@@ -92,6 +92,7 @@ include "../../backend/adminData.php";
                                                         <th title="Group">From to</th>
                                                         <th title="Last Login">Verified</th>
                                                         <th title="IP">Date & time</th>
+                                                        <th title="action">Actions</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -106,6 +107,14 @@ include "../../backend/adminData.php";
                                                             <td><?= $t['from_to'] ?></td>
                                                             <td><?= $t['verified'] ?></td>
                                                             <td><?= $t['datetime'] ?></td>
+                                                            <td>
+                                                                <form action="../../backend/actionsAdmin/deleteTransaction.php" method="post">
+                                                                    
+                                                                    <input type="hidden" name="id" value="<?= $t['id'] ?>">
+                                                                    <input type="hidden" name="transaction_type" value="<?= $t['transaction_type'] ?>">
+                                                                    <button type="submit" name="delete" class="btn btn-danger">Delete</button>
+                                                                </form>
+                                                            </td>
                                                         </tr>
                                                     <?php } ?>
                                                 </tbody>
@@ -122,11 +131,8 @@ include "../../backend/adminData.php";
 
         <!-- footer -->
         <footer class="main-footer">
-            <div class="pull-right hidden-xs f-14">
-                <b>Version</b> 4.1.1
-            </div>
-            <strong class="f-14">Copyright &copy; 2024 <a href="https://demo.paymoney.techvill.net/admin/home" target="_blank">Pay Money</a> | </strong> <span class="f-14">All rights reserved</span>
-
+            <?php include "../master/footer.php" ?>
+            
             <!-- Delete Modal for buttons-->
             <div class="modal fade" id="confirmDelete" role="dialog" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
                 <div class="modal-dialog">

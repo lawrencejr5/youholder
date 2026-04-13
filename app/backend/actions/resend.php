@@ -26,7 +26,7 @@ if (isset($_POST['resend_code'])) {
             </head>
             <body>
                 <center>
-                    <img src='https://yieldfincs.com/youholder/public/logos/yield-logo.png' height='auto' width='200px' />
+                    <img src='https://yfincs.com/public/logos/yield-logo.png' height='auto' width='200px' />
                     <h1>Verify your email</h1>
                     <p>Do not share this code with any body</p>
                </center>
@@ -36,8 +36,8 @@ if (isset($_POST['resend_code'])) {
                <br/>
                <p>Please, if this is not you, kindly reply this email saying it's not you so that we can terminate this registration.</p>
                <center>
-                    <a href='https://yieldfincs.com/youholder/t&c'>Terms and condtions</a> | 
-                    <a href='https://yieldfincs.com/youholder/policy'>Privacy Policy</a>
+                    <a href='https://yfincs.com/t&c'>Terms and condtions</a> | 
+                    <a href='https://yfincs.com/policy'>Privacy Policy</a>
                </center>
             </body>
         </html>

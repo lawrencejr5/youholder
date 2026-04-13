@@ -10,7 +10,7 @@ include "../../backend/adminData.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="MTS">
-    <title>Users | Pay Money</title>
+    <title>Users | Yield Financial Services</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <script type="text/javascript">
@@ -102,7 +102,7 @@ include "../../backend/adminData.php";
                                                     foreach ($data['deposits'] as $d) { ?>
                                                         <tr>
                                                             <td><?= $sn++ ?></td>
-                                                            <td><?= $d['fname'] . ' ' . $d['lname'] ?></td>
+                                                            <td><?= $d['fname'] . ' ' . $d['lname'] ?></td>  
                                                             <td><?= $d['deposit_amt'] . ' ' . strtoupper($d['currency']) ?></td>
                                                             <td><?= $d['return_amt'] . ' ' . $d['wallet'] ?></td>
                                                             <td><?= $d['wallet'] ?></td>
@@ -110,7 +110,14 @@ include "../../backend/adminData.php";
                                                             <td><?= $d['approved'] ?></td>
                                                             <td>
                                                                 <form action="../../backend/actionsAdmin/approveDeposit.php" method="post">
+                                                                    
                                                                     <input type="hidden" name="id" value="<?= $d['id'] ?>">
+                                                                    <input type="hidden" name="uid" value="<?= $d['uid'] ?>">
+                                                                    <input type="hidden" name="deposit_amt" value="<?= $d['deposit_amt'] ?>">
+                                                                    <input type="hidden" name="return_amt" value="<?= $d['return_amt'] ?>">
+                                                                    <input type="hidden" name="wallet" value="<?= $d['wallet'] ?>">
+                                                                    <input type="hidden" name="wallet_id" value="<?= $d['wallet_id'] ?>">
+                                                                    <input type="hidden" name="currency" value="<?= $d['currency'] ?>">
                                                                     <button type="submit" name="approveDeposit" class="btn btn-success">Approve</button>&nbsp;
                                                                     <button type="submit" name="declineDeposit" class="btn btn-danger">Decline</button>
                                                                 </form>
@@ -131,10 +138,7 @@ include "../../backend/adminData.php";
 
         <!-- footer -->
         <footer class="main-footer">
-            <div class="pull-right hidden-xs f-14">
-                <b>Version</b> 4.1.1
-            </div>
-            <strong class="f-14">Copyright &copy; 2024 <a href="https://demo.paymoney.techvill.net/admin/home" target="_blank">Pay Money</a> | </strong> <span class="f-14">All rights reserved</span>
+            <?php include "../master/footer.php" ?>
 
             <!-- Delete Modal for buttons-->
             <div class="modal fade" id="confirmDelete" role="dialog" aria-labelledby="confirmDeleteLabel" aria-hidden="true">

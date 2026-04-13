@@ -25,7 +25,7 @@ include '../backend/udata.php';
     <!-- end css -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="/youholder/public/logos/favicon.png">
+    <link rel="shortcut icon" href="https://yfincs.com/public/logos/favicon.png">
 
     <!-- theme-color -->
     <meta name="theme-color" content="#130e80" />
@@ -327,7 +327,7 @@ include '../backend/udata.php';
                                         </div>
                                         <div class="modal-body modal-body-pxy">
                                             <form id="profileUpdateForm">
-                                                <input type="hidden" value="<?php $level ?>" id="level">
+                                                <input type="hidden" value="<?php echo $level ?>" id="level">
                                                 <div class="row">
                                                     <!-- First Name -->
                                                     <div class="col-6 column-pr-unset2">
@@ -1766,7 +1766,7 @@ include '../backend/udata.php';
                         tapToDismiss: !1
                     })
                     updatePasswordBtn.html('Save changes')
-                } else if (newpass < 6) {
+                } else if (newPass < 6) {
                     toastr.warning("Password must be a minimum of 6 characters", "Warning", {
                         positionClass: "toast-top-center",
                         timeOut: 5e3,

@@ -1,0 +1,101 @@
+[08-Dec-2024 16:32:49 UTC] PHP Warning:  Array to string conversion in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 33
+[08-Dec-2024 16:35:29 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "referer" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 33
+[08-Dec-2024 16:36:02 UTC] PHP Warning:  Undefined array key "referer" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 33
+[08-Dec-2024 16:36:40 UTC] PHP Warning:  Undefined array key "referer" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 33
+[08-Dec-2024 16:37:05 UTC] PHP Warning:  Undefined array key "fname" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 33
+[08-Dec-2024 16:37:13 UTC] PHP Warning:  Undefined array key "fname" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 33
+[08-Dec-2024 16:37:49 UTC] PHP Warning:  Array to string conversion in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 33
+[08-Dec-2024 17:13:46 UTC] PHP Warning:  Undefined array key "fname" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 41
+[08-Dec-2024 17:13:46 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "approved" in /home/yfiniqvq/public_html/app/backend/adminModule.php:461
+Stack trace:
+#0 /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php(41): AdminModule->addRefBonus()
+#1 {main}
+  thrown in /home/yfiniqvq/public_html/app/backend/adminModule.php on line 461
+[08-Dec-2024 17:14:28 UTC] PHP Warning:  Undefined array key "fname" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 41
+[08-Dec-2024 17:15:23 UTC] PHP Warning:  Undefined array key "fname" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 41
+[08-Dec-2024 17:15:50 UTC] PHP Warning:  Undefined array key "fname" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 41
+[09-Dec-2024 07:38:45 UTC] PHP Warning:  Undefined array key "fname" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 41
+[09-Dec-2024 07:40:50 UTC] PHP Warning:  Undefined array key "lname" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 41
+[09-Dec-2024 07:44:39 UTC] PHP Warning:  Array to string conversion in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 40
+[09-Dec-2024 07:44:41 UTC] PHP Warning:  Array to string conversion in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 40
+[09-Dec-2024 07:49:21 UTC] PHP Warning:  Array to string conversion in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 40
+[09-Dec-2024 16:47:49 UTC] PHP Warning:  Undefined array key "uid" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 7
+[09-Dec-2024 16:47:49 UTC] PHP Warning:  Undefined array key "currency" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 8
+[09-Dec-2024 16:47:49 UTC] PHP Warning:  Undefined array key "return_amt" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 9
+[09-Dec-2024 16:47:49 UTC] PHP Warning:  Undefined array key "wallet" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 10
+[09-Dec-2024 16:47:49 UTC] PHP Warning:  Undefined array key "wallet_id" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 11
+[09-Dec-2024 16:47:49 UTC] PHP Warning:  Undefined array key 0 in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:47:49 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:48:38 UTC] PHP Warning:  Undefined array key "uid" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 7
+[09-Dec-2024 16:48:38 UTC] PHP Warning:  Undefined array key "currency" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 8
+[09-Dec-2024 16:48:38 UTC] PHP Warning:  Undefined array key "return_amt" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 9
+[09-Dec-2024 16:48:38 UTC] PHP Warning:  Undefined array key "wallet" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 10
+[09-Dec-2024 16:48:38 UTC] PHP Warning:  Undefined array key "wallet_id" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 11
+[09-Dec-2024 16:48:38 UTC] PHP Warning:  Undefined array key 0 in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:48:38 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:52:31 UTC] PHP Warning:  Undefined array key "uid" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 7
+[09-Dec-2024 16:52:31 UTC] PHP Warning:  Undefined array key "currency" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 8
+[09-Dec-2024 16:52:31 UTC] PHP Warning:  Undefined array key "return_amt" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 9
+[09-Dec-2024 16:52:31 UTC] PHP Warning:  Undefined array key "wallet" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 10
+[09-Dec-2024 16:52:31 UTC] PHP Warning:  Undefined array key "wallet_id" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 11
+[09-Dec-2024 16:52:31 UTC] PHP Warning:  Undefined array key 0 in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:52:31 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:53:36 UTC] PHP Warning:  Undefined array key "uid" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 7
+[09-Dec-2024 16:53:36 UTC] PHP Warning:  Undefined array key "currency" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 8
+[09-Dec-2024 16:53:36 UTC] PHP Warning:  Undefined array key "return_amt" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 9
+[09-Dec-2024 16:53:36 UTC] PHP Warning:  Undefined array key "wallet" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 10
+[09-Dec-2024 16:53:36 UTC] PHP Warning:  Undefined array key "wallet_id" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 11
+[09-Dec-2024 16:53:36 UTC] PHP Warning:  Undefined array key 0 in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:53:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:54:22 UTC] PHP Warning:  Undefined array key "uid" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 7
+[09-Dec-2024 16:54:22 UTC] PHP Warning:  Undefined array key "currency" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 8
+[09-Dec-2024 16:54:22 UTC] PHP Warning:  Undefined array key "return_amt" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 9
+[09-Dec-2024 16:54:22 UTC] PHP Warning:  Undefined array key "wallet" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 10
+[09-Dec-2024 16:54:22 UTC] PHP Warning:  Undefined array key "wallet_id" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 11
+[09-Dec-2024 16:54:22 UTC] PHP Warning:  Undefined array key 0 in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:54:22 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:54:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function print_f() in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 19
+[09-Dec-2024 16:54:38 UTC] PHP Warning:  Undefined array key "uid" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 7
+[09-Dec-2024 16:54:38 UTC] PHP Warning:  Undefined array key "currency" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 8
+[09-Dec-2024 16:54:38 UTC] PHP Warning:  Undefined array key "return_amt" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 9
+[09-Dec-2024 16:54:38 UTC] PHP Warning:  Undefined array key "wallet" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 10
+[09-Dec-2024 16:54:38 UTC] PHP Warning:  Undefined array key "wallet_id" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 11
+[09-Dec-2024 16:54:38 UTC] PHP Warning:  Undefined array key 0 in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:54:38 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:55:09 UTC] PHP Warning:  Undefined array key "uid" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 7
+[09-Dec-2024 16:55:09 UTC] PHP Warning:  Undefined array key "currency" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 8
+[09-Dec-2024 16:55:09 UTC] PHP Warning:  Undefined array key "return_amt" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 9
+[09-Dec-2024 16:55:09 UTC] PHP Warning:  Undefined array key "wallet" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 10
+[09-Dec-2024 16:55:09 UTC] PHP Warning:  Undefined array key "wallet_id" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 11
+[09-Dec-2024 16:55:09 UTC] PHP Warning:  Undefined array key 0 in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:55:09 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:55:27 UTC] PHP Warning:  Undefined array key "uid" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 7
+[09-Dec-2024 16:55:27 UTC] PHP Warning:  Undefined array key "currency" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 8
+[09-Dec-2024 16:55:27 UTC] PHP Warning:  Undefined array key "return_amt" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 9
+[09-Dec-2024 16:55:27 UTC] PHP Warning:  Undefined array key "wallet" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 10
+[09-Dec-2024 16:55:27 UTC] PHP Warning:  Undefined array key "wallet_id" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 11
+[09-Dec-2024 16:55:27 UTC] PHP Warning:  Undefined array key 0 in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:55:27 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:56:25 UTC] PHP Warning:  Undefined array key "uid" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 7
+[09-Dec-2024 16:56:25 UTC] PHP Warning:  Undefined array key "currency" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 8
+[09-Dec-2024 16:56:25 UTC] PHP Warning:  Undefined array key "return_amt" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 9
+[09-Dec-2024 16:56:25 UTC] PHP Warning:  Undefined array key "wallet" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 10
+[09-Dec-2024 16:56:25 UTC] PHP Warning:  Undefined array key "wallet_id" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 11
+[09-Dec-2024 16:56:25 UTC] PHP Warning:  Undefined array key 0 in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:56:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:59:06 UTC] PHP Warning:  Undefined array key "uid" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 7
+[09-Dec-2024 16:59:06 UTC] PHP Warning:  Undefined array key "currency" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 8
+[09-Dec-2024 16:59:06 UTC] PHP Warning:  Undefined array key "return_amt" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 9
+[09-Dec-2024 16:59:06 UTC] PHP Warning:  Undefined array key "wallet" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 10
+[09-Dec-2024 16:59:06 UTC] PHP Warning:  Undefined array key "wallet_id" in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 11
+[09-Dec-2024 16:59:06 UTC] PHP Warning:  Undefined array key 0 in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 16:59:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 17:02:41 UTC] PHP Warning:  Undefined variable $uid in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 16
+[09-Dec-2024 17:02:41 UTC] PHP Warning:  Undefined array key 0 in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17
+[09-Dec-2024 17:02:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/backend/actionsAdmin/approveDeposit.php on line 17

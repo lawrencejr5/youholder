@@ -15,11 +15,23 @@
 	<link rel="stylesheet" href="./public/frontend/templates/css/style.min.css">
 	<link rel="stylesheet" href="./public/frontend/templates/css/owl-css/owl.min.css">
 	<link rel="stylesheet" href="./public/dist/plugins/select2-4.1.0-rc.0/css/select2.min.css">
-	<link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
-	<link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
+	<link href="https://yfincs.com/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+	<link href="https://yfincs.com/public/logos/favicon.png" rel="apple-touch-icon" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" type="text/css" href="./public/dist/plugins/intl-tel-input-17.0.19/css/intlTelInput.min.css">
-
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/669fa1fd32dca6db2cb3efef/1i3fp1icd';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 </head>
 
 <body>
@@ -38,8 +50,8 @@
 		<div class="main-auth-div">
 			<div class="d-flex justify-content-start position-fixed mt-24 ml-18">
 				<div class="logo-div">
-					<a href="/youholder/">
-						<img src="/youholder/public/logos/yield-logo.png" height="auto" width="150px" alt="Brand Logo">
+					<a href="https://yfincs.com/">
+						<img src="https://yfincs.com/public/logos/yield-logo.png" height="auto" width="150px" alt="Brand Logo">
 					</a>
 				</div>
 			</div>
@@ -130,6 +142,10 @@
 											<label class="form-label">Confirm Password <span class="star">*</span></label>
 											<input type="password" class="form-control input-form-control" id="password_confirmation" name="password_confirmation" required minlength="6" data-min-length="Password should contain at least 6 characters.">
 										</div>
+										<div class="form-group mb-3">
+											<label class="form-label">Referer</label>
+											<input type="text" class="form-control input-form-control" id="referer" name="referer" disabled value="<?=$_GET['ref']?>">
+										</div>
 										<div class="d-grid mb-3 mb-3p">
 											<button class="btn btn-lg" type="button" id="registerBtn" style="background-color: #130e80;">
 												<div class="spinner spinner-border text-white spinner-border-sm mx-2 d-none" role="status">
@@ -204,6 +220,7 @@
 				const phone = $('#tel').val()
 				const pass = $('#password').val()
 				const cpass = $('#password_confirmation').val()
+				const referer = $('#referer').val()
 
 				if (!fname || !lname || !email || !pass) {
 					toastr.warning("Input required fields!!!", "Error", {
@@ -275,7 +292,8 @@
 							lname,
 							email,
 							phone,
-							pass
+							pass,
+							referer
 						},
 						success: (res) => {
 							if (res.header == 'exists') {

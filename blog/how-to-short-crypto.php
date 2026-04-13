@@ -1,18 +1,10 @@
 <!DOCTYPE html><!-- Last Published: Wed Feb 28 2024 14:19:43 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="www.youhodler.com" data-wf-page="65719812835ab1dfc00c39e7" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
+<html data-wf-domain="www.yfincs.com" data-wf-page="65719812835ab1dfc00c39e7" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
 
 <head>
     <meta charset="utf-8" />
     <title>How to Short Crypto in 2023</title>
-    <meta content="USDC and USDT are two popular stablecoins, but which one is best? Find out the differences and unique benefits of USDC vs USDT and see which one is best for you.  By , Aug 07, 2023" name="description" />
-    <meta content="USDC vs. USDT: Which Stablecoin to Use" property="og:title" />
-    <meta content="USDC and USDT are two popular stablecoins, but which one is best? Find out the differences and unique benefits of USDC vs USDT and see which one is best for you." property="og:description" />
-    <meta content="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/64d087946577cae16153b659_USDC_USDT.jpeg" property="og:image" />
-    <meta content="USDC vs. USDT: Which Stablecoin to Use" property="twitter:title" />
-    <meta content="USDC and USDT are two popular stablecoins, but which one is best? Find out the differences and unique benefits of USDC vs USDT and see which one is best for you." property="twitter:description" />
-    <meta content="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/64d087946577cae16153b659_USDC_USDT.jpeg" property="twitter:image" />
-    <meta property="og:type" content="website" />
-    <meta content="summary_large_image" name="twitter:card" />
+    
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="../style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -32,8 +24,8 @@
             n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
         }(window, document);
     </script>
-    <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
-    <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
+    <link href="https://yfincs.com/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://yfincs.com/public/logos/favicon.png" rel="apple-touch-icon" />
     <link href="rss.xml" rel="alternate" title="RSS Feed" type="application/rss+xml" />
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -50,7 +42,7 @@
     <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
     <!-- End TrustBox script -->
 
-    <!-- Hotjar Tracking Code for https://www.youhodler.com -->
+    <!-- Hotjar Tracking Code for https://www.yfincs.com -->
     <script>
         (function(h, o, t, j, a, r) {
             h.hj = h.hj || function() {
@@ -68,12 +60,12 @@
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
 
-    <link rel="alternate" hreflang="en" href="https://www.youhodler.com">
-    <link rel="alternate" hreflang="fr" href="https://fr.youhodler.com">
-    <link rel="alternate" hreflang="it" href="https://it.youhodler.com">
-    <link rel="alternate" hreflang="es" href="https://es.youhodler.com">
-    <link rel="alternate" hreflang="latam" href="https://latam.youhodler.com">
-    <link rel="alternate" hreflang="de" href="https://de.youhodler.com">
+    <link rel="alternate" hreflang="en" href="https://www.yfincs.com">
+    <link rel="alternate" hreflang="fr" href="https://fr.yieldfincs.com">
+    <link rel="alternate" hreflang="it" href="https://it.yieldfincs.com">
+    <link rel="alternate" hreflang="es" href="https://es.yieldfincs.com">
+    <link rel="alternate" hreflang="latam" href="https://latam.yieldfincs.com">
+    <link rel="alternate" hreflang="de" href="https://de.yieldfincs.com">
     <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
     <script>
         Weglot.initialize({
@@ -147,9 +139,9 @@
                         <h2><strong>What does it mean to short crypto?</strong></h2>
                         <p>Shorting, or short-selling, is an investment strategy where traders buy assets at a price decline and
                             sell at a high price. Traders can anticipate that an asset will drop in value, borrow funds from a lender
-                            like YouHodler, and buy the asset. Then, when the price rises later, the trader can sell it for a profit. 
+                            like yieldfincs, and buy the asset. Then, when the price rises later, the trader can sell it for a profit. 
                         </p>
-                        <p>On YouHodler, this can be achieved via the “chain of loans” method. This works as follows:</p>
+                        <p>On yieldfincs, this can be achieved via the “chain of loans” method. This works as follows:</p>
                         <ul role="list">
                             <li>Use crypto as collateral to secure a cash loan</li>
                             <li>Use that cash to buy more crypto</li>
@@ -159,7 +151,7 @@
                             <li>Etc.</li>
                         </ul>
                         <p><br />This flow is automated by using MultiHODL.</p>
-                        <p><strong><em>Suggested reading: </em></strong><a href="https://www.youhodler.com/blog/trading-with-leverage"><strong><em>Trading With Leverage: Risks vs.
+                        <p><strong><em>Suggested reading: </em></strong><a href="https://www.yfincs.com/blog/trading-with-leverage"><strong><em>Trading With Leverage: Risks vs.
                                         Benefits</em></strong></a></p>
                         <h3><strong>Why do people short Bitcoin and other cryptocurrencies?</strong></h3>
                         <p>While shorting was typically done in the stock market, it’s becoming a popular strategy for
@@ -169,7 +161,7 @@
                         <figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" style="max-width:1533pxpx" class="w-richtext-align-fullwidth w-richtext-figure-type-image">
                             <div><img src="https://assets-global.website-files.com/5cc1a690df4e901766e92dcd/64659379cfd2eaea1f7d8af1_06b48dcd.png" alt="" /></div>
                         </figure>
-                        <p>These price crashes cost many crypto investors to lose money. Opening a <a href="https://www.youhodler.com/blog/short-position-vs-long-position">short position</a> allows
+                        <p>These price crashes cost many crypto investors to lose money. Opening a <a href="https://www.yfincs.com/blog/short-position-vs-long-position">short position</a> allows
                             investors to gain from a price crash, instead of having to wait for the next peak. It’s also a great way
                             to add some balance to your portfolio, enabling you to diversify your tactics during a bear market.</p>
                         <h2><strong>Short crypto example</strong></h2>
@@ -184,11 +176,11 @@
                         </ul>
                         <h2><strong>How to short crypto with MultiHODL</strong></h2>
                         <p>There are numerous ways to put the above example into action and short crypto. However, one of the
-                            easiest and most flexible ways to do so is via YouHodler’s MultiHODL tool. Whether you’re an expert or a
+                            easiest and most flexible ways to do so is via yieldfincs’s MultiHODL tool. Whether you’re an expert or a
                             beginner trader, MultiHODL has something for everyone. </p>
                         <p>Using BTC as an example, here’s how to short Bitcoin with MultiHODL. <br /></p>
                         <ul role="list">
-                            <li>Log into your YouHodler account and click the MultiHODL tab on the left.</li>
+                            <li>Log into your yieldfincs account and click the MultiHODL tab on the left.</li>
                             <li>Click the “Start new MultiHODL&quot; button.</li>
                             <li>Choose what cryptocurrency pair to short in the drop-down menu at the top.</li>
                             <li>Click the red arrow for a short position (as seen in the image below).</li>
@@ -208,7 +200,7 @@
                         </figure>
                         <p>‍</p>
                         <p><strong>PRO TIP!</strong> To learn more about <strong>pending orders</strong> and why they are so helpful
-                            for crypto traders, check out this helpful article &gt;&gt;&gt; <a href="https://www.youhodler.com/blog/crypto-day-trading">CLICK HERE<br /></a></p>
+                            for crypto traders, check out this helpful article &gt;&gt;&gt; <a href="https://www.yfincs.com/blog/crypto-day-trading">CLICK HERE<br /></a></p>
                         <ul role="list">
                             <li>That’s it! Your MultiHODL deal is ready to go. Give it a try today. </li>
                         </ul>
@@ -231,10 +223,10 @@
                                 upon.</em><br /></p>
                     </div>
                     <div class="blog-cta-wrap">
-                        <div class="cta-blog-text">Open a short position with YouHodler</div>
+                        <div class="cta-blog-text">Open a short position with yieldfincs</div>
                         <div class="cta-blog-subheading">Now that you know how to short crypto, put that knowledge into action! With
                             YieldFincs&#x27;s crypto staking feature and Loans feature, you can capitalize on market volatility and short
-                            crypto. </div><a href="/youhodler/login" target="_blank" class="cta-blog-button w-button">Short crypto here</a>
+                            crypto. </div><a href="/yieldfincs/login" target="_blank" class="cta-blog-button w-button">Short crypto here</a>
                     </div>
                 </div>
                 <div class="column-compensation post-content-right w-col w-col-4">

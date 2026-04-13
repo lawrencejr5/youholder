@@ -24,7 +24,7 @@ include '../backend/udata.php';
     <!-- end css -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="/youholder/public/logos/favicon.png">
+    <link rel="shortcut icon" href="https://yfincs.com/public/logos/favicon.png">
 
     <!-- theme-color -->
     <meta name="theme-color" content="#130e80" />
@@ -169,7 +169,7 @@ include '../backend/udata.php';
         const fetchUsers = async () => {
             const username = document.querySelector('#username')
             username.innerHTML = 'Searching user....'
-            const url = 'https://www.yieldfincs.com/youholder/app/backend/api/users.php';
+            const url = 'https://www.yfincs.com/app/backend/api/users.php';
             try {
                 const res = await fetch(url);
                 const data = await res.json();

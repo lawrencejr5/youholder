@@ -1,14 +1,14 @@
 <!DOCTYPE html><!-- Last Published: Wed Jan 10 2024 11:07:26 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="www.youhodler.com" data-wf-page="65719812835ab1dfc00c3a3c" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
+<html data-wf-domain="www.yieldfincs.com" data-wf-page="65719812835ab1dfc00c3a3c" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
 
 <head>
   <meta charset="utf-8" />
   <title>Exchange | Yield Financial Services</title>
   <meta content="All major features available such as fiat-to-crypto exchange, crypto-to-crypto exchange, crypto-to-fiat exchange and fiat-to-fiat exchange." name="description" />
-  <meta content="Bitcoin and cryptocurrency exchange – YouHodler.com" property="og:title" />
+  <meta content="Bitcoin and cryptocurrency exchange – yieldfincs.com" property="og:title" />
   <meta content="All major features available such as fiat-to-crypto exchange, crypto-to-crypto exchange, crypto-to-fiat exchange and fiat-to-fiat exchange." property="og:description" />
   <meta content="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c61c440228a8147b94888_exchange.jpg" property="og:image" />
-  <meta content="Bitcoin and cryptocurrency exchange – YouHodler.com" property="twitter:title" />
+  <meta content="Bitcoin and cryptocurrency exchange – yieldfincs.com" property="twitter:title" />
   <meta content="All major features available such as fiat-to-crypto exchange, crypto-to-crypto exchange, crypto-to-fiat exchange and fiat-to-fiat exchange." property="twitter:description" />
   <meta content="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c61c440228a8147b94888_exchange.jpg" property="twitter:image" />
   <meta property="og:type" content="website" />
@@ -33,8 +33,8 @@
       n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);
   </script>
-  <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
-  <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
+  <link href="https://yfincs.com/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="https://yfincs.com/public/logos/favicon.png" rel="apple-touch-icon" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta name="facebook-domain-verification" content="9d151kspnzgxeyddfsx424rcf04nh6" />
@@ -71,28 +71,28 @@
     {
       "@context": "http://schema.org",
       "@type": "Organization",
-      "name": "YouHodler",
-      "url": "http://www.youhodler.com",
+      "name": "yieldfincs",
+      "url": "http://www.yieldfincs.com",
       "logo": "https://global-uploads.webflow.com/5cc19fbd198b8d31a9c64876/5cee8faeaeff6f36241942f1_fav_large.png",
       "contactPoint": [{
           "@type": "ContactPoint",
-          "url": "support@youhodler.com",
+          "url": "support@yieldfincs.com",
           "contactType": "customer service",
           "availableLanguage": ["English"]
         },
         {
           "@type": "ContactPoint",
-          "url": "welcome@youhodler.com",
+          "url": "welcome@yieldfincs.com",
           "contactType": "public relations",
           "availableLanguage": ["English"]
         }
       ],
       "sameAs": [
-        "https://twitter.com/youhodler",
+        "https://twitter.com/yieldfincs",
         "https://t.me/youhodler_official",
-        "https://www.facebook.com/YouHodler/",
-        "https://www.linkedin.com/company/youhodler",
-        "https://www.instagram.com/youhodler/",
+        "https://www.facebook.com/yieldfincs/",
+        "https://www.linkedin.com/company/yieldfincs",
+        "https://www.instagram.com/yieldfincs/",
         "https://www.youtube.com/channel/UC-Kxvqm8Q-l_WGxQL0VpEEQ"
       ]
     }
@@ -104,7 +104,7 @@
   <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
   <!-- End TrustBox script -->
 
-  <!-- Hotjar Tracking Code for https://www.youhodler.com -->
+  <!-- Hotjar Tracking Code for https://www.yieldfincs.com -->
   <script>
     (function(h, o, t, j, a, r) {
       h.hj = h.hj || function() {
@@ -135,12 +135,12 @@
     gtag('config', 'G-N8Q9NJR9K1');
   </script>
 
-  <link rel="alternate" hreflang="en" href="https://www.youhodler.com">
-  <link rel="alternate" hreflang="fr" href="https://fr.youhodler.com">
-  <link rel="alternate" hreflang="it" href="https://it.youhodler.com">
-  <link rel="alternate" hreflang="es" href="https://es.youhodler.com">
-  <link rel="alternate" hreflang="latam" href="https://latam.youhodler.com">
-  <link rel="alternate" hreflang="de" href="https://de.youhodler.com">
+  <link rel="alternate" hreflang="en" href="https://www.yieldfincs.com">
+  <link rel="alternate" hreflang="fr" href="https://fr.yieldfincs.com">
+  <link rel="alternate" hreflang="it" href="https://it.yieldfincs.com">
+  <link rel="alternate" hreflang="es" href="https://es.yieldfincs.com">
+  <link rel="alternate" hreflang="latam" href="https://latam.yieldfincs.com">
+  <link rel="alternate" hreflang="de" href="https://de.yieldfincs.com">
   <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
   <script>
     Weglot.initialize({
@@ -271,31 +271,31 @@
           <h1 class="h1 hero big main">YieldFincs Fiat and Crypto Exchange.<br /></h1>
           <p class="h3 subheading hero">Exchange cryptocurrency, fiat, and stablecoins with real-time execution prices
             and low fees.<br /></p>
-          <div class="hero-cta-wrap cta-mobile"><a data-test-id="EXCHANGE_BUTTON" href="/youholder/register/" class="btn-big-solid w-button">EXCHANGE</a>
+          <div class="hero-cta-wrap cta-mobile"><a data-test-id="EXCHANGE_BUTTON" href="https://yfincs.com/register/" class="btn-big-solid w-button">EXCHANGE</a>
 
             <div data-hover="true" data-delay="0" class="nav-store-icons w-dropdown">
               <div class="nav-store-icons-trigger w-dropdown-toggle"></div>
               <nav class="nav-drop-wrap store-icons-wrap w-dropdown-list">
-                <div class="nav-drop-bg store-icons store-icons-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/639c957ee0327b20c4e9782b_Untitled.svg" loading="lazy" alt="youhodler appstore" class="store-qr" /></div>
+                <div class="nav-drop-bg store-icons store-icons-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/639c957ee0327b20c4e9782b_Untitled.svg" loading="lazy" alt="yieldfincs appstore" class="store-qr" /></div>
               </nav>
             </div>
           </div>
           <div class="hero-cta-wrap cta-desktop">
-            <a data-test-id="EXCHANGE_BUTTON" href="/youholder/register/" class="btn-big-solid hero w-button">EXCHANGE</a>
+            <a data-test-id="EXCHANGE_BUTTON" href="https://yfincs.com/register/" class="btn-big-solid hero w-button">EXCHANGE</a>
           </div>
           <div class="block-sla w-clearfix"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0d4f7f3ef469679f59758a_doc_address.svg" alt="doc icon" class="sla-icon" />
             <p class="p grey-sla">Exchange service is provided by <a class="grey-a">Yield Financial Services</a>.</p>
           </div>
           <ul role="list" class="testimonial-list w-clearfix w-list-unstyled">
             <li class="testimonial-item"><a href="/company" target="_blank" class="testimonial-link w-inline-block">
-                <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb1cdaada6d30231e75_testimonial_eu_swiss_combined.svg" loading="lazy" alt="youhodler eu and swiss" class="testimonial-pic" /></div>
+                <div class="testimonial-pic-wrap"><img src="https://yfincs.com/public/images/australia.png" loading="lazy" alt="yieldfincs eu and swiss" class="testimonial-pic" /></div>
                 <div class="testimonial-txt">Regulated Australian Financial institutions</div>
               </a></li>
             <li class="testimonial-item"><a href="https://twitter.com/ledger_business/status/1275806038613274631" target="_blank" class="testimonial-link w-inline-block">
                 <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb0cdaada6a20231e71_testimonial_ledger.svg" loading="lazy" alt="ledger vault" class="testimonial-pic" /></div>
                 <div class="testimonial-txt">Custody secured by Ledger Enterprise</div>
               </a></li>
-            <li class="testimonial-item"><a href="https://torinofc.it/en/photogallery/30/09/2022/youhodler-official-crypto-partner-torino-fc_21070" target="_blank" class="testimonial-link w-inline-block">
+            <li class="testimonial-item"><a href="https://torinofc.it/en/photogallery/30/09/2022/yieldfincs-official-crypto-partner-torino-fc_21070" target="_blank" class="testimonial-link w-inline-block">
                 <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb35925bbf0b0b93c0a_testimonial_torino_fc.svg" loading="lazy" alt="torino fc" class="testimonial-pic" /></div>
                 <div class="testimonial-txt">Official Crypto Partner of Torino FC</div>
               </a></li>
@@ -309,7 +309,7 @@
   </div>
   <div class="s-content wide hidden">
     <div class="content-wrap wide w-container">
-      <div class="calc-embed-inline w-embed w-iframe"><iframe src="https://app.youhodler.com/widgets/convert?convertTicker=eur&convertConversionTicker=btc" width="100%" height="100%" scrolling="no" importance="hight" style="border-radius: 5px;
+      <div class="calc-embed-inline w-embed w-iframe"><iframe src="https://app.yieldfincs.com/widgets/convert?convertTicker=eur&convertConversionTicker=btc" width="100%" height="100%" scrolling="no" importance="hight" style="border-radius: 5px;
 border: none; overflow: hidden;">
         </iframe></div>
     </div>
@@ -318,7 +318,7 @@ border: none; overflow: hidden;">
     <div class="content-wrap wide last w-container">
       <h2 class="h2 center">Buy and exchange cryptocurrency with a platform you can trust</h2>
       <div class="how-to-block w-row">
-        <!-- <div class="column-compensation content-center w-col w-col-5 w-col-medium-6"><a href="https://app.youhodler.com/" class="image-content-link w-inline-block"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c60dce32edc3d3a919270_convert_phone.jpg" alt="crypto exchange" width="380" sizes="(max-width: 479px) 68vw, (max-width: 767px) 320px, (max-width: 991px) 37vw, (max-width: 1279px) 36vw, 380px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c60dce32edc3d3a919270_convert_phone-p-500.jpeg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c60dce32edc3d3a919270_convert_phone-p-800.jpeg 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c60dce32edc3d3a919270_convert_phone.jpg 926w" class="image-content" /></a></div> -->
+        <!-- <div class="column-compensation content-center w-col w-col-5 w-col-medium-6"><a href="https://app.yieldfincs.com/" class="image-content-link w-inline-block"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c60dce32edc3d3a919270_convert_phone.jpg" alt="crypto exchange" width="380" sizes="(max-width: 479px) 68vw, (max-width: 767px) 320px, (max-width: 991px) 37vw, (max-width: 1279px) 36vw, 380px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c60dce32edc3d3a919270_convert_phone-p-500.jpeg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c60dce32edc3d3a919270_convert_phone-p-800.jpeg 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/5f0c60dce32edc3d3a919270_convert_phone.jpg 926w" class="image-content" /></a></div> -->
         <div class="column-compensation w-col w-col-12 w-col-medium-6">
           <div class="top-padding-wrap">
             <p class="p">With YieldFincs full range of crypto conversion tools, you can buy and exchange cryptocurrency
@@ -345,14 +345,14 @@ border: none; overflow: hidden;">
             use your Bitcoin purchase as collateral for an instant crypto loan or deposit stablecoins into our
             interest-earning wallets (up to 8% APR). Take care of all your crypto-related needs right here on YieldFincs.
           </p> -->
-          <div class="section-cta-wrap"><a data-test-id="EXCHANGE_BUTTON" href="/youholder/register/" class="btn-big-solid w-button">EXCHANGE CRYPTO</a></div>
+          <div class="section-cta-wrap"><a data-test-id="EXCHANGE_BUTTON" href="https://yfincs.com/register/" class="btn-big-solid w-button">EXCHANGE CRYPTO</a></div>
         </div>
       </div>
     </div>
   </div>
   <?php include "../master/footer.php" ?>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5cc19fbd198b8d31a9c64876" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/js/youhodler.d4bcac773.js" type="text/javascript"></script>
+  <script src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/js/yieldfincs.d4bcac773.js" type="text/javascript"></script>
   <script>
     const getCookie = (name) => {
       var matches = document.cookie.match(new RegExp(
@@ -449,13 +449,13 @@ border: none; overflow: hidden;">
         setCookie('search-params-from-landing', JSON.stringify(paramsNew), {
           expires: 120 * 24 * 60 * 60,
           path: '/',
-          domain: '.youhodler.com'
+          domain: '.yieldfincs.com'
         });
 
         setCookie('search-params-from-landing', JSON.stringify(paramsNew), {
           expires: 120 * 24 * 60 * 60,
           path: '/',
-          domain: 'youhodler.webflow.io',
+          domain: 'yieldfincs.webflow.io',
         });
       }
     };
@@ -575,12 +575,12 @@ border: none; overflow: hidden;">
           setCookie('ALLOW_COOKIES', '1', {
             expires: 120 * 24 * 60 * 60,
             path: '/',
-            domain: 'youhodler.com',
+            domain: 'yieldfincs.com',
           });
           setCookie('ALLOW_COOKIES', '1', {
             expires: 120 * 24 * 60 * 60,
             path: '/',
-            domain: 'youhodler.webflow.io',
+            domain: 'yieldfincs.webflow.io',
           });
 
           loadScripts();

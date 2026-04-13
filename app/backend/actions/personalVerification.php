@@ -46,18 +46,18 @@ if (isset($_POST['verify_document'])) {
             </head>
             <body>
                 <center>
-                    <img src='https://yieldfincs.com/youholder/public/logos/yield-logo.png' height='auto' width='200px' />
+                    <img src='https://yfincs.com/public/logos/yield-logo.png' height='auto' width='200px' />
                     <h1>Dear $fname, </h1>
                </center>
                <p>We wish to inform you that your account details have been updated and you have your portfolio has been upgraded to Level 3. This means that your portfolio would no longer be restricted from making Stakings.</p>
                <p>Congratulations!! You can now enoy the full benefits of our platform.</p>
-               <p>You can <a href='https://yieldfincs.com/youholder/login'>login</a> to perform more actions on your account.</p>
+               <p>You can <a href='https://yfincs.com/login'>login</a> to perform more actions on your account.</p>
                <br/>
                <br/>
                <p>Please, if this is not you, kindly let us know so that we can terminate this process.</p>
                <center>
-                    <a href='https://yieldfincs.com/youholder/t&c'>Terms and condtions</a> | 
-                    <a href='https://yieldfincs.com/youholder/policy'>Privacy Policy</a>
+                    <a href='https://yfincs.com/t&c'>Terms and condtions</a> | 
+                    <a href='https://yfincs.com/policy'>Privacy Policy</a>
                </center>
             </body>
         </html>

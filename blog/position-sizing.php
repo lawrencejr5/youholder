@@ -1,10 +1,9 @@
 <!DOCTYPE html><!-- Last Published: Wed Feb 28 2024 14:19:43 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="www.youhodler.com" data-wf-page="65719812835ab1dfc00c39e7" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
+<html data-wf-domain="www.yfincs.com" data-wf-page="65719812835ab1dfc00c39e7" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
 
 <head>
     <meta charset="utf-8" />
     <title>Position Sizing: The Key to Crypto Trading Success</title>
-    <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="../style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -24,8 +23,8 @@
             n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
         }(window, document);
     </script>
-    <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
-    <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
+    <link href="https://yfincs.com/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://yfincs.com/public/logos/favicon.png" rel="apple-touch-icon" />
     <link href="rss.xml" rel="alternate" title="RSS Feed" type="application/rss+xml" />
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -42,7 +41,7 @@
     <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
     <!-- End TrustBox script -->
 
-    <!-- Hotjar Tracking Code for https://www.youhodler.com -->
+    <!-- Hotjar Tracking Code for https://www.yfincs.com -->
     <script>
         (function(h, o, t, j, a, r) {
             h.hj = h.hj || function() {
@@ -60,12 +59,12 @@
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
 
-    <link rel="alternate" hreflang="en" href="https://www.youhodler.com">
-    <link rel="alternate" hreflang="fr" href="https://fr.youhodler.com">
-    <link rel="alternate" hreflang="it" href="https://it.youhodler.com">
-    <link rel="alternate" hreflang="es" href="https://es.youhodler.com">
-    <link rel="alternate" hreflang="latam" href="https://latam.youhodler.com">
-    <link rel="alternate" hreflang="de" href="https://de.youhodler.com">
+    <link rel="alternate" hreflang="en" href="https://www.yfincs.com">
+    <link rel="alternate" hreflang="fr" href="https://fr.yieldfincs.com">
+    <link rel="alternate" hreflang="it" href="https://it.yieldfincs.com">
+    <link rel="alternate" hreflang="es" href="https://es.yieldfincs.com">
+    <link rel="alternate" hreflang="latam" href="https://latam.yieldfincs.com">
+    <link rel="alternate" hreflang="de" href="https://de.yieldfincs.com">
     <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
     <script>
         Weglot.initialize({
@@ -123,7 +122,7 @@
             </div>
             <h1 class="h1 hero blog">Position Sizing: The Key to Crypto Trading Success</h1>
             <div class="post-content-data w-clearfix">
-                <div class="post-content-data-author">The YouHodler Team</div>
+                <div class="post-content-data-author">The yieldfincs Team</div>
                 <div class="post-content-data-published">November 23, 2023</div>
             </div>
             <div class="w-row">
@@ -136,14 +135,14 @@
                         <p>One way to make more profits in the cryptocurrency market is to <strong>add funds to the
                                 margin.</strong> </p>
                         <p>This can be a good strategy for traders confident in their analysis and willing to take on more risk.
-                            Furthermore, this feature is now available on YouHodler’s MultiHODL. The feature is called <a href="https://help.youhodler.com/en/articles/8504974-increase-position-in-multihodl">“Increase
+                            Furthermore, this feature is now available on yieldfincs’s MultiHODL. The feature is called <a href="https://help.yieldfincs.com/en/articles/8504974-increase-position-in-multihodl">“Increase
                                 Position”</a> and currently is in the beta test mode. More on that later. First, an introduction to
                             position sizing. </p>
                         <h2><strong>Why is there an option to increase trading position size?</strong></h2>
                         <p>Cryptocurrency exchanges offer the option to increase trading position size because <strong>it allows
                                 traders to make more profits when the market moves in their favor. </strong>It also allows traders to
                             hedge their positions more effectively if the market doesn’t move in their favor. </p>
-                        <p>For example, if a trader believes that <a href="https://www.youhodler.com/price/btc">Bitcoin</a> is going
+                        <p>For example, if a trader believes that <a href="https://www.yfincs.com/price/btc">Bitcoin</a> is going
                             to go up in price, they can buy more Bitcoin than they would if they were just trading with a small
                             position size - or if just buying Bitcoin with cash. Hence, this allows them to make a bigger profit if
                             Bitcoin&#x27;s price goes up thanks to the additional margin </p>
@@ -194,10 +193,10 @@
                             <li><strong>Reduced liquidity:</strong> It can be more difficult to exit your trades quickly if you have a
                                 large position size. This is especially true in volatile markets like the cryptocurrency market.</li>
                         </ul>
-                        <p>Thankfully, YouHodler has plenty of risk management tools available to ensure traders have some
+                        <p>Thankfully, yieldfincs has plenty of risk management tools available to ensure traders have some
                             protection in high-risk markets. </p>
-                        <h2><strong>Can you increase the trading position size on YouHodler?</strong></h2>
-                        <p>Yes! YouHodler just released a new feature that allows crypto traders to do just that. While the feature
+                        <h2><strong>Can you increase the trading position size on yieldfincs?</strong></h2>
+                        <p>Yes! yieldfincs just released a new feature that allows crypto traders to do just that. While the feature
                             is still in its beta-testing stage, traders will be happy to know they can increase their trading position
                             size on all active MultiHODL positions. The feature is called <strong>“Increase Position”</strong> and it
                             will allow crypto traders to enjoy all the benefits explained above in this article. </p>
@@ -221,7 +220,7 @@
                             <li>Check all parameters and click the “Increase” button</li>
                             <li>Congratulations! You increased the total volume of your active MultiHODL</li>
                         </ol>
-                        <h3><strong>3 tips on how to use position sizing effectively on YouHodler</strong></h3>
+                        <h3><strong>3 tips on how to use position sizing effectively on yieldfincs</strong></h3>
                         <p>If you are considering increasing your MultiHODL trading position size, it is important to do so
                             carefully. Here are a few tips:</p>
                         <ul role="list">
@@ -262,7 +261,7 @@
                     <div class="blog-cta-wrap">
                         <div class="cta-blog-text">Try the &quot;Increase Position&quot; feature on MultiHODL</div>
                         <div class="cta-blog-subheading">Put your knowledge to the test! Give &quot;Increase Position&quot; a try on
-                            MultiHODL and let us know how you like it!</div><a href="/youhodler/login" target="_blank" class="cta-blog-button w-button">Go to crypto-staking</a>
+                            MultiHODL and let us know how you like it!</div><a href="/yieldfincs/login" target="_blank" class="cta-blog-button w-button">Go to crypto-staking</a>
                     </div>
 
                 </div>

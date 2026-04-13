@@ -1,16 +1,16 @@
 <!DOCTYPE html><!-- Last Published: Fri Jan 12 2024 17:37:06 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="www.youhodler.com" data-wf-page="65719812835ab1dfc00c3916" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
+<html data-wf-domain="www.yieldfincs.com" data-wf-page="65719812835ab1dfc00c3916" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
 
 <head>
   <meta charset="utf-8" />
   <title>About Company – Yield Fianacial Services</title>
-  <meta content="YouHodler is an EU and Swiss-based Web3 crypto &amp; fiat Fintech. Focused on holding &amp; trading. Platform&#x27;s wallet allows easy utilization of digital assets." name="description" />
-  <meta content="About Company – YouHodler" property="og:title" />
-  <meta content="YouHodler is an EU and Swiss-based Web3 crypto &amp; fiat Fintech. Focused on holding &amp; trading. Platform&#x27;s wallet allows easy utilization of digital assets." property="og:description" />
-  <meta content="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/62c710e2db705194479d2556_youhodler_company.jpg" property="og:image" />
-  <meta content="About Company – YouHodler" property="twitter:title" />
-  <meta content="YouHodler is an EU and Swiss-based Web3 crypto &amp; fiat Fintech. Focused on holding &amp; trading. Platform&#x27;s wallet allows easy utilization of digital assets." property="twitter:description" />
-  <meta content="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/62c710e2db705194479d2556_youhodler_company.jpg" property="twitter:image" />
+  <meta content="yieldfincs is an EU and Swiss-based Web3 crypto &amp; fiat Fintech. Focused on holding &amp; trading. Platform&#x27;s wallet allows easy utilization of digital assets." name="description" />
+  <meta content="About Company – yieldfincs" property="og:title" />
+  <meta content="yieldfincs is an EU and Swiss-based Web3 crypto &amp; fiat Fintech. Focused on holding &amp; trading. Platform&#x27;s wallet allows easy utilization of digital assets." property="og:description" />
+  <meta content="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/62c710e2db705194479d2556_yieldfincs_company.jpg" property="og:image" />
+  <meta content="About Company – yieldfincs" property="twitter:title" />
+  <meta content="yieldfincs is an EU and Swiss-based Web3 crypto &amp; fiat Fintech. Focused on holding &amp; trading. Platform&#x27;s wallet allows easy utilization of digital assets." property="twitter:description" />
+  <meta content="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/62c710e2db705194479d2556_yieldfincs_company.jpg" property="twitter:image" />
   <meta property="og:type" content="website" />
   <meta content="summary_large_image" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -33,8 +33,8 @@
       n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);
   </script>
-  <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
-  <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
+  <link href="https://yfincs.com/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="https://yfincs.com/public/logos/favicon.png" rel="apple-touch-icon" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta name="facebook-domain-verification" content="9d151kspnzgxeyddfsx424rcf04nh6" />
@@ -71,28 +71,28 @@
     {
       "@context": "http://schema.org",
       "@type": "Organization",
-      "name": "YouHodler",
-      "url": "http://www.youhodler.com",
+      "name": "yieldfincs",
+      "url": "http://www.yieldfincs.com",
       "logo": "https://global-uploads.webflow.com/5cc19fbd198b8d31a9c64876/5cee8faeaeff6f36241942f1_fav_large.png",
       "contactPoint": [{
           "@type": "ContactPoint",
-          "url": "support@youhodler.com",
+          "url": "support@yieldfincs.com",
           "contactType": "customer service",
           "availableLanguage": ["English"]
         },
         {
           "@type": "ContactPoint",
-          "url": "welcome@youhodler.com",
+          "url": "welcome@yieldfincs.com",
           "contactType": "public relations",
           "availableLanguage": ["English"]
         }
       ],
       "sameAs": [
-        "https://twitter.com/youhodler",
-        "https://t.me/youhodler_official",
-        "https://www.facebook.com/YouHodler/",
-        "https://www.linkedin.com/company/youhodler",
-        "https://www.instagram.com/youhodler/",
+        "https://twitter.com/yieldfincs",
+        "https://t.me/yieldfincs_official",
+        "https://www.facebook.com/yieldfincs/",
+        "https://www.linkedin.com/company/yieldfincs",
+        "https://www.instagram.com/yieldfincs/",
         "https://www.youtube.com/channel/UC-Kxvqm8Q-l_WGxQL0VpEEQ"
       ]
     }
@@ -104,7 +104,7 @@
   <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
   <!-- End TrustBox script -->
 
-  <!-- Hotjar Tracking Code for https://www.youhodler.com -->
+  <!-- Hotjar Tracking Code for https://www.yieldfincs.com -->
   <script>
     (function(h, o, t, j, a, r) {
       h.hj = h.hj || function() {
@@ -135,12 +135,12 @@
     gtag('config', 'G-N8Q9NJR9K1');
   </script>
 
-  <link rel="alternate" hreflang="en" href="https://www.youhodler.com">
-  <link rel="alternate" hreflang="fr" href="https://fr.youhodler.com">
-  <link rel="alternate" hreflang="it" href="https://it.youhodler.com">
-  <link rel="alternate" hreflang="es" href="https://es.youhodler.com">
-  <link rel="alternate" hreflang="latam" href="https://latam.youhodler.com">
-  <link rel="alternate" hreflang="de" href="https://de.youhodler.com">
+  <link rel="alternate" hreflang="en" href="https://www.yieldfincs.com">
+  <link rel="alternate" hreflang="fr" href="https://fr.yieldfincs.com">
+  <link rel="alternate" hreflang="it" href="https://it.yieldfincs.com">
+  <link rel="alternate" hreflang="es" href="https://es.yieldfincs.com">
+  <link rel="alternate" hreflang="latam" href="https://latam.yieldfincs.com">
+  <link rel="alternate" hreflang="de" href="https://de.yieldfincs.com">
   <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
   <script>
     Weglot.initialize({
@@ -269,21 +269,21 @@
       <div class="w-row">
         <div class="column-compensation w-col w-col-12">
           <h1 class="h1 hero big">WHO WE ARE</h1>
-          <div class="h3 subheading hero ceo-quote">We officially launched in 2018 with an international partnership of AU, UK, US, and Hong Kong founders, our main business is AU stocks, UK Stocks, HK stocks, US stock trading, short-term quantitative funds, digital asset funds, blockchain product development, supernode operations, e-commerce, cultural communications, real estate, real economy projects, Agricultural Projects, Gold Projects. During our work in venture capital we have invested in 21 companies, some of which were sold to major market players.
+          <div class="h3 subheading hero ceo-quote">We officially launched in 2013 with an international partnership of AU, UK, US, and Hong Kong founders, our main business is AU stocks, UK Stocks, HK stocks, US stock trading, short-term quantitative funds, digital asset funds, blockchain product development, supernode operations, e-commerce, cultural communications, real estate, real economy projects, Agricultural Projects, Gold Projects. During our work in venture capital we have invested in 21 companies, some of which were sold to major market players.
             Over the years, our clients have placed their trust in our ability to help select the highest quality and most appropriate investment strategies for their portfolios. Whether you are a first-time investor or looking to expand your current portfolio, we’re committed to bringing you a superio customer experience</div>
           <!-- <div class="ceo-quote-wrap"> -->
-          <!-- <img src="/youholder/public/images/business-2.jpg" width="124" alt="Ilya Volkov CEO YouHodler" class="ceo-avatar" /> -->
+          <!-- <img src="https://yfincs.com/public/images/business-2.jpg" width="124" alt="Ilya Volkov CEO yieldfincs" class="ceo-avatar" /> -->
           <!-- </div> -->
           <ul role="list" class="testimonial-list w-clearfix w-list-unstyled">
             <li class="testimonial-item"><a href="/company" target="_blank" aria-current="page" class="testimonial-link w-inline-block w--current">
-                <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb1cdaada6d30231e75_testimonial_eu_swiss_combined.svg" loading="lazy" alt="youhodler eu and swiss" class="testimonial-pic" /></div>
+                <div class="testimonial-pic-wrap"><img src="https://yfincs.com/public/images/australia.png" loading="lazy" alt="yieldfincs eu and swiss" class="testimonial-pic" /></div>
                 <div class="testimonial-txt">Regulated Australian Financial institutions</div>
               </a></li>
             <li class="testimonial-item"><a href="https://twitter.com/ledger_business/status/1275806038613274631" target="_blank" class="testimonial-link w-inline-block">
                 <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb0cdaada6a20231e71_testimonial_ledger.svg" loading="lazy" alt="ledger vault" class="testimonial-pic" /></div>
                 <div class="testimonial-txt">Custody secured by Ledger Enterprise</div>
               </a></li>
-            <li class="testimonial-item"><a href="https://torinofc.it/en/photogallery/30/09/2022/youhodler-official-crypto-partner-torino-fc_21070" target="_blank" class="testimonial-link w-inline-block">
+            <li class="testimonial-item"><a href="https://torinofc.it/en/photogallery/30/09/2022/yieldfincs-official-crypto-partner-torino-fc_21070" target="_blank" class="testimonial-link w-inline-block">
                 <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb35925bbf0b0b93c0a_testimonial_torino_fc.svg" loading="lazy" alt="torino fc" class="testimonial-pic" /></div>
                 <div class="testimonial-txt">Official Crypto Partner of Torino FC</div>
               </a></li>
@@ -355,9 +355,9 @@
         <div class="column-compensation w-col w-col-6 w-col-stack">
           <div data-delay="10000" data-animation="slide" class="team-slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
             <div class="team-slide-mask w-slider-mask">
-              <!-- <div class="team-slide w-slide"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/6372825a4d7921ead32a03d3_New%20Project.png" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 94vw, (max-width: 1439px) 45vw, 630px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/6372825a4d7921ead32a03d3_New%20Project-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/6372825a4d7921ead32a03d3_New%20Project-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/6372825a4d7921ead32a03d3_New%20Project.png 1000w" alt="youhodler team" class="team-slider-pic" /></div> -->
-              <!-- <div class="team-slide w-slide"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/61cbd951c68d2cb8afa75c39_team_photo_5.jpg" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 94vw, (max-width: 1439px) 45vw, 630px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/61cbd951c68d2cb8afa75c39_team_photo_5-p-500.jpeg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/61cbd951c68d2cb8afa75c39_team_photo_5-p-800.jpeg 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/61cbd951c68d2cb8afa75c39_team_photo_5.jpg 1000w" alt="youhodler team" class="team-slider-pic" /></div> -->
-              <div class="team-slide w-slide"><img src="/youholder/public/images/bussiness-4.jpg" width="100%" height="auto" alt="youhodler team" class="team-slider-pic" /></div>
+              <!-- <div class="team-slide w-slide"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/6372825a4d7921ead32a03d3_New%20Project.png" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 94vw, (max-width: 1439px) 45vw, 630px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/6372825a4d7921ead32a03d3_New%20Project-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/6372825a4d7921ead32a03d3_New%20Project-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/6372825a4d7921ead32a03d3_New%20Project.png 1000w" alt="yieldfincs team" class="team-slider-pic" /></div> -->
+              <!-- <div class="team-slide w-slide"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/61cbd951c68d2cb8afa75c39_team_photo_5.jpg" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 94vw, (max-width: 1439px) 45vw, 630px" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/61cbd951c68d2cb8afa75c39_team_photo_5-p-500.jpeg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/61cbd951c68d2cb8afa75c39_team_photo_5-p-800.jpeg 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/61cbd951c68d2cb8afa75c39_team_photo_5.jpg 1000w" alt="yieldfincs team" class="team-slider-pic" /></div> -->
+              <div class="team-slide w-slide"><img src="https://yfincs.com/public/images/bussiness-4.jpg" width="100%" height="auto" alt="yieldfincs team" class="team-slider-pic" /></div>
             </div>
             <div class="team-slider-arr w-slider-arrow-left">
               <div class="w-icon-slider-left"></div>
@@ -399,7 +399,7 @@
           <div data-delay="10000" data-animation="slide" class="team-slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
             <div class="team-slide-mask w-slider-mask">
 
-              <div class="team-slide w-slide"><img src="/youholder/public/images/bussiness-2.jpg" width="100%" height="auto" alt="youhodler team" class="team-slider-pic" /></div>
+              <div class="team-slide w-slide"><img src="https://yfincs.com/public/images/bussiness-2.jpg" width="100%" height="auto" alt="yieldfincs team" class="team-slider-pic" /></div>
             </div>
             <div class="team-slider-arr w-slider-arrow-left">
               <div class="w-icon-slider-left"></div>
@@ -417,14 +417,14 @@
   <div class="s-content wide">
     <div class="content-wrap wide w-container">
       <div class="wrap-center padding-bottom">
-        <h2 class="h2">Yield FINANCIAL SERVICES security fundamentals <br /></h2>
+        <h2 class="h2">YIELD FINANCIAL SERVICES security fundamentals <br /></h2>
       </div>
       <div class="w-row">
         <div class="column-compensation post-content-left no-bottom-padding w-col w-col-6">
-          <p>Learn more about Yield App’s commitment to security and how we ensure your assets are always safe
+          <p>Learn more about YieldFincs App’s commitment to security and how we ensure your assets are always safe
             <br />
           </p>
-          <p><strong>Risk management</strong>Yield Financial Services portfolio strategy is focused on long-term capital preservation through a robust risk management framework. We allocate to decentralized finance (DeFi) pools and external alpha managers using an internal proprietary 135-point risk model. <br /></p>
+          <p><strong>Risk management</strong> Yield Financial Services portfolio strategy is focused on long-term capital preservation through a robust risk management framework. We allocate to decentralized finance (DeFi) pools and external alpha managers using an internal proprietary 135-point risk model. <br /></p>
           <p><strong>Market-neutral strategies </strong>Yield Financial Services runs a portfolio focused on capital preservation through allocations to market-neutral DeFi pools, and strategies with external managers. These strategies are selected based on the strongest internal thresholds, ensuring client asset security remains the number one priority. Yield App never resorts to lending out customers’ assets and has zero exposure to the risks associated with unsecured lending.<br /></p>
 
         </div>
@@ -476,16 +476,16 @@
         <p>YIELD Fincs was founded in 2013 by market experts and has served more than 900,000 clients worldwide.</p>
       </div>
       <div class="w-layout-grid grid-3-row">
-        <div class="product-a-content brandline w-clearfix"><img src="/youholder/public/icons/user.png" alt="Secured wallet" class="product-a-icon" />
+        <div class="product-a-content brandline w-clearfix"><img src="https://yfincs.com/public/icons/user.png" alt="Secured wallet" class="product-a-icon" />
           <h3 class="h5 no-padding-top">PERSONALIZED SERVICE </h3>
           <p class="p">Your Client–Connect Advantage approach means we work to establish a long-term relationship with you by helping you formulate a personalized diversification strategy that meets your individual needs. </p>
         </div>
-        <div class="product-a-content brandline w-clearfix"><img src="/youholder/public/icons/zero.png" alt="Safety" class="product-a-icon" />
+        <div class="product-a-content brandline w-clearfix"><img src="https://yfincs.com/public/icons/zero.png" alt="Safety" class="product-a-icon" />
           <h3 class="h5 no-padding-top">SAFEGUARD PROMISE </h3>
           <p class="p">
             Nothing is more important than your security. We keep your personal information private and every purchase safe with insured and discreet shipping. </p>
         </div>
-        <div class="product-a-content brandline w-clearfix"><img src="/youholder/public/icons/global.png" alt="Team" class="product-a-icon" />
+        <div class="product-a-content brandline w-clearfix"><img src="https://yfincs.com/public/icons/global.png" alt="Team" class="product-a-icon" />
           <h3 class="h5 no-padding-top">CUSTOMER EDUCATION </h3>
           <p class="p">From our special reports and executive insights to our courtesy calls and market news alerts, we strongly believe that all decisions begin with having the right information.
 
@@ -499,7 +499,7 @@
   <?php include '../master/footer.php' ?>
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5cc19fbd198b8d31a9c64876" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/js/youhodler.d4bcac773.js" type="text/javascript"></script>
+  <script src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/js/yieldfincs.d4bcac773.js" type="text/javascript"></script>
   <script>
     const getCookie = (name) => {
       var matches = document.cookie.match(new RegExp(
@@ -596,13 +596,13 @@
         setCookie('search-params-from-landing', JSON.stringify(paramsNew), {
           expires: 120 * 24 * 60 * 60,
           path: '/',
-          domain: '.youhodler.com'
+          domain: '.yieldfincs.com'
         });
 
         setCookie('search-params-from-landing', JSON.stringify(paramsNew), {
           expires: 120 * 24 * 60 * 60,
           path: '/',
-          domain: 'youhodler.webflow.io',
+          domain: 'yieldfincs.webflow.io',
         });
       }
     };
@@ -722,12 +722,12 @@
           setCookie('ALLOW_COOKIES', '1', {
             expires: 120 * 24 * 60 * 60,
             path: '/',
-            domain: 'youhodler.com',
+            domain: 'yieldfincs.com',
           });
           setCookie('ALLOW_COOKIES', '1', {
             expires: 120 * 24 * 60 * 60,
             path: '/',
-            domain: 'youhodler.webflow.io',
+            domain: 'yieldfincs.webflow.io',
           });
 
           loadScripts();

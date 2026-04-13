@@ -24,8 +24,8 @@ include '../backend/udata.php';
     <!-- end css -->
 
     <!-- favicon -->
-    <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
-    <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
+    <link rel="shortcut icon" href="https://yfincs.com/public/logos/favicon.png">
+
 
     <script>
         'use strict';

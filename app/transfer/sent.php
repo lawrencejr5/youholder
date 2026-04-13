@@ -26,7 +26,7 @@ if (!$_GET['i'] || !$_GET['r'] || !$_GET['a'] || !$_GET['w']) {
     <!-- end css -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="/youholder/public/logos/favicon.png">
+    <link rel="shortcut icon" href="https://yfincs.com/public/logos/favicon.png">
 
     <!-- theme-color -->
     <meta name="theme-color" content="#130e80" />

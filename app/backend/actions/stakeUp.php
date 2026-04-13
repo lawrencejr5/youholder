@@ -17,7 +17,7 @@ foreach ($data['stakes'] as $s) {
     $capital_available_withdrawal = $s['available_withdrawal'] + $s['staked'];
     $dura = '365';
 
-    if (($stat == 'ended' || $stat == 'unstaked') && $interval >= 21600) {
+    if (($stat == 'ended' || $stat == 'unstaked') && $interval >= 86400) {
         if ($s['days_until_withdrawal'] == 1) {
             $modules->stakeReduceWithdrawDay($id, $days_until_withdrawal, time());
             if ($s['capital_returned'] == 0) {
@@ -28,7 +28,7 @@ foreach ($data['stakes'] as $s) {
         } else {
             $modules->stakeReduceWithdrawDay($id, $days_until_withdrawal, time());
         }
-    } elseif ($stat == 'staking' && $interval >= 21600) {
+    } elseif ($stat == 'staking' && $interval >= 86400) {
         if ($s['num_of_days'] == '364') {
             $modules->stakeUp($id, $earned, time());
             $modules->stakeAvailableWithdrawal($id, $available_withdrawal);

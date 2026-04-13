@@ -25,7 +25,7 @@ include '../backend/udata.php';
     <!-- end css -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="/youholder/public/logos/favicon.png">
+    <link rel="shortcut icon" href="https://yfincs.com/public/logos/favicon.png">
 
     <!-- theme-color -->
     <meta name="theme-color" content="#130e80" />
@@ -182,11 +182,11 @@ include '../backend/udata.php';
                                         <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= $s['expected'] ?> <?= $s['crypto'] ?></p>
                                     </div>
                                     <div class="d-flex justify-content-between mt-20">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Staking started at</p>
+                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Started at</p>
                                         <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= $s['start_date'] ?></p>
                                     </div>
                                     <div class="d-flex justify-content-between mt-20">
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Staking ends at</p>
+                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Ends at</p>
                                         <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= $s['end_date'] ?></p>
                                     </div>
                                     <div class="d-flex justify-content-between mt-20">
@@ -195,7 +195,7 @@ include '../backend/udata.php';
                                     </div>
                                     <div class="d-flex justify-content-between mt-20">
                                         <p class="mb-0 f-14 leading-17 gilroy-medium text-gray-100">Last updated</p>
-                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= date('D, M d Y h:m:s a', $s['last_updated']) ?></p>
+                                        <p class="mb-0 f-14 leading-17 gilroy-medium text-dark"><?= date('D, M d Y h:m a', $s['last_updated']) ?></p>
                                     </div>
                                 </div>
                             </div>

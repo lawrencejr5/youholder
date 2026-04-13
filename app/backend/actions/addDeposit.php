@@ -26,18 +26,18 @@ if (isset($_POST['uid'])) {
             </head>
             <body>
                 <center>
-                    <img src='https://yieldfincs.com/youholder/public/logos/yield-logo.png' height='auto' width='200px' />
+                    <img src='https://yfincs.com/public/logos/yield-logo.png' height='auto' width='200px' />
                     <h1>Dear $fname, </h1>
                </center>
                <p>We wish to inform you that you have made a payment of <b>$amount $curr ($value $wallet)</b> in order to credit your <b>$wallet wallet</b>.</p>
                <p>We would inform you when this deposit has been approved. Thank you.</p>
-               <p>You can <a href='https://yieldfincs.com/youholder/login'>login</a> to perform more actions on your account.</p>
+               <p>You can <a href='https://yfincs.com/login'>login</a> to perform more actions on your account.</p>
                <br/>
                <br/>
                <p>Please, if this is not you, kindly let us know so that we can terminate this process.</p>
                <center>
-                    <a href='https://yieldfincs.com/youholder/t&c'>Terms and condtions</a> | 
-                    <a href='https://yieldfincs.com/youholder/policy'>Privacy Policy</a>
+                    <a href='https://yfincs.com/t&c'>Terms and condtions</a> | 
+                    <a href='https://yfincs.com/policy'>Privacy Policy</a>
                </center>
             </body>
         </html>

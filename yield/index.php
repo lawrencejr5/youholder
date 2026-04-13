@@ -1,14 +1,14 @@
 <!DOCTYPE html><!-- Last Published: Fri Jan 12 2024 17:37:06 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="www.youhodler.com" data-wf-page="65719812835ab1dfc00c3b3c" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
+<html data-wf-domain="www.yieldfincs.com" data-wf-page="65719812835ab1dfc00c3b3c" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
 
 <head>
   <meta charset="utf-8" />
   <title>Investments | Yield Fiancial Services</title>
   <meta content="Boost your earnings with a yield account. Get increased rates on 55+ assets." name="description" />
-  <meta content="Earn up to 15% on Crypto &amp; Stablecoins | YouHodler Yield Account" property="og:title" />
+  <meta content="Earn up to 15% on Crypto &amp; Stablecoins | yieldfincs Yield Account" property="og:title" />
   <meta content="Boost your earnings with a yield account. Get increased rates on 55+ assets." property="og:description" />
   <meta content="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dc7f6a0682bcba9cc2294c_opengraph-yield.jpg" property="og:image" />
-  <meta content="Earn up to 15% on Crypto &amp; Stablecoins | YouHodler Yield Account" property="twitter:title" />
+  <meta content="Earn up to 15% on Crypto &amp; Stablecoins | yieldfincs Yield Account" property="twitter:title" />
   <meta content="Boost your earnings with a yield account. Get increased rates on 55+ assets." property="twitter:description" />
   <meta content="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dc7f6a0682bcba9cc2294c_opengraph-yield.jpg" property="twitter:image" />
   <meta property="og:type" content="website" />
@@ -33,8 +33,8 @@
       n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);
   </script>
-  <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
-  <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
+  <link href="https://yfincs.com/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="https://yfincs.com/public/logos/favicon.png" rel="apple-touch-icon" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta name="facebook-domain-verification" content="9d151kspnzgxeyddfsx424rcf04nh6" />
@@ -67,44 +67,14 @@
   </script>
   <noscript> <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=4143644&fmt=gif" /> </noscript>
 
-  <script name="company" type="application/ld+json" data-react-helmet="true">
-    {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "name": "YouHodler",
-      "url": "http://www.youhodler.com",
-      "logo": "https://global-uploads.webflow.com/5cc19fbd198b8d31a9c64876/5cee8faeaeff6f36241942f1_fav_large.png",
-      "contactPoint": [{
-          "@type": "ContactPoint",
-          "url": "support@youhodler.com",
-          "contactType": "customer service",
-          "availableLanguage": ["English"]
-        },
-        {
-          "@type": "ContactPoint",
-          "url": "welcome@youhodler.com",
-          "contactType": "public relations",
-          "availableLanguage": ["English"]
-        }
-      ],
-      "sameAs": [
-        "https://twitter.com/youhodler",
-        "https://t.me/youhodler_official",
-        "https://www.facebook.com/YouHodler/",
-        "https://www.linkedin.com/company/youhodler",
-        "https://www.instagram.com/youhodler/",
-        "https://www.youtube.com/channel/UC-Kxvqm8Q-l_WGxQL0VpEEQ"
-      ]
-    }
-  </script>
-
+  
   <link rel="manifest" href="/manifest.json">
 
   <!-- TrustBox script -->
   <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
   <!-- End TrustBox script -->
 
-  <!-- Hotjar Tracking Code for https://www.youhodler.com -->
+  <!-- Hotjar Tracking Code for https://www.yieldfincs.com -->
   <script>
     (function(h, o, t, j, a, r) {
       h.hj = h.hj || function() {
@@ -135,12 +105,12 @@
     gtag('config', 'G-N8Q9NJR9K1');
   </script>
 
-  <link rel="alternate" hreflang="en" href="https://www.youhodler.com">
-  <link rel="alternate" hreflang="fr" href="https://fr.youhodler.com">
-  <link rel="alternate" hreflang="it" href="https://it.youhodler.com">
-  <link rel="alternate" hreflang="es" href="https://es.youhodler.com">
-  <link rel="alternate" hreflang="latam" href="https://latam.youhodler.com">
-  <link rel="alternate" hreflang="de" href="https://de.youhodler.com">
+  <link rel="alternate" hreflang="en" href="https://www.yieldfincs.com">
+  <link rel="alternate" hreflang="fr" href="https://fr.yieldfincs.com">
+  <link rel="alternate" hreflang="it" href="https://it.yieldfincs.com">
+  <link rel="alternate" hreflang="es" href="https://es.yieldfincs.com">
+  <link rel="alternate" hreflang="latam" href="https://latam.yieldfincs.com">
+  <link rel="alternate" hreflang="de" href="https://de.yieldfincs.com">
   <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
   <script>
     Weglot.initialize({
@@ -275,10 +245,10 @@
             <p class="h3 subheading hero">Boost your crypto-earnings with YieldFincs Loyalty program. Get increased
               rates on 30+ cryptos.<br /></p>
           </div>
-          <div class="hero-cta-wrap cta-mobile"><a href="/youholder/register/" target="_blank" class="btn-big-solid w-button">START EARNING</a></div>
+          <div class="hero-cta-wrap cta-mobile"><a href="https://yfincs.com/register/" target="_blank" class="btn-big-solid w-button">START EARNING</a></div>
           <ul role="list" class="testimonial-list w-clearfix w-list-unstyled">
             <li class="testimonial-item"><a href="#" target="_blank" class="testimonial-link w-inline-block">
-                <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb1cdaada6d30231e75_testimonial_eu_swiss_combined.svg" loading="lazy" alt="youhodler eu and swiss" class="testimonial-pic" /></div>
+                <div class="testimonial-pic-wrap"><img src="https://yfincs.com/public/images/australia.png" loading="lazy" alt="yieldfincs eu and swiss" class="testimonial-pic" /></div>
                 <div class="testimonial-txt">Regulated Australian Financial institutions</div>
               </a></li>
             <li class="testimonial-item"><a href="#" class="testimonial-link w-inline-block">
@@ -288,7 +258,7 @@
           </ul>
         </div>
         <!-- <div class="column-compensation w-col w-col-4 w-col-stack"></div> -->
-        <!-- </div><img src="/youholder/public/images/mokup.png" loading="lazy" width="972" sizes="(max-width: 767px) 100vw, 880px" alt="" class="hero-pic-yield" /> -->
+        <!-- </div><img src="https://yfincs.com/public/images/mokup.png" loading="lazy" width="972" sizes="(max-width: 767px) 100vw, 880px" alt="" class="hero-pic-yield" /> -->
       </div>
     </div>
     <section class="s-content wide">
@@ -297,17 +267,17 @@
           <h2 class="h2">Why Earn With Us?<br /></h2>
         </div>
         <div class="w-layout-grid grid-3-columns">
-          <div id="w-node-f076320d-25b6-6ce2-1e8e-f787cab2922a-c00c3b3c" class="feature-block-item"><img src="/youholder/public/icons/earn.png" loading="lazy" alt="" class="feature-icon" />
+          <div id="w-node-f076320d-25b6-6ce2-1e8e-f787cab2922a-c00c3b3c" class="feature-block-item"><img src="https://yfincs.com/public/icons/earn.png" loading="lazy" alt="" class="feature-icon" />
             <div class="feature-heading">Bi-weekly Payouts</div>
             <div class="feature-text">Your payouts are compounded daily and we offer bi-weekly payouts.
             </div>
           </div>
-          <div id="w-node-_10543b6d-060b-cc5c-07e6-e22d4f39b0e6-c00c3b3c" class="feature-block-item"><img src="/youholder/public/icons/fall.png" loading="lazy" alt="" class="feature-icon" />
+          <div id="w-node-_10543b6d-060b-cc5c-07e6-e22d4f39b0e6-c00c3b3c" class="feature-block-item"><img src="https://yfincs.com/public/icons/fall.png" loading="lazy" alt="" class="feature-icon" />
             <div class="feature-heading">Consistent Returns</div>
             <div class="feature-text">Our clients have relished in earning crypto since 2019 with constant access to their
               funds.</div>
           </div>
-          <div id="w-node-_8e8d91d5-272e-ded5-c88b-d7928be7510d-c00c3b3c" class="feature-block-item"><img src="/youholder/public/icons/turbo.png" loading="lazy" alt="" class="feature-icon" />
+          <div id="w-node-_8e8d91d5-272e-ded5-c88b-d7928be7510d-c00c3b3c" class="feature-block-item"><img src="https://yfincs.com/public/icons/turbo.png" loading="lazy" alt="" class="feature-icon" />
             <div class="feature-heading">Boost earnings</div>
             <div class="feature-text">Get increased rewards the moment you jump to the next level.</div>
           </div>
@@ -345,7 +315,7 @@
             <div class="blue-wrap">
               <div class="feature-heading">Boost earnings up to <span class="span-blue"><strong>39.7%</strong></span></div>
               <div class="feature-text">Get increased rewards the moment you jump to the next level.</div>
-              <div class="bottom-cta-wrap"><a href="/youholder/register" class="btn-big-solid w-button">START EARNING</a></div>
+              <div class="bottom-cta-wrap"><a href="https://yfincs.com/register" class="btn-big-solid w-button">START EARNING</a></div>
             </div>
           </div>
           <div class="column-compensation content-center w-col w-col-6 w-col-stack">
@@ -360,17 +330,17 @@
           <h2 class="h2">Your Assets are Safe with Us<br /></h2>
         </div>
         <div class="w-layout-grid grid-3-columns">
-          <div id="w-node-_2df3d93d-0c2b-6972-8d54-c8d316253514-c00c3b3c" class="feature-block-item"><img src="/youholder/public/icons/bolt.png" loading="lazy" alt="" class="feature-icon" />
+          <div id="w-node-_2df3d93d-0c2b-6972-8d54-c8d316253514-c00c3b3c" class="feature-block-item"><img src="https://yfincs.com/public/icons/bolt.png" loading="lazy" alt="" class="feature-icon" />
             <div class="feature-heading">Proactive Security Model</div>
             <div class="feature-text">We use a real-time risk engine and maintain strict collateralization requirements,
               ensuring earnings in a safe way.</div>
           </div>
-          <div id="w-node-_2df3d93d-0c2b-6972-8d54-c8d31625351a-c00c3b3c" class="feature-block-item"><img src="/youholder/public/icons/bag.png" loading="lazy" alt="" class="feature-icon" />
+          <div id="w-node-_2df3d93d-0c2b-6972-8d54-c8d31625351a-c00c3b3c" class="feature-block-item"><img src="https://yfincs.com/public/icons/bag.png" loading="lazy" alt="" class="feature-icon" />
             <div class="feature-heading">Top-Notch Custody</div>
             <div class="feature-text">Digital assets are secured with Ledger Vault&#x27;s industry-leading technology,
               benefiting from $150M pooled crime insurance.</div>
           </div>
-          <div id="w-node-_2df3d93d-0c2b-6972-8d54-c8d316253520-c00c3b3c" class="feature-block-item"><img src="/youholder/public/icons/global.png" loading="lazy" alt="" class="feature-icon" />
+          <div id="w-node-_2df3d93d-0c2b-6972-8d54-c8d316253520-c00c3b3c" class="feature-block-item"><img src="https://yfincs.com/public/icons/global.png" loading="lazy" alt="" class="feature-icon" />
             <div class="feature-heading">Industry&#x27;s Best Practices</div>
             <div class="feature-text">With our unwavering focus on IT security checks, data protection, access rights, and
               encryption, your assets and data are in trusted hands.</div>
@@ -381,7 +351,7 @@
   </div>
   <?php include '../master/footer.php' ?>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5cc19fbd198b8d31a9c64876" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/js/youhodler.d4bcac773.js" type="text/javascript"></script>
+  <script src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/js/yieldfincs.d4bcac773.js" type="text/javascript"></script>
   <script>
     const getCookie = (name) => {
       var matches = document.cookie.match(new RegExp(
@@ -478,13 +448,13 @@
         setCookie('search-params-from-landing', JSON.stringify(paramsNew), {
           expires: 120 * 24 * 60 * 60,
           path: '/',
-          domain: '.youhodler.com'
+          domain: '.yieldfincs.com'
         });
 
         setCookie('search-params-from-landing', JSON.stringify(paramsNew), {
           expires: 120 * 24 * 60 * 60,
           path: '/',
-          domain: 'youhodler.webflow.io',
+          domain: 'yieldfincs.webflow.io',
         });
       }
     };
@@ -604,12 +574,12 @@
           setCookie('ALLOW_COOKIES', '1', {
             expires: 120 * 24 * 60 * 60,
             path: '/',
-            domain: 'youhodler.com',
+            domain: 'yieldfincs.com',
           });
           setCookie('ALLOW_COOKIES', '1', {
             expires: 120 * 24 * 60 * 60,
             path: '/',
-            domain: 'youhodler.webflow.io',
+            domain: 'yieldfincs.webflow.io',
           });
 
           loadScripts();

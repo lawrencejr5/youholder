@@ -1,6 +1,7 @@
 <?php
 include '../backend/udata.php';
 !$_SESSION['id'] && header('location: ../../login');
+
 ?>
 
 <!DOCTYPE html>
@@ -22,14 +23,14 @@ include '../backend/udata.php';
     <!-- end css -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="/youholder/public/logos/favicon.png">
+    <link rel="shortcut icon" href="https://yfincs.com/public/logos/favicon.png">
 
     <!-- theme-color -->
     <meta name="theme-color" content="#130e80" />
 
     <script>
         'use strict';
-        var SITE_URL = "https://www.yieldfincs.com";
+        var SITE_URL = "https://www.yfincs.com";
         var FIATDP = "0.00";
         var CRYPTODP = "0.00000000";
 
@@ -152,7 +153,7 @@ include '../backend/udata.php';
                                     </svg>
                                 </div>
                                 <div class="check-all">
-                                    <p class="mb-0 f-18 leading-22 text-dark gilroy-Semibold"> Add New Wallet</p>
+                                    <p class="mb-0 f-18 leading-22 text-dark gilroy-Semibold">Add New Wallet</p>
                                 </div>
                                 <a href="../wallet-add" class="nscaleX-1 cursor-pointer d-flex justify-content-center align-items-center dash-arrow-div">
                                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -163,23 +164,36 @@ include '../backend/udata.php';
                         <?php } ?>
                     </div>
                     <div class="row mt-20 gy-4">
-                        <p class="mb-0 f-18 leading-22 text-dark gilroy-Semibold" style="width: 100%;">YieldFincs Account Number</p>
-                        <div class="col-12 col-xl-12">
+                        <p class="mb-0 f-18 leading-22 text-dark gilroy-Semibold" style="width: 100%;">YieldFincs Account Number & Referral link</p>
+                        <div class="col-12 col-xl-6">
                             <div class="dash-profile-qr-div bg-white profile-mt-12">
                                 <div class="d-flex justify-content-between qr-icon">
-                                    <p class="mb-0 f-16 leading-18 gilroy-medium text-gray-100 mt-0 dash-w-262"><?= $account_no ?></p>
+                                    <p class="mb-0 f-20 leading-18 gilroy-medium text-dark mt-0 dash-w-262"><?= $account_no ?></p>
                                     <a href="../profile"><svg class="ml-12" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8448 2.09484C12.759 1.18063 14.2412 1.18063 15.1554 2.09484C16.0696 3.00905 16.0696 4.49129 15.1554 5.4055L5.73337 14.8276C5.71852 14.8424 5.70381 14.8571 5.68921 14.8718C5.47363 15.0878 5.28355 15.2782 5.0544 15.4186C4.85309 15.542 4.63361 15.6329 4.40403 15.688C4.1427 15.7507 3.87364 15.7505 3.56847 15.7502C3.54781 15.7502 3.52698 15.7502 3.50598 15.7502H2.25008C1.83586 15.7502 1.50008 15.4144 1.50008 15.0002V13.7443C1.50008 13.7233 1.50006 13.7025 1.50004 13.6818C1.49975 13.3766 1.4995 13.1076 1.56224 12.8462C1.61736 12.6167 1.70827 12.3972 1.83164 12.1959C1.97206 11.9667 2.16249 11.7766 2.37848 11.5611C2.3931 11.5465 2.40784 11.5317 2.42269 11.5169L11.8448 2.09484ZM14.0948 3.1555C13.7663 2.82707 13.2339 2.82707 12.9054 3.1555L3.48335 12.5776C3.19868 12.8622 3.14619 12.9215 3.1106 12.9796C3.06948 13.0467 3.03917 13.1199 3.0208 13.1964C3.0049 13.2626 3.00008 13.3417 3.00008 13.7443V14.2502H3.50598C3.90857 14.2502 3.98762 14.2453 4.05386 14.2294C4.13039 14.2111 4.20354 14.1808 4.27065 14.1396C4.32873 14.1041 4.38804 14.0516 4.67271 13.7669L14.0948 4.34484C14.4232 4.01641 14.4232 3.48393 14.0948 3.1555ZM8.25006 15.0002C8.25006 14.586 8.58584 14.2502 9.00006 14.2502H15.7501C16.1643 14.2502 16.5001 14.586 16.5001 15.0002C16.5001 15.4144 16.1643 15.7502 15.7501 15.7502H9.00006C8.58584 15.7502 8.25006 15.4144 8.25006 15.0002Z" fill="currentColor" />
                                         </svg></a>
                                 </div>
-                                <div class="d-flex">
-                                    <div class="dash-profile-qrCode mt-10">
-                                        <img width="200px" height="auto" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=<?= $account_no ?>&choe=UTF-8&chld=H|0" alt="account-qrcode">
-                                    </div>
-                                </div>
+                                <!--<div class="d-flex">-->
+                                <!--    <div class="dash-profile-qrCode mt-10">-->
+                                <!--        <img width="200px" height="auto" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=<?= $account_no ?>&choe=UTF-8&chld=H|0" alt="account-qrcode">-->
+                                <!--    </div>-->
+                                <!--</div>-->
                                 <input type="hidden" value="<?= $account_no ?>" id="accNo">
                                 <button class="btn btn-primary dash-print-btn mt-24 green-btn copyBtn" style="width: 100%" id="copyBtn" onclick="copy()">
                                     <span class="f-14 leading-20 gilroy-medium">Copy Account Number</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-xl-6">
+                            <div class="dash-profile-qr-div bg-white profile-mt-12">
+                                <div class="d-flex justify-content-between qr-icon">
+                                    <input type="text" value="https://yfincs.com/register/?ref=<?= $account_no ?>" class="text-dark" style="width: 100%; background: transparent; padding: .5rem; border: none;"/>
+                                </div>
+                                
+                                <input type="hidden" value="https://yfincs.com/register/?ref=<?= $account_no ?>" id="refLink" >
+                                <button class="btn btn-primary dash-print-btn mt-24 green-btn copyBtn" id="copyBtnRef" onclick="copyRef()">
+                                    <span class="f-14 leading-20 gilroy-medium">Copy Referral Link</span>
                                 </button>
                             </div>
                         </div>
@@ -219,8 +233,6 @@ include '../backend/udata.php';
                                 <?php } ?>
                             </div>
                         </div>
-
-
                         <?php if ($level == 1) { ?>
                             <div class="col-12 col-xl-6">
                                 <div class="contact-support bg-white">
@@ -364,6 +376,98 @@ include '../backend/udata.php';
 
                         </div>
                     <?php } ?>
+                    
+                    <div>
+                        <div class="mt-22 mt-sm-4">
+                            <div class="d-flex justify-content-between align-items-center r-pb-8 pb-10">
+                                <p class="mb-0 text-gray-100 f-16 r-f-12 gilroy-medium dark-CDO">Referrals</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Referral List -->
+                    <?php 
+                    $data['refs'] = $modules->getReferals($account_no);
+                    foreach ($data['refs'] as $t) { ?>
+                        <div class="transacparent">
+                            <div class="transacparent cursor-pointer open-transac_modal" style="background-color: white">
+                                <div class="d-flex justify-content-between transac-child">
+                                    <div class="d-flex w-50">
+
+                                        <!-- Image -->
+                                        <div class="deposit-circle d-flex justify-content-center align-items-center">
+                                            <img src="<?= $t['profile_pic'] ? "../backend/actions/uploads/" . $t['profile_pic'] : '../public/uploads/user-profile/1532005837.jpg' ?>" alt="Transaction">
+                                        </div>
+
+                                        <div class="ml-20 r-ml-8">
+                                            <!-- Transaction Type -->
+
+                                            <p class="mb-0 text-dark f-16 gilroy-medium theme-tran" style="text-transform: capitalize;"><?= $t['fname'] . " ". $t['lname'] ?></p>
+                                            <div class="d-flex flex-wrap">
+
+                                                <p class="mb-0 text-gray-100 f-13 leading-17 gilroy-regular tran-title mt-2">
+                                                    <?= $t['from_to'] ? $t['from_to'] : $fullname ?></p>
+
+                                                <!-- Dot & Transaction Date -->
+                                                <p class="mb-0 text-gray-100 f-13 leading-17 gilroy-regular tran-title mt-2 d-flex justify-content-center align-items-center">
+                                                    <svg class="mx-2 text-muted-100" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="2" cy="2" r="2" fill="currentColor" />
+                                                    </svg>
+                                                </p>
+                                                <p class="mb-0 text-gray-100 f-13 leading-17 gilroy-regular tran-title mt-2 d-flex justify-content-center align-items-center">
+                                                    <?= $t['datetime'] ?>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div>
+                                            <p class="mb-0 gilroy-medium text-gray-100 r-f-12 f-16 ph-20">
+                                                <?php if ($t['transaction_type'] == 'deposit') { ?>
+                                                    <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.89992 3.84617L7.02742 5.71867L5.88409 6.86784C5.65113 7.10045 5.33538 7.23109 5.00617 7.23109C4.67697 7.23109 4.36122 7.10045 4.12826 6.86784L1.10659 3.84617C0.709923 3.4495 0.995756 2.77284 1.54992 2.77284H8.45659C9.01659 2.77284 9.29659 3.4495 8.89992 3.84617Z" fill="#2AAA5E" />
+                                                    </svg>
+                                                <?php } elseif ($t['transaction_type'] == 'withdrawal') { ?>
+                                                    <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.89992 6.15383L7.02742 4.28133L5.88409 3.13216C5.65113 2.89955 5.33538 2.76891 5.00617 2.76891C4.67697 2.76891 4.36122 2.89955 4.12826 3.13216L1.10659 6.15383C0.709923 6.5505 0.995756 7.22716 1.54992 7.22716H8.45659C9.01659 7.22716 9.29659 6.5505 8.89992 6.15383Z" fill="#D9204C"></path>
+                                                    </svg>
+                                                <?php } elseif ($t['transaction_type'] == 'transfer from') { ?>
+
+                                                    <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.89992 6.15383L7.02742 4.28133L5.88409 3.13216C5.65113 2.89955 5.33538 2.76891 5.00617 2.76891C4.67697 2.76891 4.36122 2.89955 4.12826 3.13216L1.10659 6.15383C0.709923 6.5505 0.995756 7.22716 1.54992 7.22716H8.45659C9.01659 7.22716 9.29659 6.5505 8.89992 6.15383Z" fill="#D9204C"></path>
+                                                    </svg>
+                                                <?php } elseif ($t['transaction_type'] == 'transfer to') { ?>
+                                                    <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.89992 3.84617L7.02742 5.71867L5.88409 6.86784C5.65113 7.10045 5.33538 7.23109 5.00617 7.23109C4.67697 7.23109 4.36122 7.10045 4.12826 6.86784L1.10659 3.84617C0.709923 3.4495 0.995756 2.77284 1.54992 2.77284H8.45659C9.01659 2.77284 9.29659 3.4495 8.89992 3.84617Z" fill="#2AAA5E" />
+                                                    </svg>
+                                                <?php } elseif ($t['transaction_type'] == 'exchange from') { ?>
+                                                    <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.89992 6.15383L7.02742 4.28133L5.88409 3.13216C5.65113 2.89955 5.33538 2.76891 5.00617 2.76891C4.67697 2.76891 4.36122 2.89955 4.12826 3.13216L1.10659 6.15383C0.709923 6.5505 0.995756 7.22716 1.54992 7.22716H8.45659C9.01659 7.22716 9.29659 6.5505 8.89992 6.15383Z" fill="#D9204C"></path>
+                                                    </svg>
+                                                <?php } elseif ($t['transaction_type'] == 'exchange to') { ?>
+                                                    <svg class="mx-2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.89992 3.84617L7.02742 5.71867L5.88409 6.86784C5.65113 7.10045 5.33538 7.23109 5.00617 7.23109C4.67697 7.23109 4.36122 7.10045 4.12826 6.86784L1.10659 3.84617C0.709923 3.4495 0.995756 2.77284 1.54992 2.77284H8.45659C9.01659 2.77284 9.29659 3.4495 8.89992 3.84617Z" fill="#2AAA5E" />
+                                                    </svg>
+                                                <?php } ?>
+                                                <?= $t['amount'] . ' ' . $t['wallet'] ?>
+                                            </p>
+                                        </div>
+                                        <!-- <div class="cursor-pointer transaction-arrow ml-28 r-ml-12">
+                                        <a class="arrow-hovers" data-bs-toggle="modal" data-bs-target="#transaction-Info-0">
+                                            <svg class="nscaleX-1" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5312 1.52861C3.27085 1.78896 3.27085 2.21107 3.5312 2.47141L7.0598 6.00001L3.5312 9.52861C3.27085 9.78895 3.27085 10.2111 3.5312 10.4714C3.79155 10.7318 4.21366 10.7318 4.47401 10.4714L8.47401 6.47141C8.73436 6.21106 8.73436 5.78895 8.47401 5.52861L4.47401 1.52861C4.21366 1.26826 3.79155 1.26826 3.5312 1.52861Z" fill="currentColor" />
+                                            </svg>
+                                        </a>
+                                    </div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    <?php } ?>
+
 
                     <!-- main-containt -->
 
@@ -409,21 +513,24 @@ include '../backend/udata.php';
                     });
 
                 } else {
-                    let lang = $("#select_language select").val();
-                    $.ajax({
-                        type: 'get',
-                        url: 'https://demo.paymoney.techvill.net/change-lang',
-                        data: {
-                            lang: lang
-                        },
-                        success: function(msg) {
-                            if (msg == 1) {
-                                location.reload()
-                                localStorage.setItem('lang', lang);
-                                $("html").removeAttr("dir", "rtl");
-                            }
-                        }
-                    });
+                    var lang = this.value;
+        console.log(lang)
+        var translateFrame = document.querySelector('iframe.goog-te-menu-frame');
+    
+        if (!translateFrame) {
+          alert("Please wait for Google Translate to load.");
+          return;
+        }
+    
+        var innerDoc = translateFrame.contentDocument || translateFrame.contentWindow.document;
+        var links = innerDoc.querySelectorAll('.goog-te-menu2-item span.text');
+    
+        for (var i = 0; i < links.length; i++) {
+          if (links[i].innerText.toLowerCase().indexOf(lang.toLowerCase()) > -1) {
+            links[i].click();
+            break;
+          }
+        }
                 }
             });
         });
@@ -495,6 +602,16 @@ include '../backend/udata.php';
 
             setTimeout(() => {
                 btn.innerHTML = `<span class="f-14 leading-20 gilroy-medium">Copy Account Number</span>`
+            }, 1500)
+        }
+        const copyRef = () => {
+            const refLink = document.querySelector('#refLink').value
+            const btn = document.querySelector('#copyBtnRef')
+            navigator.clipboard.writeText(refLink)
+            btn.innerHTML = `<span class="f-14 leading-20 gilroy-medium">Copied!!</span>`
+
+            setTimeout(() => {
+                btn.innerHTML = `<span class="f-14 leading-20 gilroy-medium">Copy Referral Link</span>`
             }, 1500)
         }
     </script>

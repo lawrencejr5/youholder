@@ -1,0 +1,12 @@
+[10-Jun-2024 03:20:55 UTC] PHP Warning:  Undefined array key "id" in /home/yfiniqvq/public_html/app/backend/adminData.php on line 4
+[10-Jun-2024 03:20:55 UTC] PHP Warning:  Undefined array key "id" in /home/yfiniqvq/public_html/app/backend/adminData.php on line 12
+[10-Jun-2024 03:20:55 UTC] PHP Warning:  Undefined variable $fname in /home/yfiniqvq/public_html/app/admin/master/topnav.php on line 26
+[10-Jun-2024 03:20:55 UTC] PHP Warning:  Undefined variable $email in /home/yfiniqvq/public_html/app/admin/master/topnav.php on line 33
+[20-Jan-2025 12:43:04 UTC] PHP Warning:  Undefined array key "id" in /home/yfiniqvq/public_html/app/backend/adminData.php on line 4
+[20-Jan-2025 12:43:04 UTC] PHP Warning:  Undefined array key "id" in /home/yfiniqvq/public_html/app/backend/adminData.php on line 12
+[20-Jan-2025 12:43:04 UTC] PHP Warning:  Undefined variable $fname in /home/yfiniqvq/public_html/app/admin/master/topnav.php on line 26
+[20-Jan-2025 12:43:04 UTC] PHP Warning:  Undefined variable $email in /home/yfiniqvq/public_html/app/admin/master/topnav.php on line 33
+[29-Jan-2025 11:48:18 UTC] PHP Warning:  Undefined array key "id" in /home/yfiniqvq/public_html/app/backend/adminData.php on line 4
+[29-Jan-2025 11:48:18 UTC] PHP Warning:  Undefined array key "id" in /home/yfiniqvq/public_html/app/backend/adminData.php on line 12
+[29-Jan-2025 11:48:18 UTC] PHP Warning:  Undefined variable $fname in /home/yfiniqvq/public_html/app/admin/master/topnav.php on line 26
+[29-Jan-2025 11:48:18 UTC] PHP Warning:  Undefined variable $email in /home/yfiniqvq/public_html/app/admin/master/topnav.php on line 33

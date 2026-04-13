@@ -1,0 +1,602 @@
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 113
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 114
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 115
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 116
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 117
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 118
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Undefined variable $d in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119
+[11-Dec-2024 12:43:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/yfiniqvq/public_html/app/admin/transactions/index.php on line 119

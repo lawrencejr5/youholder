@@ -2318,7 +2318,7 @@ blockquote {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   background-color: transparent;
-  background-image: url(/youholder/public/icons/drop.png);
+  background-image: url(https://yfincs.com/public/icons/drop.png);
   background-position: 100% 3px;
   background-repeat: no-repeat;
   background-size: 32px;
@@ -2337,7 +2337,7 @@ blockquote {
 .nav-drop-toggle.w--open {
   color: #130e80;
   background-color: rgba(41, 121, 255, 0.1);
-  background-image: url(/youholder/public/icons/collapse.png);
+  background-image: url(https://yfincs.com/public/icons/collapse.png);
 }
 .nav-drop-list {
   width: 220px;
@@ -4762,7 +4762,7 @@ blockquote {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   background-color: transparent;
-  background-image: url(/youholder/public/icons/drop.png);
+  background-image: url(https://yfincs.com/public/icons/drop.png);
   background-position: 100% 3px;
   background-repeat: no-repeat;
   background-size: 32px;
@@ -4777,7 +4777,7 @@ blockquote {
 .nav-drop-toggle-mobile.w--open {
   color: #130e80;
   background-color: rgba(41, 121, 255, 0.1);
-  background-image: url(/youholder/public/icons/collapse.png);
+  background-image: url(https://yfincs.com/public/icons/collapse.png);
 }
 .content-center-wrap {
   text-align: center;
@@ -6008,7 +6008,7 @@ blockquote {
   height: 36px;
   color: transparent;
   text-align: left;
-  background-image: url(/youholder/public/icons/drop.png);
+  background-image: url(https://yfincs.com/public/icons/drop.png);
   background-position: 10%;
   background-repeat: no-repeat;
   background-size: 48px;
@@ -6207,7 +6207,7 @@ blockquote {
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
-  background-image: url(/youholder/public/icons/drop.png);
+  background-image: url(https://yfincs.com/public/icons/drop.png);
   background-position: 100%;
   background-repeat: no-repeat;
   background-size: auto;
@@ -6223,7 +6223,7 @@ blockquote {
 }
 .nav-sub-drop-toggle.w--open {
   opacity: 0.9;
-  background-image: url(/youholder/public/icons/collapse.png);
+  background-image: url(https://yfincs.com/public/icons/collapse.png);
   margin-bottom: 10px;
   transition: none;
 }
@@ -6794,7 +6794,7 @@ blockquote {
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
-  background-image: url(/youholder/public/icons/drop.png);
+  background-image: url(https://yfincs.com/public/icons/drop.png);
   background-position: 100%;
   background-repeat: no-repeat;
   background-size: auto;
@@ -6810,7 +6810,7 @@ blockquote {
 }
 .nav-sub-drop-toggle-2.w--open {
   opacity: 0.9;
-  background-image: url(/youholder/public/icons/collapse.png);
+  background-image: url(https://yfincs.com/public/icons/collapse.png);
   margin-bottom: 10px;
   transition: none;
 }
@@ -6819,7 +6819,7 @@ blockquote {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   background-color: transparent;
-  background-image: url(/youholder/public/icons/drop.png);
+  background-image: url(https://yfincs.com/public/icons/drop.png);
   background-position: 100% 3px;
   background-repeat: no-repeat;
   background-size: 32px;
@@ -6838,14 +6838,14 @@ blockquote {
 .nav-drop-toggle-2.w--open {
   color: #130e80;
   background-color: rgba(41, 121, 255, 0.1);
-  background-image: url(/youholder/public/icons/collapse.png);
+  background-image: url(https://yfincs.com/public/icons/collapse.png);
 }
 .nav-drop-toggle-mobile-2 {
   color: #130e80;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   background-color: transparent;
-  background-image: url(/youholder/public/icons/drop.png);
+  background-image: url(https://yfincs.com/public/icons/drop.png);
   background-position: 100% 3px;
   background-repeat: no-repeat;
   background-size: 32px;
@@ -6860,7 +6860,7 @@ blockquote {
 .nav-drop-toggle-mobile-2.w--open {
   color: #130e80;
   background-color: rgba(41, 121, 255, 0.1);
-  background-image: url(/youholder/public/icons/collapse.png);
+  background-image: url(https://yfincs.com/public/icons/collapse.png);
 }
 .nav-drop-bg-2 {
   background-color: #fff;
@@ -14209,7 +14209,7 @@ blockquote {
 .yield-show-all-link {
   color: #130e80;
   cursor: pointer;
-  background-image: url(/youholder/public/icons/drop.png);
+  background-image: url(https://yfincs.com/public/icons/drop.png);
   background-position: 115%;
   background-repeat: no-repeat;
   background-size: 48px;
@@ -14227,7 +14227,7 @@ blockquote {
 .yield-show-all-link-hide {
   color: #130e80;
   cursor: pointer;
-  background-image: url(/youholder/public/icons/collapse.png);
+  background-image: url(https://yfincs.com/public/icons/collapse.png);
   background-position: 190%;
   background-repeat: no-repeat;
   background-size: 48px;

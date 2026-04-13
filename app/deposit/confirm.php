@@ -22,7 +22,7 @@ include '../backend/udata.php';
     <!-- end css -->
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="/youholder/public/logos/favicon.png">
+    <link rel="shortcut icon" href="https://yfincs.com/public/logos/favicon.png">
 
     <!-- theme-color -->
     <meta name="theme-color" content="#130e80" />
@@ -100,7 +100,7 @@ include '../backend/udata.php';
                                     <hr>
                                     <!-- Total -->
                                     <div class="d-flex justify-content-between mt-3 total">
-                                        <p class="mb-0 f-16 gilroy-medium text-dark">Address</p>
+                                        <p class="mb-0 f-16 gilroy-medium text-dark">Add: </p>
                                         <p class="mb-0 f-16 gilroy-medium text-dark"><?= $_GET['address'] ?></p>
                                     </div>
                                     <hr>

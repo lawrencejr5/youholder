@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-wf-domain="www.youhodler.com" data-wf-page="65719812835ab1dfc00c38f5" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
+<html data-wf-domain="www.yfincs.com" data-wf-page="65719812835ab1dfc00c38f5" data-wf-site="5cc19fbd198b8d31a9c64876" lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -16,12 +16,14 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <meta name="theme-color" content="#130e80" />
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.dots.min.js"></script>
   <!--<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.fog.min.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript">
     WebFont.load({
       google: {
@@ -37,8 +39,9 @@
       n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);
   </script>
-  <link href="/youholder/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
-  <link href="/youholder/public/logos/favicon.png" rel="apple-touch-icon" />
+  
+  <link href="https://yfincs.com/public/logos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="https://yfincs.com/public/logos/favicon.png" rel="apple-touch-icon" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta name="facebook-domain-verification" content="9d151kspnzgxeyddfsx424rcf04nh6" />
@@ -71,44 +74,11 @@
   </script>
   <noscript> <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=4143644&fmt=gif" /> </noscript>
 
-  <script name="company" type="application/ld+json" data-react-helmet="true">
-    {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "name": "YouHodler",
-      "url": "http://www.youhodler.com",
-      "logo": "https://global-uploads.webflow.com/5cc19fbd198b8d31a9c64876/5cee8faeaeff6f36241942f1_fav_large.png",
-      "contactPoint": [{
-          "@type": "ContactPoint",
-          "url": "support@youhodler.com",
-          "contactType": "customer service",
-          "availableLanguage": ["English"]
-        },
-        {
-          "@type": "ContactPoint",
-          "url": "welcome@youhodler.com",
-          "contactType": "public relations",
-          "availableLanguage": ["English"]
-        }
-      ],
-      "sameAs": [
-        "https://twitter.com/youhodler",
-        "https://t.me/youhodler_official",
-        "https://www.facebook.com/YouHodler/",
-        "https://www.linkedin.com/company/youhodler",
-        "https://www.instagram.com/youhodler/",
-        "https://www.youtube.com/channel/UC-Kxvqm8Q-l_WGxQL0VpEEQ"
-      ]
-    }
-  </script>
-
-  <link rel="manifest" href="/manifest.json">
-
   <!-- TrustBox script -->
   <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
   <!-- End TrustBox script -->
 
-  <!-- Hotjar Tracking Code for https://www.youhodler.com -->
+  <!-- Hotjar Tracking Code for https://www.yieldfincs.com -->
   <script>
     (function(h, o, t, j, a, r) {
       h.hj = h.hj || function() {
@@ -139,12 +109,12 @@
     gtag('config', 'G-N8Q9NJR9K1');
   </script>
 
-  <link rel="alternate" hreflang="en" href="https://www.youhodler.com">
-  <link rel="alternate" hreflang="fr" href="https://fr.youhodler.com">
-  <link rel="alternate" hreflang="it" href="https://it.youhodler.com">
-  <link rel="alternate" hreflang="es" href="https://es.youhodler.com">
-  <link rel="alternate" hreflang="latam" href="https://latam.youhodler.com">
-  <link rel="alternate" hreflang="de" href="https://de.youhodler.com">
+  <link rel="alternate" hreflang="en" href="https://www.yieldfincs.com">
+  <link rel="alternate" hreflang="fr" href="https://fr.yieldfincs.com">
+  <link rel="alternate" hreflang="it" href="https://it.yieldfincs.com">
+  <link rel="alternate" hreflang="es" href="https://es.yieldfincs.com">
+  <link rel="alternate" hreflang="latam" href="https://latam.yieldfincs.com">
+  <link rel="alternate" hreflang="de" href="https://de.yieldfincs.com">
   <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
   <script>
     Weglot.initialize({
@@ -193,17 +163,17 @@
 
           </div>
           <ul role="list" class="testimonial-list testimonials-desktop w-clearfix w-list-unstyled">
-            <li class="testimonial-item"><a href="/company" target="_blank" class="testimonial-link w-inline-block">
-                <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb1cdaada6d30231e75_testimonial_eu_swiss_combined.svg" loading="lazy" alt="eu and swiss" class="testimonial-pic" /></div>
-                <div class="testimonial-txt">Regulated Australian Financial institutions</div>
+            <li class="testimonial-item"><a href="https://yfincs.com/company" target="_blank" class="testimonial-link w-inline-block">
+                <div class="testimonial-pic-wrap"><img src="https://yfincs.com/public/images/australia.png" loading="lazy" alt="eu and swiss" class="testimonial-pic" /></div>
+                <div class="testimonial-txt" style="color: #fff">Regulated Australian Financial institutions</div>
               </a></li>
             <li class="testimonial-item"><a href="https://twitter.com/ledger_business/status/1275806038613274631" target="_blank" class="testimonial-link w-inline-block">
                 <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb0cdaada6a20231e71_testimonial_ledger.svg" loading="lazy" alt="ledger vault" class="testimonial-pic" /></div>
-                <div class="testimonial-txt">Custody secured by Ledger Enterprise</div>
+                <div class="testimonial-txt" style="color: #fff">Custody secured by Ledger Enterprise</div>
               </a></li>
-            <li class="testimonial-item"><a href="https://torinofc.it/en/photogallery/30/09/2022/youhodler-official-crypto-partner-torino-fc_21070" target="_blank" class="testimonial-link w-inline-block">
+            <li class="testimonial-item"><a href="https://torinofc.it/en/photogallery/30/09/2022/yieldfincs-official-crypto-partner-torino-fc_21070" target="_blank" class="testimonial-link w-inline-block">
                 <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb35925bbf0b0b93c0a_testimonial_torino_fc.svg" loading="lazy" alt="torino fc" class="testimonial-pic" /></div>
-                <div class="testimonial-txt">Official Crypto Partner of Torino FC</div>
+                <div class="testimonial-txt" style="color: #fff">Official Crypto Partner of Torino FC</div>
               </a></li>
           </ul>
         </div>
@@ -213,8 +183,8 @@
   <div class="s-content wide hide-desktop">
     <div class="content-wrap wide w-container">
       <ul role="list" class="testimonial-list testimonials-mobile w-clearfix w-list-unstyled">
-        <li class="testimonial-item"><a href="/company" target="_blank" class="testimonial-link w-inline-block">
-            <div class="testimonial-pic-wrap"><img src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c05fb1cdaada6d30231e75_testimonial_eu_swiss_combined.svg" loading="lazy" alt="youhodler eu and swiss" class="testimonial-pic" /></div>
+        <li class="testimonial-item"><a href="https://yfincs.com/company" target="_blank" class="testimonial-link w-inline-block">
+            <div class="testimonial-pic-wrap"><img src="https://yfincs.com/public/images/australia.png" loading="lazy" alt="yieldfincs eu and swiss" class="testimonial-pic" /></div>
             <div class="testimonial-txt">Regulated Australian Financial institutions</div>
           </a></li>
         <li class="testimonial-item"><a href="https://twitter.com/ledger_business/status/1275806038613274631" target="_blank" class="testimonial-link w-inline-block">
@@ -236,25 +206,25 @@
           <div class="column-compensation w-col w-col-6 w-col-stack">
 
             <ul role="list" class="card-preorder-list w-list-unstyled">
-              <li class="card-preorder-list-item w-clearfix"><img src="/youholder/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
+              <li class="card-preorder-list-item w-clearfix"><img src="https://yfincs.com/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
                 <div class="card-preorder-list-item-txt">Live automated Platforms</div>
               </li>
-              <!-- <li class="card-preorder-list-item w-clearfix"><img src="/youholder/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
+               <li class="card-preorder-list-item w-clearfix"><img src="https://yfincs.com/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
                 <div class="card-preorder-list-item-txt">Fully Audited smart contracts</div>
-              </li> -->
-              <li class="card-preorder-list-item w-clearfix"><img src="/youholder/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
+              </li>
+              <li class="card-preorder-list-item w-clearfix"><img src="https://yfincs.com/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
                 <div class="card-preorder-list-item-txt">Full Blockchain-based smart contract sec</div>
               </li>
-              <li class="card-preorder-list-item w-clearfix"><img src="/youholder/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
+              <li class="card-preorder-list-item w-clearfix"><img src="https://yfincs.com/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
                 <div class="card-preorder-list-item-txt">Military-grade 256-bit Encryption</div>
               </li>
-              <!-- <li class="card-preorder-list-item w-clearfix"><img src="/youholder/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
+               <li class="card-preorder-list-item w-clearfix"><img src="https://yfincs.com/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
                 <div class="card-preorder-list-item-txt">Extensive Firewall Architecture</div>
-              </li> -->
-              <!-- <li class="card-preorder-list-item w-clearfix"><img src="/youholder/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
+              </li>
+               <li class="card-preorder-list-item w-clearfix"><img src="https://yfincs.com/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
                 <div class="card-preorder-list-item-txt">Continuous Third-party Penetration Testing and platform Assessment</div>
-              </li> -->
-              <li class="card-preorder-list-item w-clearfix"><img src="/youholder/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
+              </li>
+              <li class="card-preorder-list-item w-clearfix"><img src="https://yfincs.com/public/icons/global.png" loading="lazy" alt="" class="card-preorder-list-item-icon" />
                 <div class="card-preorder-list-item-txt">24/7/365 Fraud Monitoring Mechanisms</div>
               </li>
             </ul>
@@ -310,16 +280,16 @@
       </div>
       <div data-current="Multi HODL" data-easing="ease" data-duration-in="300" data-duration-out="100" class="product-tabs w-tabs">
         <div class="product-tabs-menu w-tab-menu">
-          <a data-w-tab="Multi HODL" class="product-tabs-link w-inline-block w-clearfix w-tab-link w--current"><img loading="lazy" src="/youholder/public/icons/percent.png" style="width: 20px; height: auto;" alt="Multi HODL" class="nav-drop-a-tile-icon tab" />
+          <a data-w-tab="Multi HODL" class="product-tabs-link w-inline-block w-clearfix w-tab-link w--current"><img loading="lazy" src="https://yfincs.com/public/icons/percent.png" style="width: 20px; height: auto;" alt="Multi HODL" class="nav-drop-a-tile-icon tab" />
             <div class="nav-drop-a-tile-heading tab">Crypto Staking</div>
           </a>
-          <a data-w-tab="Crypto Loans" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img loading="lazy" src="/youholder/public/icons/down.png" style="width: 20px; height: auto;" alt="Crypto Loans" class="nav-drop-a-tile-icon tab" />
+          <a data-w-tab="Crypto Loans" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img loading="lazy" src="https://yfincs.com/public/icons/down.png" style="width: 20px; height: auto;" alt="Crypto Loans" class="nav-drop-a-tile-icon tab" />
             <div class="nav-drop-a-tile-heading tab"><span class="span-hide-mobile">Instant </span>Deposits</div>
           </a>
-          <a data-w-tab="Exchange" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img loading="lazy" src="/youholder/public/icons/exchange.png" style="width: 20px; height: auto;" alt="Exchange" class="nav-drop-a-tile-icon tab" />
+          <a data-w-tab="Exchange" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img loading="lazy" src="https://yfincs.com/public/icons/exchange.png" style="width: 20px; height: auto;" alt="Exchange" class="nav-drop-a-tile-icon tab" />
             <div class="nav-drop-a-tile-heading tab">Exchange</div>
           </a>
-          <a data-w-tab="Loyalty Program" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img loading="lazy" src="/youholder/public/icons/earn.png" style="width: 20px; height: auto;" alt="Loyalty Program" class="nav-drop-a-tile-icon tab" />
+          <a data-w-tab="Loyalty Program" class="product-tabs-link w-inline-block w-clearfix w-tab-link"><img loading="lazy" src="https://yfincs.com/public/icons/earn.png" style="width: 20px; height: auto;" alt="Loyalty Program" class="nav-drop-a-tile-icon tab" />
             <div class="nav-drop-a-tile-heading tab">Earn</div>
           </a>
         </div>
@@ -346,7 +316,7 @@
                   <h3 class="h3 subheading padding-top-large">Popular coins interest rates</h3>
                   <div class="nav-inline w-dyn-list">
                     <div role="list" class="nav-drop-tile-grid-two w-dyn-items">
-                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/1661050287.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="https://yfincs.com/app/public/uploads/currency_logos/1661050287.png" loading="lazy" class="nav-drop-a-tile-icon" />
                           <div class="nav-drop-a-tile-coin-ticker caps">Btc</div>
                           <div class="nav-drop-a-apr-wrap">
                             <div class="nav-drop-a-tile-text"> up to </div>
@@ -354,7 +324,7 @@
                             <div class="nav-drop-a-tile-text">%</div>
                           </div>
                         </a></div>
-                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/1661050287.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="https://yfincs.com/app/public/uploads/currency_logos/1671520294.png" loading="lazy" class="nav-drop-a-tile-icon" />
                           <div class="nav-drop-a-tile-coin-ticker caps">Eth</div>
                           <div class="nav-drop-a-apr-wrap">
                             <div class="nav-drop-a-tile-text"> up to </div>
@@ -362,7 +332,7 @@
                             <div class="nav-drop-a-tile-text">%</div>
                           </div>
                         </a></div>
-                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/solana.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="https://yfincs.com/app/public/uploads/currency_logos/solana.png" loading="lazy" class="nav-drop-a-tile-icon" />
                           <div class="nav-drop-a-tile-coin-ticker caps">sol</div>
                           <div class="nav-drop-a-apr-wrap">
                             <div class="nav-drop-a-tile-text"> up to </div>
@@ -370,7 +340,7 @@
                             <div class="nav-drop-a-tile-text">%</div>
                           </div>
                         </a></div>
-                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/ada.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="https://yfincs.com/app/public/uploads/currency_logos/ada.png" loading="lazy" class="nav-drop-a-tile-icon" />
                           <div class="nav-drop-a-tile-coin-ticker caps">ada</div>
                           <div class="nav-drop-a-apr-wrap">
                             <div class="nav-drop-a-tile-text"> up to </div>
@@ -378,7 +348,7 @@
                             <div class="nav-drop-a-tile-text">%</div>
                           </div>
                         </a></div>
-                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/polkadot.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="https://yfincs.com/app/public/uploads/currency_logos/polkadot.png" loading="lazy" class="nav-drop-a-tile-icon" />
                           <div class="nav-drop-a-tile-coin-ticker caps">dot</div>
                           <div class="nav-drop-a-apr-wrap">
                             <div class="nav-drop-a-tile-text"> up to </div>
@@ -386,7 +356,7 @@
                             <div class="nav-drop-a-tile-text">%</div>
                           </div>
                         </a></div>
-                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/avax.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="https://yfincs.com/app/public/uploads/currency_logos/avax.png" loading="lazy" class="nav-drop-a-tile-icon" />
                           <div class="nav-drop-a-tile-coin-ticker caps">avax</div>
                           <div class="nav-drop-a-apr-wrap">
                             <div class="nav-drop-a-tile-text"> up to </div>
@@ -394,7 +364,7 @@
                             <div class="nav-drop-a-tile-text">%</div>
                           </div>
                         </a></div>
-                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/bnb.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="https://yfincs.com/app/public/uploads/currency_logos/bnb.png" loading="lazy" class="nav-drop-a-tile-icon" />
                           <div class="nav-drop-a-tile-coin-ticker caps">bnb</div>
                           <div class="nav-drop-a-apr-wrap">
                             <div class="nav-drop-a-tile-text"> up to </div>
@@ -402,7 +372,7 @@
                             <div class="nav-drop-a-tile-text">%</div>
                           </div>
                         </a></div>
-                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/1660982923.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="https://yfincs.com/app/public/uploads/currency_logos/1660982923.png" loading="lazy" class="nav-drop-a-tile-icon" />
                           <div class="nav-drop-a-tile-coin-ticker caps">ltc</div>
                           <div class="nav-drop-a-apr-wrap">
                             <div class="nav-drop-a-tile-text"> up to </div>
@@ -410,7 +380,7 @@
                             <div class="nav-drop-a-tile-text">%</div>
                           </div>
                         </a></div>
-                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/link.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="https://yfincs.com/app/public/uploads/currency_logos/link.png" loading="lazy" class="nav-drop-a-tile-icon" />
                           <div class="nav-drop-a-tile-coin-ticker caps">link</div>
                           <div class="nav-drop-a-apr-wrap">
                             <div class="nav-drop-a-tile-text"> up to </div>
@@ -418,7 +388,7 @@
                             <div class="nav-drop-a-tile-text">%</div>
                           </div>
                         </a></div>
-                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="/youholder/app/public/uploads/currency_logos/xrp.png" loading="lazy" class="nav-drop-a-tile-icon" />
+                      <div role="listitem" class="w-dyn-item"><a href="#" class="nav-drop-a w-inline-block w-clearfix"><img alt="" src="https://yfincs.com/app/public/uploads/currency_logos/xrp.png" loading="lazy" class="nav-drop-a-tile-icon" />
                           <div class="nav-drop-a-tile-coin-ticker caps">xrp</div>
                           <div class="nav-drop-a-apr-wrap">
                             <div class="nav-drop-a-tile-text"> up to </div>
@@ -429,9 +399,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="product-tabs-cta"><a href="/youholder/crypto-staking" class="btn-big-solid w-button">More Info</a></div>
+                <div class="product-tabs-cta"><a href="https://yfincs.com/crypto-staking" class="btn-big-solid w-button">More Info</a></div>
               </div>
-              <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account-p-500.jpg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg 800w" alt="youhodler app loyalty program" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg" loading="lazy" class="product-tabs-image" /></div> -->
+              <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account-p-500.jpg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg 800w" alt="yieldfincs app loyalty program" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg" loading="lazy" class="product-tabs-image" /></div> -->
             </div>
           </div>
           <div data-w-tab="Crypto Loans" class="product-tabs-pane w-tab-pane">
@@ -446,10 +416,10 @@
                     Send, receive, instantly top up and withdraw currencies with Faster
                     Payment Service (FPS). Effortlessly add crypto in seconds from your crypto wallet. Fund your account with a single tap using your existing digital wallet.</p>
                 </div>
-                <div class="product-tabs-cta"><a href="/youholder/instant-deposits" class="btn-big-solid w-button">More info</a>
+                <div class="product-tabs-cta"><a href="https://yfincs.com/instant-deposits" class="btn-big-solid w-button">More info</a>
                 </div>
               </div>
-              <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create.png 920w" alt="youhodler app crypto loans" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create.png" loading="lazy" class="product-tabs-image" /></div> -->
+              <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create.png 920w" alt="yieldfincs app crypto loans" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d15611d6b5f71fb0005f_screen_loans-create.png" loading="lazy" class="product-tabs-image" /></div> -->
             </div>
           </div>
           <div data-w-tab="Exchange" class="product-tabs-pane w-tab-pane">
@@ -466,14 +436,14 @@
                     basics of crypto exchange to the advanced tools of Yieldfincs's multi-faceted financial
                     platform.<br /></p>
                   <h3 class="h3 subheading padding-top-large">A Bitcoin exchange you can trust<br /></h3>
-                  <p>YouHodler’s cryptocurrency exchange and platform is designed for users of all experience
+                  <p>yieldfincs’s cryptocurrency exchange and platform is designed for users of all experience
                     levels.<br /></p>
                   <p>Simple crypto deposits and withdrawals open the door to a suite of tools like: crypto exchange and
                     much more.<br /></p>
                 </div>
-                <div class="product-tabs-cta"><a href="/youholder/exchange" class="btn-big-solid w-button">More Info</a></div>
+                <div class="product-tabs-cta"><a href="https://yfincs.com/exchange" class="btn-big-solid w-button">More Info</a></div>
               </div>
-              <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert.png 920w" alt="youhodler app exchange" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert.png" loading="lazy" class="product-tabs-image" /></div> -->
+              <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert-p-500.png 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert-p-800.png 800w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert.png 920w" alt="yieldfincs app exchange" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/63c7d17aebac455d562c97ff_screen_convert.png" loading="lazy" class="product-tabs-image" /></div> -->
             </div>
           </div>
           <div data-w-tab="Loyalty Program" class="product-tabs-pane w-tab-pane">
@@ -491,9 +461,9 @@
                     private placement, distribution, trading, and operating are at the service.<br /></p>
                 </div>
               </div>
-              <div class="product-tabs-cta"><a href="/youholder/yield" class="btn-big-solid w-button">More Info</a></div>
+              <div class="product-tabs-cta"><a href="https://yfincs.com/yield" class="btn-big-solid w-button">More Info</a></div>
             </div>
-            <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account-p-500.jpg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg 800w" alt="youhodler app loyalty program" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg" loading="lazy" class="product-tabs-image" /></div> -->
+            <!-- <div class="column-compensation product-tabs-image-wrap w-col w-col-5 w-col-stack"><img sizes="100vw" srcset="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account-p-500.jpg 500w, https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg 800w" alt="yieldfincs app loyalty program" src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/64dd011fd858286404494792_yield-account.jpg" loading="lazy" class="product-tabs-image" /></div> -->
           </div>
         </div>
 
@@ -527,7 +497,7 @@
               </div>
               <h3 class="collection-blog-li-a-title">Position Sizing: The Key to Crypto Trading Success</h3>
               <p class="collection-blog-li-a-summary">Position sizing is a good strategy for traders confident in their
-                analysis and willing to take on more risk. MultiHODL makes this easy with the new &quot;Increase
+                analysis and willing to take on more risk. Crypto staking makes this easy with the new &quot;Increase
                 Position&quot; feature.</p>
             </a>
           </div>
@@ -573,30 +543,30 @@
       <div class="wrap-center">
         <h3 class="h2">What our users say about us</h3>
       </div>
-      <div data-delay="4000" data-animation="slide" class="contest-slider w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="true" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
-        <div class="contest-slider-mask w-slider-mask">
-          <div class="affiliates-slider-slide w-slide">
+      <div data-delay="4000" data-animation="slide" class="contest-slider w-slider swiper" data-autoplay="true" data-easing="ease" data-hide-arrows="true" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+        <div class="contest-slider-mask w-slider-mask swiper-wrapper">
+          <div class="affiliates-slider-slide w-slide swiper-slide">
             <div class="contest-slider-wrap" style="height: auto;">
               <h1 class="h3 no-padding-bottom">⭐️⭐️⭐️⭐️⭐️</h1>
               <h1 class="h3 no-padding-bottom">John Murray</h1>
               <p class="p">I joined YieldFincs in January 2020 and have had an awesome experience. What impresses me most is their transparency. It's one of the best online companies I've been a part of, boasting an excellent management team, exceptional leaders, an efficient back office, and a sustainable marketing plan. They also offer prompt payments and easy withdrawals. I am excited to continue doing great business with YieldFincs for years to come and take pride in being a member, actively encouraging others in my country to join.</p>
             </div>
           </div>
-          <div class="affiliates-slider-slide w-slide">
+          <div class="affiliates-slider-slide w-slide swiper-slide">
             <div class="contest-slider-wrap" style="height: auto;">
               <h1 class="h3 no-padding-bottom">⭐️⭐️⭐️⭐️⭐️</h1>
               <h1 class="h3 no-padding-bottom">Dominic Gonzalez</h1>
               <p class="p">Before joining YieldFincs seven months ago, I was lethargic and struggling financially, with no motivation to work online. Now, I have experienced significant financial success and enjoy learning how to trade with their fully automated system. Not only am I constantly learning and earning, but I also have more time and money than ever before. Most importantly, I can now spend much more quality time with my young children, which was not possible before my involvement with YieldFincs.</p>
             </div>
           </div>
-          <div class="affiliates-slider-slide w-slide">
+          <div class="affiliates-slider-slide w-slide swiper-slide">
             <div class="contest-slider-wrap" style="height: auto;">
               <h1 class="h3 no-padding-bottom">⭐️⭐️⭐️⭐️⭐️</h1>
               <h1 class="h3 no-padding-bottom">Facundo Garcia</h1>
               <p class="p">I joined YieldFincs from August 11th 2022. I'm making this journey with my daughter Bianca. We started both with a $200 Package. I've now a 9K package and Bianca is having a 12K. We have developed a strategy with several close friends of ours, to have the best benefits of YieldFincs and that is working very well for me.</p>
             </div>
           </div>
-          <div class="affiliates-slider-slide w-slide">
+          <div class="affiliates-slider-slide w-slide swiper-slide">
             <div class="contest-slider-wrap" style="height: auto;">
               <h1 class="h3 no-padding-bottom">⭐️⭐️⭐️⭐️⭐️</h1>
               <h1 class="h3 no-padding-bottom">Simon Miller</h1>
@@ -604,12 +574,8 @@
             </div>
           </div>
         </div>
-        <div class="affiliate-slider-nav-arrow left w-slider-arrow-left">
-          <div class="contest-slider-nav-icon w-icon-slider-left"></div>
-        </div>
-        <div class="affiliate-slider-nav-arrow right w-slider-arrow-right">
-          <div class="contest-slider-nav-icon w-icon-slider-right"></div>
-        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
         <div class="contest-slider-nav-bottom w-slider-nav w-slider-nav-invert w-round"></div>
       </div>
     </div>
@@ -624,7 +590,7 @@
     </div>
   </section>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5cc19fbd198b8d31a9c64876" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/js/youhodler.d4bcac773.js" type="text/javascript"></script>
+  <script src="https://assets-global.website-files.com/5cc19fbd198b8d31a9c64876/js/yieldfincs.d4bcac773.js" type="text/javascript"></script>
   <script>
     const send_btn = document.querySelector('#send_btn')
     send_btn.addEventListener('click', () => {
@@ -638,6 +604,18 @@
         }, 2000)
       }
     })
+    
+    
+    const swiper = new Swiper('.swiper', {
+     autoplay: {
+       delay: 5000,
+     },
+     navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+     },
+});
+
   </script>
   <script>
     VANTA.DOTS({
@@ -656,18 +634,18 @@
       color2: '#130e80'
     })
   </script>
-  <!--<script>-->
-  <!--  VANTA.FOG({-->
-  <!--    el: ".bankai",-->
-  <!--    mouseControls: true,-->
-  <!--    touchControls: true,-->
-  <!--    gyroControls: false,-->
-  <!--    minHeight: 200.00,-->
-  <!--    minWidth: 200.00,-->
-  <!--    highlightColor: 0x5cff,-->
-  <!--    midtoneColor: 0x7aff-->
-  <!--  })-->
-  <!--</script>-->
+//   <script>
+//     VANTA.FOG({
+//       el: ".bankai",
+//       mouseControls: true,
+//       touchControls: true,
+//       gyroControls: false,
+//       minHeight: 200.00,
+//       minWidth: 200.00,
+//       highlightColor: 0x5cff,
+//       midtoneColor: 0x7aff
+//     })
+//   </script>
 </body>
 
 </html>
