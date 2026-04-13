@@ -68,7 +68,7 @@ include "../../backend/adminData.php";
             <section class="content">
 
                 <?php if (isset($_SESSION['msg'])) { ?>
-                    <div class="alert alert-info alert-dismissible bg-info text-white border-0 fade show" role="alert">
+                    <div class="alert alert-success alert-dismissible text-white border-0 fade show" role="alert">
                         <?= $_SESSION['msg'] ?>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>

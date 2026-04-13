@@ -674,6 +674,45 @@ class AdminModule extends Connection
         }
     }
 
+    public function deleteInvestment($id)
+    {
+        $this->sql = "DELETE FROM investments WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false . $th->getMessage();
+        }
+    }
+
+    public function deleteStake($id)
+    {
+        $this->sql = "DELETE FROM stakes WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false . $th->getMessage();
+        }
+    }
+
+    public function deleteKyc($id)
+    {
+        $this->sql = "DELETE FROM personal_documents WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false . $th->getMessage();
+        }
+    }
+
     // ******** GET ROW COUNT ***********
     public function numOfUsers()
     {

@@ -65,6 +65,12 @@ include "../../backend/adminData.php";
         <div class="content-wrapper">
             <!-- Main content -->
             <section class="content">
+                <?php if (isset($_SESSION['msg'])) { ?>
+                    <div class="alert alert-info alert-dismissible bg-info text-white border-0 fade show" role="alert">
+                        <?= $_SESSION['msg'] ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php unset($_SESSION['msg']); } ?>
                 <div class="box box-default">
                     <div class="box-body">
                         <div class="d-flex justify-content-between">
@@ -88,8 +94,7 @@ include "../../backend/adminData.php";
                                                         <th title="First Name">Name</th>
                                                         <th title="Phone">Amount</th>
                                                         <th title="Group">To</th>
-                                                        <th title="Status">Date & time</th>
-                                                        <!-- <th title="Action">Action</th> -->
+                                                        <th title="Action">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -101,7 +106,9 @@ include "../../backend/adminData.php";
                                                             <td><?= $t['amount'] . ' ' . $t['wallet'] ?></td>
                                                             <td><?= $t['from_to'] ?></td>
                                                             <td><?= $t['datetime'] ?></td>
-                                                            <!-- <td><button class="btn btn-success">Verify</button>&nbsp;<button class="btn btn-danger">Delete</button></td> -->
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger delete-btn" data-id="<?= $t['id'] ?>" data-type="<?= $t['transaction_type'] ?>" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fa fa-trash"></i></button>
+                                                            </td>
                                                         </tr>
                                                     <?php } ?>
                                                 </tbody>
@@ -119,41 +126,25 @@ include "../../backend/adminData.php";
         <footer class="main-footer">
             <?php include "../master/footer.php" ?>
             
-            <!-- Delete Modal for buttons-->
-            <div class="modal fade" id="confirmDelete" role="dialog" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
+            <!-- Delete Modal -->
+            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content w-100 h-100 aliceblue">
                         <div class="modal-header">
                             <h4 class="modal-title f-18">Confirm Delete</h4>
                             <a type="button" class="close f-18" data-bs-dismiss="modal" aria-hidden="true">&times;</a>
                         </div>
-                        <div class="px-3 f-14">
-                            <p><strong>Are you sure you want to delete?</strong></p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger f-14" id="confirm">Yes</button>
-                            <button type="button" class="btn btn-default f-14" data-bs-dismiss="modal">No</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Delete Modal for href-->
-            <div class="modal fade del-modal" id="delete-warning-modal" role="dialog">
-                <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content w-100 h-100 aliceblue">
-                        <div class="modal-header">
-                            <h4 class="modal-title f-18">Confirm Delete</h4>
-                            <a type="button" class="close f-18" data-bs-dismiss="modal">&times;</a>
-                        </div>
-                        <div class="px-3 f-14">
-                            <p><strong>Are you sure you want to delete?</strong></p>
-                        </div>
-                        <div class="modal-footer">
-                            <a class="btn btn-danger f-14" id="delete-modal-yes" href="javascript:void(0)">Yes</a>
-                            <button type="button" class="btn btn-default f-14" data-bs-dismiss="modal">No</button>
-                        </div>
+                        <form action="../../backend/actionsAdmin/deleteTransaction.php" method="POST">
+                            <div class="modal-body px-3 f-14">
+                                <p><strong>Are you sure you want to delete this record?</strong></p>
+                                <input type="hidden" name="id" id="delete_id">
+                                <input type="hidden" name="transaction_type" id="delete_type">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" name="delete" class="btn btn-danger f-14">Yes, Delete</button>
+                                <button type="button" class="btn btn-default f-14" data-bs-dismiss="modal">No, Cancel</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -191,6 +182,13 @@ include "../../backend/adminData.php";
                 "autoWidth": false,
                 "stateSave": true
             });
+        });
+
+        $(document).on('click', '.delete-btn', function() {
+            var id = $(this).data('id');
+            var type = $(this).data('type');
+            $('#delete_id').val(id);
+            $('#delete_type').val(type);
         });
     </script>
 </body>
