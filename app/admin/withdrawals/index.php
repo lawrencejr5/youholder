@@ -199,7 +199,8 @@ include "../../backend/adminData.php";
                 "order": [],
                 "pageLength": 10,
                 "responsive": true,
-                "autoWidth": false
+                "autoWidth": false,
+                "stateSave": true
             });
         });
     </script>
