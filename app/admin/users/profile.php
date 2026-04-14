@@ -66,6 +66,12 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
                 <div id="user-edit">
                     <?php include "../master/usernav.php" ?>
 
+                    <?php if (isset($_SESSION['msg'])) { ?>
+                        <div class="mt-3">
+                            <?= $_SESSION['msg'] ?>
+                        </div>
+                    <?php unset($_SESSION['msg']); } ?>
+
                     <div class="row align-items-center">
                         <div class="col-md-4">
                             <div class="d-flex align-items-center">
