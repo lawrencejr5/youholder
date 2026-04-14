@@ -232,6 +232,18 @@ $data['single_user'] = $adminModule->getUserData($_GET['userid']);
                                                             </div>
                                                         </div>
 
+                                                        <!-- Verified Status -->
+                                                        <div class="row form-group">
+                                                            <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="verified">Verification Status</label>
+                                                            <div class="col-sm-6">
+                                                                <select class="form-control f-14" name="verified" id="verified" required>
+                                                                    <option value="0" <?= $u['verified'] == '0' ? 'selected' : '' ?>>Unverified</option>
+                                                                    <option value="1" <?= $u['verified'] == '1' ? 'selected' : '' ?>>Verified</option>
+                                                                    <option value="2" <?= $u['verified'] == '2' ? 'selected' : '' ?>>Blocked</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
                                                         <!-- Status -->
                                                         <!-- <div class="row form-group">
                                                             <label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14 require" for="status">Status</label>

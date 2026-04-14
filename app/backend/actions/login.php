@@ -14,13 +14,13 @@ if (isset($_POST['email'])) {
 
     $login = $modules->login($email, $pass);
     if ($login->rowCount() == 1) {
-        if ($modules->checkEmailVerified($email) == '1') {
-            $data['user'] = $login->fetchAll();
-            foreach ($data['user'] as $u) {
-                $_SESSION['id'] = $u['id'];
-                $_SESSION['admin'] = $u['admin'];
-            }
+        $user = $login->fetch(PDO::FETCH_ASSOC);
+        if ($user['verified'] == '1') {
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['admin'] = $user['admin'];
             $response['header'] = 'signin';
+        } elseif ($user['verified'] == '2') {
+            $response['header'] = 'blocked';
         } else {
             $response['header'] = 'not_verified';
         }

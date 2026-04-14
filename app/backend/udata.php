@@ -12,6 +12,11 @@ $uID = $_SESSION['id'];
 // User info
 $data['user'] = $modules->getUserData($uID);
 foreach ($data['user'] as $u) {
+    if ($u['verified'] == '2') {
+        session_destroy();
+        header("location: ../../login");
+        exit();
+    }
     $fname = $u['fname'];
     $lname = $u['lname'];
     $fullname = $u['fname'] . ' ' . $u['lname'];

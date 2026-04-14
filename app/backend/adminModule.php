@@ -521,9 +521,9 @@ class AdminModule extends Connection
 
     // ******** UPDATE ***********
 
-    public function updateUser($id, $fname, $lname, $email, $phone, $country, $state, $city, $address1, $address2, $password)
+    public function updateUser($id, $fname, $lname, $email, $phone, $country, $state, $city, $address1, $address2, $password, $verified)
     {
-        $this->sql = "UPDATE users SET fname = :fname, lname = :lname, email = :email, address1 = :address1, address2 = :address2, city = :city, state = :state, country = :country, phone = :phone, password = :password WHERE id = :id";
+        $this->sql = "UPDATE users SET fname = :fname, lname = :lname, email = :email, address1 = :address1, address2 = :address2, city = :city, state = :state, country = :country, phone = :phone, password = :password, verified = :verified WHERE id = :id";
         try {
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':id', $id);
@@ -537,6 +537,7 @@ class AdminModule extends Connection
             $this->stmt->bindParam(':state', $state);
             $this->stmt->bindParam(':city', $city);
             $this->stmt->bindParam(':password', $password);
+            $this->stmt->bindParam(':verified', $verified);
             $this->stmt->execute();
             return true;
         } catch (PDOException $th) {

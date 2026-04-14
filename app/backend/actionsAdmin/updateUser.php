@@ -16,13 +16,14 @@ if (isset($_POST['updateProfile'])) {
     $city = $_POST['city'];
     $password = $_POST['password'];
     $cpassword = $_POST['cpassword'];
+    $verified = $_POST['verified'];
 
     if (empty($fname) || empty($lname) || empty($email) || empty($password) || empty($cpassword)) {
         echo "<script>alert('An error occured, please fill required fields')</script>";
     } elseif ($password !== $cpassword) {
         echo "<script>alert('An error occured, passwords do not match')</script>";
     } else {
-        if ($adminModule->updateUser($id, $fname, $lname, $email, $phone, $country, $state, $city, $address1, $address2, $password)) {
+        if ($adminModule->updateUser($id, $fname, $lname, $email, $phone, $country, $state, $city, $address1, $address2, $password, $verified)) {
             header("location: ../../admin/users/profile.php?userid=$id");
         }
     }

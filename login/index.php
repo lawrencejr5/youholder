@@ -272,6 +272,26 @@
 									tapToDismiss: !1
 								})
 								loginBtn.html('Try again')
+							} else if (res.header == 'blocked') {
+								toastr.error("Your account has been blocked!!!", "Access Denied", {
+									positionClass: "toast-top-center",
+									timeOut: 5e3,
+									closeButton: !0,
+									debug: !1,
+									newestOnTop: !0,
+									progressBar: !0,
+									preventDuplicates: !0,
+									onclick: null,
+									showDuration: "300",
+									hideDuration: "1000",
+									extendedTimeOut: "1000",
+									showEasing: "swing",
+									hideEasing: "linear",
+									showMethod: "fadeIn",
+									hideMethod: "fadeOut",
+									tapToDismiss: !1
+								})
+								loginBtn.html('Access Denied')
 							} else if (res.header == 'not_verified') {
 								toastr.warning("Your account is not verified", "Account not verified", {
 									positionClass: "toast-top-center",
