@@ -422,8 +422,8 @@ class AdminModule extends Connection
             return false . $e->getMessage();
         }
     }
-    
-    
+
+
     public function getUserByAcc($acc)
     {
         $this->sql = "SELECT * FROM users WHERE account_no = :account_no";
@@ -436,14 +436,14 @@ class AdminModule extends Connection
             return false . $e->getMessage();
         }
     }
-    
-    
 
 
 
 
- // ******** INSERT ***********
-    
+
+
+    // ******** INSERT ***********
+
     public function adminAddDeposit($uid, $wallet_id, $wallet_name, $amount, $transaction_type, $approved)
     {
         try {
@@ -647,7 +647,7 @@ class AdminModule extends Connection
             return false;
         }
     }
-    
+
     public function deleteDeposit($id)
     {
         $this->sql = "DELETE FROM deposits WHERE id = :id";
@@ -660,7 +660,7 @@ class AdminModule extends Connection
             return false;
         }
     }
-    
+
     public function deleteWithdrawal($id)
     {
         $this->sql = "DELETE FROM withdrawals WHERE id = :id";
@@ -823,6 +823,47 @@ class AdminModule extends Connection
         try {
             $this->stmt = $this->conn->prepare($this->sql);
             $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false;
+        }
+    }
+
+
+    public function updateStake($id, $staked, $expected, $daily_earned, $earned, $start_date, $end_date, $status)
+    {
+        $this->sql = "UPDATE stakes SET staked = :staked, expected = :expected, daily_earned = :daily_earned, earned = :earned, start_date = :start_date, end_date = :end_date, status = :status WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->bindParam(':staked', $staked);
+            $this->stmt->bindParam(':expected', $expected);
+            $this->stmt->bindParam(':daily_earned', $daily_earned);
+            $this->stmt->bindParam(':earned', $earned);
+            $this->stmt->bindParam(':start_date', $start_date);
+            $this->stmt->bindParam(':end_date', $end_date);
+            $this->stmt->bindParam(':status', $status);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false;
+        }
+    }
+
+    public function updateInvestment($id, $amount, $to_earn, $earned, $expected, $start_date, $end_date, $status)
+    {
+        $this->sql = "UPDATE investments SET amount = :amount, to_earn = :to_earn, earned = :earned, expected = :expected, start_date = :start_date, end_date = :end_date, status = :status WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->bindParam(':amount', $amount);
+            $this->stmt->bindParam(':to_earn', $to_earn);
+            $this->stmt->bindParam(':earned', $earned);
+            $this->stmt->bindParam(':expected', $expected);
+            $this->stmt->bindParam(':start_date', $start_date);
+            $this->stmt->bindParam(':end_date', $end_date);
+            $this->stmt->bindParam(':status', $status);
             $this->stmt->execute();
             return true;
         } catch (PDOException $th) {

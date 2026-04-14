@@ -124,12 +124,19 @@ include "../../backend/adminData.php";
                                                             <td><?= $i['end_date'] ?></td>
                                                             <td><?= $i['status'] ?></td>
                                                             <td>
-                                                                <form action="../../backend/actionsAdmin/" method="post" style="display:inline;">
-                                                                    <input type="hidden" name="id" value="<?= $i['id'] ?>">
-                                                                    <input type="hidden" name="uid" value="<?= $i['uid'] ?>">
-                                                                    <button type="submit" name="declineKyc" class="btn btn-danger">End earn</button>
-                                                                </form>
-                                                                <button type="button" class="btn btn-danger delete-btn" data-id="<?= $i['id'] ?>" data-type="investment" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fa fa-trash"></i></button>
+                                                                <button type="button" class="btn btn-info edit-btn" 
+                                                                    data-id="<?= $i['id'] ?>" 
+                                                                    data-amount="<?= $i['amount'] ?>" 
+                                                                    data-toearn="<?= $i['to_earn'] ?>" 
+                                                                    data-earned="<?= $i['earned'] ?>" 
+                                                                    data-expected="<?= $i['expected'] ?>" 
+                                                                    data-start="<?= $i['start_date'] ?>" 
+                                                                    data-end="<?= $i['end_date'] ?>" 
+                                                                    data-status="<?= $i['status'] ?>" 
+                                                                    onclick="setEditInvestData(this)" 
+                                                                    data-bs-toggle="modal" data-bs-target="#editInvestModal">
+                                                                    <i class="fa fa-edit"></i></button>
+                                                                <button type="button" class="btn btn-danger delete-btn" data-id="<?= $i['id'] ?>" data-type="investment" onclick="setDeleteData(this)" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fa fa-trash"></i></button>
                                                             </td>
                                                         </tr>
                                                     <?php } ?>
@@ -170,6 +177,58 @@ include "../../backend/adminData.php";
                     </div>
                 </div>
             </div>
+
+            <!-- Edit Investment Modal -->
+            <div class="modal fade" id="editInvestModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content aliceblue">
+                        <form action="../../backend/actionsAdmin/manageInvestments.php" method="post">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Edit Investment</h5>
+                                <button type="button" class="btn-close f-18" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <input type="hidden" name="id" id="edit_invest_id">
+                                <div class="form-group mb-3">
+                                    <label>Amount</label>
+                                    <input type="text" name="amount" id="edit_amount" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>To Earn</label>
+                                    <input type="text" name="to_earn" id="edit_toearn" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Earned</label>
+                                    <input type="text" name="earned" id="edit_earned" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Expected</label>
+                                    <input type="text" name="expected" id="edit_expected" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Start Date</label>
+                                    <input type="text" name="start_date" id="edit_start" class="form-control" required placeholder="YYYY-MM-DD">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>End Date</label>
+                                    <input type="text" name="end_date" id="edit_end" class="form-control" required placeholder="YYYY-MM-DD">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Status</label>
+                                    <select name="status" id="edit_status" class="form-control">
+                                        <option value="active">Active</option>
+                                        <option value="ended">Ended</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" name="updateInvestment" class="btn btn-theme">Update Investment</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </footer>
         <div class="control-sidebar-bg"></div>
     </div>
@@ -205,12 +264,32 @@ include "../../backend/adminData.php";
             });
         });
 
-        $(document).on('click', '.delete-btn', function() {
-            var id = $(this).data('id');
-            var type = $(this).data('type');
-            $('#delete_id').val(id);
-            $('#delete_type').val(type);
-        });
+        function setEditInvestData(btn) {
+            var id = btn.getAttribute('data-id');
+            var amount = btn.getAttribute('data-amount');
+            var toearn = btn.getAttribute('data-toearn');
+            var earned = btn.getAttribute('data-earned');
+            var expected = btn.getAttribute('data-expected');
+            var start = btn.getAttribute('data-start');
+            var end = btn.getAttribute('data-end');
+            var status = btn.getAttribute('data-status');
+
+            document.getElementById('edit_invest_id').value = id;
+            document.getElementById('edit_amount').value = amount;
+            document.getElementById('edit_toearn').value = toearn;
+            document.getElementById('edit_earned').value = earned;
+            document.getElementById('edit_expected').value = expected;
+            document.getElementById('edit_start').value = start;
+            document.getElementById('edit_end').value = end;
+            document.getElementById('edit_status').value = status;
+        }
+
+        function setDeleteData(btn) {
+            var id = btn.getAttribute('data-id');
+            var type = btn.getAttribute('data-type');
+            document.getElementById('delete_id').value = id;
+            document.getElementById('delete_type').value = type;
+        }
     </script>
 </body>
 

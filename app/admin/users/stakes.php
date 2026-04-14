@@ -112,12 +112,20 @@ $data['user_wallets'] = $adminModule->getUserWallets($_GET['userid']);
                                                             <td><?= $s['end_date'] ?></td>
                                                             <td><?= $s['status'] ?></td>
                                                             <td>
-                                                                <form action="../../backend/actionsAdmin/unstake.php" method="post" style="display:inline;">
-                                                                    <input type="hidden" name="id" value="<?= $s['id'] ?>">
-                                                                    <input type="hidden" name="uid" value="<?= $s['uid'] ?>">
-                                                                    <button type="submit" name="unstake" class="btn btn-danger">Unstake</button>
-                                                                </form>
-                                                                <button type="button" class="btn btn-danger delete-btn" data-id="<?= $s['id'] ?>" data-type="staking" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fa fa-trash"></i></button>
+                                                                <button type="button" class="btn btn-info edit-btn" 
+                                                                    data-id="<?= $s['id'] ?>" 
+                                                                    data-staked="<?= $s['staked'] ?>" 
+                                                                    data-expected="<?= $s['expected'] ?>" 
+                                                                    data-daily="<?= $s['daily_earned'] ?>" 
+                                                                    data-earned="<?= $s['earned'] ?>" 
+                                                                    data-start="<?= $s['start_date'] ?>" 
+                                                                    data-end="<?= $s['end_date'] ?>" 
+                                                                    data-status="<?= $s['status'] ?>" 
+                                                                    onclick="setEditStakeData(this)" 
+                                                                    data-bs-toggle="modal" data-bs-target="#editStakeModal">
+                                                                    <i class="fa fa-edit"></i></button>
+
+                                                                <button type="button" class="btn btn-danger delete-btn" data-id="<?= $s['id'] ?>" data-type="staking" onclick="setDeleteData(this)" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fa fa-trash"></i></button>
                                                             </td>
                                                         </tr>
                                                     <?php } ?>
@@ -159,6 +167,59 @@ $data['user_wallets'] = $adminModule->getUserWallets($_GET['userid']);
                     </div>
                 </div>
             </div>
+
+            <!-- Edit Stake Modal -->
+            <div class="modal fade" id="editStakeModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content aliceblue">
+                        <form action="../../backend/actionsAdmin/manageStakes.php" method="post">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Edit Stake</h5>
+                                <button type="button" class="btn-close f-18" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <input type="hidden" name="id" id="edit_stake_id">
+                                <div class="form-group mb-3">
+                                    <label>Staked Amount</label>
+                                    <input type="text" name="staked" id="edit_staked" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Expected Amount</label>
+                                    <input type="text" name="expected" id="edit_expected" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Daily Earned</label>
+                                    <input type="text" name="daily_earned" id="edit_daily" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Total Earned</label>
+                                    <input type="text" name="earned" id="edit_earned" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Start Date</label>
+                                    <input type="text" name="start_date" id="edit_start" class="form-control" required placeholder="YYYY-MM-DD">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>End Date</label>
+                                    <input type="text" name="end_date" id="edit_end" class="form-control" required placeholder="YYYY-MM-DD">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Status</label>
+                                    <select name="status" id="edit_status" class="form-control">
+                                        <option value="staking">Staking</option>
+                                        <option value="unstaked">Unstaked</option>
+                                        <option value="ended">Ended</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" name="updateStake" class="btn btn-theme">Update Stake</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </footer>
         <div class="control-sidebar-bg"></div>
     </div>
@@ -195,12 +256,32 @@ $data['user_wallets'] = $adminModule->getUserWallets($_GET['userid']);
             });
         });
 
-        $(document).on('click', '.delete-btn', function() {
-            var id = $(this).data('id');
-            var type = $(this).data('type');
-            $('#delete_id').val(id);
-            $('#delete_type').val(type);
-        });
+        function setEditStakeData(btn) {
+            var id = btn.getAttribute('data-id');
+            var staked = btn.getAttribute('data-staked');
+            var expected = btn.getAttribute('data-expected');
+            var daily = btn.getAttribute('data-daily');
+            var earned = btn.getAttribute('data-earned');
+            var start = btn.getAttribute('data-start');
+            var end = btn.getAttribute('data-end');
+            var status = btn.getAttribute('data-status');
+
+            document.getElementById('edit_stake_id').value = id;
+            document.getElementById('edit_staked').value = staked;
+            document.getElementById('edit_expected').value = expected;
+            document.getElementById('edit_daily').value = daily;
+            document.getElementById('edit_earned').value = earned;
+            document.getElementById('edit_start').value = start;
+            document.getElementById('edit_end').value = end;
+            document.getElementById('edit_status').value = status;
+        }
+
+        function setDeleteData(btn) {
+            var id = btn.getAttribute('data-id');
+            var type = btn.getAttribute('data-type');
+            document.getElementById('delete_id').value = id;
+            document.getElementById('delete_type').value = type;
+        }
     </script>
 </body>
 
