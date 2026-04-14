@@ -171,11 +171,11 @@ $stakePlans = $adminModule->getStakePlans();
                             <input type="number" step="0.00000001" name="min" class="form-control" required>
                         </div>
                         <div class="form-group mb-3">
-                            <label>Max Stake</label>
+                            <label>Max Stake Value ($)</label>
                             <input type="number" step="0.00000001" name="max" class="form-control" required>
                         </div>
                         <div class="form-group mb-3">
-                            <label>Max Value ($)</label>
+                            <label>Max Value Text ($)</label>
                             <input type="text" name="max_val" class="form-control" required>
                         </div>
                     </div>
@@ -217,12 +217,12 @@ $stakePlans = $adminModule->getStakePlans();
                                 required>
                         </div>
                         <div class="form-group mb-3">
-                            <label>Max Stake</label>
+                            <label>Max Stake Value ($)</label>
                             <input type="number" step="0.00000001" name="max" id="edit_max" class="form-control"
                                 required>
                         </div>
                         <div class="form-group mb-3">
-                            <label>Max Value ($)</label>
+                            <label>Max Value Text ($)</label>
                             <input type="text" name="max_val" id="edit_max_val" class="form-control" required>
                         </div>
                     </div>
