@@ -911,6 +911,132 @@ class AdminModule extends Connection
             return false;
         }
     }
+
+    // Investment Plans
+    public function getInvestPlans()
+    {
+        $this->sql = "SELECT * FROM invest_plans";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $th) {
+            return [];
+        }
+    }
+
+    public function addInvestPlan($plan, $min, $max, $monthly, $duration, $dura)
+    {
+        $this->sql = "INSERT INTO invest_plans(plan, min, max, monthly, duration, dura) VALUES(:plan, :min, :max, :monthly, :duration, :dura)";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':plan', $plan);
+            $this->stmt->bindParam(':min', $min);
+            $this->stmt->bindParam(':max', $max);
+            $this->stmt->bindParam(':monthly', $monthly);
+            $this->stmt->bindParam(':duration', $duration);
+            $this->stmt->bindParam(':dura', $dura);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false;
+        }
+    }
+
+    public function updateInvestPlan($id, $plan, $min, $max, $monthly, $duration, $dura)
+    {
+        $this->sql = "UPDATE invest_plans SET plan = :plan, min = :min, max = :max, monthly = :monthly, duration = :duration, dura = :dura WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->bindParam(':plan', $plan);
+            $this->stmt->bindParam(':min', $min);
+            $this->stmt->bindParam(':max', $max);
+            $this->stmt->bindParam(':monthly', $monthly);
+            $this->stmt->bindParam(':duration', $duration);
+            $this->stmt->bindParam(':dura', $dura);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false;
+        }
+    }
+
+    public function deleteInvestPlan($id)
+    {
+        $this->sql = "DELETE FROM invest_plans WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false;
+        }
+    }
+
+    // Stake Plans
+    public function getStakePlans()
+    {
+        $this->sql = "SELECT * FROM stake_plans";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $th) {
+            return [];
+        }
+    }
+
+    public function addStakePlan($plan, $crypto, $apy, $min, $max, $max_val)
+    {
+        $this->sql = "INSERT INTO stake_plans(plan, crypto, apy, min, max, max_val) VALUES(:plan, :crypto, :apy, :min, :max, :max_val)";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':plan', $plan);
+            $this->stmt->bindParam(':crypto', $crypto);
+            $this->stmt->bindParam(':apy', $apy);
+            $this->stmt->bindParam(':min', $min);
+            $this->stmt->bindParam(':max', $max);
+            $this->stmt->bindParam(':max_val', $max_val);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false;
+        }
+    }
+
+    public function updateStakePlan($id, $plan, $crypto, $apy, $min, $max, $max_val)
+    {
+        $this->sql = "UPDATE stake_plans SET plan = :plan, crypto = :crypto, apy = :apy, min = :min, max = :max, max_val = :max_val WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->bindParam(':plan', $plan);
+            $this->stmt->bindParam(':crypto', $crypto);
+            $this->stmt->bindParam(':apy', $apy);
+            $this->stmt->bindParam(':min', $min);
+            $this->stmt->bindParam(':max', $max);
+            $this->stmt->bindParam(':max_val', $max_val);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false;
+        }
+    }
+
+    public function deleteStakePlan($id)
+    {
+        $this->sql = "DELETE FROM stake_plans WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false;
+        }
+    }
 }
 
 

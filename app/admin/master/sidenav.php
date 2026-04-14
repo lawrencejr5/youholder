@@ -72,6 +72,15 @@
             </li>
 
 
+            <p class="pl-4 configuration">Plans</p>
+            <li class="">
+                <a href="../plans/investment.php"><i class="fa fa-list"></i><span>Investment Plans</span></a>
+            </li>
+            <li class="">
+                <a href="../plans/stakes.php"><i class="fa fa-list-ul"></i><span>Stake Plans</span></a>
+            </li>
+
+
             <p class="pl-4 configuration">Account</p>
             <!-- Currencies & Fees -->
             <li class="">
