@@ -46,8 +46,10 @@ include "../../backend/adminData.php";
     <link rel="stylesheet" type="text/css" href="../public/admin/templates/css/style.min.css">
 
     <!-- dataTables -->
-    <link rel="stylesheet" type="text/css" href="../public/dist/plugins/DataTables/DataTables-1.10.18/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" type="text/css" href="../public/dist/plugins/DataTables/Responsive-2.2.2/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="../public/dist/plugins/DataTables/DataTables-1.10.18/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="../public/dist/plugins/DataTables/Responsive-2.2.2/css/responsive.dataTables.min.css">
 
 
 
@@ -71,7 +73,8 @@ include "../../backend/adminData.php";
                         <?= $_SESSION['msg'] ?>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-                <?php unset($_SESSION['msg']); } ?>
+                    <?php unset($_SESSION['msg']);
+                } ?>
                 <div class="box box-default">
                     <div class="box-body">
                         <div class="d-flex justify-content-between">
@@ -88,42 +91,62 @@ include "../../backend/adminData.php";
                             <div class="col-md-12">
                                 <div class="panel panel-info">
                                     <div class="panel-body">
-                                        <table class="table table-striped table-hover f-14 dt-responsive" id="withdrawTable" width="100%" cellspacing="0">
-                                                <thead>
+                                        <table class="table table-striped table-hover f-14 dt-responsive"
+                                            id="withdrawTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th title="ID">ID</th>
+                                                    <th title="First Name">Name</th>
+                                                    <th title="Phone">Amount</th>
+                                                    <th title="Email">Wallet</th>
+                                                    <th title="Group">Address</th>
+                                                    <th title="Status">Verified</th>
+                                                    <th title="Status">Date & time</th>
+                                                    <th title="Action">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php $sn = 1;
+                                                foreach ($data['withdrawals'] as $w) { ?>
                                                     <tr>
-                                                        <th title="ID">ID</th>
-                                                        <th title="First Name">Name</th>
-                                                        <th title="Phone">Amount</th>
-                                                        <th title="Email">Wallet</th>
-                                                        <th title="Group">Address</th>
-                                                        <th title="Status">Verified</th>
-                                                        <th title="Status">Date & time</th>
-                                                        <th title="Action">Action</th>
+                                                        <td><?= $sn++ ?></td>
+                                                        <td><?= $w['fname'] . ' ' . $w['lname'] ?></td>
+                                                        <td><?= $w['amount'] . ' ' . $w['wallet_name'] ?></td>
+                                                        <td><?= $w['wallet_name'] ?></td>
+                                                        <td><?= $w['crypto_address'] ?></td>
+                                                        <td><?= $w['verified'] ?></td>
+                                                        <td><?= $w['datetime'] ?></td>
+                                                        <td>
+                                                            <form action="../../backend/actionsAdmin/approveWithdrawal.php"
+                                                                method="post" style="display:inline;">
+                                                                <input type="hidden" name="id" value="<?= $w['id'] ?>">
+                                                                <button type="submit" name="approveWithdrawal"
+                                                                    class="btn btn-success">Approve</button>&nbsp;
+                                                                <button type="submit" name="declineWithdrawal"
+                                                                    class="btn btn-danger">Decline</button>
+                                                            </form>
+                                                            <button type="button" class="btn btn-info edit-btn"
+                                                                data-id="<?= $w['id'] ?>" data-amount="<?= $w['amount'] ?>"
+                                                                data-wallet_name="<?= $w['wallet_name'] ?>"
+                                                                data-crypto_address="<?= $w['crypto_address'] ?>"
+                                                                data-datetime="<?= $w['datetime'] ?>"
+                                                                data-transaction_type="<?= $w['transaction_type'] ?>"
+                                                                data-from_to="<?= $w['from_to'] ?>"
+                                                                data-status="<?= $w['verified'] ?>"
+                                                                onclick="setEditWithdrawData(this)" data-bs-toggle="modal"
+                                                                data-bs-target="#editWithdrawModal">
+                                                                <i class="fa fa-edit"></i>
+                                                            </button>
+                                                            <button type="button" class="btn btn-danger delete-btn"
+                                                                data-id="<?= $w['id'] ?>" data-type="withdrawal"
+                                                                onclick="setDeleteData(this)" data-bs-toggle="modal"
+                                                                data-bs-target="#deleteModal"><i
+                                                                    class="fa fa-trash"></i></button>
+                                                        </td>
                                                     </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <?php $sn = 1;
-                                                    foreach ($data['withdrawals'] as $w) { ?>
-                                                        <tr>
-                                                            <td><?= $sn++ ?></td>
-                                                            <td><?= $w['fname'] . ' ' . $w['lname'] ?></td>
-                                                            <td><?= $w['amount'] . ' ' . $w['wallet_name'] ?></td>
-                                                            <td><?= $w['wallet_name'] ?></td>
-                                                            <td><?= $w['crypto_address'] ?></td>
-                                                            <td><?= $w['verified'] ?></td>
-                                                            <td><?= $w['datetime'] ?></td>
-                                                            <td>
-                                                                <form action="../../backend/actionsAdmin/approveWithdrawal.php" method="post" style="display:inline;">
-                                                                    <input type="hidden" name="id" value="<?= $w['id'] ?>">
-                                                                    <button type="submit" name="approveWithdrawal" class="btn btn-success">Approve</button>&nbsp;
-                                                                    <button type="submit" name="declineWithdrawal" class="btn btn-danger">Decline</button>
-                                                                </form>
-                                                                <button type="button" class="btn btn-danger delete-btn" data-id="<?= $w['id'] ?>" data-type="withdrawal" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fa fa-trash"></i></button>
-                                                            </td>
-                                                        </tr>
-                                                    <?php } ?>
-                                                </tbody>
-                                            </table>
+                                                <?php } ?>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -136,9 +159,10 @@ include "../../backend/adminData.php";
         <!-- footer -->
         <footer class="main-footer">
             <?php include "../master/footer.php" ?>
-            
+
             <!-- Delete Modal -->
-            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content w-100 h-100 aliceblue">
                         <div class="modal-header">
@@ -153,7 +177,67 @@ include "../../backend/adminData.php";
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" name="delete" class="btn btn-danger f-14">Yes, Delete</button>
-                                <button type="button" class="btn btn-default f-14" data-bs-dismiss="modal">No, Cancel</button>
+                                <button type="button" class="btn btn-default f-14" data-bs-dismiss="modal">No,
+                                    Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Edit Withdrawal Modal -->
+            <div class="modal fade" id="editWithdrawModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content aliceblue">
+                        <form action="../../backend/actionsAdmin/manageWithdrawals.php" method="post">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Edit Withdrawal</h5>
+                                <button type="button" class="btn-close f-18" data-bs-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <input type="hidden" name="id" id="edit_withdraw_id">
+                                <div class="form-group mb-3">
+                                    <label>Amount</label>
+                                    <input type="text" name="amount" id="edit_amount" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Wallet Name</label>
+                                    <input type="text" name="wallet_name" id="edit_wallet_name" class="form-control"
+                                        required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Crypto Address</label>
+                                    <input type="text" name="crypto_address" id="edit_crypto_address"
+                                        class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Transaction Type</label>
+                                    <input type="text" name="transaction_type" id="edit_transaction_type"
+                                        class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>From/To</label>
+                                    <input type="text" name="from_to" id="edit_from_to" class="form-control">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Datetime</label>
+                                    <input type="text" name="datetime" id="edit_datetime" class="form-control" required
+                                        placeholder="YYYY-MM-DD HH:MM:SS">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Status</label>
+                                    <select name="status" id="edit_status" class="form-control">
+                                        <option value="0">Pending</option>
+                                        <option value="1">Approved</option>
+                                        <option value="2">Declined</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" name="updateWithdrawal" class="btn btn-theme">Update
+                                    Withdrawal</button>
                             </div>
                         </form>
                     </div>
@@ -174,8 +258,10 @@ include "../../backend/adminData.php";
     <!-- AdminLTE App -->
     <script src="../public/admin/templates/js/app.min.js" type="text/javascript"></script>
     <!-- jquery.dataTables js -->
-    <script src="../public/dist/plugins/DataTables/DataTables-1.10.18/js/jquery.dataTables.min.js" type="text/javascript"></script>
-    <script src="../public/dist/plugins/DataTables/Responsive-2.2.2/js/dataTables.responsive.min.js" type="text/javascript"></script>
+    <script src="../public/dist/plugins/DataTables/DataTables-1.10.18/js/jquery.dataTables.min.js"
+        type="text/javascript"></script>
+    <script src="../public/dist/plugins/DataTables/Responsive-2.2.2/js/dataTables.responsive.min.js"
+        type="text/javascript"></script>
 
 
     <script type="text/javascript">
@@ -185,7 +271,7 @@ include "../../backend/adminData.php";
     </script>
     <script src="../public/admin/customs/js/body_script.min.js"></script>
     <script type="text/javascript">
-        $(function() {
+        $(function () {
             $("#withdrawTable").DataTable({
                 "order": [],
                 "pageLength": 10,
@@ -195,12 +281,32 @@ include "../../backend/adminData.php";
             });
         });
 
-        $(document).on('click', '.delete-btn', function() {
-            var id = $(this).data('id');
-            var type = $(this).data('type');
-            $('#delete_id').val(id);
-            $('#delete_type').val(type);
-        });
+        function setEditWithdrawData(btn) {
+            var id = btn.getAttribute('data-id');
+            var amount = btn.getAttribute('data-amount');
+            var wallet_name = btn.getAttribute('data-wallet_name');
+            var crypto_address = btn.getAttribute('data-crypto_address');
+            var datetime = btn.getAttribute('data-datetime');
+            var transaction_type = btn.getAttribute('data-transaction_type');
+            var from_to = btn.getAttribute('data-from_to');
+            var status = btn.getAttribute('data-status');
+
+            document.getElementById('edit_withdraw_id').value = id;
+            document.getElementById('edit_amount').value = amount;
+            document.getElementById('edit_wallet_name').value = wallet_name;
+            document.getElementById('edit_crypto_address').value = crypto_address;
+            document.getElementById('edit_datetime').value = datetime;
+            document.getElementById('edit_transaction_type').value = transaction_type;
+            document.getElementById('edit_from_to').value = from_to;
+            document.getElementById('edit_status').value = status;
+        }
+
+        function setDeleteData(btn) {
+            var id = btn.getAttribute('data-id');
+            var type = btn.getAttribute('data-type');
+            document.getElementById('delete_id').value = id;
+            document.getElementById('delete_type').value = type;
+        }
     </script>
 </body>
 

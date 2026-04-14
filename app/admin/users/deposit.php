@@ -186,31 +186,35 @@ $data['user_deposits'] = $adminModule->getUserDeposits('deposit', $_GET['userid'
                                                         <td><?= $d['datetime'] ?></td>
                                                         <td><?= $d['approved'] ?></td>
                                                         <td>
-                                                            <form action="../../backend/actionsAdmin/approveDeposit.php"
-                                                                method="post">
-                                                                <input type="hidden" name="id" value="<?= $d['id'] ?>">
-                                                                <input type="hidden" name="uid" value="<?= $d['uid'] ?>">
-                                                                <input type="hidden" name="deposit_amt"
-                                                                    value="<?= $d['deposit_amt'] ?>">
-                                                                <input type="hidden" name="return_amt"
-                                                                    value="<?= $d['return_amt'] ?>">
-                                                                <input type="hidden" name="wallet"
-                                                                    value="<?= $d['wallet'] ?>">
-                                                                <input type="hidden" name="wallet_id"
-                                                                    value="<?= $d['wallet_id'] ?>">
-                                                                <input type="hidden" name="currency"
-                                                                    value="<?= $d['currency'] ?>">
-                                                                <button type="submit" name="approveUserDeposit"
-                                                                    class="btn btn-success">Approve</button>&nbsp;
-                                                                <button type="submit" name="declineUserDeposit"
-                                                                    class="btn btn-danger">Decline</button>
-                                                                <button type="button" class="btn btn-danger delete-btn"
-                                                                    data-id="<?= $d['id'] ?>" data-type="deposit"
-                                                                    onclick="setDeleteData(this)" data-bs-toggle="modal"
-                                                                    data-bs-target="#deleteModal"><i
-                                                                        class="fa fa-trash"></i></button>
-                                                            </form>
-                                                        </td>
+                                                                <form action="../../backend/actionsAdmin/approveDeposit.php" method="post" style="display:inline;">
+                                                                    <input type="hidden" name="id" value="<?= $d['id'] ?>">
+                                                                    <input type="hidden" name="uid" value="<?= $d['uid'] ?>">
+                                                                    <input type="hidden" name="deposit_amt" value="<?= $d['deposit_amt'] ?>">
+                                                                    <input type="hidden" name="return_amt" value="<?= $d['return_amt'] ?>">
+                                                                    <input type="hidden" name="wallet" value="<?= $d['wallet'] ?>">
+                                                                    <input type="hidden" name="wallet_id" value="<?= $d['wallet_id'] ?>">
+                                                                    <input type="hidden" name="currency" value="<?= $d['currency'] ?>">
+                                                                    <button type="submit" name="approveUserDeposit" class="btn btn-success">Approve</button>&nbsp;
+                                                                    <button type="submit" name="declineUserDeposit" class="btn btn-danger">Decline</button>
+                                                                </form>
+                                                                <button type="button" class="btn btn-info edit-btn" 
+                                                                    data-id="<?= $d['id'] ?>" 
+                                                                    data-deposit_amt="<?= $d['deposit_amt'] ?>" 
+                                                                    data-return_amt="<?= $d['return_amt'] ?>" 
+                                                                    data-currency="<?= $d['currency'] ?>" 
+                                                                    data-wallet="<?= $d['wallet'] ?>" 
+                                                                    data-datetime="<?= $d['datetime'] ?>" 
+                                                                    data-transaction_type="<?= $d['transaction_type'] ?>" 
+                                                                    data-status="<?= $d['approved'] ?>" 
+                                                                    onclick="setEditDepositData(this)" 
+                                                                    data-bs-toggle="modal" data-bs-target="#editDepositModal">
+                                                                    <i class="fa fa-edit"></i>
+                                                                </button>
+                                                                <button type="button" class="btn btn-danger delete-btn" 
+                                                                    data-id="<?= $d['id'] ?>" data-type="deposit" 
+                                                                    onclick="setDeleteData(this)" data-bs-toggle="modal" 
+                                                                    data-bs-target="#deleteModal"><i class="fa fa-trash"></i></button>
+                                                            </td>
                                                     </tr>
                                                 <?php } ?>
                                             </tbody>
@@ -240,12 +244,65 @@ $data['user_deposits'] = $adminModule->getUserDeposits('deposit', $_GET['userid'
                             <div class="modal-body px-3 f-14">
                                 <p><strong>Are you sure you want to delete this record?</strong></p>
                                 <input type="hidden" name="id" id="delete_id">
-                                <input type="hidden" name="transaction_type" value="deposit" id="delete_type">
+                                <input type="hidden" name="transaction_type" id="delete_type">
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" name="delete" class="btn btn-danger f-14">Yes, Delete</button>
                                 <button type="button" class="btn btn-default f-14" data-bs-dismiss="modal">No,
                                     Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Edit Deposit Modal -->
+            <div class="modal fade" id="editDepositModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content aliceblue">
+                        <form action="../../backend/actionsAdmin/manageDeposits.php" method="post">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Edit Deposit</h5>
+                                <button type="button" class="btn-close f-18" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <input type="hidden" name="id" id="edit_deposit_id">
+                                <div class="form-group mb-3">
+                                    <label>Deposit Amount</label>
+                                    <input type="text" name="deposit_amt" id="edit_deposit_amt" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Return Amount</label>
+                                    <input type="text" name="return_amt" id="edit_return_amt" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Currency</label>
+                                    <input type="text" name="currency" id="edit_currency" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Wallet</label>
+                                    <input type="text" name="wallet" id="edit_wallet" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Transaction Type</label>
+                                    <input type="text" name="transaction_type" id="edit_transaction_type" class="form-control" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Datetime</label>
+                                    <input type="text" name="datetime" id="edit_datetime" class="form-control" required placeholder="YYYY-MM-DD HH:MM:SS">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Status</label>
+                                    <select name="status" id="edit_status" class="form-control">
+                                        <option value="0">Pending</option>
+                                        <option value="1">Approved</option>
+                                        <option value="2">Declined</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" name="updateDeposit" class="btn btn-theme">Update Deposit</button>
                             </div>
                         </form>
                     </div>
@@ -416,21 +473,42 @@ $data['user_deposits'] = $adminModule->getUserDeposits('deposit', $_GET['userid'
             });
         });
 
+        function setEditDepositData(btn) {
+            var id = btn.getAttribute('data-id');
+            var deposit_amt = btn.getAttribute('data-deposit_amt');
+            var return_amt = btn.getAttribute('data-return_amt');
+            var currency = btn.getAttribute('data-currency');
+            var wallet = btn.getAttribute('data-wallet');
+            var datetime = btn.getAttribute('data-datetime');
+            var transaction_type = btn.getAttribute('data-transaction_type');
+            var status = btn.getAttribute('data-status');
+
+            document.getElementById('edit_deposit_id').value = id;
+            document.getElementById('edit_deposit_amt').value = deposit_amt;
+            document.getElementById('edit_return_amt').value = return_amt;
+            document.getElementById('edit_currency').value = currency;
+            document.getElementById('edit_wallet').value = wallet;
+            document.getElementById('edit_datetime').value = datetime;
+            document.getElementById('edit_transaction_type').value = transaction_type;
+            document.getElementById('edit_status').value = status;
+        }
+
         function setDeleteData(btn) {
-            console.log("Vanilla JS activated");
             var id = btn.getAttribute('data-id');
             var type = btn.getAttribute('data-type');
-
             document.getElementById('delete_id').value = id;
             document.getElementById('delete_type').value = type;
-
-            if (document.getElementById('display_id')) {
-                document.getElementById('display_id').innerText = id;
-            }
-            if (document.getElementById('display_type')) {
-                document.getElementById('display_type').innerText = type;
-            }
         }
+
+        $(document).ready(function() {
+            $('#users-deposit').DataTable({
+                "order": [],
+                "columnDefs": [{
+                    "orderable": false,
+                    "targets": 7
+                }]
+            });
+        });
     </script>
 
 </body>

@@ -870,6 +870,46 @@ class AdminModule extends Connection
             return false;
         }
     }
+
+    public function updateDeposit($id, $deposit_amt, $return_amt, $currency, $wallet, $datetime, $transaction_type, $approved)
+    {
+        $this->sql = "UPDATE deposits SET deposit_amt = :deposit_amt, return_amt = :return_amt, currency = :currency, wallet = :wallet, datetime = :datetime, transaction_type = :transaction_type, approved = :approved WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->bindParam(':deposit_amt', $deposit_amt);
+            $this->stmt->bindParam(':return_amt', $return_amt);
+            $this->stmt->bindParam(':currency', $currency);
+            $this->stmt->bindParam(':wallet', $wallet);
+            $this->stmt->bindParam(':datetime', $datetime);
+            $this->stmt->bindParam(':transaction_type', $transaction_type);
+            $this->stmt->bindParam(':approved', $approved);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false;
+        }
+    }
+
+    public function updateWithdrawal($id, $amount, $wallet_name, $crypto_address, $datetime, $transaction_type, $from_to, $verified)
+    {
+        $this->sql = "UPDATE withdrawals SET amount = :amount, wallet_name = :wallet_name, crypto_address = :crypto_address, datetime = :datetime, transaction_type = :transaction_type, from_to = :from_to, verified = :verified WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->bindParam(':amount', $amount);
+            $this->stmt->bindParam(':wallet_name', $wallet_name);
+            $this->stmt->bindParam(':crypto_address', $crypto_address);
+            $this->stmt->bindParam(':datetime', $datetime);
+            $this->stmt->bindParam(':transaction_type', $transaction_type);
+            $this->stmt->bindParam(':from_to', $from_to);
+            $this->stmt->bindParam(':verified', $verified);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false;
+        }
+    }
 }
 
 
