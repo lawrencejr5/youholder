@@ -64,6 +64,9 @@
             <li class="">
                 <a href="../investments"><i class="fa fa-money"></i><span>Investments</span></a>
             </li>
+            <li class="">
+                <a href="../wallets"><i class="fa fa-google-wallet"></i><span>Wallets</span></a>
+            </li>
 
 
             <p class="pl-4 configuration">Account</p>

@@ -773,6 +773,62 @@ class AdminModule extends Connection
             return $th->getMessage();
         }
     }
+
+    public function fetchAllWalletAddresses()
+    {
+        $this->sql = "SELECT * FROM wallet_address";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->execute();
+            return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $th) {
+            return $th->getMessage();
+        }
+    }
+
+    public function addWalletAddress($currency, $address, $network)
+    {
+        $this->sql = "INSERT INTO wallet_address(currency, address, network) VALUES(:currency, :address, :network)";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':currency', $currency);
+            $this->stmt->bindParam(':address', $address);
+            $this->stmt->bindParam(':network', $network);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false;
+        }
+    }
+
+    public function updateWalletAddress($id, $currency, $address, $network)
+    {
+        $this->sql = "UPDATE wallet_address SET currency = :currency, address = :address, network = :network WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->bindParam(':currency', $currency);
+            $this->stmt->bindParam(':address', $address);
+            $this->stmt->bindParam(':network', $network);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false;
+        }
+    }
+
+    public function deleteWalletAddress($id)
+    {
+        $this->sql = "DELETE FROM wallet_address WHERE id = :id";
+        try {
+            $this->stmt = $this->conn->prepare($this->sql);
+            $this->stmt->bindParam(':id', $id);
+            $this->stmt->execute();
+            return true;
+        } catch (PDOException $th) {
+            return false;
+        }
+    }
 }
 
 

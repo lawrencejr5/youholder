@@ -43,6 +43,7 @@ $data['documents'] = $adminModule->fetchAllUserDocuments();
 $data['stakings'] = $adminModule->fetchAllStakes();
 $data['investments'] = $adminModule->fetchAllInvests();
 $data['wallets'] = $adminModule->fetchAllWallets();
+$data['wallet_addresses'] = $adminModule->fetchAllWalletAddresses();
 
 
 

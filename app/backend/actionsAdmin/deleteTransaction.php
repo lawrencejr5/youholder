@@ -35,6 +35,10 @@ if (isset($_POST['delete'])) {
             if ($adminModule->deleteKyc($id))
                 $success = true;
             break;
+        case "wallet_address":
+            if ($adminModule->deleteWalletAddress($id))
+                $success = true;
+            break;
         default:
             // Log that the type was not recognized
             $_SESSION['msg'] = "Error: Unrecognized transaction type: " . $type;
