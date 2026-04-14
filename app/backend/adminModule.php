@@ -631,7 +631,7 @@ class AdminModule extends Connection
             $this->stmt->execute();
             return true;
         } catch (PDOException $th) {
-            return false . $th->getMessage();
+            return false;
         }
     }
 
@@ -644,7 +644,7 @@ class AdminModule extends Connection
             $this->stmt->execute();
             return true;
         } catch (PDOException $th) {
-            return false . $th->getMessage();
+            return false;
         }
     }
     
@@ -657,7 +657,7 @@ class AdminModule extends Connection
             $this->stmt->execute();
             return true;
         } catch (PDOException $th) {
-            return false . $th->getMessage();
+            return false;
         }
     }
     
@@ -670,7 +670,7 @@ class AdminModule extends Connection
             $this->stmt->execute();
             return true;
         } catch (PDOException $th) {
-            return false . $th->getMessage();
+            return false;
         }
     }
 
@@ -683,7 +683,7 @@ class AdminModule extends Connection
             $this->stmt->execute();
             return true;
         } catch (PDOException $th) {
-            return false . $th->getMessage();
+            return false;
         }
     }
 
@@ -696,7 +696,7 @@ class AdminModule extends Connection
             $this->stmt->execute();
             return true;
         } catch (PDOException $th) {
-            return false . $th->getMessage();
+            return false;
         }
     }
 
